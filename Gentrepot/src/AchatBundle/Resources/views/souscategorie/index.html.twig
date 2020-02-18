@@ -1,0 +1,59 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} les sous categories  {% endblock  %}
+{% block content %}
+    <h1>Liste des sous categories</h1>
+
+<section class="section">
+
+
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <h5 style="text-align: center">sous categories</h5>
+                </div>
+            </div>
+            <div class="panel-body p-20">
+
+                <table class="table table-striped">
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Categorie</th>
+               
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sousCategorie in sousCategories %}
+            <tr>
+                <td><a href="{{ path('souscategorie_show', { 'id': sousCategorie.id }) }}">{{ sousCategorie.id }}</a></td>
+                <td>{{ sousCategorie.name }}</td>
+                <td>{{ sousCategorie.categorie }}</td>
+
+
+
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('souscategorie_show', { 'id': sousCategorie.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('souscategorie_edit', { 'id': sousCategorie.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('souscategorie_new') }}">Create a new sousCategorie</a>
+        </li>
+    </ul>
+{% endblock %}

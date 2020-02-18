@@ -1,0 +1,24 @@
+bonentree_index:
+    path:     /
+    defaults: { _controller: "AchatBundle:BonEntree:index" }
+    methods:  GET
+
+bonentree_show:
+    path:     /{id}/show
+    defaults: { _controller: "AchatBundle:BonEntree:show" }
+    methods:  GET
+
+bonentree_new:
+    path:     /new
+    defaults: { _controller: "AchatBundle:BonEntree:new" }
+    methods:  [GET, POST]
+
+bonentree_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AchatBundle:BonEntree:edit" }
+    methods:  [GET, POST]
+
+bonentree_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AchatBundle:BonEntree:delete" }
+    methods:  DELETE

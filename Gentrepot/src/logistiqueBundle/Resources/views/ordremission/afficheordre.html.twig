@@ -1,0 +1,39 @@
+{% extends 'backend/logistique/index.html.twig' %}
+{% block title %} ordre mission {% endblock %}
+{% block content %}
+    <section class="section">
+
+
+    <div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <h5 style="text-align: center">ordre mission</h5>
+        </div>
+    </div>
+    <div class="panel-body p-20">
+
+    <table class="table table-striped">
+    {% block body %}
+    <table border="2">
+        <tr>
+            <th>datecreation</th>
+            <th>datesortie</th>
+            <th>dateretour</th>
+            <th>id_aidechauff</th>
+            <th>id_chauffeur</th>
+            <th>id_vehicule</th>
+
+        </tr>
+        {% for e in ordremission %}
+            <tr>
+                <td>{{ e.datecreation|date}}</td>
+                <td>{{ e.datesortie|date}}</td>
+                <td>{{ e.dateretour|date}}</td>
+                <td>{{ e.getIdAidechauff()}}</td>
+                <td>{{ e.getIdChauffeur()}}</td>
+                <td>{{ e.getIdVehicule().getMatricule()}}</td>
+            </tr>
+        {% endfor %}
+        {% endblock %}
+{% endblock %}

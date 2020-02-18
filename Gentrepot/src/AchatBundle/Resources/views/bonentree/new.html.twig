@@ -1,0 +1,18 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} ajout bon entree  {% endblock  %}
+
+
+{% block content %}
+    <h1>Creer un bon d'entree</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('bonentree_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

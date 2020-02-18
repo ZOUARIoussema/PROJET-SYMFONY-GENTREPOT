@@ -1,0 +1,49 @@
+logistique_homepage:
+    path:     /
+    defaults: { _controller: logistiqueBundle:Default:index }
+
+
+vehicule_ajout:
+    path:     /ajout
+    defaults: { _controller: logistiqueBundle:Default:ajoutvehicule}
+vehiculeaff:
+    path:     /aff
+    defaults: { _controller: logistiqueBundle:Default:affichevehicule}
+
+vehicule_delete:
+    path:     /sup/{id}
+    defaults: { _controller: logistiqueBundle:Default:deletev}
+
+vehicule_update:
+    path:     /up/{id}
+    defaults: { _controller: logistiqueBundle:Default:modifier}
+ajoutchauf:
+    path:     /ajoutchauf
+    defaults: { _controller: logistiqueBundle:chauffeur:ajoutchauf}
+chauffeuraff:
+    path:     /affchauf
+    defaults: { _controller: logistiqueBundle:chauffeur:chauffeuraff}
+deletechauf:
+    path:     /supchauf/{cin}
+    defaults: { _controller: logistiqueBundle:chauffeur:deletechauf}
+updatechauf:
+    path:     /upchauf/{cin}
+    defaults: { _controller: logistiqueBundle:chauffeur:updatechauf}
+ajoutAchauf:
+    path:     /ajoutAchauf
+    defaults: { _controller: logistiqueBundle:aidechauffeur:ajoutAchauf}
+affaide:
+    path:     /affA
+    defaults: { _controller: logistiqueBundle:aidechauffeur:affaide}
+deleteAchauf:
+    path:     /supAchauf/{cin}
+    defaults: { _controller: logistiqueBundle:aidechauffeur:deleteAchauf}
+updateAchauf:
+    path:     /upAchauf/{cin}
+    defaults: { _controller: logistiqueBundle:aidechauffeur:updateAchauf}
+ajoutordreM:
+    path:     /ajoutM
+    defaults: { _controller: logistiqueBundle:ordremission:ajoutordreM}
+afficheordre:
+    path:     /affM
+    defaults: { _controller: logistiqueBundle:ordremission:afficheordre}

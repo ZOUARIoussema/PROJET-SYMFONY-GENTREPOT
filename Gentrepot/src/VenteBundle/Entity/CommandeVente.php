@@ -1,0 +1,175 @@
+<?php
+
+namespace VenteBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
+use VenteBundle\Entity\LigneCommande;
+
+/**
+ * CommandeVente
+ *
+ * @ORM\Table(name="commande_vente")
+ * @ORM\Entity(repositoryClass="VenteBundle\Repository\CommandeVenteRepository")
+ */
+class CommandeVente
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+
+    /**
+     * @ORM\Column(name="totalC", type="float")
+     */
+
+    private  $totalC;
+
+
+    /**
+     * @ORM\Column(name="dateC", type="date")
+     */
+    private $dateC;
+
+    /**
+     * @ORM\Column(name="etat", type="string")
+     */
+
+    private $etat;
+
+    /**
+     * @ORM\Column(name="tauxRemise", type="float")
+     */
+
+    private $tauxRemise;
+
+    /**
+     * CommandeVente constructor.
+     * @param $lignecommandes
+     */
+    public function __construct()
+    {
+        $this->lignecommandes = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotalC()
+    {
+        return $this->totalC;
+    }
+
+    /**
+     * @param mixed $totalC
+     */
+    public function setTotalC($totalC)
+    {
+        $this->totalC = $totalC;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateC()
+    {
+        return $this->dateC;
+    }
+
+    /**
+     * @param mixed $dateC
+     */
+    public function setDateC($dateC)
+    {
+        $this->dateC = $dateC;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param mixed $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTauxRemise()
+    {
+        return $this->tauxRemise;
+    }
+
+    /**
+     * @param mixed $tauxRemise
+     */
+    public function setTauxRemise($tauxRemise)
+    {
+        $this->tauxRemise = $tauxRemise;
+    }
+
+
+    public function __toString()
+    {
+        return(string) $this->id ;   }
+
+
+private  $lignecommandes;
+
+    /**
+     * @return mixed
+     */
+    public function getLignecommandes()
+    {
+        return $this->lignecommandes;
+    }
+
+    /**
+     * @param mixed $lignecommandes
+     */
+    public function setLignecommandes($lignecommandes)
+    {
+        $this->lignecommandes = $lignecommandes;
+    }
+
+
+
+
+
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+
+
+
+
+
+
+
+
+}
+

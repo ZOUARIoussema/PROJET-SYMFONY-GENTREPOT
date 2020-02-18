@@ -1,0 +1,18 @@
+stockage_homepage:
+    path:     /
+    defaults: { _controller: StockageBundle:Default:index }
+stockage_ajouterEntrepot:
+    path:     /ajouterEntrepot
+    defaults: { _controller: StockageBundle:Entrepot:ajouterEntrepot }
+stockage_listEntrepot:
+    path:     /afficherEntrepot
+    defaults: { _controller: StockageBundle:Entrepot:afficherEntrepot }
+stockage_modifierEntrepot:
+    path:     /modifierEntrepot/{matriculeFiscal}
+    defaults: { _controller: StockageBundle:Entrepot:modifierEntrepot}
+stockage_supprimerEntrepot:
+    path:     /supprimerEntrepot/{matriculeFiscal}
+    defaults: { _controller: StockageBundle:Entrepot:supprimerEntrepot}
+stockage_ajouterEmplacement:
+    path:     /ajouterEmplacement
+    defaults: { _controller: StockageBundle:Emplacement:ajouterEmplacement }

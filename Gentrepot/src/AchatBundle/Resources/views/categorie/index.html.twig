@@ -1,0 +1,57 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} les categories  {% endblock  %}
+
+{% block content %}
+
+
+<section class="section">
+
+
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <h5 style="text-align: center">categories</h5>
+                </div>
+            </div>
+            <div class="panel-body p-20">
+
+                <table class="table table-striped">
+
+
+      
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for categorie in categories %}
+            <tr>
+                <td><a href="{{ path('categorie_show', { 'id': categorie.id }) }}">{{ categorie.id }}</a></td>
+                <td>{{ categorie.nom }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('categorie_show', { 'id': categorie.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('categorie_new') }}">Create a new categorie</a>
+        </li>
+    </ul>
+
+{% endblock %}

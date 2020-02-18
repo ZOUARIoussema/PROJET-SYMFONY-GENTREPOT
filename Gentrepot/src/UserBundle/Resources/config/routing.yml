@@ -1,0 +1,14 @@
+user_homepage:
+    path:     /a
+    defaults: { _controller: UserBundle:Default:index }
+
+
+
+admin:
+    path:     /
+    defaults: { _controller: UserBundle:Default:user }
+
+
+read:
+    path:     /read
+    defaults: { _controller: UserBundle:Default:read }

@@ -1,0 +1,37 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} bon de retour  {% endblock  %}
+
+{% block content %}
+    <h1>Bon de retour</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ bonRetour.id }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if bonRetour.date %}{{ bonRetour.date|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Motif de retour</th>
+                <td>{{ bonRetour.motifDeRetour }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('bonretour_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('bonretour_edit', { 'id': bonRetour.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

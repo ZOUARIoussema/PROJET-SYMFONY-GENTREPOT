@@ -1,0 +1,51 @@
+{% extends 'backend/AgentCaisse/indexAgentCaisse.html.twig' %}
+{% block title %} table {% endblock %}
+
+{% block content %}
+
+    <h2>liste des facture clients impayées </h2>
+
+    <table border="1">
+        <tr>
+            <th>numero</th>
+            <th>Date creation</th>
+            <th>etat</th>
+            <th>total TTC</th>
+            <th>total paye</th>
+            <th>reste a payer</th>
+            <th>Date echaillance de paiement</th>
+
+
+
+
+        </tr>
+        {%for f in factures %}  <tr>
+            <td>{{f.id}}</td>
+            <td>{{f.dateCreation|date('Y-m-d')}}</td>
+            <td>{{f.etat}}</td>
+            <td>{{f.totalTTC}}</td>
+            <td>{{f.totalPaye}}</td>
+            <td>{{f.resteAPaye}}</td>
+            <td>{{f.dateEchaillancePaiement|date}}</td>
+
+
+           {#{% if(f.etat == "non_paye") %}#}
+
+                <td><a href="{{ path('tresorerie_ajouterRecouvrementChequeF',{'id':f.id}) }}">payer par cheque</a></td>
+                <td>   <a href="{{ path('tresorerie_ajouterRecouvrementEspeceF',{'id':f.id}) }}">payer en espece</a> </td>
+
+
+
+         {#{% endif %}#}
+
+
+
+
+
+
+        </tr>    {% endfor %}
+
+    </table>
+
+
+{% endblock %}

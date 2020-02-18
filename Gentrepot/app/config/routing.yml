@@ -1,0 +1,39 @@
+logistique:
+    resource: "@logistiqueBundle/Resources/config/routing.yml"
+    prefix:   /logistique
+
+achat:
+    resource: "@AchatBundle/Resources/config/routing.yml"
+    prefix:   /achat
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+vente:
+    resource: "@VenteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+test:
+    resource: "@TestBundle/Resources/config/routing.yml"
+    prefix:   /test
+stockage:
+    resource: "@StockageBundle/Resources/config/routing.yml"
+    prefix:   /stockage
+
+tresorerie:
+    resource: "@TresorerieBundle/Resources/config/routing.yml"
+    prefix:   /tresorerie
+
+
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+
+

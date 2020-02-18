@@ -1,0 +1,36 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+<html>
+<head>
+    <title>Modifier un Club</title>
+
+</head>
+<body>
+<center><h1>Bienvenue à la page de modification d'un entrepot</h1>
+    <fieldset style="width: 50%">
+        <form method="POST">
+            <table>
+            <tr>
+                <td>Matricule fiscale:</td><td><input type="text" name="matriculeFiscal" value="{{entrepot.matriculeFiscal}}"></td>
+            </tr>
+                <tr>
+                    <td>Adresse:</td><td><input type="text" name="adresse" value="{{entrepot.adresse}}"></td>
+                </tr>
+                <tr>
+                    <td>Raison social:</td><td><input type="text" name="raisonSocial" value="{{entrepot.raisonSocial}}"></td>
+                </tr>
+                <tr>
+                    <td>Adresse Mail:</td><td><input type="text" name="adresseMail" value="{{entrepot.adresseMail}}"></td>
+                </tr>
+                <tr>
+                    <td>Numéro Téléphone:</td><td><input type="text" name="numeroTel" value="{{entrepot.numeroTel}}"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Enregistrer"></td><td></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</center>
+</body>
+
+</html>

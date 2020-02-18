@@ -1,0 +1,37 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+{% block title %} table {% endblock %}
+
+{% block content %}
+
+<h2>liste des entrepots </h2>
+
+<table border="1">
+    <tr>
+        <th>Matricule fiscale</th>
+        <th>Adresse</th>
+        <th>Raison sociale</th>
+        <th>Adresse mail</th>
+        <th>Numéro de téléphone</th>
+        <th>Action <br> Modification</th>
+        <th>Action <br> Suppression</th>
+
+
+
+
+    </tr>
+    {%for f in entrepots %}
+        <tr>
+        <td>{{f.matriculeFiscal}}</td>
+        <td>{{f.adresse}}</td>
+        <td>{{f.raisonSocial}}</td>
+        <td>{{f.adresseMail}}</td>
+        <td>{{f.numeroTel}}</td>
+        <td><a href="{{ path('stockage_modifierEntrepot',{'matriculeFiscal':f.matriculeFiscal}) }}">Modifier</a></td>
+        <td><a href="{{ path('stockage_supprimerEntrepot',{'matriculeFiscal':f.matriculeFiscal}) }}">Supprimer</a> </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}

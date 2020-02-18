@@ -1,0 +1,81 @@
+vente_homepage:
+    path:     /
+    defaults: { _controller: VenteBundle:Default:index }
+
+
+utilisateurs:
+        path:     /list
+        defaults: { _controller: VenteBundle:Default:read }
+
+home:
+    path:     /home
+    defaults: { _controller: VenteBundle:Default:home }
+
+user:
+    path:     /admin
+    defaults: { _controller: VenteBundle:Default:admin }
+
+
+produit:
+    path:     /produit
+    defaults: { _controller: VenteBundle:Produit:ajoutP }
+
+
+affiche:
+    path:     /affiche
+    defaults: { _controller: VenteBundle:Produit:affiche }
+
+detail:
+    path:     /details/{reference}
+    defaults: { _controller: VenteBundle:Produit:detail }
+
+panier:
+    path:     /panier/add/{reference}
+    defaults: { _controller: VenteBundle:Cart:add }
+
+index:
+    path:     /panier
+    defaults: { _controller: VenteBundle:Cart:index }
+
+
+remove:
+    path:     /panier/remove/{reference}
+    defaults: { _controller: VenteBundle:Cart:remove }
+
+
+commande:
+  path:     /commande
+  defaults: { _controller: VenteBundle:Cart:create }
+
+list:
+    path:     /listP
+    defaults: { _controller: VenteBundle:Produit:list }
+
+
+ajout:
+    path:     /ajout
+    defaults: { _controller: VenteBundle:Commande:ajoutcP }
+
+
+listeC:
+  path:     /listC
+  defaults: { _controller: VenteBundle:Commande:read }
+
+
+update:
+  path:     /updateC/{id}
+  defaults: { _controller: VenteBundle:Commande:update }
+
+
+delete:
+  path:     /remove/{id}
+  defaults: { _controller: VenteBundle:Commande:remove }
+
+
+
+
+
+
+
+
+

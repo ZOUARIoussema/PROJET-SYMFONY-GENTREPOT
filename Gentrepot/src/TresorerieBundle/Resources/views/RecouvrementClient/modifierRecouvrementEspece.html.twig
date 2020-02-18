@@ -1,0 +1,22 @@
+{% extends 'backend/AgentCaisse/indexAgentCaisse.html.twig' %}
+
+{% block content %}
+    <h1>Modifier recouvrement client par espèce </h1>
+
+    <table>
+
+        {{ form_start(form) }}
+        <tr><td>montant</td><td>{{ form_widget(form.montant) }}</td></tr>
+        <tr><td>facture</td><td>{{ form_widget(form.facture) }}</td></tr>
+
+
+
+
+        <tr><td></td><td>{{ form_widget(form.modifier) }}</td></tr>
+        {{ form_end(form) }}
+    </table>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+fournisseur_index:
+    path:     /
+    defaults: { _controller: "AchatBundle:Fournisseur:index" }
+    methods:  GET
+
+fournisseur_show:
+    path:     /{id}/show
+    defaults: { _controller: "AchatBundle:Fournisseur:show" }
+    methods:  GET
+
+fournisseur_new:
+    path:     /new
+    defaults: { _controller: "AchatBundle:Fournisseur:new" }
+    methods:  [GET, POST]
+
+fournisseur_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AchatBundle:Fournisseur:edit" }
+    methods:  [GET, POST]
+
+fournisseur_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AchatBundle:Fournisseur:delete" }
+    methods:  DELETE

@@ -1,0 +1,93 @@
+tresorerie_homepage:
+    path:     /
+    defaults: { _controller: TresorerieBundle:Default:index }
+tresorerie_ajouterFacture:
+    path:     /ajouterFacture
+    defaults: { _controller: TresorerieBundle:FactureAchat:ajouterFacture }
+tresorerie_listFacture:
+    path:     /afficherFacture
+    defaults: { _controller: TresorerieBundle:FactureAchat:afficher }
+tresorerie_consulter:
+    path:     /consulterFacture
+    defaults: { _controller: TresorerieBundle:FactureAchat:consulter }
+tresorerie_ajouterREspece:
+    path:     /ajouterRE
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:ajouterReglementEspece }
+tresorerie_ajouterRCheque:
+    path:     /ajouterRC
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:ajouterReglementCheque }
+tresorerie_ajouterREParFacture:
+    path:     /ajouterREF/{numeroF}
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:ajouterReglementEspeceF }
+tresorerie_ajouterRCParFacture:
+    path:     /ajouterRCF/{numeroF}
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:ajouterReglementChequeF }
+tresorerie_afficherR:
+    path:     /afficherR
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:afficher }
+tresorerie_supprimerRC:
+    path:     /supprimerRC/{id}
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:deleteRC }
+tresorerie_supprimerRE:
+    path:     /supprimerRE/{id}
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:deleteRE }
+tresorerie_modifierRC:
+    path:     /modifierRC/{id}
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:updateRC }
+tresorerie_modifierRE:
+    path:     /modifierRE/{id}
+    defaults: { _controller: TresorerieBundle:ReglementFournisseur:updateRE }
+tresorerie_afficherRecouvrement:
+    path:     /afficherRecouvrement
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:afficher }
+tresorerie_ajouterRecouvrementCheque:
+    path:     /ajouterRecouvrementC
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:ajouterRcouvrementCheque }
+tresorerie_ajouterRecouvrementChequeF:
+    path:     /ajouterRecouvrementChequeF/{id}
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:ajouterRcouvrementChequeF }
+tresorerie_ajouterRecouvrementEspece:
+    path:     /ajouterRecouvrementE
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:ajouterRecouvrementEspece }
+tresorerie_ajouterRecouvrementEspeceF:
+    path:     /ajouterRecouvrementEFActure/{id}
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:ajouterRecouvrementEspeceF }
+tresorerie_supprimerRecouvrementEspece:
+    path:     /supprimerRecouvrementE/{id}
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:deleteRecouvrementEspece }
+tresorerie_supprimerRecouvrementCheque:
+    path:     /supprimerRecouvrementc/{id}
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:deleteRecouvrementCheque }
+tresorerie_modifierRecouvrementCheque:
+    path:     /modifierRecouvrementc/{id}
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:updateRC }
+tresorerie_modifierRecouvrementEspece:
+    path:     /modifierRecouvrement/{id}
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:updateRecouvrementE }
+tresorerie_afficherFactureVente:
+    path:     /afficherFactureVente
+    defaults: { _controller: TresorerieBundle:RecouvrementClient:afficherFactureVente }
+inventairecaisse_afficher:
+    path:     /afficherinventaire
+    defaults: { _controller: TresorerieBundle:InventaireCaisse:afficher }
+Tresorerie_inventairecaisse_ajouter:
+    path:     /TajouterInventaireCaisse
+    defaults: { _controller: TresorerieBundle:InventaireCaisse:ajouterInventaire }
+inventairecaisse_modifier:
+    path:     /modidierInventaire{id}
+    defaults: { _controller: TresorerieBundle:InventaireCaisse:updateInventaire }
+lettreDerelance_afficherFacture:
+    path:     /LettreDeRelanceafficherFactureVente
+    defaults: { _controller: TresorerieBundle:LettreDeRelance:afficherFactureVente }
+lettreDerelance_ajouterLettreParFacture:
+    path:     /LettreDeRelanceajouterParFacture/{id}
+    defaults: { _controller: TresorerieBundle:LettreDeRelance:ajouterLettreParFacture }
+lettreDerelance_afficherLettreDeRelance:
+    path:     /afficherLettreDeRelance
+    defaults: { _controller: TresorerieBundle:LettreDeRelance:afficherLettreDeRelance }
+lettreDerelance_ajouterLettreDeRelance:
+    path:     /ajouterLettreRelance
+    defaults: { _controller: TresorerieBundle:LettreDeRelance:ajouterLettre }
+inventaire_supprimer:
+    path:     /supprimerInventaire{id}
+    defaults: { _controller: TresorerieBundle:InventaireCaisse:deleteInventaire }

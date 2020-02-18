@@ -1,0 +1,21 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+
+{% block content %}
+    <h1>Ajouter facture</h1>
+    {{ form_start(form) }}
+    <table>
+        <tr><td>matricule fiscale</td><td>{{ form_widget(form.matriculeFiscal) }}</td></tr>
+        <tr><td>adresse</td><td>{{ form_widget(form.adresse) }}</td></tr>
+        <tr><td>raison social</td><td>{{ form_widget(form.raisonSocial) }}</td></tr>
+        <tr><td>adresse mail</td><td>{{ form_widget(form.adresseMail) }}</td></tr>
+        <tr><td>numéro telephone</td><td>{{ form_widget(form.numeroTel) }}</td></tr>
+
+
+        <tr><td></td><td>{{ form_widget(form.Ajout) }}</td></tr>
+        {{ form_end(form) }}
+    </table>
+
+
+
+
+{% endblock %}

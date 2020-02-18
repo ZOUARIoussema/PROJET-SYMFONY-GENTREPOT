@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} Admin {% endblock %}</title>
+    {% block stylesheets %}
+        <!-- ========== COMMON STYLES ========== -->
+        <link rel="stylesheet" href="{{ asset('backend/css/bootstrap.min.css') }}" media="screen" >
+        <link rel="stylesheet" href="{{ asset('backend/css/font-awesome.min.css') }}" media="screen" >
+        <link rel="stylesheet" href="{{ asset('backend/css/animate-css/animate.min.css') }}" media="screen" >
+        <link rel="stylesheet" href="{{ asset('backend/css/lobipanel/lobipanel.min.css') }}" media="screen" >
+
+        <!-- ========== PAGE STYLES ========== -->
+        <link rel="stylesheet" href="{{ asset('backend/css/prism/prism.css') }}" media="screen" > <!-- USED FOR DEMO HELP - YOU CAN REMOVE IT -->
+        <link rel="stylesheet" href="{{ asset('backend/css/toastr/toastr.min.css') }}" media="screen" >
+        <link rel="stylesheet" href="{{ asset('backend/css/icheck/skins/line/blue.css') }}" >
+        <link rel="stylesheet" href="{{ asset('backend/css/icheck/skins/line/red.css') }}" >
+        <link rel="stylesheet" href="{{ asset('backend/css/icheck/skins/line/green.css') }}" >
+        <link rel="stylesheet" href="{{ asset('backend/css/bootstrap-tour/bootstrap-tour.css') }}" >
+
+        <!-- ========== THEME CSS ========== -->
+        <link rel="stylesheet" href="{{ asset('backend/css/main.css') }}" media="screen" >
+
+        <!-- ========== MODERNIZR ========== -->
+
+        <script src="{{ asset('backend/js/modernizr/modernizr.min.js') }}"></script>
+    {% endblock %}
+</head>
+
+<body class="top-navbar-fixed">
+{% block header %}
+<div class="main-wrapper">
+
+    <!-- ========== TOP NAVBAR ========== -->
+    <nav class="navbar top-navbar bg-white box-shadow">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="navbar-header no-padding">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo-dark.svg" alt="Options - Admin Template" class="logo">
+                    </a>
+                    <span class="small-nav-handle hidden-sm hidden-xs"><i class="fa fa-outdent"></i></span>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-ellipsis-v"></i>
+                    </button>
+                    <button type="button" class="navbar-toggle mobile-nav-toggle" >
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <li class="hidden-sm hidden-xs"><a href="#" class="user-info-handle"><i class="fa fa-user"></i></a></li>
+                        <li class="hidden-sm hidden-xs"><a href="#" class="full-screen-handle"><i class="fa fa-arrows-alt"></i></a></li>
+                        <li class="hidden-sm hidden-xs"><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li class="hidden-xs hidden-xs"><!-- <a href="#">My Tasks</a> --></li>
+                        <li class=""><a href="#" class="color-primary"><i class="fa fa-diamond"></i> Upgrade</a></li>
+                    </ul>
+                    <!-- /.nav navbar-nav -->
+
+                    <ul class="nav navbar-nav navbar-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle bg-primary tour-one" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-circle"></i> Add New <span class="caret"></span></a>
+                            <ul class="dropdown-menu" >
+                                <li><a href="#"><i class="fa fa-plus-square-o"></i> Customer</a></li>
+                                <li><a href="#"><i class="fa fa-plus-square-o"></i> Employee</a></li>
+                                <li><a href="#"><i class="fa fa-plus-square-o"></i> Estimate</a></li>
+                                <li><a href="#"><i class="fa fa-plus-square-o"></i> Task</a></li>
+                                <li><a href="#"><i class="fa fa-plus-square-o"></i> Team Member</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Create Order</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Generate Report</a></li>
+                            </ul>
+                        </li>
+                        <!-- /.dropdown -->
+                        <li><a href="#" class=""><i class="fa fa-bell"></i><span class="badge badge-danger">6</span></a></li>
+                        <li><a href="#" class=""><i class="fa fa-comments"></i><span class="badge badge-warning">2</span></a></li>
+                        <li class="dropdown tour-two">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">John Doe <span class="caret"></span></a>
+                            <ul class="dropdown-menu profile-dropdown">
+                                <li class="profile-menu bg-gray">
+                                    <div class="">
+                                        <img src="http://placehold.it/60/c2c2c2?text=User" alt="John Doe" class="img-circle profile-img">
+                                        <div class="profile-name">
+                                            <h6>John Doe</h6>
+                                            <a href="pages-profile.html">View Profile</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </li>
+                                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                                <li><a href="#"><i class="fa fa-sliders"></i> Account Details</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" class="color-danger text-center"><i class="fa fa-sign-out"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                        <!-- /.dropdown -->
+                        <li><a href="#" class="hidden-xs hidden-sm open-right-sidebar"><i class="fa fa-ellipsis-v"></i></a></li>
+                    </ul>
+                    <!-- /.nav navbar-nav navbar-right -->
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- ========== WRAPPER FOR BOTH SIDEBARS & MAIN CONTENT ========== -->
+    <div class="content-wrapper">
+        <div class="content-container">
+
+            <!-- ========== LEFT SIDEBAR ========== -->
+            <div class="left-sidebar fixed-sidebar bg-black-300 box-shadow tour-three">
+                <div class="sidebar-content">
+                    <div class="user-info closed">
+                        <img src="http://placehold.it/90/c2c2c2?text=User" alt="John Doe" class="img-circle profile-img">
+                        <h6 class="title">John Doe</h6>
+                        <small class="info">PHP Developer</small>
+                    </div>
+                    <!-- /.user-info -->
+
+                    <div class="sidebar-nav">
+                        <ul class="side-nav color-gray">
+
+                            <li class="nav-header">
+                                <span class="">ACHAT</span>
+                            </li>
+
+
+
+
+                       {# <li class="has-children">
+                                <a href="#"><i class="fa fa-bars"></i> <span>Bootstrap Components</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+                                    <li><a href="bt-accordions.html"><i class="fa fa-bar-chart"></i> <span>Accordions</span></a></li>
+                                    <li><a href="bt-affix.html"><i class="fa fa-bell-o"></i> <span>Affix</span></a></li>
+                                    <li><a href="bt-alerts.html"><i class="fa fa-info-circle"></i> <span>Alerts</span></a></li>
+                                    <li><a href="bt-button-dropdown.html"><i class="fa fa-bookmark"></i> <span>Button Dropdown</span></a></li>
+                                    <li><a href="bt-button-groups.html"><i class="fa fa-bomb"></i> <span>Button Groups</span></a></li>
+                                    <li><a href="bt-buttons.html"><i class="fa fa-bug"></i> <span>Buttons</span></a></li>
+                                    <li><a href="bt-carousel.html"><i class="fa fa-bullseye"></i> <span>Carousel</span></a></li>
+                                    <li><a href="bt-code.html"><i class="fa fa-code"></i> <span>Code</span></a></li>
+                                    <li><a href="bt-collapse.html"><i class="fa fa-plane"></i> <span>Collapse</span></a></li>
+                                    <li><a href="bt-dropdowns.html"><i class="fa fa-calendar"></i> <span>Dropdowns</span></a></li>
+                                    <li><a href="bt-grid.html"><i class="fa fa-th"></i> <span>Grid</span></a></li>
+                                    <li><a href="bt-helpers.html"><i class="fa fa-hand-o-right"></i> <span>Helpers</span></a></li>
+                                    <li><a href="bt-labels-badges.html"><i class="fa fa-signal"></i> <span>Labels & Badges</span></a></li>
+                                    <li><a href="bt-modals.html"><i class="fa fa-shopping-cart"></i> <span>Modals</span></a></li>
+                                    <li><a href="bt-pagination.html"><i class="fa fa-video-camera"></i> <span>Pagination</span></a></li>
+                                    <li><a href="bt-popover.html"><i class="fa fa-camera"></i> <span>Popover</span></a></li>
+                                    <li><a href="bt-scrollspy.html"><i class="fa fa-arrows-alt"></i> <span>Scrollspy</span></a></li>
+                                    <li><a href="bt-tabs.html"><i class="fa fa-cloud"></i> <span>Tabs</span></a></li>
+                                    <li><a href="bt-tooltips.html"><i class="fa fa-crop"></i> <span>Tooltips</span></a></li>
+                                    <li><a href="bt-typography.html"><i class="fa fa-text-width"></i> <span>Typography</span></a></li>
+                                    <li><a href="bt-progress-bar.html"><i class="fa fa-tasks"></i> <span>Progress Bar</span></a></li>
+                                </ul>
+                            </li>#}
+
+
+
+
+
+                            <li class="has-children">
+                                <a href=""><i class="fa fa-sign-out"></i> <span>Facture fournisseur</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+
+                                    <li><a href="{{ path('tresorerie_ajouterFacture') }}"><i class="fa fa-sign-in"></i> <span>Ajouter facture fournisseur </span></a></li>
+                                    <li><a href="{{ path('tresorerie_consulter') }}"><i class="fa fa-list"></i> <span>Liste des factures fournisseurs </span></a></li>
+
+
+                                </ul>
+                            </li>
+
+
+                            <li class="has-children">
+                                <a href=""><i class="fa fa-sign-out"></i> <span>Reglement fournisseur</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+
+
+                                    <li><a href="{{ path('tresorerie_listFacture') }}"><i class="fa fa-sign-in"></i> <span>Ajouter Reglement fournisseurs </span></a></li>
+                                    <li><a href="{{ path('tresorerie_afficherR') }}"><i class="fa fa-list"></i> <span>Liste des Reglement fournisseurs </span></a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-header">
+                                <span class="">VENTE</span>
+                            </li>
+
+                            <li class="has-children">
+                                <a href="#"><i class="fa fa-sign-out"></i> <span>Recouvrement client</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+
+
+                                    <li><a href="{{ path('tresorerie_afficherFactureVente') }}"><i class="fa fa-sign-in"></i> <span>Ajouter recouvrement client </span></a></li>
+
+                                    <li><a href="{{ path('tresorerie_afficherRecouvrement') }}"><i class="fa fa-list"></i> <span>Liste des recouvrements client </span></a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="has-children">
+                                <a href="#"><i class="fa fa-sign-out"></i> <span>Lettre de relance</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+
+
+                                    <li><a href="{{ path('lettreDerelance_afficherFacture') }}"><i class="fa fa-sign-in"></i> <span>Ajouter lettre de relance </span></a></li>
+
+                                    <li><a href="{{ path('lettreDerelance_afficherLettreDeRelance') }}"><i class="fa fa-list"></i> <span>Liste des lettres de relance </span></a></li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="nav-header">
+                                <span class="">CONTROLE CAISSE</span>
+                            </li>
+
+                            <li class="has-children">
+                                <a href="#"><i class="fa fa-sign-out"></i> <span>Inventaire caisse</span> <i class="fa fa-angle-right arrow"></i></a>
+                                <ul class="child-nav">
+
+
+
+                                    <li><a href="{{ path('Tresorerie_inventairecaisse_ajouter') }}"><i class="fa fa-sign-in"></i> <span>Ajouter inventaire  </span></a></li>
+                                    <li><a href="{{ path('inventairecaisse_afficher') }}"><i class="fa fa-list"></i> <span>Liste des inventaires </span></a></li>
+                                </ul>
+                            </li>
+
+
+
+
+                        </ul>
+                        <!-- /.side-nav -->
+
+                    </div>
+                    <!-- /.sidebar-nav -->
+                </div>
+                <!-- /.sidebar-content -->
+            </div>
+            <!-- /.left-sidebar -->
+            {% endblock %}
+
+            {% block content%}
+
+
+
+            {% endblock %}<!-- /.section -->
+
+            {% block js %}
+                <!-- ========== COMMON JS FILES ========== -->
+                <script src="{{ asset('backend/js/jquery/jquery-2.2.4.min.js') }}"></script>
+                <script src="{{ asset('backend/js/jquery-ui/jquery-ui.min.js') }}"></script>
+                <script src="{{ asset('backend/js/bootstrap/bootstrap.min.js') }}"></script>
+                <script src="{{ asset('backend/js/pace/pace.min.js') }}"></script>
+                <script src="{{ asset('backend/js/lobipanel/lobipanel.min.js') }}"></script>
+                <script src="{{ asset('backend/js/iscroll/iscroll.js') }}"></script>
+
+                <!-- ========== PAGE JS FILES ========== -->
+                <script src="{{ asset('backend/js/prism/prism.js') }}"></script>
+                <script src="{{ asset('backend/js/waypoint/waypoints.min.js') }}"></script>
+                <script src="{{ asset('backend/js/counterUp/jquery.counterup.min.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/amcharts.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/serial.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/plugins/export/export.min.js') }}"></script>
+                <link rel="stylesheet" href="{{ asset('backend/js/amcharts/plugins/export/export.css') }}" type="text/css" media="all" />
+                <script src="{{ asset('backend/js/amcharts/themes/light.js') }}"></script>
+                <script src="{{ asset('backend/js/toastr/toastr.min.js') }}"></script>
+                <script src="{{ asset('backend/js/icheck/icheck.min.js') }}"></script>
+                <script src="{{ asset('backend/js/bootstrap-tour/bootstrap-tour.js') }}"></script>
+
+                <!-- ========== THEME JS ========== -->
+                <script src="{{ asset('backend/js/main.js') }}"></script>
+                <script src="{{ asset('backend/js/production-chart.js') }}"></script>
+                <script src="{{ asset('backend/js/traffic-chart.js') }}"></script>
+                <script src="{{ asset('backend/js/task-list.js') }}"></script>
+                <script>
+                    $(function(){
+
+                        // Counter for dashboard stats
+                        $('.counter').counterUp({
+                            delay: 10,
+                            time: 1000
+                        });
+
+                        // Welcome notification
+                        toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": false,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "3500",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+                        toastr["success"]("One stop solution to your website admin panel!", "Welcome to Options!");
+
+                    });
+                </script>
+            {% endblock %}
+            <!-- ========== ADD custom.js FILE BELOW WITH YOUR CHANGES ========== -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+souscategorie_index:
+    path:     /
+    defaults: { _controller: "AchatBundle:SousCategorieAchat:index" }
+    methods:  GET
+
+souscategorie_show:
+    path:     /{id}/show
+    defaults: { _controller: "AchatBundle:SousCategorieAchat:show" }
+    methods:  GET
+
+souscategorie_new:
+    path:     /new
+    defaults: { _controller: "AchatBundle:SousCategorieAchat:new" }
+    methods:  [GET, POST]
+
+souscategorie_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AchatBundle:SousCategorieAchat:edit" }
+    methods:  [GET, POST]
+
+souscategorie_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AchatBundle:SousCategorieAchat:delete" }
+    methods:  DELETE

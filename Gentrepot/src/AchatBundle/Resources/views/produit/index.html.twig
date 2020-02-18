@@ -1,0 +1,74 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} les produits {% endblock  %}
+
+{% block content %}
+
+    <section class="section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h5 style="text-align: center">Liste des produits</h5>
+                            </div>
+                        </div>
+                        <div class="panel-body p-20 overflow-x-auto">
+                            <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Libelle</th>
+                                    <th>Quantite en stock</th>
+                                    <th>Classe</th>
+                                    <th>Quantite en stock de securite</th>
+                                    <th>Dernier prix d'achat</th>
+                                    <th>TVA</th>
+                                    <th>Dimension</th>
+                                    <th>Description</th>
+                                    <th>Type de conditionnement</th>
+                                    <th>Prix de vente</th>
+                                    <th>Sous categorie</th>
+                                    <th>Actions</th>
+
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for produit in produits %}
+                                    <tr>
+                                        <td><a href="{{ path('produit_show', { 'reference': produit.reference }) }}">{{ produit.reference }}</a></td>
+                                        <td>{{ produit.libelle }}</td>
+                                        <td>{{ produit.quantiteEnStock }}</td>
+                                        <td>{{ produit.classe }}</td>
+                                        <td>{{ produit.quantiteStockSecurite }}</td>
+                                        <td>{{ produit.dernierPrixAchat }}</td>
+                                        <td>{{ produit.tVA }}</td>
+                                        <td>{{ produit.dimension }}</td>
+                                        <td>{{ produit.description }}</td>
+                                        <td>{{ produit.typeDeConditionnement }}</td>
+                                        <td>{{ produit.prixVente }}</td>
+                                        <td>{{ produit.sousCategorie }}</td>
+
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    <a href="{{ path('produit_show', { 'reference': produit.reference }) }}">show</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ path('produit_edit', { 'reference': produit.reference }) }}">edit</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tfoot>
+                            </table>
+                            <a href="{{ path('produit_new') }}">Create a new produit</a>
+
+
+
+
+
+{% endblock %}

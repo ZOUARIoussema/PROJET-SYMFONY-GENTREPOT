@@ -1,0 +1,27 @@
+front:
+    path:     /front
+    defaults: { _controller: TestBundle:Default:front }
+
+test_homepage:
+    path:     /test
+    defaults: { _controller: TestBundle:Default:index }
+
+
+
+table:
+    path:     /table
+    defaults: { _controller: TestBundle:Default:test }
+
+
+
+
+
+
+cart:
+    path:     /cart
+    defaults: { _controller: TestBundle:Default:test2 }
+
+
+
+
+

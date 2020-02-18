@@ -1,0 +1,45 @@
+# app/config/security.yml
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_ADMIN
+        ROLE_SUPER_ADMIN: ROLE_SUPER_ADMIN
+        ROLE_FOURN:       ROLE_FOURN
+        ROLE_RVENT:       ROLE_RVENT
+        ROLE_CLIEN:       ROLE_CLIEN
+        ROLE_RACHA:       ROLE_RACHA
+        ROLE_STOCK:       ROLE_STOCK
+        ROLE_ACAIS:       ROLE_ACAIS
+        ROLE_CPARC:       ROLE_CPARC
+
+
+
+
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+        main:
+            pattern: ^/
+            user_checker: security.user_checker
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+
+            logout:       true
+            anonymous:    true
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/cart, role: ROLE_SUPER_ADMIN }
+        - { path: ^/table, role: ROLE_STOCK }
+        - { path: ^/cart, role: ROLE_FOURN }
+        - { path: ^/list, role: ROLE_RVENT }
+        - { path: ^/admin, role: ROLE_RVENT }
+

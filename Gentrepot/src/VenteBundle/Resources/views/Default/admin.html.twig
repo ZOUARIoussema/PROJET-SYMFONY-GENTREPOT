@@ -1,0 +1,65 @@
+{% extends 'backend/Vente/index.html.twig' %}
+{% block title %} Liste des employes {% endblock %}
+
+
+{% block content %}
+
+    <section class="section">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <p></p>
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h5 class="container-fluid" style="text-align: center">List des employees</h5>
+                            </div>
+                        </div>
+                        <div class="panel-body p-20">
+
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>email</th>
+                                    <th>nom</th>
+                                    <th>last login</th>
+                                    <th>Statut</th>
+                                    <th>Roles</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+                                {%for e in list%}
+                                    {% if e.roles[0]=='ROLE_STOCK' or  e.roles[0]=='ROLE_RVENT'or  e.roles[0]=='ROLE_RACHA' or  e.roles[0]=='ROLE_ACAIS' or  e.roles[0]=='ROLE_CPARC' %}
+
+                                        <tr>
+                                            <th scope="row">{{e.id}}</th>
+
+                                            <td>{{e.email}}</td>
+                                            <td>{{e.username}}</td>
+                                            <td>{{e.lastlogin|date}}</td>
+                                            <td>{{e.enabled}}</td>
+
+                                            <td>{{e.roles[0]}}</td>
+
+                                        </tr>
+                                    {% endif %}
+
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

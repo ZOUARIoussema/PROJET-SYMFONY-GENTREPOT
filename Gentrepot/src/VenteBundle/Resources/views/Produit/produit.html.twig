@@ -1,0 +1,11 @@
+{% extends 'backend/Vente/index.html.twig' %}
+{% block content %}
+    <center>
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+
+<input class="btn btn-success" type="submit" value="Ajouter" />
+{{ form_row(form.image) }}
+{{ form_end(form) }}
+    </center>
+{% endblock %}

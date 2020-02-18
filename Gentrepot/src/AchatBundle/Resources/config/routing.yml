@@ -1,0 +1,28 @@
+achat_produit:
+    resource: "@AchatBundle/Resources/config/routing/produit.yml"
+    prefix:   /produit
+
+achat_sousCategorie:
+    resource: "@AchatBundle/Resources/config/routing/souscategorie.yml"
+    prefix:   /souscategorie
+
+achat_categorie:
+    resource: "@AchatBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie
+
+achat_fournisseur:
+    resource: "@AchatBundle/Resources/config/routing/fournisseur.yml"
+    prefix:   /fournisseur
+
+achat_bonretour:
+    resource: "@AchatBundle/Resources/config/routing/bonretour.yml"
+    prefix:   /bonretour
+
+achat_bonentree:
+    resource: "@AchatBundle/Resources/config/routing/bonentree.yml"
+    prefix:   /bonentree
+
+achat_homepage:
+    path:     /
+    defaults: { _controller: AchatBundle:Default:index }
+

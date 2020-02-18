@@ -1,0 +1,74 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} produit  {% endblock  %}
+
+{% block content %}
+    <h1>Produit</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Reference</th>
+                <td>{{ produit.reference }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ produit.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Quantite en stock</th>
+                <td>{{ produit.quantiteEnStock }}</td>
+            </tr>
+            <tr>
+                <th>Classe</th>
+                <td>{{ produit.classe }}</td>
+            </tr>
+            <tr>
+                <th>Quantite en stock securite</th>
+                <td>{{ produit.quantiteStockSecurite }}</td>
+            </tr>
+            <tr>
+                <th>Dernier prix d'achat</th>
+                <td>{{ produit.dernierPrixAchat }}</td>
+            </tr>
+            <tr>
+                <th>TVA</th>
+                <td>{{ produit.tVA }}</td>
+            </tr>
+            <tr>
+                <th>Dimension</th>
+                <td>{{ produit.dimension }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ produit.description }}</td>
+            </tr>
+            <tr>
+                <th>Typede de conditionnement</th>
+                <td>{{ produit.typeDeConditionnement }}</td>
+            </tr>
+            <tr>
+                <th>Prix de vente</th>
+                <td>{{ produit.prixVente }}</td>
+            </tr>
+
+            <tr>
+                <th>Sous categorie</th>
+                <td>{{ produit.sousCategorie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('produit_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('produit_edit', { 'reference': produit.reference }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

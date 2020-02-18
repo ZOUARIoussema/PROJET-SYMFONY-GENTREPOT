@@ -1,0 +1,47 @@
+{% extends 'backend/logistique/index.html.twig' %}
+{% block title %} liste des vehicule{% endblock %}
+{% block content %}
+ <section class="section">
+
+
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <h5 style="text-align: center">Liste des vehicule</h5>
+                </div>
+            </div>
+            <div class="panel-body p-20">
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>nom</th>
+                        <th>prenom</th>
+                        <th>adresse</th>
+                        <th>cin</th>
+                    </tr>
+                    </thead>
+{% block body %}
+<table border="2">
+    <tr>
+        <th>mtricule</th>
+        <th>type</th>
+        <th>capacite</th>
+        <th>etat</th>
+
+
+
+    </tr>
+    {% for e in vehicule %}
+        <tr>
+            <td>{{ e.matricule }}</td>
+            <td>{{ e.type}}</td>
+            <td>{{ e.capacite }}</td>
+            <td>{{ e.etat}}</td>
+            <td><a href="{{ path('vehicule_delete',{'id':e.id})}}"> Supprimer </a></td>
+            <td><a href="{{ path('vehicule_update',{'id':e.id})}}"> modifier</a></td>
+        </tr>
+    {% endfor %}
+{% endblock %}
+{% endblock %}

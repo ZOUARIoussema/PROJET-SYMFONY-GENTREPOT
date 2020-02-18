@@ -1,0 +1,17 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} ajout bon de retour  {% endblock  %}
+
+{% block content %}
+    <h1>Creer un bon de retour</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('bonretour_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

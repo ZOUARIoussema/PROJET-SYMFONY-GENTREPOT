@@ -1,0 +1,21 @@
+{% extends 'backend/AgentCaisse/indexAgentCaisse.html.twig' %}
+
+{% block content %}
+    <h1>Ajouter facture</h1>
+    {{ form_start(form) }}
+    <table>
+        <tr><td>numero facture</td><td>{{ form_widget(form.numeroF) }}</td></tr>
+        <tr><td>date echaillance paiement</td><td>{{ form_widget(form.dateEchaillancePaiement) }}</td></tr>
+        <tr><td>frais transport</td><td>{{ form_widget(form.fraisTransport) }}</td></tr>
+        <tr><td>timbre fiscale</td><td>{{ form_widget(form.timbreFiscale) }}</td></tr>
+        <tr><td>total TTC</td><td>{{ form_widget(form.totalTTC) }}</td></tr>
+        <tr><td>commande d'aproisionnement</td><td>{{ form_widget(form.commandeAp) }}</td></tr>
+
+        <tr><td></td><td>{{ form_widget(form.Ajout) }}</td></tr>
+        {{ form_end(form) }}
+    </table>
+
+
+
+
+{% endblock %}

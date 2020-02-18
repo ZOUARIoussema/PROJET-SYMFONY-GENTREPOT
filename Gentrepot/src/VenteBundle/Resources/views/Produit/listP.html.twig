@@ -1,0 +1,63 @@
+{% extends 'backend/Vente/index.html.twig' %}
+{% block title %} Liste des produits {% endblock %}
+
+
+{% block content %}
+
+    <section class="section">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <p></p>
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h5 class="container-fluid" style="text-align: center">Liste des Produits</h5>
+                            </div>
+                        </div>
+                        <div class="panel-body p-20">
+
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>reference</th>
+                                    <th>libelle</th>
+                                    <th>classe</th>
+                                    <th>TVA</th>
+                                    <th>Prix vente</th>
+                                    <th>Quantite</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+                                {% for e in produits %}
+
+                                        <tr>
+                                            <th scope="row">{{e.reference}}</th>
+
+                                            <td>{{e.libelle}}</td>
+                                            <td>{{e.classe}}</td>
+                                            <td>{{e.TVA}}</td>
+
+                                            <td>{{e.prixVente}}</td>
+                                            <td>{{e.quantiteEnStock}}</td>
+
+                                        </tr>
+
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

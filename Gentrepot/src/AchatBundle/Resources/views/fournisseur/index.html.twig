@@ -1,0 +1,48 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} les fournisseurs  {% endblock  %}
+
+{% block content %}
+    <h1>Liste des fournisseurs</h1>
+    <table class="table table-striped">
+        <caption>Optional table caption.</caption>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Raison sociale</th>
+            <th>Numero de telephone</th>
+            <th>Adresse</th>
+            <th>Adresse mail</th>
+            <th>Matricule fiscale</th>
+            <th>Code postale</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for fournisseur in fournisseurs %}
+            <tr>
+                <td scope="row"><a href="{{ path('fournisseur_show', { 'id': fournisseur.id }) }}">{{ fournisseur.id }}</a></td>
+                <td>{{ fournisseur.raisonSociale }}</td>
+                <td>{{ fournisseur.numeroTelephone }}</td>
+                <td>{{ fournisseur.adresse }}</td>
+                <td>{{ fournisseur.adresseMail }}</td>
+                <td>{{ fournisseur.matriculeFiscale }}</td>
+                <td>{{ fournisseur.codePostale }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('fournisseur_show', { 'id': fournisseur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fournisseur_edit', { 'id': fournisseur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+
+
+        <li>
+            <a href="{{ path('fournisseur_new') }}">Create a new fournisseur</a>
+        </li>
+    </ul>
+{% endblock %}

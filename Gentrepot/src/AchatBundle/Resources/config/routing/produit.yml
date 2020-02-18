@@ -1,0 +1,24 @@
+produit_index:
+    path:     /
+    defaults: { _controller: "AchatBundle:ProduitAchat:index" }
+    methods:  GET
+
+produit_show:
+    path:     /{reference}/show
+    defaults: { _controller: "AchatBundle:ProduitAchat:show" }
+    methods:  GET
+
+produit_new:
+    path:     /new
+    defaults: { _controller: "AchatBundle:ProduitAchat:new" }
+    methods:  [GET, POST]
+
+produit_edit:
+    path:     /{reference}/edit
+    defaults: { _controller: "AchatBundle:ProduitAchat:edit" }
+    methods:  [GET, POST]
+
+produit_delete:
+    path:     /{reference}/delete
+    defaults: { _controller: "AchatBundle:ProduitAchat:delete" }
+    methods:  DELETE

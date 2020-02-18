@@ -1,0 +1,16 @@
+{% extends 'backend/achat/index.html.twig' %}
+{% block title %} ajout sous categorie  {% endblock  %}
+{% block content %}
+    <h1>Creer une sous categorie </h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('souscategorie_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

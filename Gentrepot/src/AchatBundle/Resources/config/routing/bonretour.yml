@@ -1,0 +1,24 @@
+bonretour_index:
+    path:     /
+    defaults: { _controller: "AchatBundle:BonRetour:index" }
+    methods:  GET
+
+bonretour_show:
+    path:     /{id}/show
+    defaults: { _controller: "AchatBundle:BonRetour:show" }
+    methods:  GET
+
+bonretour_new:
+    path:     /new
+    defaults: { _controller: "AchatBundle:BonRetour:new" }
+    methods:  [GET, POST]
+
+bonretour_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AchatBundle:BonRetour:edit" }
+    methods:  [GET, POST]
+
+bonretour_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AchatBundle:BonRetour:delete" }
+    methods:  DELETE
