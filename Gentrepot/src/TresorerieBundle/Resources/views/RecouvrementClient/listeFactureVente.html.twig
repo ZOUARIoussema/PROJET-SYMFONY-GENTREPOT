@@ -5,7 +5,7 @@
 
     <h2>liste des facture clients impayées </h2>
 
-    <table border="1">
+    <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
             <th>numero</th>
             <th>Date creation</th>
@@ -14,6 +14,7 @@
             <th>total paye</th>
             <th>reste a payer</th>
             <th>Date echaillance de paiement</th>
+            <th>Action</th>
 
 
 
@@ -31,8 +32,9 @@
 
            {#{% if(f.etat == "non_paye") %}#}
 
-                <td><a href="{{ path('tresorerie_ajouterRecouvrementChequeF',{'id':f.id}) }}">payer par cheque</a></td>
-                <td>   <a href="{{ path('tresorerie_ajouterRecouvrementEspeceF',{'id':f.id}) }}">payer en espece</a> </td>
+
+                <td><a class="btn btn-success btn-xs btn-labeled href="{{ path('tresorerie_ajouterRecouvrementChequeF',{'id':f.id}) }}">payer par cheque<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></a>
+                   <a class="btn btn-success btn-xs btn-labeled href="{{ path('tresorerie_ajouterRecouvrementEspeceF',{'id':f.id}) }}">payer en espece<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></a> </td>
 
 
 

@@ -4,6 +4,12 @@ tresorerie_homepage:
 tresorerie_ajouterFacture:
     path:     /ajouterFacture
     defaults: { _controller: TresorerieBundle:FactureAchat:ajouterFacture }
+tresorerie_listeCommandeDA:
+    path:     /listeCommandeDA
+    defaults: { _controller: TresorerieBundle:FactureAchat:afficherCommande }
+tresorerie_ajouterfactureAchatParCommande:
+    path:     /ajouterFactureAchatParCommande/{id}
+    defaults: { _controller: TresorerieBundle:FactureAchat:ajouterFactureParCommande }
 tresorerie_listFacture:
     path:     /afficherFacture
     defaults: { _controller: TresorerieBundle:FactureAchat:afficher }

@@ -5,11 +5,12 @@
 
     <h2>liste des reglements fournisseur par espèce  </h2>
 
-    <table border="1">
+    <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
             <th>montant</th>
             <th>Date creation</th>
             <th>facture</th>
+            <th>Action</th>
 
         </tr>
         {%for r in reglemente %}  <tr>
@@ -17,8 +18,8 @@
             <td>{{r.dateCreation|date}}</td>
             <td>{{r.facture.numeroF}}</td>
 
-            <td><a href="{{ path('tresorerie_modifierRE',{'id':r.id}) }}">modifier</a> </td>
-            <td><a href="{{ path('tresorerie_supprimerRE',{'id':r.id}) }}">supprimer</a> </td>
+            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRE',{'id':r.id}) }}">modifier</a>
+            <a  class="btn btn-danger btn-xs btn-labeled" href="{{ path('tresorerie_supprimerRE',{'id':r.id}) }}">supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a> </td>
 
 
 
@@ -32,18 +33,19 @@
     </table>
 
 
-    <a href="{{ path('tresorerie_ajouterREspece') }}">Ajouter reglement en espece</a>
+    <a class="label label-success label-bordered" href="{{ path('tresorerie_ajouterREspece') }}">Ajouter reglement en espece</a>
 
 
     <h2>liste des reglement fournisseur par chèque  </h2>
 
-    <table border="1">
+    <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
             <th>montant</th>
             <th>Date creation</th>
             <th>numero cheque</th>
             <th>Date cheque</th>
            <th>facture</th>
+            <th>Action</th>
 
         </tr>
         {%for r in reglementc %}  <tr>
@@ -55,8 +57,8 @@
 
 
 
-            <td><a href="{{ path('tresorerie_modifierRC',{'id':r.id}) }}">modifier</a> </td>
-            <td><a href="{{ path('tresorerie_supprimerRC',{'id':r.id}) }}">supprimer</a> </td>
+            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRC',{'id':r.id}) }}">modifier</a>
+            <a class="btn btn-danger btn-xs btn-labeled"  href="{{ path('tresorerie_supprimerRC',{'id':r.id}) }}">supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a> </td>
 
 
 
@@ -67,7 +69,7 @@
 
     </table>
 
-    <a href="{{ path('tresorerie_ajouterRCheque') }}">Ajouter reglement en cheque</a>
+    <a class="label label-success label-bordered" href="{{ path('tresorerie_ajouterRCheque') }}">Ajouter reglement en cheque</a>
 
 
 {% endblock %}

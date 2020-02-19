@@ -29,7 +29,7 @@ class FactureAchatType extends AbstractType
             ->add('timbreFiscale')
             ->add('fraisTransport')
             //->add('commandeAp');
-            ->add('commandeAp',EntityType::class,['class'=>CommandeDAprovisionnement::class,'choice_label'=>'numeroC','multiple'=>false])
+
             ->add('Ajout',SubmitType::class);
 
 

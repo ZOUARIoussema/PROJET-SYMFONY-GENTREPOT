@@ -10,4 +10,8 @@ namespace TresorerieBundle\Repository;
  */
 class FactureAchatRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
+
+
 }

@@ -34,7 +34,7 @@ class CommandeDAprovisionnement
     private $dateCreation;
 
     /**
-     * @ORM\Column(type="string",options={"default":"non_paye"})
+     * @ORM\Column(type="string")
      */
     private $etat;
 

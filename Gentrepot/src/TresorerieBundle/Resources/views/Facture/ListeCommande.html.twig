@@ -1,0 +1,47 @@
+{% extends 'backend/AgentCaisse/indexAgentCaisse.html.twig' %}
+{% block title %} table {% endblock %}
+
+{% block content %}
+
+    <h2>liste des commandes d'approvisionnements </h2>
+
+    <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
+        <tr>
+            <th>Numero</th>
+            <th>Total</th>
+            <th>Date creation</th>
+            <th>Action</th>
+
+
+
+
+        </tr>
+        {%for c in commandes %}  <tr>
+
+            <td>{{c.numeroC}}</td>
+            <td>{{c.totalC}}</td>
+            <td>{{c.dateCreation|date('Y-m-d')}}</td>
+
+
+
+
+
+
+            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_ajouterfactureAchatParCommande',{'id':c.numeroC}) }}">Facturer<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></a></td>
+
+
+
+
+
+
+
+
+
+
+
+        </tr>    {% endfor %}
+
+    </table>
+
+
+{% endblock %}

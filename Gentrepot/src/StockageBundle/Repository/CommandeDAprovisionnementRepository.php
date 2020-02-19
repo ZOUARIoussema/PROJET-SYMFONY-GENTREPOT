@@ -10,4 +10,20 @@ namespace StockageBundle\Repository;
  */
 class CommandeDAprovisionnementRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public  function updateE($id){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("update set f.etat='facturer'
+                             TresorerieBundle:FactureAchat f where f.id=?1
+                            ")
+
+            ->setParameter(1,$id);
+
+
+
+    }
+
+
 }

@@ -9,22 +9,9 @@
 {% block content %}
 
 
-<script>
-    $(function($) {
-        $('#tab-1').DataTable();
-    });
 
-</script>
 
-<div class="col-md-8 col-md-offset-2">
-    <div class="panel">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <h5>Liste des inventaire caisse</h5>
-            </div>
-        </div>
-        <div class="panel-body p-20">
-
+    <h1>Liste des inbentaires caisses</h1>
 
 
 
@@ -61,8 +48,14 @@
 
                 {% if ("now"|date('Y-m-d') ==  inventaireCaisse.dateCreation|date('Y-m-d') ) %}
 
-                <td><a href="{{ path('inventairecaisse_modifier',{'id':inventaireCaisse.id}) }}">modifier</a> </td>
-                <td><a href="{{ path('inventaire_supprimer',{'id':inventaireCaisse.id}) }}">supprimer</a> </td>
+                <td>
+
+                    <a  class="btn btn-success btn-xs btn-labeled href="{{ path('inventairecaisse_modifier',{'id':inventaireCaisse.id}) }}">modifier</a>
+                    <a class="btn btn-danger btn-xs btn-labeled" href="{{ path('inventaire_supprimer',{'id':inventaireCaisse.id}) }}">supprimer <span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a>
+
+
+
+                </td>
 
                 {% endif %}
 
@@ -74,7 +67,7 @@
     </table>
 
 
-    <a href="{{ path('Tresorerie_inventairecaisse_ajouter') }}">Ajouter inventaire caisse</a>
+    <a class="label label-success label-bordered" href="{{  path('Tresorerie_inventairecaisse_ajouter') }}">Ajouter inventaire caisse</a>
 
 
 {% endblock %}

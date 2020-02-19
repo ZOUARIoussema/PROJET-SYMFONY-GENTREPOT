@@ -5,11 +5,12 @@
 
     <h2>liste des recouvrement client par espece  </h2>
 
-    <table border="1">
+    <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
             <th>montant</th>
             <th>Date creation</th>
             <th>facture</th>
+            <th>Action</th>
 
         </tr>
         {%for r in roucouvrementE %}  <tr>
@@ -18,8 +19,8 @@
             <td>{{r.facture.id}}</td>
 
 
-            <td><a href="{{ path('tresorerie_modifierRecouvrementEspece',{'id':r.id}) }}">modifier</a> </td>
-            <td><a href="{{ path('tresorerie_supprimerRecouvrementEspece',{'id':r.id}) }}">supprimer</a> </td>
+            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRecouvrementEspece',{'id':r.id}) }}">modifier</a>
+             <a class="btn btn-danger btn-xs btn-labeled" href="{{ path('tresorerie_supprimerRecouvrementEspece',{'id':r.id}) }}">supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a> </td>
 
 
 
@@ -30,18 +31,19 @@
 
     </table>
 
-    <a href="{{ path('tresorerie_ajouterRecouvrementEspece') }}">Ajouter recouvrement en espece</a>
+    <a class="label label-success label-bordered" href="{{ path('tresorerie_ajouterRecouvrementEspece') }}">Ajouter recouvrement en espece</a>
 
 
     <h2>liste des recouvrement client par cheque  </h2>
 
-    <table border="1">
+    <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
             <th>montant</th>
             <th>Date creation</th>
             <th>numero cheque</th>
             <th>Date cheque</th>
             <th>facture</th>
+            <th>Action</th>
 
         </tr>
         {%for r in recouvrementC %}  <tr>
@@ -54,8 +56,8 @@
 
 
 
-            <td><a href="{{ path('tresorerie_modifierRecouvrementCheque',{'id':r.id}) }}">modifier</a> </td>
-            <td><a href="{{ path('tresorerie_supprimerRecouvrementCheque',{'id':r.id}) }}">supprimer</a> </td>
+            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRecouvrementCheque',{'id':r.id}) }}">modifier</a>
+            <a class="btn btn-danger btn-xs btn-labeled" href="{{ path('tresorerie_supprimerRecouvrementCheque',{'id':r.id}) }}">supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a> </td>
 
 
 
@@ -66,7 +68,7 @@
 
     </table>
 
-    <a href="{{ path('tresorerie_ajouterRecouvrementCheque') }}">Ajouter recouvrement en cheque</a>
+    <a  class="label label-success label-bordered" href="{{ path('tresorerie_ajouterRecouvrementCheque') }}">Ajouter recouvrement en cheque</a>
 
 
 {% endblock %}

@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="" />
+    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/ListeCommande.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/ajouterFactureParCommande.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/AgentCaisse/indexAgentCaisse.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/AgentCaisse/indexAgentCaisse.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Entity/CommandeDAprovisionnement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Entity/CommandeDAprovisionnement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Repository/CommandeDAprovisionnementRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Repository/CommandeDAprovisionnementRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/FactureAchatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Controller/FactureAchatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Form/FactureAchatType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Form/FactureAchatType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Repository/FactureAchatRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Repository/FactureAchatRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/consulterListeFactureAchat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/consulterListeFactureAchat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/listeFactureAchat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/listeFactureAchat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/listeInventaire.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/listeInventaire.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/ListeLettreDeRelance.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/ListeLettreDeRelance.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/listeFactureVente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/listeFactureVente.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeFactureVente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeFactureVente.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeRecouvrementClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeRecouvrementClient.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/ReglementF/listeReglement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/ReglementF/listeReglement.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +94,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1XX11k2ee2q35t04JA9qFuUhCD6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -85,7 +106,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/Default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/TresorerieBundle/Form" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -97,16 +118,16 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
-      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\TresorerieBundle\Form" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views\Default" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\TresorerieBundle\Resources\views" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\StockageBundle\Resources\views" />
-      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\AchatBundle\Resources\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
+      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -147,7 +168,6 @@
       <command value="s doctrine:generate:form TresorerieBundle:ReglementFournisseur" />
       <command value="s generate:bundle" />
       <command value="s doctrine:generate:entity" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form logistique:aideChauffeur" />
       <command value="s doctrine:generate:form logistiqueBundle:aideChauffeur" />
       <command value="s doctrine:generate:form logistiqueBundle:chauffeur" />
@@ -156,10 +176,11 @@
       <command value="s generate:controller" />
       <command value="run server" />
       <command value="s server:stop" />
-      <command value="s cache:clear" />
-      <command value="c dump-autoload" />
       <command value="s doctrine:generate:form VenteBundle:FactureVente" />
       <command value="s server:run" />
+      <command value="s cache:clear" />
+      <command value="c dump-autoload" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
   <component name="ServiceViewManager">
@@ -217,6 +238,8 @@
       <workItem from="1581999567130" duration="2048000" />
       <workItem from="1582002579532" duration="105000" />
       <workItem from="1582003319337" duration="30000" />
+      <workItem from="1582054010547" duration="1553000" />
+      <workItem from="1582055804202" duration="11739000" />
     </task>
     <servers />
   </component>
@@ -237,6 +260,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="367" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582055158750">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="367" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1582055158750" />
     <state x="476" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1581994272560">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -245,49 +272,49 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="199" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1581997774749" />
-    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582000953984">
+    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582059414675">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582000953984" />
-    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1581978290440">
+    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582059414675" />
+    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1582055462389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581978290440" />
-    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1581978310645">
+    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582055462388" />
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1582055475264">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581978310645" />
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1582001902834">
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582055475264" />
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1582071306894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582001902834" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1582001902834">
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582071306894" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1582071306894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582001902834" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1582001902834">
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582071306894" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1582071306894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582001902834" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1582001902834">
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582071306894" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1582071306894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582001902834" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1582002684424">
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582071306894" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1582055487332">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582002684424" />
-    <state x="494" y="265" key="SymfonyPathDialog" timestamp="1581978311865">
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582055487332" />
+    <state x="494" y="265" key="SymfonyPathDialog" timestamp="1582055476393">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1581978311865" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582003319747">
+    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582055476393" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582055804455">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582003319747" />
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582000762166">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582055804455" />
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582062592088">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582000762166" />
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582062592088" />
   </component>
 </project>
