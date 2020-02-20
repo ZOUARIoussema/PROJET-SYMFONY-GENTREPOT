@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/ListeCommande.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/ajouterFactureParCommande.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/AgentCaisse/indexAgentCaisse.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/AgentCaisse/indexAgentCaisse.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Entity/CommandeDAprovisionnement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Entity/CommandeDAprovisionnement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Repository/CommandeDAprovisionnementRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Repository/CommandeDAprovisionnementRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/FactureAchatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Controller/FactureAchatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Form/FactureAchatType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Form/FactureAchatType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Repository/FactureAchatRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Repository/FactureAchatRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/consulterListeFactureAchat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/consulterListeFactureAchat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/InventaireCaisseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Controller/InventaireCaisseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/RecouvrementClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Controller/RecouvrementClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Form/InventaireCaisseType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Form/InventaireCaisseType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Form/RecouvrementClientChequeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Form/RecouvrementClientChequeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/ajouterFactureAchat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/ajouterFactureAchat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/ajouterFactureParCommande.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/ajouterFactureParCommande.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/listeFactureAchat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/listeFactureAchat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/ajouterInventaire.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/ajouterInventaire.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/listeInventaire.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/listeInventaire.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/ListeLettreDeRelance.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/ListeLettreDeRelance.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/listeFactureVente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/listeFactureVente.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/ajouterRecouvrementParFactureCheque.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/ajouterRecouvrementParFactureCheque.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeFactureVente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeFactureVente.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeRecouvrementClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeRecouvrementClient.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/ReglementF/listeReglement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/ReglementF/listeReglement.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/modifierRecouvrementCheque.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/modifierRecouvrementCheque.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,9 +173,9 @@
       <command value="s server:stop" />
       <command value="s doctrine:generate:form VenteBundle:FactureVente" />
       <command value="s server:run" />
-      <command value="s cache:clear" />
       <command value="c dump-autoload" />
       <command value="s doctrine:schema:update --force" />
+      <command value="s cache:clear" />
     </option>
   </component>
   <component name="ServiceViewManager">
@@ -240,6 +235,7 @@
       <workItem from="1582003319337" duration="30000" />
       <workItem from="1582054010547" duration="1553000" />
       <workItem from="1582055804202" duration="11739000" />
+      <workItem from="1582124280091" duration="7904000" />
     </task>
     <servers />
   </component>
@@ -284,22 +280,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582055475264" />
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1582071306894">
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1582136441638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582071306894" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1582071306894">
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582136441638" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1582136441638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582071306894" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1582071306894">
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582136441638" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1582136441637">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582071306894" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1582071306894">
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582136441637" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1582136441638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582071306894" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582136441638" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1582055487332">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -308,13 +304,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582055476393" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582055804455">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582124287428">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582055804455" />
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582062592088">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582124287428" />
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582127441982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582062592088" />
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582127441982" />
   </component>
 </project>

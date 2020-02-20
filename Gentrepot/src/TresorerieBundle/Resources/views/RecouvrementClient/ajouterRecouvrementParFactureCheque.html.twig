@@ -4,12 +4,19 @@
 
 {% block content %}
     <h1>Ajouter recouvrement par chèque </h1>
-
+    {{ form_start(form) }}
     <table>
-        {{ form_start(form) }}
+
 
         <tr><td>numero</td><td>{{ form_widget(form.numeroCheque) }}</td></tr>
+        <tr>
+            <td></td><td>{{ form_errors(form.numeroCheque) }}</td>
+        </tr>
         <tr><td>montant</td><td>{{ form_widget(form.montant) }}</td></tr>
+        <tr>
+            <td></td><td>{{ form_errors(form.montant) }}</td>
+        </tr>
+
         <tr><td>date création </td><td>{{ form_widget(form.dateCheque) }}</td></tr>
 
 

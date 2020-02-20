@@ -2,6 +2,7 @@
 
 namespace TresorerieBundle\Form;
 
+use Doctrine\DBAL\Types\FloatType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;

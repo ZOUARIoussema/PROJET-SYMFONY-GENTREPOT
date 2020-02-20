@@ -2,6 +2,7 @@
 
 namespace TresorerieBundle\Controller;
 
+use Doctrine\DBAL\Types\FloatType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -39,6 +40,8 @@ class RecouvrementClientController extends Controller
         $form->add('montant');
         $form->add('dateCheque');
         $form->add('numeroCheque');
+
+
         $form->add('Ajout',SubmitType::class);
 
 

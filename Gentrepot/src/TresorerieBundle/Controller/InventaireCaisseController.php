@@ -45,6 +45,8 @@ class InventaireCaisseController extends Controller
 
         $inventaireCaisse = new InventaireCaisse();
 
+
+
         $inventaireCaisse->setSoldeTheorique($espece+$cheque);
 
         $inventaireCaisse->setSoldeCheque($cheque);

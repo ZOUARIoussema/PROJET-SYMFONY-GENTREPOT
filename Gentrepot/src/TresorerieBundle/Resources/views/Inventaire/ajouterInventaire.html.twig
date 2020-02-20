@@ -14,8 +14,17 @@
         <tr><td>Total solde espece</td><td>{{ inv.soldeEspece }}</td></tr>
         <tr><td>Total solde theorique</td><td>{{ inv.SoldeTheorique }}</td></tr>
         <tr><td>Solde calculer</td><td>{{ form_widget(form.soldeCalculer) }}</td></tr>
-        <tr><td>ecart</td><td>{{ form_widget(form.ecart) }}</td></tr>
+        <tr>
+            <td></td><td>{{ form_errors(form.soldeCalculer) }}</td>
+        </tr>
+        <tr>
+            <td>ecart</td><td>{{ form_widget(form.ecart) }}</td>
 
+        </tr>
+
+        <tr>
+        <td></td><td>{{ form_errors(form.ecart) }}</td>
+        </tr>
 
 
         <tr><td></td><td>{{ form_widget(form.Ajout) }}</td></tr>

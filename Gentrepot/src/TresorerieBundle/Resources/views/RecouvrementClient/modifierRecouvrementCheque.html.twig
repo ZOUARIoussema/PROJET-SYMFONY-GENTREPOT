@@ -10,6 +10,9 @@
         <tr><td>facture</td><td>{{ form_widget(form.facture) }}</td></tr>
         <tr><td>numero</td><td>{{ form_widget(form.numeroCheque) }}</td></tr>
         <tr><td>montant</td><td>{{ form_widget(form.montant) }}</td></tr>
+        <tr>
+            <td></td><td>{{ form_errors(form.montant) }}</td>
+        </tr>
         <tr><td>date création </td><td>{{ form_widget(form.dateCheque) }}</td></tr>
 
 
