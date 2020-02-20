@@ -7,6 +7,10 @@
 
         {{ form_start(form) }}
         <tr><td>montant</td><td>{{ form_widget(form.montant) }}</td></tr>
+        <tr>
+            <td></td><td>{{ form_errors(form.montant) }}</td>
+        </tr>
+
 
 
         <tr><td></td><td>{{ form_widget(form.Ajout) }}</td></tr>

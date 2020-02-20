@@ -35,7 +35,7 @@ class ReglementFournisseurController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
             $ef->flush();
@@ -90,7 +90,7 @@ class ReglementFournisseurController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
 
@@ -169,7 +169,7 @@ class ReglementFournisseurController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
 
@@ -229,6 +229,7 @@ class ReglementFournisseurController extends Controller
 
 
 
+
         $form->add('montant');
 
 
@@ -241,7 +242,7 @@ class ReglementFournisseurController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid() ){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
 
@@ -307,7 +308,7 @@ class ReglementFournisseurController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
 
@@ -474,7 +475,7 @@ class ReglementFournisseurController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted()&& $form->isValid()){
 
             $ef= $this->getDoctrine()->getManager();
 
@@ -557,7 +558,7 @@ class ReglementFournisseurController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($r);
 

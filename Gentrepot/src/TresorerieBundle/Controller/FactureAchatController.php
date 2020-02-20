@@ -31,7 +31,7 @@ class FactureAchatController extends Controller
 
         $form= $this->createForm(FactureAchatType::class,$facture);
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
 
 
             $facture->setEtat("non_paye");
@@ -81,7 +81,7 @@ class FactureAchatController extends Controller
         $form= $this->createForm(FactureAchatType::class,$facture);
         $form->add('commandeAp',EntityType::class,['class'=>CommandeDAprovisionnement::class,'choice_label'=>'numeroC','multiple'=>false]);
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
 
 
             $facture->setEtat("non_paye");

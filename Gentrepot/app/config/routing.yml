@@ -1,3 +1,4 @@
+
 logistique:
     resource: "@logistiqueBundle/Resources/config/routing.yml"
     prefix:   /logistique
@@ -34,6 +35,10 @@ tresorerie:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /messageFOS
 
 
 

@@ -9,6 +9,7 @@ imports:
     - { resource: "@VenteBundle/Resources/config/services.yml" }
     - { resource: "@AchatBundle/Resources/config/services.yml" }
     - { resource: "@logistiqueBundle/Resources/config/services.yml" }
+    - { resource: "@MessageBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -98,3 +99,9 @@ fos_user:
 
 
 
+# app/config/config.yml
+
+fos_message:
+    db_driver: orm
+    thread_class: AppBundle\Entity\Thread
+    message_class: AppBundle\Entity\Message

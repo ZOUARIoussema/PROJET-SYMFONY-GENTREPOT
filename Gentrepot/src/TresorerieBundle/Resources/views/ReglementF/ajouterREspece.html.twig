@@ -3,10 +3,17 @@
 {% block content %}
     <h1>Ajouter reglement fournisseur par espèce </h1>
 
+    {{ form_start(form) }}
     <table>
 
-        {{ form_start(form) }}
+
+
+
         <tr><td>montant</td><td>{{ form_widget(form.montant) }}</td></tr>
+
+        <tr>
+            <td></td><td>{{ form_errors(form.montant) }}</td>
+        </tr>
         <tr><td>facture</td><td>{{ form_widget(form.facture) }}</td></tr>
 
 

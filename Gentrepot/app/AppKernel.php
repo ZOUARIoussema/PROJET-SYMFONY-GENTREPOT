@@ -25,6 +25,8 @@ class AppKernel extends Kernel
             new VenteBundle\VenteBundle(),
             new AchatBundle\AchatBundle(),
             new logistiqueBundle\logistiqueBundle(),
+            new FOS\MessageBundle\FOSMessageBundle(),
+            new MessageBundle\MessageBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

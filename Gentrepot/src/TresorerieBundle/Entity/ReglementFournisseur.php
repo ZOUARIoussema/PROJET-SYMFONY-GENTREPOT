@@ -3,7 +3,7 @@
 namespace TresorerieBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\MappedSuperclass()
  *
@@ -14,6 +14,7 @@ class ReglementFournisseur
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotNull(message="le valeur d'ecart doit etre non null ")
      */
     private  $montant;
 

@@ -50,7 +50,7 @@ class RecouvrementClientController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
             $ef->flush();
@@ -97,7 +97,7 @@ class RecouvrementClientController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
             $ef->flush();
@@ -143,7 +143,7 @@ class RecouvrementClientController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
             $ef->flush();
@@ -183,7 +183,7 @@ class RecouvrementClientController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
             $ef->flush();
@@ -265,7 +265,7 @@ class RecouvrementClientController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($r);
             $ef->flush();
@@ -304,7 +304,7 @@ class RecouvrementClientController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($r);
             $ef->flush();

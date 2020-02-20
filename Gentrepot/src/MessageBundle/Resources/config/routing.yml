@@ -1,0 +1,10 @@
+message_homepage:
+    path:     /
+    defaults: { _controller: MessageBundle:Default:index }
+message_layoutAffiche:
+    path:     /layout
+    defaults: { _controller: MessageBundle:Message:index }
+message_sentMessage:
+    path:     /sentmessage
+    defaults: { _controller: MessageBundle:Message:index }
+
