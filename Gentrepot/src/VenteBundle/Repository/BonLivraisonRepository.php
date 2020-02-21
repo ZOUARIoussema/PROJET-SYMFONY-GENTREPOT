@@ -2,6 +2,8 @@
 
 namespace VenteBundle\Repository;
 
+use Symfony\Component\Validator\Constraints\Date;
+
 /**
  * BonLivraisonRepository
  *
@@ -10,4 +12,20 @@ namespace VenteBundle\Repository;
  */
 class BonLivraisonRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findalllivrasion(){
+    $qb = $this->createQueryBuilder('p')
+        ->orderBy('p.dateCreation', 'ASC');
+    $query = $qb->getQuery();
+
+    return $query->execute();
+}
+public function findallLivrasionBydate(){
+    $entityManager = $this->getEntityManager();
+    $date =  date('Y-m-d');
+    $query = $this->createQueryBuilder('p')
+        ->where('p.datesortie=:dn')
+        ->setParameter('dn',$date)
+        ->getQuery();
+    return $query->execute();
+}
 }

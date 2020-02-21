@@ -32,8 +32,14 @@
                 <td>{{ e.dateretour|date}}</td>
                 <td>{{ e.getIdAidechauff()}}</td>
                 <td>{{ e.getIdChauffeur()}}</td>
-                <td>{{ e.getIdVehicule().getMatricule()}}</td>
             </tr>
         {% endfor %}
-        {% endblock %}
+        {% for i in  ordremission %}
+        <tr>
+            <td>{{ i.adresseLivraison |date}}</td>
+            <td>{{ i.datesortie|date}}</td>
+            <td>{{ i.dateretour|date}}</td>
+        </tr>
+        {% endfor %}
+{% endblock %}
 {% endblock %}

@@ -1,10 +1,14 @@
 {% extends 'backend/logistique/index.html.twig' %}
-{% block title %} ajouter ordre mission{% endblock %}
+{% block title %} ajouter ordre mission
+    <div class="section-title">
+        <p class="sub-title text-muted"></p>
+    </div>
+{% endblock %}
 {% block content %}
     {{ form_start (form ) }}
     {{ form_widget(form) }}
     <div class="section-title">
-        <p class="sub-title text-muted">Ajouter ordre mission</p>
+        <p class="sub-title text-muted"></p>
     </div>
 
     <form action="index.html" class="form-horizontal">
@@ -13,27 +17,24 @@
         <div class="form-group left-icon">
 
             <div class="col-sm-9">
-                <span class="glyphicon glyphicon-envelope form-left-icon"></span>
+
 
             </div>
         </div>
         <div class="form-group left-icon">
 
             <div class="col-sm-9">
-                <span class="glyphicon glyphicon-tags form-left-icon"></span>
+
 
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
-
-
             </div>
         </div>
         <div class="form-group mt-20">
             <div class="">
-                <button type="submit" class="btn btn-success btn-labeled pull-right">ajouter<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
-                <div class="clearfix"></div>
+                <button type="submit" class="btn btn-success btn-labeled ">ajouter<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
             </div>
         </div>
     </form>
