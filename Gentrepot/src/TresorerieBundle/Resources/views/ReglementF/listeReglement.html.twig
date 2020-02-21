@@ -15,13 +15,17 @@
         </tr>
         {%for r in reglemente %}  <tr>
             <td>{{r.montant}}</td>
-            <td>{{r.dateCreation|date}}</td>
+            <td>{{r.dateCreation|date('Y-m-d')}}</td>
             <td>{{r.facture.numeroF}}</td>
 
-            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRE',{'id':r.id}) }}">modifier</a>
+            {% if ("now"|date('Y-m-d') ==  r.dateCreation|date('Y-m-d') ) %}
+
+
+            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRE',{'id':r.id}) }}">modifier<span class="btn-label btn-label-right"><i class="fa fa-pencil"></i></span></a>
             <a  class="btn btn-danger btn-xs btn-labeled" href="{{ path('tresorerie_supprimerRE',{'id':r.id}) }}">supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a> </td>
 
 
+            {% endif %}
 
 
 
@@ -52,15 +56,18 @@
             <td>{{r.montant}}</td>
             <td>{{r.dateCreation|date('Y-m-d')}}</td>
             <td>{{r.numeroCheque}}</td>
-            <td>{{r.dateCheque|date}}</td>
+            <td>{{r.dateCheque|date('Y-m-d')}}</td>
             <td>{{r.facture.numeroF}}</td>
 
 
 
-            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRC',{'id':r.id}) }}">modifier</a>
+            {% if ("now"|date('Y-m-d') ==  r.dateCreation|date('Y-m-d') ) %}
+
+            <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRC',{'id':r.id}) }}">modifier<span class="btn-label btn-label-right"><i class="fa fa-pencil"></i></span></a>
             <a class="btn btn-danger btn-xs btn-labeled"  href="{{ path('tresorerie_supprimerRC',{'id':r.id}) }}">supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a> </td>
 
 
+            {% endif %}
 
 
 

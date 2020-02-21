@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <h2>liste des facture clients impayées </h2>
+    <h2>liste des facture clients </h2>
 
     <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
@@ -27,10 +27,10 @@
             <td>{{f.totalTTC}}</td>
             <td>{{f.totalPaye}}</td>
             <td>{{f.resteAPaye}}</td>
-            <td>{{f.dateEchaillancePaiement|date}}</td>
+            <td>{{f.dateEchaillancePaiement|date('Y-m-d')}}</td>
 
 
-           {#{% if(f.etat == "non_paye") %}#}
+           {% if(f.resteAPaye != 0) %}
 
 
                 <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_ajouterRecouvrementChequeF',{'id':f.id}) }}">payer par cheque<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></a>
@@ -38,7 +38,7 @@
 
 
 
-         {#{% endif %}#}
+        {% endif %}
 
 
 

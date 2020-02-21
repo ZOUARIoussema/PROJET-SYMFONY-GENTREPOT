@@ -379,14 +379,17 @@ class ReglementFournisseurController extends Controller
         $r= $em->getRepository(ReglementFournisseurEspece::class)->find($id);
 
 
+
+        $em->remove($r);
+        $em->flush();
+
+
+
         //modifier facture
 
 
 
-
-        $facture=$this->getDoctrine()->getRepository(FactureAchat::class)->find($r->getFacture()->getNumeroF());
-
-
+        $facture=$r->getFacture();
 
         $facture->setTotalPaye($facture->getTotalPaye()-$r->getMontant());
         $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
@@ -404,8 +407,8 @@ class ReglementFournisseurController extends Controller
 
         //
 
-        $em->remove($r);
         $em->flush();
+
         return $this->redirectToRoute("tresorerie_afficherR");
     }
 
@@ -417,14 +420,15 @@ class ReglementFournisseurController extends Controller
 
 
 
+
+        $em->remove($r);
+        $em->flush();
+
         //modifier facture
 
 
 
-
-        $facture=$this->getDoctrine()->getRepository(FactureAchat::class)->find($r->getFacture()->getNumeroF());
-
-
+        $facture=$r->getFacture();
 
         $facture->setTotalPaye($facture->getTotalPaye()-$r->getMontant());
         $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
@@ -442,10 +446,10 @@ class ReglementFournisseurController extends Controller
 
         //
 
-
-
-        $em->remove($r);
         $em->flush();
+
+
+
         return $this->redirectToRoute("tresorerie_afficherR");
     }
 
@@ -460,6 +464,7 @@ class ReglementFournisseurController extends Controller
 
 
 
+        $ancientMontant=$r->getMontant();
 
 
         $form= $this->createForm(ReglementFournisseurChequeType::class,$r);
@@ -487,20 +492,15 @@ class ReglementFournisseurController extends Controller
             //modifier facture
 
 
-            $ancientMontant=$r->getMontant();
 
-            $facture=$this->getDoctrine()->getRepository(FactureAchat::class)->find($r->getFacture()->getNumeroF());
+            $facture=$r->getFacture();
 
 
             $facture->setTotalPaye($facture->getTotalPaye()-$ancientMontant);
 
 
 
-
             $facture->setTotalPaye($facture->getTotalPaye()+$r->getMontant());
-
-
-
             $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
 
             if($facture->getResteAPaye()==0){
@@ -512,15 +512,12 @@ class ReglementFournisseurController extends Controller
             }
 
 
-            $eF->persist($facture);
+            $em->persist($facture);
 
             //
 
+            $em->flush();
 
-
-            $ef->flush();
-
-            $eF->flush();
 
 
             return $this->redirectToRoute("tresorerie_afficherR");
@@ -543,6 +540,7 @@ class ReglementFournisseurController extends Controller
         $r= $em->getRepository(ReglementFournisseurEspece::class)->find($id);
 
 
+        $ancientMontant=$r->getMontant();
 
 
         $form= $this->createForm(ReglementFournisseurEspeceType::class,$r);
@@ -567,9 +565,8 @@ class ReglementFournisseurController extends Controller
             //modifier facture
 
 
-            $ancientMontant=$r->getMontant();
 
-            $facture=$this->getDoctrine()->getRepository(FactureAchat::class)->find($r->getFacture()->getNumeroF());
+            $facture=$r->getFacture();
 
 
             $facture->setTotalPaye($facture->getTotalPaye()-$ancientMontant);
@@ -588,14 +585,16 @@ class ReglementFournisseurController extends Controller
             }
 
 
-            $ef->persist($facture);
+            $em->persist($facture);
 
             //
 
+            $em->flush();
 
 
 
-            $ef->flush();
+
+
 
             return $this->redirectToRoute("tresorerie_afficherR");
 

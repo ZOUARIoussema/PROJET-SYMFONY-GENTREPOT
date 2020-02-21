@@ -28,7 +28,10 @@ class RecouvrementClientController extends Controller
         $reglement= new RecouvrementClientCheque();
 
 
-        $reglement->setFacture($this->getDoctrine()->getRepository(FactureVente::class)->find($id));
+
+        $facture=$this->getDoctrine()->getRepository(FactureVente::class)->find($id);
+
+        $reglement->setFacture($facture);
 
         $reglement->setDateCreation(new \DateTime());
 
@@ -54,6 +57,32 @@ class RecouvrementClientController extends Controller
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
             $ef->flush();
+
+
+            //modifier facture
+
+
+
+            $facture->setTotalPaye($facture->getTotalPaye()+$reglement->getMontant());
+            $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
+
+            if($facture->getResteAPaye()==0){
+
+                $facture->setEtat("payer");
+            }else
+            {
+                $facture->setEtat("non_paye");
+            }
+
+
+            $ef->persist($facture);
+
+            //
+
+            $ef->flush();
+
+
+
 
             return $this->redirectToRoute("tresorerie_afficherRecouvrement");
 
@@ -102,6 +131,31 @@ class RecouvrementClientController extends Controller
             $ef->persist($reglement);
             $ef->flush();
 
+
+            //modifier facture
+
+
+            $facture=$reglement->getFacture();
+
+            $facture->setTotalPaye($facture->getTotalPaye()+$reglement->getMontant());
+            $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
+
+            if($facture->getResteAPaye()==0){
+
+                $facture->setEtat("payer");
+            }else
+            {
+                $facture->setEtat("non_paye");
+            }
+
+
+            $ef->persist($facture);
+
+            //
+
+            $ef->flush();
+
+
             return $this->redirectToRoute("tresorerie_afficherRecouvrement");
 
 
@@ -123,7 +177,9 @@ class RecouvrementClientController extends Controller
 
         $reglement->setDateCreation(new \DateTime());
 
-        $reglement->setFacture($this->getDoctrine()->getRepository(FactureVente::class)->find($id));
+        $facture=$this->getDoctrine()->getRepository(FactureVente::class)->find($id);
+
+        $reglement->setFacture($facture);
 
 
         $form= $this->createForm(RecouvrementClientEspeceType::class,$reglement);
@@ -147,6 +203,31 @@ class RecouvrementClientController extends Controller
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($reglement);
             $ef->flush();
+
+
+            //modifier facture
+
+
+
+
+            $facture->setTotalPaye($facture->getTotalPaye()+$reglement->getMontant());
+            $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
+
+            if($facture->getResteAPaye()==0){
+
+                $facture->setEtat("payer");
+            }else
+            {
+                $facture->setEtat("non_paye");
+            }
+
+
+            $ef->persist($facture);
+
+            //
+
+            $ef->flush();
+
 
             return $this->redirectToRoute("tresorerie_afficherRecouvrement");
 
@@ -188,6 +269,34 @@ class RecouvrementClientController extends Controller
             $ef->persist($reglement);
             $ef->flush();
 
+
+
+            //modifier facture
+
+
+
+            $facture=$reglement->getFacture();
+
+            $facture->setTotalPaye($facture->getTotalPaye()+$reglement->getMontant());
+            $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
+
+            if($facture->getResteAPaye()==0){
+
+                $facture->setEtat("payer");
+            }else
+            {
+                $facture->setEtat("non_paye");
+            }
+
+
+            $ef->persist($facture);
+
+            //
+
+            $ef->flush();
+
+
+
             return $this->redirectToRoute("tresorerie_afficherRecouvrement");
 
         }
@@ -227,6 +336,35 @@ class RecouvrementClientController extends Controller
 
         $em->remove($r);
         $em->flush();
+
+
+        //modifier facture
+
+
+
+        $facture=$r->getFacture();
+
+        $facture->setTotalPaye($facture->getTotalPaye()-$r->getMontant());
+        $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
+
+        if($facture->getResteAPaye()==0){
+
+            $facture->setEtat("payer");
+        }else
+        {
+            $facture->setEtat("non_paye");
+        }
+
+
+        $em->persist($facture);
+
+        //
+
+        $em->flush();
+
+
+
+
         return $this->redirectToRoute("tresorerie_afficherRecouvrement");
     }
     public function deleteRecouvrementChequeAction($id)
@@ -237,6 +375,31 @@ class RecouvrementClientController extends Controller
 
         $em->remove($r);
         $em->flush();
+
+        //modifier facture
+
+
+
+        $facture=$r->getFacture();
+
+        $facture->setTotalPaye($facture->getTotalPaye()-$r->getMontant());
+        $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
+
+        if($facture->getResteAPaye()==0){
+
+            $facture->setEtat("payer");
+        }else
+        {
+            $facture->setEtat("non_paye");
+        }
+
+
+        $em->persist($facture);
+
+        //
+
+        $em->flush();
+
         return $this->redirectToRoute("tresorerie_afficherRecouvrement");
     }
 
@@ -250,6 +413,7 @@ class RecouvrementClientController extends Controller
         $r= $em->getRepository(RecouvrementClientCheque::class)->find($id);
 
 
+        $ancientMontant=$r->getMontant();
 
 
         $form= $this->createForm(RecouvrementClientChequeType::class,$r);
@@ -269,6 +433,40 @@ class RecouvrementClientController extends Controller
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($r);
             $ef->flush();
+
+
+
+            //modifier facture
+
+
+
+            $facture=$r->getFacture();
+
+
+            $facture->setTotalPaye($facture->getTotalPaye()-$ancientMontant);
+
+
+
+            $facture->setTotalPaye($facture->getTotalPaye()+$r->getMontant());
+            $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
+
+            if($facture->getResteAPaye()==0){
+
+                $facture->setEtat("payer");
+            }else
+            {
+                $facture->setEtat("non_paye");
+            }
+
+
+            $em->persist($facture);
+
+            //
+
+            $em->flush();
+
+
+
 
             return $this->redirectToRoute("tresorerie_afficherRecouvrement");
 
@@ -290,6 +488,8 @@ class RecouvrementClientController extends Controller
         $r= $em->getRepository(RecouvrementClientEspece::class)->find($id);
 
 
+        $ancientMontant=$r->getMontant();
+
 
 
         $form= $this->createForm(RecouvrementClientEspeceType::class,$r);
@@ -308,6 +508,43 @@ class RecouvrementClientController extends Controller
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($r);
             $ef->flush();
+
+
+
+
+
+            //modifier facture
+
+
+
+            $facture=$r->getFacture();
+
+
+            $facture->setTotalPaye($facture->getTotalPaye()-$ancientMontant);
+
+
+
+            $facture->setTotalPaye($facture->getTotalPaye()+$r->getMontant());
+            $facture->setResteAPaye($facture->getTotalTTC()-$facture->getTotalPaye());
+
+            if($facture->getResteAPaye()==0){
+
+                $facture->setEtat("payer");
+            }else
+            {
+                $facture->setEtat("non_paye");
+            }
+
+
+            $em->persist($facture);
+
+            //
+
+            $em->flush();
+
+
+
+
 
             return $this->redirectToRoute("tresorerie_afficherRecouvrement");
 

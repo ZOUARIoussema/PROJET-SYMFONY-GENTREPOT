@@ -37,7 +37,8 @@ class FactureAchatController extends Controller
             $facture->setEtat("non_paye");
             $facture->setDateCreation(new \DateTime());
             $facture->setTotalPaye(0);
-            $facture->setResteAPaye($facture->getTotalPaye());
+
+            $facture->setResteAPaye($facture->getTotalTTC());
 
 
 
@@ -87,7 +88,7 @@ class FactureAchatController extends Controller
             $facture->setEtat("non_paye");
             $facture->setDateCreation(new \DateTime());
             $facture->setTotalPaye(0);
-            $facture->setResteAPaye($facture->getTotalPaye());
+            $facture->setResteAPaye($facture->getTotalTTC());
 
 
 
