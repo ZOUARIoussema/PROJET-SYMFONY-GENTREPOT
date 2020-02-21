@@ -2,6 +2,9 @@
 
 namespace StockageBundle\Form;
 
+use AchatBundle\Entity\ProduitAchat;
+use StockageBundle\Entity\Entrepot;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -14,8 +17,9 @@ class EmplacementType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('adresse')->add('capaciteStockage')->add('quantiteStocker')->add('classe')->add('entrepot')
-        ->add('Ajout',SubmitType::class);
+        $builder->add('entrepot',EntityType::class,['class'=>Entrepot::class,'choice_label'=>'matriculeFiscal','multiple'=>false])
+            ->add('adresse')->add('capaciteStockage')->add('quantiteStocker')->add('classe')
+        ;
     }/**
      * {@inheritdoc}
      */

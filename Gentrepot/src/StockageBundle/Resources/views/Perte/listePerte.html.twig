@@ -1,0 +1,47 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+
+{% block content %}
+<div class ="container">
+    <div class="panel panel-primary">
+        <div class ="panel-heading">
+            <i class ="icon_menu"></i>Liste Des Pertes
+        </div>
+
+        <div class ="panel-body">
+            <table class ="table-condensed">
+
+                {% for perte in Tabpertes %}
+                    <tr>
+                        <th class="col-md-1">Date Perte</th>
+                    <td class ="col-lg-1">
+                        {{ perte.dateCreation|date }}
+                    </td>
+                    </tr>
+                    <tr>
+                        <th class="col-md-1">Numéro</th>
+                        <th class="col-md-1">Produit</th>
+                        <th class="col-md-1">Qté</th>
+                        <th class="col-md-1">Raison de la perte</th>
+                        <th class="col-md-1">Action1</th>
+                        <th class="col-md-1">Action2</th>
+                    </tr>
+
+        {% for lperte in Tablpertes %}
+        {% if perte.id == lperte.getPerte().getId() %}
+        <tr>
+            <td class ="col-lg-1">{{ lperte.id }}</td>
+            <td class ="col-lg-1">{{ lperte.getProduit().getLibelle() }}</td>
+            <td class ="col-lg-1">{{ lperte.quantite }}</td>
+            <td class ="col-lg-1">{{ lperte.raisonPerte }}</td>
+            <td class ="col-lg-1"><a href="{{ path('stockage_modifierLignePerte',{'id':lperte.id}) }}"><button type="button" class="btn btn-warning" >Modifier</button></a></td>
+            <td class ="col-lg-1"><a href="{{ path('stockage_supprimerLignePerte',{'id':lperte.id}) }}"><button type="button" class="btn btn-danger" >Supprimer</button></a></td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+
+                {% endfor %}
+        </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

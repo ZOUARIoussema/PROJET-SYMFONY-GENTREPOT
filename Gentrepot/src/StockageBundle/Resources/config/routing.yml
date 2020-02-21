@@ -4,15 +4,36 @@ stockage_homepage:
 stockage_ajouterEntrepot:
     path:     /ajouterEntrepot
     defaults: { _controller: StockageBundle:Entrepot:ajouterEntrepot }
-stockage_listEntrepot:
-    path:     /afficherEntrepot
-    defaults: { _controller: StockageBundle:Entrepot:afficherEntrepot }
-stockage_modifierEntrepot:
-    path:     /modifierEntrepot/{matriculeFiscal}
-    defaults: { _controller: StockageBundle:Entrepot:modifierEntrepot}
-stockage_supprimerEntrepot:
-    path:     /supprimerEntrepot/{matriculeFiscal}
-    defaults: { _controller: StockageBundle:Entrepot:supprimerEntrepot}
+stockage_passerCommandeDAprovisionnement:
+    path:     /passerCommandeDAprovisionnement
+    defaults: { _controller: StockageBundle:CommandeDAprovisionnement:passerCommandeDAprovisionnement }
+stockage_listeCommandeDAprovisionnement:
+    path:     /listeCommandeDAprovisionnement
+    defaults: { _controller: StockageBundle:CommandeDAprovisionnement:listeCommandeDAprovisionnement}
+stockage_passerPerte:
+    path:     /passerPerte
+    defaults: { _controller: StockageBundle:Perte:passerPerte }
+stockage_listePerte:
+    path:     /listePerte
+    defaults: { _controller: StockageBundle:Perte:listePerte}
+stockage_modifierLignePerte:
+    path:     /modifierLignePerte/{id}
+    defaults: { _controller: StockageBundle:LignePerte:modifierLignePerte}
+stockage_supprimerLignePerte:
+    path:     /supprimerLignePerte/{id}
+    defaults: { _controller: StockageBundle:LignePerte:supprimerLignePerte}
+stockage_faireInventaireStock:
+    path:     /faireInventaireStock
+    defaults: { _controller: StockageBundle:InventaireStock:faireInventaireStock}
+stockage_listeInventaireStock:
+    path:     /listeInventaireStock
+    defaults: { _controller: StockageBundle:InventaireStock:listeInventaireStock}
 stockage_ajouterEmplacement:
     path:     /ajouterEmplacement
     defaults: { _controller: StockageBundle:Emplacement:ajouterEmplacement }
+stockage_modifierInventaireStock:
+    path:     /modifierInventaireStock/{id}
+    defaults: { _controller: StockageBundle:InventaireStock:modifierInventaireStock}
+stockage_supprimerInventaireStock:
+    path:     /supprimerInventaireStock/{id}
+    defaults: { _controller: StockageBundle:InventaireStock:supprimerInventaireStock}

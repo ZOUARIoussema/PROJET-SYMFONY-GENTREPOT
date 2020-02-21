@@ -15,13 +15,7 @@ class EntrepotController extends Controller
     public function ajouterEntrepotAction(Request $request )
     {
 
-
-
         $entrepot= new Entrepot();
-
-
-
-
 
         $form= $this->createForm(EntrepotType::class,$entrepot);
         $form->handleRequest($request);
