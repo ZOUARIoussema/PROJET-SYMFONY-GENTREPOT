@@ -1,36 +1,42 @@
 {% extends 'backend/achat/index.html.twig' %}
 {% block title %} sous categorie  {% endblock  %}
 {% block content %}
-    <h1>Sous categorie</h1>
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h2 style="text-align: center">Sous categorie</h2>
+            </div>
+
+        </div>
+
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ sousCategorie.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ sousCategorie.name }}</td>
-            </tr>
-            <tr>
-                <th>Categorie</th>
-                <td>{{ sousCategorie.categorie }}</td>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ sousCategorie.id }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ sousCategorie.name }}</td>
+        </tr>
+        <tr>
+            <th>Categorie</th>
+            <td>{{ sousCategorie.categorie }}</td>
+        </tr>
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('souscategorie_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('souscategorie_edit', { 'id': sousCategorie.id }) }}">Edit</a>
-        </li>
-        <li>
+
+            <a href="{{ path('souscategorie_index') }}"><button type="button" class="btn btn-primary btn-wide">
+                    Retour a la liste</button></a>
+
+            <a href="{{ path('souscategorie_edit', { 'id': sousCategorie.id }) }}"><button type="button" class="btn btn-primary btn-wide">
+                    Modifier</button></a>
+
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
 {% endblock %}

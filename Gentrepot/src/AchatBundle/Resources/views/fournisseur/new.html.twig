@@ -2,7 +2,16 @@
 {% block title %} ajout fournisseur  {% endblock  %}
 
 {% block content %}
-    <h1>Creer un fournisseur</h1>
+
+
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h4 style="text-align: center">Creer un fournisseur</h4>
+            </div>
+
+        </div>
 
 
 
@@ -10,17 +19,22 @@
 
 
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <div class="form-group mt-20">
+            <div class="">
+                <button type="submit" class="btn btn-success btn-labeled ">ajouter<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
+            </div>
+        </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('fournisseur_index') }}">Back to the list</a>
-        </li>
-    </ul>
 
-{% endblock %}
+        {{ form_end(form) }}
 
+        <br>
+
+
+        <a href="{{ path('fournisseur_index') }}"><button type="button" class="btn btn-success">retour à la liste</button></a>
+
+
+        {% endblock %}
 

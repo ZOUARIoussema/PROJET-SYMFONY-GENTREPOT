@@ -38,9 +38,26 @@ class ProduitAchatController extends Controller
         $form = $this->createForm('AchatBundle\Form\ProduitAchatType', $produit);
 
 
-        $form->add('sousCategorie',EntityType::class,['class'=>SousCategorieAchat::class,'choice_label'=>'id','multiple'=>false]);
+        $form->add('sousCategorie', EntityType::class, ['class' => SousCategorieAchat::class, 'choice_label' => 'name', 'multiple' => false]);
         $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
         if ($form->isSubmitted() && $form->isValid()) {
+
+
+            $file = $form ['image']->getData();
+            $newImageName = $file->getClientOriginalName();
+
+            $file->move($this->getParameter('images_directory'), $newImageName);
+
+            $produit->setImage($newImageName);
+            $produit->setImage1($newImageName);
+            $produit->setImage2($newImageName);
+            $produit->setImage3($newImageName);
+            $produit->setImage4($newImageName);
+
+
+            dump($file);
+            dump($produit);
             $em = $this->getDoctrine()->getManager();
             $em->persist($produit);
             $em->flush();
@@ -68,6 +85,21 @@ class ProduitAchatController extends Controller
         ));
     }
 
+    public function detailAction(ProduitAchat $produit)
+    {
+        $deleteForm = $this->createDeleteForm($produit);
+
+        return $this->render('@Achat/produit/detail.html.twig', array(
+            'produit' => $produit,
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+    public function prodsAction(SousCategorieAchat $cat)
+    {
+        $produits = $this->getDoctrine()->getManager()
+            ->getRepository(ProduitAchat::class)->findBys($cat);
+        return ($this->render('@Achat/souscategorie/prods.html.twig', array("list" => $produits,'souscategorie' => $cat,)));
+    }
     /**
      * Displays a form to edit an existing produit entity.
      *
@@ -75,10 +107,10 @@ class ProduitAchatController extends Controller
     public function editAction(Request $request, ProduitAchat $produit)
     {
         $deleteForm = $this->createDeleteForm($produit);
-        $editForm = $this->createForm('AchatBundle\Form\ProduitType', $produit);
+        $editForm = $this->createForm('AchatBundle\Form\ProduitAchatType', $produit);
 
 
-        $editForm->add('sousCategorie',EntityType::class,['class'=>SousCategorieAchat::class,'choice_label'=>'id','multiple'=>false]);
+        $editForm->add('sousCategorie',EntityType::class,['class'=>SousCategorieAchat::class,'choice_label'=>'name','multiple'=>false]);
 
 
         $editForm->handleRequest($request);
@@ -87,7 +119,7 @@ class ProduitAchatController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('produit_edit', array('reference' => $produit->getReference()));
+            return $this->redirectToRoute('produit_show', array('reference' => $produit->getReference()));
         }
 
         return $this->render('@Achat/produit/edit.html.twig', array(
@@ -113,6 +145,21 @@ class ProduitAchatController extends Controller
         }
 
         return $this->redirectToRoute('produit_index');
+    }
+
+    public function listAction(EntityManagerInterface $em, PaginatorInterface $paginator, Request $request)
+    {
+        $dql   = "SELECT a FROM AcmeMainBundle:Article a";
+        $query = $em->createQuery($dql);
+
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1), /*page number*/
+            10 /*limit per page*/
+        );
+
+        // parameters to template
+        return $this->render('article/list.html.twig', ['pagination' => $pagination]);
     }
 
     /**
@@ -214,8 +261,8 @@ class ProduitAchatController extends Controller
     public function afficheAction()
     {
         $list=$this->getDoctrine()->getManager()
-            ->getRepository(Produit::class)->findAll();
-        return ($this->render('@Vente/Produit/affiche.html.twig',array ("list"=>$list)));}
+            ->getRepository(ProduitAchat::class)->findAll();
+        return ($this->render('@Achat/produit/affiche.html.twig',array ("list"=>$list)));}
 
     public function detailPAction($reference)
     {
@@ -235,6 +282,66 @@ class ProduitAchatController extends Controller
         $list=$this->getDoctrine()->getManager()
             ->getRepository(Produit::class)->findAll();
         return ($this->render('@Vente/Produit/listP.html.twig',array ("produits"=>$list)));}
+
+    
+        
+        
+
+    public function shopAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('AchatBundle:CategorieAchat')->findAll();
+        $list = $this->getDoctrine()->getManager()
+            ->getRepository(ProduitAchat::class)->findAll();
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $list,
+            $request->query->getInt('page',1),
+            $request->query->getInt('limit',1)
+        );
+
+        return $this->render('@Achat/produit/shop.html.twig', array('list' => $result,
+            'categories'=>$categories));
+    }
+
+    public function shopTAction()
+    {
+        $list = $this->getDoctrine()->getManager()
+            ->getRepository(ProduitAchat::class)->findallProduitAchat();
+        return ($this->render('@Achat/produit/shop.html.twig', array("list" => $list)));
+    }
+
+    public function shopTrAction()
+    {
+        $list = $this->getDoctrine()->getManager()
+            ->getRepository(ProduitAchat::class)->findallProduitAchatD();
+        return ($this->render('@Achat/produit/shop.html.twig', array("list" => $list)));
+    }
+
+    public function searchAction( Request $request){
+        $em= $this->getDoctrine()->getManager();
+        $requestString = $request->get('q');
+        $posts = $em->getRepository('AchatBundle:ProduitAchat')->findEntitiesByString($requestString);
+        if(!$posts)
+        {
+            $result['posts']['error']="Post not found :(";
+        }
+        else {
+            $result['posts']=$this->getRealEntities($posts);
+        }
+        return new Response(json_encode($result));
+    }
+
+    public function getRealEntities($posts){
+        foreach ($posts as $posts){
+            $realEntities[$posts->getId()] =[$posts->getImage(), $posts->getLibelle()];
+
+        }
+        return $realEntities;
+    }
 
 
 }
