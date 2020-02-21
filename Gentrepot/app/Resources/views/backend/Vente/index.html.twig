@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+{% block head %}
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compati
+        <meta charset="utf-8">ble" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
+        {% endblock %}
         <title>{% block title %} Admin {% endblock %}</title>
 {% block stylesheets %}
         <!-- ========== COMMON STYLES ========== -->
@@ -60,24 +62,21 @@
                 			</ul>
                             <!-- /.nav navbar-nav -->
 
-                			<ul class="nav navbar-nav navbar-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-                                <li class="dropdown">
-                					<a href="#" class="dropdown-toggle bg-primary tour-one" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-circle"></i> Add New <span class="caret"></span></a>
-                					<ul class="dropdown-menu" >
-                						<li><a href="#"><i class="fa fa-plus-square-o"></i> Customer</a></li>
-                                        <li><a href="#"><i class="fa fa-plus-square-o"></i> Employee</a></li>
-                						<li><a href="#"><i class="fa fa-plus-square-o"></i> Estimate</a></li>
-                                        <li><a href="#"><i class="fa fa-plus-square-o"></i> Task</a></li>
-                						<li><a href="#"><i class="fa fa-plus-square-o"></i> Team Member</a></li>
-                						<li role="separator" class="divider"></li>
-                						<li><a href="#">Create Order</a></li>
-                						<li role="separator" class="divider"></li>
-                						<li><a href="#">Generate Report</a></li>
-                					</ul>
-                				</li>
+
+
+
+                				</li><ul class="nav navbar-nav navbar-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                    <li class="dropdown">
+                                        <a href="" class="dropdown-toggle bg-primary tour-one" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge badge-danger">{{ mgilet_notification_count(app.user) }}</span></a>
+                                        <ul class="dropdown-menu" >
+
+                                            <li><a href="#"><i class="fa fa-plus-square-o"></i> {{ mgilet_notification_render(app.user) }}</a></li>
+
+
+                                        </ul>
                                 {% block nav %}
 
-                                    <li><a href="#" class=""><i class="fa fa-bell"></i><span class="badge badge-danger">6</span></a></li>
+                                    <li></li>
                 				<li><a href="#" class=""><i class="fa fa-comments"></i><span class="badge badge-warning">2</span></a></li>
                 				<li class="dropdown tour-two">
                 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% if app.user %}
@@ -168,10 +167,10 @@
 
 
                                     <li class="has-children">
-                                        <a href="{{ path('listeC') }}"><i class="fa fa-file-text"></i> <span>Gérer les Commandes</span> <i class="fa fa-angle-up arrow"></i></a>
+                                        <a href="{{ path('listco') }}"><i class="fa fa-file-text"></i> <span>Gérer les Commandes</span> <i class="fa fa-angle-up arrow"></i></a>
                                         <ul class="child-nav">
 
-                                            <li><a href="{{ path('listeC') }}"><i class="fa fa-sign-in"></i> <span>List des ligne commande </span></a></li>
+                                            <li><a href="{{ path('listco') }}"><i class="fa fa-sign-in"></i> <span>List des ligne commande </span></a></li>
                                             <li><a href="{{ path('ajout') }}"><i class="fa fa-sign-in"></i> <span>Ajouter ligne commande</span></a></li>
 
                                         </ul>
@@ -264,7 +263,6 @@
                     "showMethod": "fadeIn",
                     "hideMethod": "fadeOut"
                 }
-                toastr["success"]("", "Welcome to Gentrepot");
 
             });
         </script>

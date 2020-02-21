@@ -61,9 +61,9 @@ class ProduitController extends Controller
         $last=$this->getDoctrine()->getManager()
             ->getRepository(Produit::class)->findAll();
         return ($this->render('@Vente/Produit/details.html.twig' ,array(
-        'libelle' => $last,
+            'libelle' => $last,
 
-    )));}
+        )));}
 
 
 

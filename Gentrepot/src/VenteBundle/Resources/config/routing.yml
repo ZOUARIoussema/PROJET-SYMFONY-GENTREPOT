@@ -1,46 +1,46 @@
 vente_homepage:
-    path:     /
-    defaults: { _controller: VenteBundle:Default:index }
+  path:     /
+  defaults: { _controller: VenteBundle:Default:index }
 
 
 utilisateurs:
-        path:     /list
-        defaults: { _controller: VenteBundle:Default:read }
+  path:     /list
+  defaults: { _controller: VenteBundle:Default:read }
 
 home:
-    path:     /home
-    defaults: { _controller: VenteBundle:Default:home }
+  path:     /home
+  defaults: { _controller: VenteBundle:Default:home }
 
 user:
-    path:     /admin
-    defaults: { _controller: VenteBundle:Default:admin }
+  path:     /admin
+  defaults: { _controller: VenteBundle:Default:admin }
 
 
 produit:
-    path:     /produit
-    defaults: { _controller: VenteBundle:Produit:ajoutP }
+  path:     /produit
+  defaults: { _controller: VenteBundle:Produit:ajoutP }
 
 
 affiche:
-    path:     /affiche
-    defaults: { _controller: VenteBundle:Produit:affiche }
+  path:     /affiche
+  defaults: { _controller: VenteBundle:Produit:affiche }
 
 detail:
-    path:     /details/{reference}
-    defaults: { _controller: VenteBundle:Produit:detail }
+  path:     /details/{reference}
+  defaults: { _controller: VenteBundle:Produit:detail }
 
 panier:
-    path:     /panier/add/{reference}
-    defaults: { _controller: VenteBundle:Cart:add }
+  path:     /panier/add/{reference}
+  defaults: { _controller: VenteBundle:Cart:add }
 
 index:
-    path:     /panier
-    defaults: { _controller: VenteBundle:Cart:index }
+  path:     /panier
+  defaults: { _controller: VenteBundle:Cart:index }
 
 
 remove:
-    path:     /panier/remove/{reference}
-    defaults: { _controller: VenteBundle:Cart:remove }
+  path:     /panier/remove/{reference}
+  defaults: { _controller: VenteBundle:Cart:remove }
 
 
 commande:
@@ -48,13 +48,13 @@ commande:
   defaults: { _controller: VenteBundle:Cart:create }
 
 list:
-    path:     /listP
-    defaults: { _controller: VenteBundle:Produit:list }
+  path:     /listP
+  defaults: { _controller: VenteBundle:Produit:list }
 
 
 ajout:
-    path:     /ajout
-    defaults: { _controller: VenteBundle:Commande:ajoutcP }
+  path:     /ajout
+  defaults: { _controller: VenteBundle:Commande:ajoutcP }
 
 
 listeC:
@@ -70,6 +70,29 @@ update:
 delete:
   path:     /remove/{id}
   defaults: { _controller: VenteBundle:Commande:remove }
+
+
+
+
+up:
+  path:     /up/{reference}
+  defaults: { _controller: VenteBundle:Cart:updat }
+
+
+listco:
+  path:     /listcom
+  defaults: { _controller: VenteBundle:Commande:show }
+
+
+detail-commande:
+  path:     /detailss/{id}
+  defaults: { _controller: VenteBundle:Commande:detail }
+
+
+pdf:
+  path:     /pdf
+  defaults: { _controller: VenteBundle:Commande:pdf }
+
 
 
 

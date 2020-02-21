@@ -1,0 +1,73 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+<div class="container">
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+
+    {{ form_row(form.plainPassword) }}
+    {{ form_row(form.nom , {'attr': {'width': '50'}}) }}
+
+    {{ form_row(form.prenom) }}
+    {{ form_row(form.tel) }}
+    {{ form_row(form.ville) }}
+    {{ form_row(form.type) }}
+    {{ form_row(form.roles) }}
+
+
+
+
+
+
+</div>
+
+<div>
+    <input type="submit" value="{{ 'registration.submit'|trans }}" />
+</div>
+<style>
+    form input {
+
+      
+        outline:none;
+        border:1px solid #bbb;
+        border-radius:20px;
+        display:inline-block;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        -webkit-transition:0.2s ease all;
+        -moz-transition:0.2s ease all;
+        -ms-transition:0.2s ease all;
+        -o-transition:0.2s ease all;
+        transition:0.2s ease all;
+    }
+
+    form input[type=text]:focus,
+    form input[type="password"]:focus {
+        border-color:cornflowerblue;
+    }
+
+    input[type=submit] {
+        background: #0088cc;
+        border:none;
+        color:white;
+        cursor:pointer;
+        display:inline-block;
+
+        -webkit-transition:0.2s ease all;
+        -moz-transition:0.2s ease all;
+        -ms-transition:0.2s ease all;
+        -o-transition:0.2s ease all;
+        transition:0.2s ease all;
+    }
+
+    input[type=submit]:hover {
+        opacity:0.8;
+    }
+
+    input[type="submit"]:active {
+        opacity:0.4;
+    }
+</style>
+{{ form_end(form) }}

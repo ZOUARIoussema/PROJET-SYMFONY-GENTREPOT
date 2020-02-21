@@ -3,6 +3,7 @@
 namespace VenteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * BonLivraison
@@ -11,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="VenteBundle\Repository\BonLivraisonRepository")
  */
 class BonLivraison
+
 {
     /**
      * @var int
@@ -23,21 +25,42 @@ class BonLivraison
 
 
     /**
-     * @ORM\Column(name="adresseLivraison", type="string")
+     * @ORM\Column(name="adresseLivraison", type="string",nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      min = 4,
+     *      max = 30,
+     *      minMessage = "Your first name must be at least {{ limit }} characters long",
+     *      maxMessage = "Your first name cannot be longer than {{ limit }} characters")
      */
+
     private $adresseLivraison;
 
 
 
     /**
-     * @ORM\Column(name="etat", type="string")
+     * @ORM\Column(name="etat", type="string",nullable=true)
      */
     private $etat;
+    /**
+     * @ORM\ManyToOne(targetEntity="logistiqueBundle\Entity\ordremission")
+     * @ORM\JoinColumn(name="id_ordremission",referencedColumnName="id",nullable=true)
+     */
+
+    private $id_ordemission;
+
+    /**
+     * @return mixed
+     */
+    public function getIdOrdemission()
+    {
+        return $this->id_ordemission;
+    }
 
 
 
     /**
-     * @ORM\Column(name="dateCreation", type="date")
+     * @ORM\Column(name="dateCreation", type="date",nullable=true)
      */
     private $dateCreation;
 
@@ -92,7 +115,26 @@ class BonLivraison
     }
 
 
+    /**
+     * @ORM\Column(name="datesortie", type="date",nullable=true)
+     */
+    private $datesortie;
 
+    /**
+     * @return mixed
+     */
+    public function getDatesortie()
+    {
+        return $this->datesortie;
+    }
+
+    /**
+     * @param mixed $datesortie
+     */
+    public function setDatesortie($datesortie)
+    {
+        $this->datesortie = $datesortie;
+    }
 
 
 
@@ -112,7 +154,7 @@ class BonLivraison
     /**
      *
      * @ORM\OneToOne(targetEntity="CommandeVente")
-     * @ORM\JoinColumn(name="idC_Commande",referencedColumnName="id")
+     * @ORM\JoinColumn(name="idC_Commande",referencedColumnName="id",nullable=true)
      */
     private $BonLivraison;
 
@@ -131,5 +173,49 @@ class BonLivraison
     {
         $this->BonLivraison = $BonLivraison;
     }
-}
 
+    /**
+     * @ORM\Column(name="nom", type="string",nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @ORM\Column(name="prenom", type="string",nullable=true)
+     */
+    private $prenom;
+
+    /**
+     * @return mixed
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param mixed $prenom
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+
+
+}

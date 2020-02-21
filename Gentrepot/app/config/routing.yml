@@ -35,5 +35,7 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
-
+mgilet_notification:
+    resource: "@MgiletNotificationBundle/Controller/"
+    prefix: /notifications
 

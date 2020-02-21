@@ -14,7 +14,7 @@
                             <ul>
                                 <li data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide">
 
-                                    <img src=""{{ asset('uploads/images/unnamed.jpg') }}" alt="" width="1920" height="656" data-lazyload="images/slideshow/slider_1920x657.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg">
+                                    <img src={{ asset('uploads/images/unnamed.jpg') }}" alt="" width="1920" height="656" data-lazyload="images/slideshow/slider_1920x657.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg">
 
                                     <div class="tp-caption home1-small-black tp-resizeme" data-x="586" data-y="217" data-width="['auto']" data-height="['auto']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];rZ:0deg;sX:0.7;sY:0.7;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="500" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05">
                                     </div>
@@ -836,59 +836,59 @@
                             <div class="products-masonry-wrap">
                                 <ul class="products masonry-products row masonry-wrap">
                                     {% for e in list %}
-                                            <li class="product masonry-item product-no-border style-2 col-md-3 col-sm-6 nulla maecenas">
-                                        <div class="product-container">
-                                            <figure>
-                                                <div class="product-wrap">
-                                                    <div class="product-images">
-                                                        <span class="onsale">Sale!</span>
-                                                        <div class="shop-loop-thumbnail shop-loop-front-thumbnail">
-                                                            <a href="shop-detail-1.html"><img width="450" height="450" src="{{ asset('uploads/images/' ~ e.getImage1) }}" alt=""/></a>
-                                                        </div>
-                                                        <div class="shop-loop-thumbnail shop-loop-back-thumbnail">
-                                                            <a href="shop-detail-1.html"><img width="450" height="450" src="{{ asset('uploads/images/' ~ e.getImage) }}" alt=""/></a>
+                                        <li class="product masonry-item product-no-border style-2 col-md-3 col-sm-6 nulla maecenas">
+                                            <div class="product-container">
+                                                <figure>
+                                                    <div class="product-wrap">
+                                                        <div class="product-images">
+                                                            <span class="onsale">Sale!</span>
+                                                            <div class="shop-loop-thumbnail shop-loop-front-thumbnail">
+                                                                <a href="shop-detail-1.html"><img width="450" height="450" src="{{ asset('uploads/images/' ~ e.getImage1) }}" alt=""/></a>
+                                                            </div>
+                                                            <div class="shop-loop-thumbnail shop-loop-back-thumbnail">
+                                                                <a href="shop-detail-1.html"><img width="450" height="450" src="{{ asset('uploads/images/' ~ e.getImage) }}" alt=""/></a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <figcaption>
-                                                    <div class="shop-loop-product-info">
-                                                        <div class="info-meta clearfix">
-                                                            <div class="star-rating">
-                                                                <span style="width:80%"></span>
+                                                    <figcaption>
+                                                        <div class="shop-loop-product-info">
+                                                            <div class="info-meta clearfix">
+                                                                <div class="star-rating">
+                                                                    <span style="width:80%"></span>
+                                                                </div>
+                                                                <div class="loop-add-to-wishlist">
+                                                                    <div class="yith-wcwl-add-to-wishlist">
+                                                                        <div class="yith-wcwl-add-button">
+                                                                            <a href="#" class="add_to_wishlist">
+                                                                                Add to Wishlist
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="loop-add-to-wishlist">
-                                                                <div class="yith-wcwl-add-to-wishlist">
-                                                                    <div class="yith-wcwl-add-button">
-                                                                        <a href="#" class="add_to_wishlist">
-                                                                            Add to Wishlist
+                                                            <div class="info-content-wrap">
+                                                                <h3 class="product_title">
+                                                                    <a href="shop-detail-1.html">{{ e.libelle }}</a>
+                                                                </h3>
+                                                                <div class="info-price">
+																			<span class="price">
+                                                                                <span class="amount">{{  e.prixVente }}</span>
+
+																			</span>
+                                                                </div>
+                                                                <div class="loop-action">
+                                                                    <div class="loop-add-to-cart">
+                                                                        <a href="{{path('panier' , {'reference':e.reference}) }}" class="add_to_cart_button">
+                                                                            Add to cart
                                                                         </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="info-content-wrap">
-                                                            <h3 class="product_title">
-                                                                <a href="shop-detail-1.html">{{ e.libelle }}</a>
-                                                            </h3>
-                                                            <div class="info-price">
-																			<span class="price">
-                                                                                <span class="amount">{{  e.prixVente }}</span>
-
-																			</span>
-                                                            </div>
-                                                            <div class="loop-action">
-                                                                <div class="loop-add-to-cart">
-                                                                    <a href="{{path('panier' , {'reference':e.reference}) }}" class="add_to_cart_button">
-                                                                        Add to cart
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                    </li>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </li>
                                     {% endfor %}
 
                                 </ul>
@@ -1526,5 +1526,5 @@
                     </div>
                 </div>
 
-{% endblock %}
+                {% endblock %}
 

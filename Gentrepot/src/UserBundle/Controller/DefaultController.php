@@ -61,9 +61,11 @@ class DefaultController extends Controller
             ));
         }
         if ($authChecker->isGranted('ROLE_RVENT')) {
-
+            $list=$this->getDoctrine()->getManager()
+                ->getRepository(User::class)->findAll();
             return $this->render('@Vente/Default/list.html.twig', array(
                 'user' => $user,
+                'liste'=>$list,
 
 
             ));

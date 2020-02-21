@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +73,9 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/mgilet/notification-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XX11k2ee2q35t04JA9qFuUhCD6" />
@@ -85,7 +89,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/Default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -102,11 +106,11 @@
       <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PIDEV\PROJET-SYMFONY-GENTREPOT\Gentrepot\app\Resources\FOSUserBundle\views" />
+      <recent name="C:\xampp\htdocs\PIDEV\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\UserBundle\Form" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views\Default" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\TresorerieBundle\Resources\views" />
-      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\StockageBundle\Resources\views" />
-      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\AchatBundle\Resources\config" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -126,7 +130,6 @@
       <command value="s doctrine:generate:form AchatBundle:Fournisseur" />
       <command value="s doctrine:database:drop" />
       <command value="s doctrine:database:drop --force" />
-      <command value="s doctrine:database:create" />
       <command value="s doctrine:generate:form StockageBundle:CommandeDAprovisionnement" />
       <command value="s doctrine:generate:form StockageBundle:Emplacement" />
       <command value="s doctrine:generate:form StockageBundle:Entrepot" />
@@ -147,7 +150,6 @@
       <command value="s doctrine:generate:form TresorerieBundle:ReglementFournisseur" />
       <command value="s generate:bundle" />
       <command value="s doctrine:generate:entity" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form logistique:aideChauffeur" />
       <command value="s doctrine:generate:form logistiqueBundle:aideChauffeur" />
       <command value="s doctrine:generate:form logistiqueBundle:chauffeur" />
@@ -156,21 +158,26 @@
       <command value="s generate:controller" />
       <command value="run server" />
       <command value="s server:stop" />
-      <command value="s cache:clear" />
-      <command value="c dump-autoload" />
       <command value="s doctrine:generate:form VenteBundle:FactureVente" />
       <command value="s server:run" />
+      <command value="c install" />
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:schema:create" />
+      <command value="s doctrine:generate:form VenteBundle:BonLivraison" />
+      <command value="c dump-autoload" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s cache:clear" />
     </option>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -217,6 +224,12 @@
       <workItem from="1581999567130" duration="2048000" />
       <workItem from="1582002579532" duration="105000" />
       <workItem from="1582003319337" duration="30000" />
+      <workItem from="1582041541906" duration="24992000" />
+      <workItem from="1582133211854" duration="12220000" />
+      <workItem from="1582155502565" duration="464000" />
+      <workItem from="1582155994761" duration="1628000" />
+      <workItem from="1582216831163" duration="1124000" />
+      <workItem from="1582218152594" duration="37018000" />
     </task>
     <servers />
   </component>
@@ -289,5 +302,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582000762166" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/VenteBundle/Resources/views/Default/pdf.html.twig</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

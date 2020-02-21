@@ -44,7 +44,7 @@ class CommandeVente
     private $etat;
 
     /**
-     * @ORM\Column(name="tauxRemise", type="float")
+     * @ORM\Column(name="tauxRemise", type="float",nullable=true)
      */
 
     private $tauxRemise;
@@ -127,8 +127,10 @@ class CommandeVente
     {
         return(string) $this->id ;   }
 
-
-private  $lignecommandes;
+    /**
+     * @ORM\Column(name="lignecommande", type="array")
+     */
+    private  $lignecommandes;
 
     /**
      * @return mixed
@@ -162,14 +164,32 @@ private  $lignecommandes;
         return $this->id;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
 
 
 
 
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $user;
 
 
 
 
 }
-
