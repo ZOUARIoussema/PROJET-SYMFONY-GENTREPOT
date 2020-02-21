@@ -9,12 +9,10 @@ achat:
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /
+
 vente:
     resource: "@VenteBundle/Resources/config/routing.yml"
     prefix:   /
-
-
-
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 test:
@@ -27,10 +25,6 @@ stockage:
 tresorerie:
     resource: "@TresorerieBundle/Resources/config/routing.yml"
     prefix:   /tresorerie
-
-
-
-
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

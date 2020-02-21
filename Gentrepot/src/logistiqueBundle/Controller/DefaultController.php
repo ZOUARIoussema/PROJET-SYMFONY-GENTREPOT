@@ -2,10 +2,14 @@
 
 namespace logistiqueBundle\Controller;
 
+use logistiqueBundle\Entity\ordremission;
 use logistiqueBundle\Entity\vehicule;
 use logistiqueBundle\Form\vehiculeType;
+use Symfony\Component\HttpFoundation\Response;
+use VenteBundle\Entity\BonLivraison;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use VenteBundle\Repository\BonLivraisonRepository;
 
 class DefaultController extends Controller
 {
@@ -56,5 +60,44 @@ class DefaultController extends Controller
             return $this->redirectToRoute('vehiculeaff');
         }
         return $this->render('@logistique/Default/updatev.html.twig',array('form'=>$form->createView()));
+    }
+    public function afficheBonAction(){
+        $em= $this->getDoctrine()->getManager();
+        /*$bon = $em->getRepository("VenteBundle:BonLivraison")->findallLivrasionBydate();
+        $em=$this->getDoctrine()->getManager();
+
+        foreach ($bon as $b ){
+            $order = new ordremission();
+            $order->setDatecreation(new \DateTime());
+            $order->setDateretour(new \DateTime());
+
+            $order->setDatesortie($b->getDatesortie());
+            $em->persist($order);
+
+            $em->flush($order);
+        }*/
+        $B= $em->getRepository("VenteBundle:BonLivraison")->findalllivrasion();
+
+        return $this->render('@logistique/Default/afficheBon.html.twig',array('bon'=>$B));
+    }
+
+    public function PDFAction()
+    {
+        $snappy = $this->get('knp_snappy.pdf');
+
+        $html = $this->renderView('logistiqueBundle:Default:template.html.twig', array(
+            'title' => 'Hello World !'
+        ));
+
+        $filename = 'myFirstSnappyPDF';
+
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+            )
+        );
     }
 }

@@ -2,7 +2,6 @@ logistique_homepage:
     path:     /
     defaults: { _controller: logistiqueBundle:Default:index }
 
-
 vehicule_ajout:
     path:     /ajout
     defaults: { _controller: logistiqueBundle:Default:ajoutvehicule}
@@ -47,3 +46,17 @@ ajoutordreM:
 afficheordre:
     path:     /affM
     defaults: { _controller: logistiqueBundle:ordremission:afficheordre}
+
+afficheBon:
+    path:     /afficheBon
+    defaults: { _controller: logistiqueBundle:Default:afficheBon}
+
+pdf:
+    path:     /pdf
+    defaults: { _controller: logistiqueBundle:Default:PDF}
+updateM:
+    path:     /updateM/{id}
+    defaults: { _controller: logistiqueBundle:ordremission:updateM}
+deleteM:
+    path:     /updateM/{id}
+    defaults: { _controller: logistiqueBundle:ordremission:deleteM}
