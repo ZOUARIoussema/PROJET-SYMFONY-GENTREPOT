@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/guiforodrigue.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/CommandeDAprovisionnement/passerCommandeDApprovisionnement.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/InventaireStock/faireInventaireStock.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/InventaireStock/listeInventaireStock.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/LignePerte/modifierLignePerte.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Perte/listePerte.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Perte/passerPerte.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/ResponsableStockage/indexStockage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/ResponsableStockage/indexStockage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/CommandeDAprovisionnementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/CommandeDAprovisionnementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/EmplacementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/EmplacementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/EntrepotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/EntrepotController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/InventaireStockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/InventaireStockController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/LignePerteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/LignePerteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/PerteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/PerteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Entity/CommandeDAprovisionnement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Entity/CommandeDAprovisionnement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Entity/LignePerte.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Entity/LignePerte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Form/CommandeDAprovisionnementType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Form/CommandeDAprovisionnementType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Form/EmplacementType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Form/EmplacementType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Form/EntrepotType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Form/EntrepotType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Form/InventaireStockType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Form/InventaireStockType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Form/LigneCommandeDApprovisionnementType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Form/LigneCommandeDApprovisionnementType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Form/LignePerteType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Form/LignePerteType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Emplacement/ajouterEmplacement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Emplacement/ajouterEmplacement.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Entrepot/ajouterEntrepot.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Entrepot/ajouterEntrepot.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,11 +163,12 @@
       <command value="s cache:clear" />
       <command value="s doctrine:generate:form VenteBundle:FactureVente" />
       <command value="c install" />
-      <command value="c dump-autoload" />
       <command value="s server:run" />
       <command value="s doctrine:database:create" />
       <command value="schema update --force" />
       <command value="s doctrine:schema:update --force" />
+      <command value="c require cmen/google-charts-bundle" />
+      <command value="c dump-autoload" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -256,7 +232,7 @@
       <workItem from="1582162070894" duration="33223000" />
       <workItem from="1582219084478" duration="8515000" />
       <workItem from="1582241400940" duration="13883000" />
-      <workItem from="1582261667443" duration="8334000" />
+      <workItem from="1582261667443" duration="9284000" />
     </task>
     <servers />
   </component>
