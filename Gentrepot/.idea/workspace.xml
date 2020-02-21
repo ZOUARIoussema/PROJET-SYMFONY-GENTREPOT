@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/FactureAchatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Controller/FactureAchatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/RecouvrementClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Controller/RecouvrementClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/ReglementFournisseurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Controller/ReglementFournisseurController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/consulterListeFactureAchat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Facture/consulterListeFactureAchat.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/ajouterInventaire.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/ajouterInventaire.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/listeInventaire.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/listeInventaire.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/listeFactureVente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/LettreDeRelance/listeFactureVente.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeFactureVente.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeFactureVente.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/InventaireCaisseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Controller/InventaireCaisseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/modifierInventaire.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/Inventaire/modifierInventaire.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeRecouvrementClient.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/RecouvrementClient/listeRecouvrementClient.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/ReglementF/listeReglement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/views/ReglementF/listeReglement.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,6 +237,8 @@
       <workItem from="1582229096419" duration="11915000" />
       <workItem from="1582242716059" duration="7284000" />
       <workItem from="1582250444703" duration="156000" />
+      <workItem from="1582274154270" duration="1440000" />
+      <workItem from="1582278539440" duration="1100000" />
     </task>
     <servers />
   </component>
@@ -315,10 +310,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582055476393" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582250445709">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582278549708">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582250445709" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582278549708" />
     <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582234097160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

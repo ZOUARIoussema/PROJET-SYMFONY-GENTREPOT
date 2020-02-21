@@ -91,7 +91,7 @@ class InventaireCaisseController extends Controller
 
 
         $form->handleRequest($request);
-        if ($form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($i);
             $ef->flush();

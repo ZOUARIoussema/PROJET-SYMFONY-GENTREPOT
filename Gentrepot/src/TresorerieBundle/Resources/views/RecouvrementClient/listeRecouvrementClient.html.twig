@@ -19,10 +19,13 @@
             <td>{{r.facture.id}}</td>
 
 
+            {% if ("now"|date('Y-m-d') ==  r.dateCreation|date('Y-m-d') ) %}
+
             <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRecouvrementEspece',{'id':r.id}) }}">modifier<span class="btn-label btn-label-right"><i class="fa fa-pencil"></i></span></a>
              <a class="btn btn-danger btn-xs btn-labeled" href="{{ path('tresorerie_supprimerRecouvrementEspece',{'id':r.id}) }}">supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a> </td>
 
 
+            {% endif %}
 
 
 
@@ -55,11 +58,15 @@
 
 
 
+            {% if ("now"|date('Y-m-d') ==  r.dateCreation|date('Y-m-d') ) %}
+
 
             <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_modifierRecouvrementCheque',{'id':r.id}) }}">modifier<span class="btn-label btn-label-right"><i class="fa fa-pencil"></i></span></a>
             <a class="btn btn-danger btn-xs btn-labeled" href="{{ path('tresorerie_supprimerRecouvrementCheque',{'id':r.id}) }}">supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a> </td>
 
 
+
+            {% endif %}
 
 
 
