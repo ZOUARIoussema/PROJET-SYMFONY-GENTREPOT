@@ -12,6 +12,45 @@ class FactureAchatRepository extends \Doctrine\ORM\EntityRepository
 {
 
 
+    public  function calculerTotalAchat(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (f.totalTTC) 
+                            FROM TresorerieBundle:FactureAchat f 
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
+    public  function calculerTotalPaye(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (f.totalPaye) 
+                            FROM TresorerieBundle:FactureAchat f 
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
+
+    public  function calculerRestelPaye(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (f.resteAPaye) 
+                            FROM TresorerieBundle:FactureAchat f 
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
+
+
 
 
 }

@@ -30,7 +30,7 @@
             <td>{{f.dateEchaillancePaiement|date('Y-m-d')}}</td>
 
 
-            {#{% if(f.etat == "non_paye") %}#}
+             {% if(f.resteAPaye == 0) %}
 
 
 
@@ -39,7 +39,7 @@
 
 
 
-            {#{% endif %}#}
+             {% endif %}
 
 
 

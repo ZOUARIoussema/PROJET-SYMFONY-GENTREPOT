@@ -365,7 +365,14 @@ class ReglementFournisseurController extends Controller
 
         $reglementC= $this->getDoctrine()-> getRepository(ReglementFournisseurCheque::class)-> findAll();
 
-        return $this->render("@Tresorerie/ReglementF/listeReglement.html.twig",array ('reglemente'=>$reglementE,'reglementc'=>$reglementC));
+
+
+        $totalCheque=$this->getDoctrine()->getRepository(ReglementFournisseurCheque::class)->calculerTotal();
+
+        $totalEspece=$this->getDoctrine()->getRepository(ReglementFournisseurEspece::class)->calculerTotal();
+
+
+        return $this->render("@Tresorerie/ReglementF/listeReglement.html.twig",array ('reglemente'=>$reglementE,'reglementc'=>$reglementC,'tespece'=>$totalEspece,'tcheque'=>$totalCheque));
     }
 
 

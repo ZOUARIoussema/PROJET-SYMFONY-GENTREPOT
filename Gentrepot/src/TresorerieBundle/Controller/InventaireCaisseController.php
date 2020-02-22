@@ -20,8 +20,26 @@ class InventaireCaisseController extends Controller
 
         $inventaireCaisses = $em->getRepository('TresorerieBundle:InventaireCaisse')->findAll();
 
+
+        $totalT=$this->getDoctrine()->getRepository(InventaireCaisse::class)->calculerTotalSoldeT();
+
+        $totalC=$this->getDoctrine()->getRepository(InventaireCaisse::class)->calculerTotalSoldeCheque();
+
+
+        $totalEspece=$this->getDoctrine()->getRepository(InventaireCaisse::class)->calculerTotalSoldesoldeEspece();
+
+
+        $totalE=$this->getDoctrine()->getRepository(InventaireCaisse::class)->calculerTotalecart();
+
+        $totalcalculer=$this->getDoctrine()->getRepository(InventaireCaisse::class)->calculerTotalcalculer();
+
+
+
+
+
         return $this->render("@Tresorerie/Inventaire/listeInventaire.html.twig", array(
-            'inventaireCaisses' => $inventaireCaisses,
+            'inventaireCaisses' => $inventaireCaisses,'tt'=>$totalT,'tc'=>$totalC,'tespece'=>$totalEspece,'tecart'=>$totalE,
+            "tcalculer"=>$totalcalculer
         ));
     }
 

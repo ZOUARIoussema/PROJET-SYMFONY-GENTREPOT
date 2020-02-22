@@ -3,20 +3,23 @@
 
 {% block content %}
 
-    <h2>liste des recouvrement client par espece  </h2>
+    <h2>Liste des recouvrement client par espece  </h2>
 
     <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
-            <th>montant</th>
+
             <th>Date creation</th>
             <th>facture</th>
+
+            <th>montant</th>
             <th>Action</th>
 
         </tr>
         {%for r in roucouvrementE %}  <tr>
-            <td>{{r.montant}}</td>
+
             <td>{{r.dateCreation|date('Y-m-d')}}</td>
             <td>{{r.facture.id}}</td>
+            <td>{{r.montant}}</td>
 
 
             {% if ("now"|date('Y-m-d') ==  r.dateCreation|date('Y-m-d') ) %}
@@ -32,29 +35,51 @@
 
         </tr>    {% endfor %}
 
+
+        <tr>
+
+
+            <td>Total   </td>
+
+            <td>   </td>
+
+
+
+
+            <td>{{ tespece }}  </td>
+
+
+
+
+
+        </tr>
+
     </table>
 
     <a class="label label-success label-bordered" href="{{ path('tresorerie_ajouterRecouvrementEspece') }}">Ajouter recouvrement en espece</a>
 
 
-    <h2>liste des recouvrement client par cheque  </h2>
+    <h2>Liste des recouvrement client par cheque  </h2>
 
     <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
-            <th>montant</th>
+
             <th>Date creation</th>
             <th>numero cheque</th>
             <th>Date cheque</th>
             <th>facture</th>
+
+            <th>montant</th>
             <th>Action</th>
 
         </tr>
         {%for r in recouvrementC %}  <tr>
-            <td>{{r.montant}}</td>
+
             <td>{{r.dateCreation|date('Y-m-d')}}</td>
             <td>{{r.numeroCheque}}</td>
             <td>{{r.dateCheque|date('Y-m-d')}}</td>
             <td>{{r.facture.id}}</td>
+            <td>{{r.montant}}</td>
 
 
 
@@ -70,8 +95,33 @@
 
 
 
-
         </tr>    {% endfor %}
+
+
+
+        <tr>
+
+
+            <td>Total   </td>
+
+            <td>   </td>
+
+            <td>   </td>
+            <td>   </td>
+
+            <td>{{ tcheque }}  </td>
+
+
+
+
+
+
+
+
+        </tr>
+
+
+
 
     </table>
 

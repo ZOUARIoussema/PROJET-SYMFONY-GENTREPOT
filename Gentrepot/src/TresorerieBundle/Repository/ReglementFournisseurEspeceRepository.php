@@ -10,4 +10,18 @@ namespace TresorerieBundle\Repository;
  */
 class ReglementFournisseurEspeceRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
+    public  function calculerTotal(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (r.montant) 
+                            FROM TresorerieBundle:ReglementFournisseurEspece r
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
 }

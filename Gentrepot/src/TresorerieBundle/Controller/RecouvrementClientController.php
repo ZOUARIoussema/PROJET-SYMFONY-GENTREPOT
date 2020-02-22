@@ -325,7 +325,16 @@ class RecouvrementClientController extends Controller
 
         $recouvrementC= $this->getDoctrine()-> getRepository(RecouvrementClientCheque::class)-> findAll();
 
-        return $this->render("@Tresorerie/RecouvrementClient/listeRecouvrementClient.html.twig",array ('roucouvrementE'=>$recouvrementE,'recouvrementC'=>$recouvrementC));
+        $totalCheque=$this->getDoctrine()->getRepository(RecouvrementClientCheque::class)->calculerTotal();
+
+        $totalEspece=$this->getDoctrine()->getRepository(RecouvrementClientEspece::class)->calculerTotal();
+
+
+
+
+
+
+        return $this->render("@Tresorerie/RecouvrementClient/listeRecouvrementClient.html.twig",array ('roucouvrementE'=>$recouvrementE,'recouvrementC'=>$recouvrementC,'tcheque'=>$totalCheque,'tespece'=>$totalEspece));
     }
 
     public function deleteRecouvrementEspeceAction($id)

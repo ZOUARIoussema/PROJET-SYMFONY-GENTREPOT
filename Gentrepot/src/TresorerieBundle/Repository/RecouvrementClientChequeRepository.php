@@ -23,4 +23,18 @@ class RecouvrementClientChequeRepository extends \Doctrine\ORM\EntityRepository
 
 
     }
+
+
+    public  function calculerTotal(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (r.montant) 
+                            FROM TresorerieBundle:RecouvrementClientCheque r
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
 }

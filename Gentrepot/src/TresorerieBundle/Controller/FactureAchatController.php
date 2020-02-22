@@ -110,7 +110,14 @@ class FactureAchatController extends Controller
     {
         $factures= $this->getDoctrine()-> getRepository(FactureAchat::class)-> findAll();
 
-        return $this->render("@Tresorerie/Facture/listeFactureAchat.html.twig",array ('factures'=>$factures));
+        $achat=$this->getDoctrine()->getRepository(FactureAchat::class)->calculerTotalAchat();
+
+        $restt=$this->getDoctrine()->getRepository(FactureAchat::class)->calculerRestelPaye();
+
+        $payert=$this->getDoctrine()->getRepository(FactureAchat::class)->calculerRestelPaye();
+
+
+        return $this->render("@Tresorerie/Facture/listeFactureAchat.html.twig",array ('factures'=>$factures,'tachat'=>$achat,'trest'=>$restt,'tpayer'=>$payert));
     }
 
     public function afficherCommandeAction( )

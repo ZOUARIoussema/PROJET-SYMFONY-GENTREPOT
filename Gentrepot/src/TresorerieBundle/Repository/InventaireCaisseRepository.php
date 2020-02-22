@@ -10,4 +10,75 @@ namespace TresorerieBundle\Repository;
  */
 class InventaireCaisseRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
+    public  function calculerTotalSoldeT(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (i.soldeTheorique) 
+                            FROM TresorerieBundle:InventaireCaisse i
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
+
+    public  function calculerTotalSoldeCheque(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (i.soldeCheque )
+                            FROM TresorerieBundle:InventaireCaisse i
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
+
+    public  function calculerTotalSoldesoldeEspece(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (i.soldeEspece )
+                            FROM TresorerieBundle:InventaireCaisse i
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
+
+    public  function calculerTotalecart(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (i.ecart)
+                            FROM TresorerieBundle:InventaireCaisse i
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
+
+    public  function calculerTotalcalculer(){
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (i.soldeCalculer)
+                            FROM TresorerieBundle:InventaireCaisse i
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+
+    }
+
+
+
+
+
 }

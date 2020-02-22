@@ -16,7 +16,7 @@
 
 
             <table id="tab1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
-                <thead>
+
                 <tr>
 
 
@@ -30,8 +30,8 @@
                     <th>Action</th>
 
         </tr>
-        </thead>
-        <tbody>
+
+
         {% for inventaireCaisse in inventaireCaisses %}
             <tr>
 
@@ -63,7 +63,28 @@
 
             </tr>
         {% endfor %}
-        </tbody>
+
+
+                <tr>
+
+
+                    <td>Total</td>
+
+                    <td>{{ tc }}</td>
+                    <td>{{tespece  }}</td>
+                    <td>{{ tt }}</td>
+
+                    <td>{{ tcalculer }}</td>
+
+                    <td>{{ tecart }}</td>
+
+
+
+
+
+
+                </tr>
+
     </table>
 
 
