@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <h2>liste des commandes d'approvisionnements </h2>
+    <h2>Liste des commandes d'approvisionnements </h2>
 
     <table border="1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
         <tr>
@@ -24,6 +24,7 @@
 
 
 
+            {% if(c.etat!='facturer') %}
 
 
 
@@ -31,6 +32,8 @@
 
 
 
+
+            {% endif %}
 
 
 

@@ -42,16 +42,12 @@ class FactureAchatController extends Controller
 
 
 
-            $commmade->setEtat='facturer';
+            $commmade->setEtat('facturer');
 
-
-
-
-
-            $this->getDoctrine()->getRepository(CommandeDAprovisionnement::class)->updateE($commmade->getNumeroC());
 
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($facture);
+            $ef->flush();
             $ef->persist($commmade);
             $ef->flush();
 
