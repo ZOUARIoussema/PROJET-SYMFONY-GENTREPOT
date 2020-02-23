@@ -1,25 +1,16 @@
 {% extends 'backend/achat/index.html.twig' %}
 {% block title %} ajout produit  {% endblock  %}
 {% block content %}
-
-
-    <div class="col-md-8 col-md-offset-2">
-    <div class="panel">
-    <div class="panel-heading">
-        <div class="panel-title">
-            <h4 style="text-align: center">Creer un produit</h4>
-        </div>
-
-    </div>
-
+    <h1>Creer un produit</h1>
 
     {{ form_start(form) }}
-    {{ form_widget(form) }}
-
-    <button type="submit" class="btn btn-success btn-labeled ">ajouter<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
     {{ form_end(form) }}
 
-    <br>
-    <a href="{{ path('produit_index') }}"><button type="button" class="btn btn-success">retour à la liste</button></a>
-
+    <ul>
+        <li>
+            <a href="{{ path('produit_index') }}">Back to the list</a>
+        </li>
+    </ul>
 {% endblock %}

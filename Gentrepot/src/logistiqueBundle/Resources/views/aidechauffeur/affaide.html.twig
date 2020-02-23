@@ -16,21 +16,22 @@
     <table class="table table-striped">
     {% block body %}
     <table border="2">
+    <tr>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>adresse</th>
+        <th>cin</th>
+        <th></th>
+    </tr>
+    {% for e in aidechauffeur %}
         <tr>
-            <th>nom</th>
-            <th>prenom</th>
-            <th>adresse</th>
-            <th>cin</th>
-            <th>Action</th>
+            <td>{{ e.nom}}</td>
+            <td>{{ e.prenom}}</td>
+            <td>{{ e.adresse}}</td>
+            <td>{{ e.cin}}</td>
+            <td><a href="{{ path('deleteAchauf',{'cin':e.cin})}}"> Supprimer </a></td>
+            <td><a href="{{ path('updateAchauf',{'cin':e.cin})}}"> modifier</a></td>
         </tr>
-        {% for e in aidechauffeur %}
-            <tr>
-                <td>{{ e.nom}}</td>
-                <td>{{ e.prenom}}</td>
-                <td>{{ e.adresse}}</td>
-                <td>{{ e.cin}}</td>
-                <td><a href="{{ path('deleteAchauf',{'cin':e.cin})}}"> Supprimer </a><br><a href="{{ path('updateAchauf',{'cin':e.cin})}}"> modifier</a></td>
-            </tr>
-        {% endfor %}
-        {% endblock %}
+    {% endfor %}
+{% endblock %}
 {% endblock %}

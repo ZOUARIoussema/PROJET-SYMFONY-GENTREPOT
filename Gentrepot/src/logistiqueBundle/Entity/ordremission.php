@@ -105,25 +105,44 @@ class ordremission
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="datecreation", type="datetime")
+     * @ORM\Column(name="datecreation", type="date")
      */
     private $datecreation;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="datesortie", type="datetime")
+     * @ORM\Column(name="datesortie", type="date")
      */
     private $datesortie;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateretour", type="datetime")
+     * @ORM\Column(name="dateretour", type="date")
      */
     private $dateretour;
 
+
+
+
     /**
+     * Set datecreation
+     *
+     * @param \DateTime $datecreation
+     *
+     * @return ordremission
+     */
+    public function setDatecreation($datecreation)
+    {
+        $this->datecreation = $datecreation;
+
+        return $this;
+    }
+
+    /**
+     * Get datecreation
+     *
      * @return \DateTime
      */
     public function getDatecreation()
@@ -132,14 +151,22 @@ class ordremission
     }
 
     /**
-     * @param \DateTime $datecreation
+     * Set datesortie
+     *
+     * @param \DateTime $datesortie
+     *
+     * @return ordremission
      */
-    public function setDatecreation($datecreation)
+    public function setDatesortie($datesortie)
     {
-        $this->datecreation = $datecreation;
+        $this->datesortie = $datesortie;
+
+        return $this;
     }
 
     /**
+     * Get datesortie
+     *
      * @return \DateTime
      */
     public function getDatesortie()
@@ -148,42 +175,27 @@ class ordremission
     }
 
     /**
-     * @param \DateTime $datesortie
+     * Set dateretour
+     *
+     * @param \DateTime $dateretour
+     *
+     * @return ordremission
      */
-    public function setDatesortie($datesortie)
+    public function setDateretour($dateretour)
     {
-        $this->datesortie = $datesortie;
+        $this->dateretour = $dateretour;
+
+        return $this;
     }
 
     /**
+     * Get dateretour
+     *
      * @return \DateTime
      */
     public function getDateretour()
     {
         return $this->dateretour;
     }
-
-    /**
-     * @param \DateTime $dateretour
-     */
-    public function setDateretour($dateretour)
-    {
-        $this->dateretour = $dateretour;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 

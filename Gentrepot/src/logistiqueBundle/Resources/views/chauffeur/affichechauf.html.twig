@@ -1,5 +1,5 @@
 {% extends 'backend/logistique/index.html.twig' %}
-{% block title %} liste des chauffeurs{% endblock %}
+{% block title %} liste des Aide chauffeurs{% endblock %}
 {% block content %}
     <section class="section">
 
@@ -8,7 +8,7 @@
     <div class="panel">
     <div class="panel-heading">
         <div class="panel-title">
-            <h5 style="text-align: center">Liste des chauffeurs</h5>
+            <h5 style="text-align: center">Liste des Aide chauffeurs</h5>
         </div>
     </div>
     <div class="panel-body p-20">
@@ -16,31 +16,31 @@
     <table class="table table-striped">
     {% block body %}
 
-        <table class="table table-striped" border="1" width="1200">
-            <thead>
-            <tr>
-                <th>nom</th>
-                <th>prenom</th>
-                <th>adresse</th>
-                <th>cin</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for e in chauffeur %}
-                <tr>
-                    <td>{{ e.nom}}</td>
-                    <td>{{ e.prenom}}</td>
-                    <td>{{ e.adresse}}</td>
-                    <td>{{ e.cin}}</td>
-                    <td><a href="{{ path('deletechauf',{'cin':e.cin})}}"> Supprimer </a><br><a href="{{ path('updatechauf',{'cin':e.cin})}}"> modifier</a></td>
+                <table class="table table-striped" border="1" width="1200">
+                    <thead>
+                    <tr>
+                        <th>nom</th>
+                        <th>prenom</th>
+                        <th>adresse</th>
+                        <th>cin</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for e in chauffeur %}
+                    <tr>
+                        <td>{{ e.nom}}</td>
+                        <td>{{ e.prenom}}</td>
+                        <td>{{ e.adresse}}</td>
+                        <td>{{ e.cin}}</td>
+                        <td><a href="{{ path('deletechauf',{'cin':e.cin})}}"> Supprimer </a>
+                         <td><a href="{{ path('updatechauf',{'cin':e.cin})}}"> modifier</a></td>
+                    </tr>
+                    {% endfor %}
 
-                </tr>
-            {% endfor %}
-
-            </tbody>
-        </table>
+                    </tbody>
+                </table>
 
 
-    {% endblock %}
+{% endblock %}
 {% endblock %}

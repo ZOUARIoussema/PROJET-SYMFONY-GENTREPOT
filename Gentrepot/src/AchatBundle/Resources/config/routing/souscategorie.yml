@@ -3,11 +3,6 @@ souscategorie_index:
     defaults: { _controller: "AchatBundle:SousCategorieAchat:index" }
     methods:  GET
 
-souscategorie_prod:
-    path:     /prods
-    defaults: { _controller: "AchatBundle:ProduitAchat:prods" }
-    methods:  GET
-
 souscategorie_show:
     path:     /{id}/show
     defaults: { _controller: "AchatBundle:SousCategorieAchat:show" }

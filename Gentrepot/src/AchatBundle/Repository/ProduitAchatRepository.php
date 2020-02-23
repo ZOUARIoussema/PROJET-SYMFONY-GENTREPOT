@@ -2,8 +2,6 @@
 
 namespace AchatBundle\Repository;
 
-use AchatBundle\Entity\SousCategorieAchat;
-
 /**
  * ProduitAchatRepository
  *
@@ -12,35 +10,4 @@ use AchatBundle\Entity\SousCategorieAchat;
  */
 class ProduitAchatRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findallProduitAchat(){
-        $qb = $this->createQueryBuilder('p')
-            ->orderBy('p.prixVente', 'ASC');
-        $query = $qb->getQuery();
-
-        return $query->execute();
-    }
-
-    public function findallProduitAchatD(){
-        $qb = $this->createQueryBuilder('p')
-            ->orderBy('p.prixVente', 'DESC');
-        $query = $qb->getQuery();
-
-        return $query->execute();
-    }
-    public function findBys(SousCategorieAchat $cat){
-        $qb = $this->createQueryBuilder('p')
-            ->where('p.sousCategorie = :c')
-            ->setParameter('c',$cat);
-        $query = $qb->getQuery();
-
-        return $query->execute();
-    }
-    public function findEntitiesByString($str){
-        return $this->getEntityManager()->createQuery(
-            'SELECT p
-            FROM AchatBundle:ProduitAchat p
-            WHERE p.libelle LIKE :str')->setParameter('str','%'.$str.'%')->getResult();
-
-    }
-
 }

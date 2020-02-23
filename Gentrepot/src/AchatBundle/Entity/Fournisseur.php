@@ -3,7 +3,6 @@
 namespace AchatBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Fournisseur
@@ -33,14 +32,6 @@ class Fournisseur
      * @var int
      *
      * @ORM\Column(name="numeroTelephone", type="integer")
-     * @Assert\Length(
-     *      min = 8,
-     *      max = 8,
-     *      minMessage = "le numero de telephone doit comporter 8 chiffres",
-     *      maxMessage = "le numero de telephone doit comporter 8 chiffres"
-     *
-     * )
-     ** @Assert\NotNull(message="Le numero de telephone doit etre non null ")
      */
     private $numeroTelephone;
 

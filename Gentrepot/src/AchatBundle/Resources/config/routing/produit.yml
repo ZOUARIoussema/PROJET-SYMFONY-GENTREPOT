@@ -22,28 +22,3 @@ produit_delete:
     path:     /{reference}/delete
     defaults: { _controller: "AchatBundle:ProduitAchat:delete" }
     methods:  DELETE
-
-produit_affiche:
-    path:     /affiche
-    defaults: { _controller: "AchatBundle:ProduitAchat:affiche" }
-
-produit_shop:
-    path:     /shop
-    defaults: { _controller: "AchatBundle:ProduitAchat:shop" }
-
-produit_shopT:
-    path:     /shopT
-    defaults: { _controller: "AchatBundle:ProduitAchat:shopT" }
-
-produit_shopTr:
-    path:     /shopTr
-    defaults: { _controller: "AchatBundle:ProduitAchat:shopTr" }
-
-ajax_search:
-    path:     /search
-    defaults: { _controller: "AchatBundle:ProduitAchat:search" }
-
-produit_detail:
-    path:     /{reference}/detail
-    defaults: { _controller: "AchatBundle:ProduitAchat:detail" }
-    methods:  GET

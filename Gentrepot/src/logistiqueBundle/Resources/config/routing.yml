@@ -47,15 +47,3 @@ ajoutordreM:
 afficheordre:
     path:     /affM
     defaults: { _controller: logistiqueBundle:ordremission:afficheordre}
-updateM:
-    path:     /updateM/{id}
-    defaults: { _controller: logistiqueBundle:ordremission:updateM}
-deleteM:
-    path:     /deleteM/{id}
-    defaults: { _controller: logistiqueBundle:ordremission:deleteM}
-afficheBon:
-    path:     /afficheBon
-    defaults: { _controller: logistiqueBundle:Default:afficheBon}
-pdf:
-    path:     /pdf/{id}
-    defaults: { _controller: logistiqueBundle:ordremission:PDF}

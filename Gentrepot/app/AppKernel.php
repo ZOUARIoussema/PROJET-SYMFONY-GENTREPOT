@@ -24,8 +24,6 @@ class AppKernel extends Kernel
             new StockageBundle\StockageBundle(),
             new VenteBundle\VenteBundle(),
             new AchatBundle\AchatBundle(),
-            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
-
             new logistiqueBundle\logistiqueBundle(),
             new FOS\MessageBundle\FOSMessageBundle(),
             new MessageBundle\MessageBundle(),

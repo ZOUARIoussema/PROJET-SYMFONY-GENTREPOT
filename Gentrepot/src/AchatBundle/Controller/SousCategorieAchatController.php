@@ -28,17 +28,6 @@ class SousCategorieAchatController extends Controller
         ));
     }
 
-    public function indAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $sousCategories = $em->getRepository('AchatBundle:SousCategorieAchat')->findAll();
-
-        return $this->render('@Achat/ProduitAchat/shop.html.twig', array(
-            'sousCategories' => $sousCategories,
-        ));
-    }
-
     /**
      * Creates a new sousCategorie entity.
      *
@@ -49,7 +38,7 @@ class SousCategorieAchatController extends Controller
         $form = $this->createForm('AchatBundle\Form\SousCategorieAchatType', $sousCategorie);
 
 
-        $form->add('categorie',EntityType::class,['class'=>CategorieAchat::class,'choice_label'=>'nom','multiple'=>false]);
+        $form->add('categorie',EntityType::class,['class'=>CategorieAchat::class,'choice_label'=>'id','multiple'=>false]);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
@@ -136,13 +125,6 @@ class SousCategorieAchatController extends Controller
             ->setMethod('DELETE')
             ->getForm()
             ;
-    }
-
-    public function prodsAction(CategorieAchat $cat)
-    {
-        $sousCategories = $this->getDoctrine()->getManager()
-            ->getRepository(SousCategorieAchat::class)->findBys($cat);
-        return ($this->render('@Achat/produit/shop.html.twig', array("sousCategories" => $sousCategories,'categorie' => $cat,)));
     }
 
 }

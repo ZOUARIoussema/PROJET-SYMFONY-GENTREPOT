@@ -2,61 +2,52 @@
 {% block title %} fournisseur  {% endblock  %}
 
 {% block content %}
-
-<div class="col-md-8 col-md-offset-2">
-    <div class="panel">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <h2 style="text-align: center">Fournisseur</h2>
-            </div>
-
-        </div>
-
-
-
+    <h1>Fournisseur</h1>
 
     <table>
         <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ fournisseur.id }}</td>
-        </tr>
-        <tr>
-            <th>Raisonsociale</th>
-            <td>{{ fournisseur.raisonSociale }}</td>
-        </tr>
-        <tr>
-            <th>Numerotelephone</th>
-            <td>{{ fournisseur.numeroTelephone }}</td>
-        </tr>
-        <tr>
-            <th>Adresse</th>
-            <td>{{ fournisseur.adresse }}</td>
-        </tr>
-        <tr>
-            <th>Adressemail</th>
-            <td>{{ fournisseur.adresseMail }}</td>
-        </tr>
-        <tr>
-            <th>Matriculefiscale</th>
-            <td>{{ fournisseur.matriculeFiscale }}</td>
-        </tr>
-        <tr>
-            <th>Codepostale</th>
-            <td>{{ fournisseur.codePostale }}</td>
-        </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ fournisseur.id }}</td>
+            </tr>
+            <tr>
+                <th>Raisonsociale</th>
+                <td>{{ fournisseur.raisonSociale }}</td>
+            </tr>
+            <tr>
+                <th>Numerotelephone</th>
+                <td>{{ fournisseur.numeroTelephone }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ fournisseur.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Adressemail</th>
+                <td>{{ fournisseur.adresseMail }}</td>
+            </tr>
+            <tr>
+                <th>Matriculefiscale</th>
+                <td>{{ fournisseur.matriculeFiscale }}</td>
+            </tr>
+            <tr>
+                <th>Codepostale</th>
+                <td>{{ fournisseur.codePostale }}</td>
+            </tr>
         </tbody>
     </table>
 
-
-            <a href="{{ path('fournisseur_index') }}"><button type="button" class="btn btn-primary btn-wide">
-                    Retour a la liste</button></a>
-
-            <a href="{{ path('fournisseur_edit', { 'id': fournisseur.id }) }}"><button type="button" class="btn btn-primary btn-wide">
-                    Modifier</button></a>
-
+    <ul>
+        <li>
+            <a href="{{ path('fournisseur_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('fournisseur_edit', { 'id': fournisseur.id }) }}">Edit</a>
+        </li>
+        <li>
             {{ form_start(delete_form) }}
-            <input type="submit" value="Delete">
+                <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
-
+        </li>
+    </ul>
 {% endblock %}

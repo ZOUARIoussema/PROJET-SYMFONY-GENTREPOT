@@ -8,11 +8,6 @@ categorie_show:
     defaults: { _controller: "AchatBundle:CategorieAchat:show" }
     methods:  GET
 
-categorie_cat:
-    path:     /{id}/prods
-    defaults: { _controller: "AchatBundle:SousCategorieAchat:prods" }
-    methods:  GET
-
 categorie_new:
     path:     /new
     defaults: { _controller: "AchatBundle:CategorieAchat:new" }
