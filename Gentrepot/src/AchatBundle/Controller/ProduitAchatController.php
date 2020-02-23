@@ -300,18 +300,31 @@ class ProduitAchatController extends Controller
         $result = $paginator->paginate(
             $list,
             $request->query->getInt('page',1),
-            $request->query->getInt('limit',1)
+            $request->query->getInt('limit',3)
         );
 
         return $this->render('@Achat/produit/shop.html.twig', array('list' => $result,
             'categories'=>$categories));
     }
 
-    public function shopTAction()
+    public function shopTAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('AchatBundle:ProduitAchat')->findallProduitAchat();
         $list = $this->getDoctrine()->getManager()
-            ->getRepository(ProduitAchat::class)->findallProduitAchat();
-        return ($this->render('@Achat/produit/shop.html.twig', array("list" => $list)));
+            ->getRepository(ProduitAchat::class)->findAll();
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $list,
+            $request->query->getInt('page',1),
+            $request->query->getInt('limit',3)
+        );
+
+        return $this->render('@Achat/produit/shop.html.twig', array('list' => $result,
+            'categories'=>$categories));
     }
 
     public function shopTrAction()

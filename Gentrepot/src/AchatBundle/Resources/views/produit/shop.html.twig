@@ -165,67 +165,7 @@
                                                 <a href="{{ path('produit_shop') }}" class="dropdown-hover">
                                                     <span class="underline">Shop</span> <span class="caret"></span>
                                                 </a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="mega-col-3">
-                                                        <h3 class="megamenu-title">Women <span class="caret"></span></h3>
-                                                        <ul class="dropdown-menu">
 
-                                                        </ul>
-                                                    </li>
-                                                    <li class="mega-col-3">
-                                                        <h3 class="megamenu-title">Brands <span class="caret"></span></h3>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="shop-by-category.html">Evans</a></li>
-                                                            <li><a href="shop-by-category.html">Adesso</a></li>
-                                                            <li><a href="shop-by-category.html">Crocs</a></li>
-                                                            <li><a href="shop-by-category.html">Carvela</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="mega-col-3">
-                                                        <h3 class="megamenu-title">Features <span class="caret"></span></h3>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="shop-fullwidth.html">Products Style 2</a></li>
-                                                            <li><a href="shop-detail-2.html">Single Product Style 2</a></li>
-                                                            <li><a href="shop-masonry.html">Shop Masonry</a></li>
-                                                            <li><a href="my-account.html">My Account</a></li>
-                                                            <li><a href="cart.html">Cart</a></li>
-                                                            <li><a href="cart-empty.html">Empty Cart</a></li>
-                                                            <li><a href="wishlist.html">Wishlist</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="mega-col-3">
-                                                        <h3 class="megamenu-title">Mega Menu</h3>
-                                                        <div class="megamenu-sidebar">
-                                                            <div class="widget widget_products commerce">
-                                                                <ul class="product_list_widget">
-                                                                    <li>
-                                                                        <a href="shop-detail-1.html">
-                                                                            <img src="images/products/thumb/product_60x60.jpg" alt="2a"/>
-                                                                            <span class="product-title">Cras rhoncus duis viverra</span>
-                                                                        </a>
-                                                                        <span class="amount">&pound;12.00</span>
-                                                                        &ndash;
-                                                                        <span class="amount">&pound;20.00</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="shop-detail-1.html">
-                                                                            <img src="images/products/thumb/product_60x60.jpg" alt="3a"/>
-                                                                            <span class="product-title">Morbi sed egestas</span>
-                                                                        </a>
-                                                                        <span class="amount">&pound;123.00</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="shop-detail-1.html">
-                                                                            <img src="images/products/thumb/product_60x60.jpg" alt="4a"/>
-                                                                            <span class="product-title">Creamy Spring Pasta</span>
-                                                                        </a>
-                                                                        <span class="amount">&pound;321.00</span>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
                                             </li>
                                             <li><a href="collection.html"><span class="underline">Collections</span></a></li>
                                             <li class="menu-item-has-children dropdown">
@@ -310,9 +250,6 @@
                                     <div class="form-flat-select">
                                         <select name="orderby" class="orderby" onchange="location = this.value;">
                                             <option value="" selected='selected'>Default sorting</option>
-                                            <option value="">Sort by popularity</option>
-                                            <option value="">Sort by average rating</option>
-                                            <option value="">Sort by newness</option>
                                             <option value="{{ path('produit_shopT') }}">Sort by price: low to high</option>
                                             <option value="{{ path('produit_shopTr') }}">Sort by price: high to low</option>
                                         </select>
