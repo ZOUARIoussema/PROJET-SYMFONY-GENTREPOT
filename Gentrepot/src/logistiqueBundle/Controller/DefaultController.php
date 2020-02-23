@@ -2,6 +2,7 @@
 
 namespace logistiqueBundle\Controller;
 
+use logistiqueBundle\Entity\ordremission;
 use logistiqueBundle\Entity\vehicule;
 use logistiqueBundle\Form\vehiculeType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -57,4 +58,27 @@ class DefaultController extends Controller
         }
         return $this->render('@logistique/Default/updatev.html.twig',array('form'=>$form->createView()));
     }
-}
+    public function afficheBonAction(){
+        $em= $this->getDoctrine()->getManager();
+        $em=$this->getDoctrine()->getManager();
+        $B= $em->getRepository("VenteBundle:BonLivraison")->findalllivrasion();
+       // $bon = $em->getRepository("VenteBundle:BonLivraison")->findallLivrasionBydate();
+        $em=$this->getDoctrine()->getManager();
+
+        /*foreach ($bon as $b ){
+            $order = new ordremission();
+            $order->setDatecreation(new \DateTime(date('Y-m-d H:i:s')));
+            $order->setDateretour( new \DateTime(date('Y-m-d H:i:s')));
+            $order->setDatesortie($b->getDatesortie());
+            $order->setId($b->getDatesortie());
+
+            $em->persist($order);
+
+            $em->flush($order);
+        }*/
+        $B= $em->getRepository("VenteBundle:BonLivraison")->findalllivrasion();
+
+        return $this->render('@logistique/Default/afficheBon.html.twig',array('bon'=>$B));
+    }
+
+    }
