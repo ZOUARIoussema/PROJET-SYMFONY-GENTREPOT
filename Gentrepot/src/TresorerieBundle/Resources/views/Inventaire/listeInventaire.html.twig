@@ -8,15 +8,47 @@
 
 {% block content %}
 
+{% block javascripts  %}
 
 
 
-    <h1>Liste des inbentaires caisses</h1>
+    <script src="{{ asset('backend/js/prism/prism.js')  }}"></script>
+    <script src="{{ asset('backend/js/DataTables/datatables.min.js')  }}"></script>
+    <script src="{{ asset('backend/js/main.js')  }}"></script>
+
+    <script>
+
+
+
+
+
+        $(function($) {
+
+
+            $('#tab1').DataTable( {
+                "scrollY":        "300px",
+                "scrollCollapse": true,
+                "paging":         false
+            } );
+
+
+        });
+    </script>
+
+
+
+        {% endblock %}
+
+
+
+    <h1 class="panel-body p-20">Liste des inbentaires caisses</h1>
 
 
 
             <table id="tab1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
 
+
+                <thead>
                 <tr>
 
 
@@ -30,9 +62,12 @@
                     <th>Action</th>
 
         </tr>
+                </thead>
 
 
         {% for inventaireCaisse in inventaireCaisses %}
+
+                <tbody>
             <tr>
 
                 <td>{% if inventaireCaisse.dateCreation %}{{ inventaireCaisse.dateCreation|date('Y-m-d ') }}{% endif %}</td>
@@ -62,6 +97,7 @@
 
 
             </tr>
+                </tbody>
         {% endfor %}
 
 
