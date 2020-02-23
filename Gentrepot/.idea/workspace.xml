@@ -276,6 +276,7 @@
       <workItem from="1582488688179" duration="1228000" />
       <workItem from="1582238409877" duration="32418000" />
       <workItem from="1582362788743" duration="1896000" />
+      <workItem from="1582497053028" duration="441000" />
     </task>
     <servers />
   </component>
@@ -371,10 +372,10 @@
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582488990234" />
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582486839133">
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582238857547" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582363376887">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582497061306">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582363376887" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582497061306" />
     <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582254168647">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
