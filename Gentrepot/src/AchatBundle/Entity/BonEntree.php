@@ -35,6 +35,7 @@ class BonEntree
      */
     private $date;
 
+    
     /**
      * @return mixed
      */
