@@ -2,67 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Gentrepot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gentrepot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_18_02_2020_17_00_c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_18_02_2020_20_51_c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_20_02_2020_23_40_c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_22_02_2020_3_45_PM_c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_18_02_2020_17_10_s.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_18_02_2020_20_51_s.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_20_02_2020_23_47_s.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_22_02_2020_3_50_PM_s.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_23_02_2020_16_28_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_23_02_2020_21_12_c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/logistique/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/logistique/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/frontend/Achat/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Controller/ProduitAchatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Controller/ProduitAchatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Controller/SousCategorieAchatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Controller/SousCategorieAchatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Entity/Fournisseur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Entity/Fournisseur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Entity/ProduitAchat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Entity/ProduitAchat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Repository/ProduitAchatRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Repository/ProduitAchatRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Repository/SousCategorieAchatRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Repository/SousCategorieAchatRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/config/routing/categorie.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/config/routing/categorie.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/config/routing/produit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/config/routing/produit.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/config/routing/souscategorie.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/config/routing/souscategorie.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/categorie/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/categorie/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/fournisseur/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/fournisseur/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/fournisseur/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/fournisseur/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/fournisseur/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/fournisseur/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/fournisseur/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/fournisseur/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/affiche.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/detail.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/shop.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/produit/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/prods.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Resources/views/souscategorie/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Entity/BonLivraison.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VenteBundle/Entity/BonLivraison.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Repository/BonLivraisonRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VenteBundle/Repository/BonLivraisonRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Controller/ordremissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Controller/ordremissionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Entity/ordremission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Entity/ordremission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/Default/afficheBon.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/Default/template.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/aidechauffeur/affaide.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/aidechauffeur/affaide.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/aidechauffeur/ajoutAchauf.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/aidechauffeur/ajoutAchauf.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/chauffeur/affichechauf.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/chauffeur/affichechauf.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/chauffeur/ajoutch.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/chauffeur/ajoutch.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/ordremission/afficheordre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/ordremission/afficheordre.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/ordremission/ajoutordreM.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/logistiqueBundle/Resources/views/ordremission/ajoutordreM.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/uploads/images/gentropot.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,9 +187,9 @@
       <command value="s cache:clear" />
       <command value="s doctrine:schema:validate" />
       <command value="s doctrine:schema:update --force" />
+      <command value="c dump-autoload" />
+      <command value="c dump-autoload" />
       <command value="c install" />
-      <command value="c dump-autoload" />
-      <command value="c dump-autoload" />
     </option>
   </component>
   <component name="ServiceViewManager">
@@ -329,6 +273,7 @@
       <workItem from="1582400195222" duration="11361000" />
       <workItem from="1582471601918" duration="2025000" />
       <workItem from="1582486827311" duration="1042000" />
+      <workItem from="1582488688179" duration="1228000" />
     </task>
     <servers />
   </component>
@@ -372,46 +317,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="540" y="118" width="620" height="318" key="#com.jetbrains.php.framework.ui.FailedToParseDialog/0.0.1366.728@0.0.1366.728" timestamp="1582472213406" />
-    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1582471681696">
+    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1582488778501">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582471681696" />
-    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1582487636233">
+    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582488778501" />
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1582488989390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582487636233" />
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1582473770971">
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582488989390" />
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1582490467477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582473770971" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1582473770971">
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582490467477" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1582490467476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582473770971" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1582473770971">
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582490467476" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1582490467476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582473770971" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1582473770971">
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582490467476" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1582490467477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582473770971" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1582487645437">
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582490467477" />
+    <state x="62" y="0" key="SettingsEditor" timestamp="1582488993533">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582487645437" />
-    <state x="494" y="265" key="SymfonyPathDialog" timestamp="1582487637247">
+    <state x="62" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582488993533" />
+    <state x="494" y="265" key="SymfonyPathDialog" timestamp="1582488990234">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582487637247" />
+    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582488990234" />
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582486839133">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582486839133" />
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582472277158">
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582488808385">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582472277158" />
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582488808385" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
