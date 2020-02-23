@@ -236,5 +236,78 @@ class ProduitAchatController extends Controller
             ->getRepository(Produit::class)->findAll();
         return ($this->render('@Vente/Produit/listP.html.twig',array ("produits"=>$list)));}
 
+    
+        
+        
+
+    public function shopAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('AchatBundle:CategorieAchat')->findAll();
+        $list = $this->getDoctrine()->getManager()
+            ->getRepository(ProduitAchat::class)->findAll();
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $list,
+            $request->query->getInt('page',1),
+            $request->query->getInt('limit',3)
+        );
+
+        return $this->render('@Achat/produit/shop.html.twig', array('list' => $result,
+            'categories'=>$categories));
+    }
+
+    public function shopTAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('AchatBundle:ProduitAchat')->findallProduitAchat();
+        $list = $this->getDoctrine()->getManager()
+            ->getRepository(ProduitAchat::class)->findAll();
+        /**
+         * @var $paginator \Knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $list,
+            $request->query->getInt('page',1),
+            $request->query->getInt('limit',3)
+        );
+
+        return $this->render('@Achat/produit/shop.html.twig', array('list' => $result,
+            'categories'=>$categories));
+    }
+
+    public function shopTrAction()
+    {
+        $list = $this->getDoctrine()->getManager()
+            ->getRepository(ProduitAchat::class)->findallProduitAchatD();
+        return ($this->render('@Achat/produit/shop.html.twig', array("list" => $list)));
+    }
+
+    public function searchAction( Request $request){
+        $em= $this->getDoctrine()->getManager();
+        $requestString = $request->get('q');
+        $posts = $em->getRepository('AchatBundle:ProduitAchat')->findEntitiesByString($requestString);
+        if(!$posts)
+        {
+            $result['posts']['error']="Post not found :(";
+        }
+        else {
+            $result['posts']=$this->getRealEntities($posts);
+        }
+        return new Response(json_encode($result));
+    }
+
+    public function getRealEntities($posts){
+        foreach ($posts as $posts){
+            $realEntities[$posts->getId()] =[$posts->getImage(), $posts->getLibelle()];
+
+        }
+        return $realEntities;
+    }
+
 
 }
