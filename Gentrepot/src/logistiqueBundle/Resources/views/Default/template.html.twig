@@ -1,0 +1,31 @@
+<h1 style="text-align: center;color: black"> Ordre de mission </h1><br>
+<img src="C:\wamp64\www\pidev\PROJET-SYMFONY-GENTREPOT\Gentrepot\web\uploads\images\gentropot.jpg" alt="" width="221" height="228" data-ww="221px" data-hh="228px" >
+<div class="container-fluida" style="align-content: center">
+
+    <table width="1000" height="300"  border="6">
+        <tr width="500">
+            <th>date de Creation</th>
+            <th>date de sortie</th>
+            <th>date de retour </th>
+            <th>Aide chaffeur </th>
+            <th>chaffeur </th>
+            <th>vehicule </th>
+        </tr>
+        {% for e in date %}
+            <br><h3 style="text-align: center;color: black">Numéro ordre mission : {{  e.id}}</h3><br>
+            <br>
+            <br>
+            <br>
+            <tr>
+                <td>{{ e.datecreation|date}}</td>
+                <td>{{ e.datesortie|date}}</td>
+                <td>{{ e.dateretour|date}}</td>
+                <td>{{ e.getIdAidechauff()}}</td>
+                <td>{{ e.getIdChauffeur()}}</td>
+                <td>{{ e.getIdVehicule()}}</td>
+
+            </tr>
+        {% endfor %}
+    </table>
+
+</div>

@@ -7,6 +7,7 @@
     "content-hash": "d69a26515b11ac5ef1414c95717c74e5",
     "content-hash": "68695e2463ee18857cae3821fd500584",
     "content-hash": "a5718cb937cc9f772dbda45f781f18f3",
+    "content-hash": "7ecb7edddb4b2cd6837c7d58e45a2d21",
     "packages": [
         {
             "name": "composer/ca-bundle",
