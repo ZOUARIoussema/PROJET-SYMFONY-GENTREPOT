@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new VenteBundle\VenteBundle(),
             new AchatBundle\AchatBundle(),
             new logistiqueBundle\logistiqueBundle(),
+            new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
 
         ];
 

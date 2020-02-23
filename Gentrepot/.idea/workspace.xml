@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/CommandeDAprovisionnement/listeCommandeDAprovisionnement.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/ResponsableStockage/indexStockage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/ResponsableStockage/indexStockage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Entity/ProduitAchat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Entity/ProduitAchat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/CommandeDAprovisionnementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/CommandeDAprovisionnementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/EntrepotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/EntrepotController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/LigneCommandeDApprovisionnementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/LigneCommandeDApprovisionnementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/PerteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/PerteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Entity/LignePerte.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Entity/LignePerte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Form/LignePerteType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Form/LignePerteType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Entrepot/listeEntrepot.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Entrepot/listeEntrepot.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Entrepot/modifierEntrepot.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Entrepot/modifierEntrepot.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Perte/listePerte.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Perte/listePerte.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Perte/passerPerte.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Perte/passerPerte.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +238,7 @@
       <workItem from="1582288148411" duration="822000" />
       <workItem from="1582315899531" duration="1784000" />
       <workItem from="1582357306886" duration="33250000" />
-      <workItem from="1582446860744" duration="7499000" />
+      <workItem from="1582446860744" duration="8142000" />
     </task>
     <servers />
   </component>
