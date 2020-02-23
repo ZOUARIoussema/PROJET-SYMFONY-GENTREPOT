@@ -5,6 +5,7 @@ namespace UserBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use UserBundle\Entity\User;
+use VenteBundle\Entity\Produit;
 
 class DefaultController extends Controller
 {
@@ -90,8 +91,12 @@ class DefaultController extends Controller
 
             ));
         }
-        return $this->render('@Test/backend/ahmed.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,]);
+        $list=$this->getDoctrine()->getManager()
+            ->getRepository(Produit::class)->findAll();
+        return $this->render('@Vente/produit/affiche.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'list'=>$list,
+            ]);
 
     }
 

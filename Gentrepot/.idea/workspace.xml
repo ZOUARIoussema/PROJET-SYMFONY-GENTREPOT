@@ -101,16 +101,16 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
-      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\PIDEV\PROJET-SYMFONY-GENTREPOT\Gentrepot\app\Resources\FOSUserBundle\views" />
       <recent name="C:\xampp\htdocs\PIDEV\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\UserBundle\Form" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views\Default" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\TresorerieBundle\Resources\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
+      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -164,9 +164,12 @@
       <command value="s doctrine:database:create" />
       <command value="s doctrine:schema:create" />
       <command value="s doctrine:generate:form VenteBundle:BonLivraison" />
-      <command value="c dump-autoload" />
-      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:schema:validate User" />
+      <command value="s doctrine:schema:validate --skip-mapping" />
       <command value="s cache:clear" />
+      <command value="c dump-autoload" />
+      <command value="s doctrine:schema:validate" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -229,7 +232,10 @@
       <workItem from="1582155502565" duration="464000" />
       <workItem from="1582155994761" duration="1628000" />
       <workItem from="1582216831163" duration="1124000" />
-      <workItem from="1582218152594" duration="37018000" />
+      <workItem from="1582218152594" duration="38191000" />
+      <workItem from="1582376204566" duration="33000" />
+      <workItem from="1582376299392" duration="640000" />
+      <workItem from="1582400195222" duration="11361000" />
     </task>
     <servers />
   </component>

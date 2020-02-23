@@ -62,5 +62,11 @@ class Categorie
     {
         return $this->nom;
     }
+
+    /**
+     * @ORM\Column(name="aa",type="string")
+     */
+
+    private $aa;
 }
 
