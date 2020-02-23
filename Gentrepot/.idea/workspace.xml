@@ -80,6 +80,8 @@
       <path value="$PROJECT_DIR$/vendor/mgilet/notification-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XX11k2ee2q35t04JA9qFuUhCD6" />
@@ -98,6 +100,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/FOSMessageBundle" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/views/frontend/Achat" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -120,6 +123,11 @@
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views\Default" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\TresorerieBundle\Resources\views" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\app\Resources\views\frontend\Achat" />
+      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views\Default" />
+      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views" />
+      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\TresorerieBundle\Resources\views" />
+      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\StockageBundle\Resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
@@ -189,6 +197,13 @@
       <command value="c dump-autoload" />
       <command value="s doctrine:schema:validate" />
       <command value="s doctrine:schema:update --force" />
+      <command value="s cache:clear" />
+      <command value="s doctrine:generate:form VenteBundle:FactureVente" />
+      <command value="s server:run" />
+      <command value="c install" />
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="c dump-autoload" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -270,6 +285,7 @@
       <workItem from="1582376204566" duration="33000" />
       <workItem from="1582376299392" duration="640000" />
       <workItem from="1582400195222" duration="11361000" />
+      <workItem from="1582238409877" duration="25846000" />
     </task>
     <servers />
   </component>
@@ -360,5 +376,49 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582267466423">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582267466423" />
+    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1582238428115">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582238428115" />
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1582238855663">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582238855663" />
+    <state width="1323" height="187" key="GridCell.Tab.0.bottom" timestamp="1582243378971">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582243378971" />
+    <state width="1323" height="187" key="GridCell.Tab.0.center" timestamp="1582243378971">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="187" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582243378971" />
+    <state width="1323" height="187" key="GridCell.Tab.0.left" timestamp="1582243378971">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="187" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582243378971" />
+    <state width="1323" height="187" key="GridCell.Tab.0.right" timestamp="1582243378971">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582243378971" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1582238864796">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582238864796" />
+    <state x="494" y="265" key="SymfonyPathDialog" timestamp="1582238857547">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582238857547" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582003319747">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582003319747" />
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582254168647">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582254168647" />
   </component>
 </project>
