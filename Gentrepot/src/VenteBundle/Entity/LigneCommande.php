@@ -35,14 +35,14 @@ class LigneCommande
     /**
      *
      * @ORM\ManyToOne(targetEntity="Produit")
-     * @ORM\JoinColumn(name="idP_produit",referencedColumnName="reference")
+     * @ORM\JoinColumn(name="idP_produit",referencedColumnName="reference",nullable=true)
      */
 
     private $produit;
     /**
      *
      * @ORM\ManyToOne(targetEntity="CommandeVente")
-     * @ORM\JoinColumn(name="id_commande",referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_commande",referencedColumnName="id",nullable=true)
      */
     private $commande;
 
@@ -142,28 +142,47 @@ class LigneCommande
         $this->tva = $tva;
     }
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float",nullable=true)
      */
     private $prix;
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float",nullable=true)
      */
     private $total;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer",nullable=true)
      */
     private $quantite;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float",nullable=true)
      */
-private $tva;
+    private $tva;
 
     public function __toString()
     {
-return(string) $this->produit ;   }
+        return(string) $this->produit ;   }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
 
 
+    /**
+     * @ORM\Column(type="string",nullable=true)
+     */
+    private $user;
 }
-

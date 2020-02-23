@@ -10,4 +10,16 @@ namespace VenteBundle\Repository;
  */
 class LigneCommandeRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findallCommandesByuSER($username): array
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = ' SELECT * FROM ligne_commande p WHERE p.user = :username ';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['username' => $username]);
+
+        // returns an array of arrays (i.e. a raw data set)
+        return $stmt->fetchAll();
+    }
 }

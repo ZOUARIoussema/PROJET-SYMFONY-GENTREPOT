@@ -4,6 +4,8 @@
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +77,9 @@
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/message-bundle" />
+      <path value="$PROJECT_DIR$/vendor/mgilet/notification-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XX11k2ee2q35t04JA9qFuUhCD6" />
@@ -92,6 +97,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/FOSMessageBundle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -103,16 +109,21 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
-      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\PROJET-SYMFONY-GENTREPOT\Gentrepot\app\Resources\FOSMessageBundle" />
       <recent name="C:\xampp\htdocs\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\MessageBundle\Resources\views\Message" />
       <recent name="C:\xampp\htdocs\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\TresorerieBundle\Form" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views\Default" />
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views" />
+      <recent name="C:\xampp\htdocs\PIDEV\PROJET-SYMFONY-GENTREPOT\Gentrepot\app\Resources\FOSUserBundle\views" />
+      <recent name="C:\xampp\htdocs\PIDEV\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\UserBundle\Form" />
+      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views\Default" />
+      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views" />
+      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\TresorerieBundle\Resources\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
+      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -131,6 +142,7 @@
       <command value="s doctrine:generate:form AchatBundle:SousCategorieAchat" />
       <command value="s doctrine:generate:form AchatBundle:Fournisseur" />
       <command value="s doctrine:database:drop" />
+      <command value="s doctrine:database:drop --force" />
       <command value="s doctrine:generate:form StockageBundle:CommandeDAprovisionnement" />
       <command value="s doctrine:generate:form StockageBundle:Emplacement" />
       <command value="s doctrine:generate:form StockageBundle:Entrepot" />
@@ -149,6 +161,8 @@
       <command value="s doctrine:generate:form TresorerieBundle:ReglementFournisseurCheque" />
       <command value="s doctrine:generate:form TresorerieBundle:ReglementFournisseurEspece" />
       <command value="s doctrine:generate:form TresorerieBundle:ReglementFournisseur" />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entity" />
       <command value="s doctrine:generate:form logistique:aideChauffeur" />
       <command value="s doctrine:generate:form logistiqueBundle:aideChauffeur" />
       <command value="s doctrine:generate:form logistiqueBundle:chauffeur" />
@@ -165,18 +179,27 @@
       <command value="s cache:clear" />
       <command value="s doctrine:database:drop --force" />
       <command value="s doctrine:database:create" />
+      <command value="c install" />
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:schema:create" />
+      <command value="s doctrine:generate:form VenteBundle:BonLivraison" />
+      <command value="s doctrine:schema:validate User" />
+      <command value="s doctrine:schema:validate --skip-mapping" />
+      <command value="s cache:clear" />
+      <command value="c dump-autoload" />
+      <command value="s doctrine:schema:validate" />
       <command value="s doctrine:schema:update --force" />
     </option>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -238,6 +261,15 @@
       <workItem from="1582278539440" duration="1100000" />
       <workItem from="1582409113036" duration="9947000" />
       <workItem from="1582465525251" duration="2372000" />
+      <workItem from="1582041541906" duration="24992000" />
+      <workItem from="1582133211854" duration="12220000" />
+      <workItem from="1582155502565" duration="464000" />
+      <workItem from="1582155994761" duration="1628000" />
+      <workItem from="1582216831163" duration="1124000" />
+      <workItem from="1582218152594" duration="38191000" />
+      <workItem from="1582376204566" duration="33000" />
+      <workItem from="1582376299392" duration="640000" />
+      <workItem from="1582400195222" duration="11361000" />
     </task>
     <servers />
   </component>
@@ -317,5 +349,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582234097160" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/VenteBundle/Resources/views/Default/pdf.html.twig</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

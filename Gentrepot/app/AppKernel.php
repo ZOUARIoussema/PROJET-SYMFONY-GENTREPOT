@@ -27,6 +27,8 @@ class AppKernel extends Kernel
             new logistiqueBundle\logistiqueBundle(),
             new FOS\MessageBundle\FOSMessageBundle(),
             new MessageBundle\MessageBundle(),
+            new Mgilet\NotificationBundle\MgiletNotificationBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

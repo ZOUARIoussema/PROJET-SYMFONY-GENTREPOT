@@ -1,0 +1,57 @@
+{% extends 'backend/Vente/index.html.twig' %}
+{% block title %} Liste des Commandes {% endblock %}
+
+
+{% block content %}
+
+    <section class="section">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h5 class="container-fluid" style="text-align: center">Liste des Produits commandé </h5>
+                            </div>
+                        </div>
+                        <div class="panel-body p-20">
+
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Produits</th>
+                                    <th>Quantité</th>
+
+
+
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+                                {% for e in liste %}
+
+                                    <tr>
+
+                                        <td>{{e.produit}}</td>
+                                        <td>{{e.quantite}}</td>
+
+                                    </tr>
+
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

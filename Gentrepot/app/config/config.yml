@@ -47,7 +47,7 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-
+    form_themes: ['bootstrap_4_layout.html.twig']
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -95,7 +95,13 @@ fos_user:
 
     registration:
       form:
-        type: UserBundle\Form\UserType
+        type: UserBundle\Form\RegistrationFormType
+
+knp_snappy:
+    pdf:
+        enabled:    true
+        binary:     /usr/local/bin/wkhtmltopdf #"\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\"" for Windows users
+        options:    []
 
 
 

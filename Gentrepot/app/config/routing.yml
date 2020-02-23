@@ -41,4 +41,7 @@ fos_message:
     prefix: /messageFOS
 
 
+mgilet_notification:
+    resource: "@MgiletNotificationBundle/Controller/"
+    prefix: /notifications
 

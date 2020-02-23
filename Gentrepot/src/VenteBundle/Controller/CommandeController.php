@@ -7,8 +7,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use VenteBundle\Controller\CartController;
 
+use VenteBundle\Entity\BonLivraison;
 use VenteBundle\Entity\CommandeVente;
+use VenteBundle\Entity\FactureVente;
 use VenteBundle\Entity\LigneCommande;
+use VenteBundle\Form\BonLivraisonType;
 use VenteBundle\Form\CommandeVenteType;
 use VenteBundle\Form\LigneCommandeType;
 
@@ -108,4 +111,41 @@ class CommandeController extends Controller
         return $this->redirectToRoute("listeC");
 
     }
+
+
+    public function showAction()
+    {
+        $list=$this->getDoctrine()->getManager()
+            ->getRepository(CommandeVente::class)->findAll();
+        return ($this->render('@Vente/Default/listCommande.html.twig',array ("liste"=>$list)));}
+
+
+
+
+        public function detailAction( $id){
+
+
+        $commande=$this->getDoctrine()->getManager()->getRepository(CommandeVente::class)->find($id);
+
+            return ($this->render('@Vente/Default/DetailsCommande.html.twig',array ("liste"=>$commande->getLignecommandes())));
+
+        }
+
+    public function pdfAction()
+    {
+
+        $em=$this->getDoctrine()->getManager();
+
+        $facture= new FactureVente();
+        $facture->setEtat("non payé");
+        $facture->setDateCreation(new \DateTime());
+        $em->persist($facture);
+        $em->flush();
+
+
+        return ($this->render('@Vente/Default/pdf.html.twig',array ("liste"=>$facture)));}
+
+
+
+
 }

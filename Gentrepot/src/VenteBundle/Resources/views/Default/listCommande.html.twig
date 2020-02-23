@@ -1,0 +1,78 @@
+{% extends 'backend/Vente/index.html.twig' %}
+{% block title %} Liste des Commandes {% endblock %}
+{% block head %}
+<meta http-equiv="refresh" content="5">
+{% endblock %}
+{% block content %}
+
+    <section class="section">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <script
+                            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+                            crossorigin="anonymous"></script>
+
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h5 class="container-fluid" style="text-align: center">Liste des commandes</h5>
+
+
+                            </div>
+                        </div>
+                        <div class="panel-body p-20">
+
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Total</th>
+                                    <th>Date</th>
+                                    <th>etat</th>
+                                    <th>Taux Remise</th>
+                                    <th>User</th>
+                                    <th>Action</th>
+
+
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+                                {% for e in liste %}
+
+                                    <tr>
+                                        <th scope="row">{{e.id}}</th>
+
+                                        <td>{{e.totalC}}</td>
+                                        <td>{{e.dateC | date}}</td>
+                                        <td>{{e.etat}}</td>
+                                        <td>{{e.tauxRemise}}</td>
+
+
+
+                                        <td>{{e.user}}</td>
+
+                               <td>  <a href="{{ path('detail-commande',{'id':e.id}) }}" class="checkout-button button alt wc-forward rounded"> Details </a> </td>
+
+
+                                    </tr>
+
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
