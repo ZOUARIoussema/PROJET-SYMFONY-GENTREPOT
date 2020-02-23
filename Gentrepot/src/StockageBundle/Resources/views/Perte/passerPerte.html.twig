@@ -1,6 +1,6 @@
 {% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
 
-{% block content %}
+{% block  content %}
     {{ form_start(form) }}
     <div class ="container">
          <div class="panel panel-primary">
@@ -10,37 +10,18 @@
 
                 <div class ="panel-body">
                      <table class ="table-condensed">
-                        {#  <tr>
-                               <td>Numéro Perte :</td>
-                               <td>{{ form_widget(form.id) }}</td>
-
-                          </tr>#}
                           <tr>
                               <td>Date Perte :</td>
                               <td>{{ form_widget(form.dateCreation) }}</td>
                           </tr>
                      </table>
-                </div>
-             </div>
-              <tfoot>
-                    <input type="submit" value = "Valider" name="bt" class="btn btn-success">
-              </tfoot>
-         </div>
-    {{ form_end(form) }}
-
-    <div class ="container">
-        <div class="panel panel-primary">
-            <div class ="panel-heading">
-                <i class ="icon_menu"></i>Ajouter une ligne de perte
-            </div>
-
-            <div class ="panel-body">
-                     {{ form_start(f) }}
+                    {{ form_start(f) }}
                      <table class ="table">
                          <tr>
                               <th class="col-md-1">Produit</th>
                               <th class="col-md-1">Qté</th>
                               <th class="col-md-1">Raison Perte</th>
+                             <th class="col-md-1">Action</th>
                          </tr>
                          <tr>
                               <td class ="col-lg-1">
@@ -52,22 +33,47 @@
                               <td class ="col-lg-1">
                                    {{ form_widget(f.raisonPerte) }}
                               </td>
-                         </tr>
-                         <tr>
-                             <th class="col-md-1">Perte</th>
-                         </tr>
-                         <tr>
                              <td class ="col-lg-1">
-                                 {{ form_widget(f.perte) }}
+                                 <input type="submit" value="Add" name ="bt" class="btn btn-success">
                              </td>
                          </tr>
                      </table>
-            </div>
+                     {{ form_end(f) }}
+                     <table class ="table table-condensed">
+                         <thead class="thead-dark">
+                             <tr>
+                                 <th class="col-md-1">Produit</th>
+                                 <th class="col-md-1">Qté</th>
+                                 <th class="col-md-1">Raison Perte</th>
+                                 <th class="col-md-1">Action</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                         {% for lper in lpertes %}
+                             <tr>
+                                 <td class ="col-lg-1">
+                                     {{ lper.getProduit().getReference() }}
+                                 </td>
+                                 <td class ="col-lg-1">
+                                     {{ lper.quantite }}
+                                 </td>
+                                 <td class ="col-lg-1">
+                                     {{ lper.raisonPerte }}
+                                 </td>
+                                 <td class ="col-lg-1"><a href="#" class="btn btn-danger">
+                                 <i class="glyphicon glyphicon-trash"></i>Supprimer</a>
+                                 </td>
+                             </tr>
+                         {% endfor %}
+                         </tbody>
+                         <tfoot>
 
-        </div>
-            <tfoot>
-                 <input type="submit" value="Add" name ="bt" class="btn btn-success" >
-            </tfoot>
-    </div>
-    {{ form_end(f) }}
+                         </tfoot>
+                     </table>
+                    <input type="submit" value = "Valider" name="bt" class="btn btn-success">
+
+                </div>
+             </div>
+          </div>
+    {{ form_end(form) }}
 {% endblock %}

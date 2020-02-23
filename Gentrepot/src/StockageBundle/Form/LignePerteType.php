@@ -16,8 +16,8 @@ class LignePerteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('produit',EntityType::class,['class'=>ProduitAchat::class,'choice_label'=>'libelle','multiple'=>false])
-            ->add('perte',EntityType::class,['class'=>Perte::class,'choice_label'=>'id','multiple'=>false])
+        $builder->add('produit',EntityType::class,['class'=>ProduitAchat::class,'choice_label'=>'reference','multiple'=>false])
+            /*->add('perte',EntityType::class,['class'=>Perte::class,'choice_label'=>'id','multiple'=>false])*/
             ->add('quantite')->add('raisonPerte');
     }/**
      * {@inheritdoc}

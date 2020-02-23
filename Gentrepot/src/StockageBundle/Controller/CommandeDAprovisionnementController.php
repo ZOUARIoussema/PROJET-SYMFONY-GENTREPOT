@@ -42,4 +42,10 @@ class CommandeDAprovisionnementController extends Controller
         return $this->render("@Stockage/CommandeDAprovisionnement/passerCommandeDApprovisionnement.html.twig", array("form" => $form->createView(), "f" => $f->createView()));
 
     }
+    public function listeCommandeDAprovisionnementAction(){
+        $commandes = $this->getDoctrine()->getRepository(CommandeDAprovisionnement::class)->findAll();
+        $lcommandes = $this->getDoctrine()->getRepository(LigneCommandeDApprovisionnement::class)->findAll();
+        return $this->render('@Stockage/CommandeDAprovisionnement/listeCommandeDAprovisionnement.html.twig', array('Tabcoms' => $commandes,'Tablcoms' => $lcommandes));
+
+    }
 }

@@ -4,12 +4,24 @@ stockage_homepage:
 stockage_ajouterEntrepot:
     path:     /ajouterEntrepot
     defaults: { _controller: StockageBundle:Entrepot:ajouterEntrepot }
+stockage_modifierEntrepot:
+    path:     /modifierEntrepot/{matriculeFiscal}
+    defaults: { _controller: StockageBundle:Entrepot:modifierEntrepot }
+stockage_afficherEntrepot:
+    path:     /afficherEntrepot/
+    defaults: { _controller: StockageBundle:Entrepot:afficherEntrepot }
 stockage_passerCommandeDAprovisionnement:
     path:     /passerCommandeDAprovisionnement
     defaults: { _controller: StockageBundle:CommandeDAprovisionnement:passerCommandeDAprovisionnement }
 stockage_listeCommandeDAprovisionnement:
     path:     /listeCommandeDAprovisionnement
     defaults: { _controller: StockageBundle:CommandeDAprovisionnement:listeCommandeDAprovisionnement}
+stockage_modifierLigneCommandeDApprovisionnement:
+    path:     /modifierLigneCommandeDApprovisionnement/{id}
+    defaults: { _controller: StockageBundle:LigneCommandeDApprovisionnement:modifierLigneCommandeDApprovisionnement}
+stockage_supprimerLigneCommandeDApprovisionnement:
+    path:     /supprimerLigneCommandeDApprovisionnement/{id}
+    defaults: { _controller: StockageBundle:LigneCommandeDApprovisionnement:supprimerLigneCommandeDApprovisionnement}
 stockage_passerPerte:
     path:     /passerPerte
     defaults: { _controller: StockageBundle:Perte:passerPerte }

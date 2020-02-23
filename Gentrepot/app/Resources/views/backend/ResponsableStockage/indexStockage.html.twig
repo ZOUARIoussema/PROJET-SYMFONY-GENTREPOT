@@ -142,16 +142,16 @@
                                         <span class="">Second</span>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-file-text"></i> <span>Commandes Approvisionnement</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-pencil-square-o"></i> <span>Commandes Approvisionnement</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
                                             <li><a href="{{ path('stockage_passerCommandeDAprovisionnement') }}"><i class="fa fa-lock"></i> <span>Passer Une Commande</span></a></li>
-                                            {#<li><a href="layout-fixed-top-side.html"><i class="fa fa-thumb-tack"></i> <span>Ajouter Une Ligne de Commande</span></a></li>
-                                            <li><a href="layout-static-top-side.html"><i class="fa fa-unlock"></i> <span>Lister Les Commandes </span></a></li>
-                                            <li><a href="layout-small-sidebar.html"><i class="fa fa-sign-in"></i> <span>Small Sidebar</span></a></li>#}
+                                           <li><a href="{{ path('stockage_listeCommandeDAprovisionnement')}}"><i class="fa fa-thumb-tack"></i> <span>Afficher La Liste Des Commande</span></a></li>
+                                            {#<li><a href="layout-static-top-side.html"><i class="fa fa-unlock"></i> <span>Lister Les Commandes </span></a></li>
+                                           <li><a href="layout-small-sidebar.html"><i class="fa fa-sign-in"></i> <span>Small Sidebar</span></a></li>#}
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-paint-brush"></i> <span>Inventaires Stock</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-check"></i> <span>Inventaires Stock</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
                                             <li><a href="{{ path('stockage_faireInventaireStock') }}"><i class="fa fa-bank"></i> <span>Faire Un Inventaire De Stock</span></a></li>
                                             <li><a href="{{ path('stockage_listeInventaireStock') }}"><i class="fa fa-bell"></i> <span>Gerer Les Inventaires</span></a></li>
@@ -160,9 +160,9 @@
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-map-signs"></i> <span>Espaces</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-square-o"></i> <span>Espaces</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="{{ path('stockage_ajouterEmplacement') }}"><i class="fa fa-newspaper-o "></i> <span>Créer Un Emplacement</span></a></li>
+                                            <li><a href="{{ path('stockage_ajouterEmplacement') }}"><i class="fa fa-plus "></i> <span>Créer Un Emplacement</span></a></li>
                                             {#<li><a href=""><i class="fa fa-leaf "></i> <span>Voir Les Emplacements</span></a></li>
                                             <li><a href="sidebar-primary.html"><i class="fa fa-check"></i> <span>Primary Sidebar</span></a></li>
                                             <li><a href="sidebar-indigo.html"><i class="fa fa-info"></i> <span>Indigo Sidebar</span></a></li>
@@ -175,7 +175,7 @@
                                         <span class="">Components</span>
                                     </li>#}
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-magic"></i> <span>Pertes</span>  <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-level-down"></i> <span>Pertes</span>  <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
                                             <li><a href="{{ path('stockage_passerPerte')}}"><i class="fa fa-plane"></i> <span>Passer En perte</span></a></li>
                                             <li><a href="{{ path('stockage_listePerte')}}"><i class="fa fa-puzzle-piece"></i> <span>AfficherLes Pertes </span></a></li>
@@ -199,11 +199,11 @@
                                         <span class="">Charts</span>
                                     </li>#}
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span>PARAMETRES</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-cog fa-fw"></i> <span>PARAMETRES</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="{{ path('stockage_ajouterEntrepot')}}"><i class="fa fa-barcode"></i> <span>Ajouter Les Parametres de L'Entrepot</span></a></li>
-                                           {# <li><a href="chart-line-area.html"><i class="fa fa-line-chart"></i> <span>Line & Area Charts</span></a></li>
-                                            <li><a href="chart-pie-chart.html"><i class="fa fa-pie-chart"></i> <span>Pie Charts</span></a></li>
+                                            <li><a href="{{ path('stockage_ajouterEntrepot')}}"><i class="fa fa-plus"></i> <span>Ajouter Les Parametres de L'Entrepot</span></a></li>
+                                           <li><a href="{{ path('stockage_afficherEntrepot')}}"><i class="fa fa-pencil fa-fw"></i> <span>Modifer Les Parametres</span></a></li>
+                                            {#<li><a href="chart-pie-chart.html"><i class="fa fa-pie-chart"></i> <span>Pie Charts</span></a></li>
                                             <li><a href="chart-funnel.html"><i class="fa fa-area-chart"></i> <span>Funnel Chart</span></a></li>
                                             <li><a href="chart-others.html"><i class="fa fa-comments"></i> <span>Other Charts</span></a></li>#}
                                         </ul>

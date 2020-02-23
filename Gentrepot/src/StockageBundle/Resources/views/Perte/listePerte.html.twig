@@ -10,7 +10,7 @@
         <div class ="panel-body">
             <table class ="table-condensed">
 
-                {% for perte in Tabpertes %}
+                {% for perte in pertes %}
                     <tr>
                         <th class="col-md-1">Date Perte</th>
                     <td class ="col-lg-1">
@@ -26,7 +26,7 @@
                         <th class="col-md-1">Action2</th>
                     </tr>
 
-        {% for lperte in Tablpertes %}
+        {% for lperte in Tablper %}
         {% if perte.id == lperte.getPerte().getId() %}
         <tr>
             <td class ="col-lg-1">{{ lperte.id }}</td>

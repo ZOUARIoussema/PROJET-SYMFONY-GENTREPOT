@@ -80,9 +80,6 @@ class LignePerte
     }
 
 
-
-
-
     /**
      * @var int
      *

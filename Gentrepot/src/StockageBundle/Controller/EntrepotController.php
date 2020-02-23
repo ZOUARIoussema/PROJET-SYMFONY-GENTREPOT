@@ -14,30 +14,16 @@ class EntrepotController extends Controller
 
     public function ajouterEntrepotAction(Request $request )
     {
-
         $entrepot= new Entrepot();
 
         $form= $this->createForm(EntrepotType::class,$entrepot);
         $form->handleRequest($request);
         if ($form->isSubmitted()){
 
-
-
-            //code incorrecte
-
-            /* $entrepot->setMatriculeFiscal("matriculeFiscal");
-             $entrepot->setAdresse("adresse");
-             $entrepot->setRaisonSocial("raisonSocial");
-             $entrepot->setAdresseMail("adresseMail");
-             $entrepot->setNumeroTel("numeroTel");*/
-
-
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($entrepot);
             $ef->flush();
             return $this->redirectToRoute("stockage_listEntrepot");
-
-
 
         }
         return $this->render("@Stockage/Entrepot/ajouterEntrepot.html.twig",array("form"=> $form->createView()));
@@ -77,7 +63,7 @@ class EntrepotController extends Controller
             //fresh the data base
             $em->flush();
             //Redirect to the read
-            return $this->redirectToRoute('stockage_listEntrepot');
+            return $this->redirectToRoute('stockage_afficherEntrepot');
         }
         //second step:
         // send the view to the user
