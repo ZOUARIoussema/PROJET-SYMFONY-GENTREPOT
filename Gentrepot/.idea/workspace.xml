@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,6 +236,7 @@
       <workItem from="1582278539440" duration="1100000" />
       <workItem from="1582409113036" duration="9947000" />
       <workItem from="1582465525251" duration="2372000" />
+      <workItem from="1582503678358" duration="162000" />
     </task>
     <servers />
   </component>
@@ -309,10 +308,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582055476393" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582465532828">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582503727390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582465532828" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582503727390" />
     <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582234097160">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
