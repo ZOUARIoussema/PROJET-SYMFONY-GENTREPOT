@@ -7,6 +7,10 @@ stockage_ajouterEntrepot:
 stockage_modifierEntrepot:
     path:     /modifierEntrepot/{matriculeFiscal}
     defaults: { _controller: StockageBundle:Entrepot:modifierEntrepot }
+Stockage_graphePie:
+    path:     /index
+    defaults: { _controller: StockageBundle:Emplacement:index}
+
 stockage_afficherEntrepot:
     path:     /afficherEntrepot/
     defaults: { _controller: StockageBundle:Entrepot:afficherEntrepot }

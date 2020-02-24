@@ -96,5 +96,6 @@ fos_user:
       form:
         type: UserBundle\Form\UserType
 
-
-
+# app/config/config.yml
+cmen_google_charts:
+    version: "current"
