@@ -1,7 +1,9 @@
 <?php
 
 namespace StockageBundle\Form;
-
+use StockageBundle\Entity\Emplacement;
+use AchatBundle\Entity\ProduitAchat;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,7 +15,9 @@ class InventaireStockType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('dateCreation')->add('quantiteInventaire')->add('ecart')->add('quantiteTheorique')->add('produit')->add('emplacement');
+        $builder->add('dateCreation')->add('produit',EntityType::class,['class'=>ProduitAchat::class,'choice_label'=>'libelle','multiple'=>false])
+            ->add('emplacement',EntityType::class,['class'=>Emplacement::class,'choice_label'=>'adresse','multiple'=>false])
+            ->add('quantiteInventaire');
     }/**
      * {@inheritdoc}
      */

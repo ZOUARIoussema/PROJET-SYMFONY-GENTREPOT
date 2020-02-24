@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="" />
+    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,6 +100,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/FOSMessageBundle" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PIDEV-GEntrepot-GTC/Gentrepot" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/views/frontend/Achat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cours-symfony-session-panier-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -120,6 +125,16 @@
       <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\StockageBundle\Resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\CommandeDAprovisionnement" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\InventaireStock" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\Perte" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views" />
+      <recent name="E:\Esprit\Semestre-2-2019\PITRAVAILEE\CopieProjet\Gentrepot\src\logistiqueBundle\Resources\views\Default" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\CommandeDAprovisionnement" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\LigneCommandeDApprovisionnement" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\LignePerte" />
       <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
       <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
     </key>
@@ -187,18 +202,23 @@
       <command value="c install" />
       <command value="s doctrine:database:create" />
       <command value="s doctrine:schema:update --force" />
+      <command value="s server:run" />
+      <command value="s doctrine:database:create" />
+      <command value="schema update --force" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="c require cmen/google-charts-bundle" />
       <command value="c dump-autoload" />
     </option>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -266,6 +286,18 @@
       <workItem from="1582238409877" duration="32418000" />
       <workItem from="1582362788743" duration="1896000" />
       <workItem from="1582497053028" duration="1523000" />
+      <workItem from="1582050525913" duration="1865000" />
+      <workItem from="1582116649773" duration="16880000" />
+      <workItem from="1582138013415" duration="1867000" />
+      <workItem from="1582162070894" duration="33223000" />
+      <workItem from="1582219084478" duration="8515000" />
+      <workItem from="1582241400940" duration="13883000" />
+      <workItem from="1582261667443" duration="9284000" />
+      <workItem from="1582273995093" duration="6391000" />
+      <workItem from="1582288148411" duration="822000" />
+      <workItem from="1582315899531" duration="1784000" />
+      <workItem from="1582357306886" duration="33250000" />
+      <workItem from="1582446860744" duration="8142000" />
     </task>
     <servers />
   </component>

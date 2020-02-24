@@ -20,10 +20,6 @@ class EmplacementController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted()){
 
-
-
-
-
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($emplacement);
             $ef->flush();

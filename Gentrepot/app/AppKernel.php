@@ -30,6 +30,8 @@ class AppKernel extends Kernel
             new FOS\MessageBundle\FOSMessageBundle(),
             new MessageBundle\MessageBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

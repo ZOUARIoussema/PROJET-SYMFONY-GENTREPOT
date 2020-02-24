@@ -1,0 +1,38 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+
+{% block content %}
+
+    {{ form_start(form) }}
+   <div class ="container">
+         <div class="panel panel-primary">
+             <div class ="panel-heading">
+            <i class ="icon_menu"></i>Faire Une Inventaite Du Stock
+             </div>
+
+                <div class ="panel-body">
+                     <table class ="table-condensed">
+                          <tr>
+                               {#<td>Numéro Inventaire :</td>
+                               <td>{{ form_widget(form.id) }}</td>#}
+                               <td>Date Commande :</td>
+                               <td>{{ form_widget(form.dateCreation) }}</td>
+                          </tr>
+                         <tr>
+                             <td>Produit:</td>
+                             <td>{{ form_widget(form.produit) }}</td>
+                             <td>Emplacement :</td>
+                             <td>{{ form_widget(form.emplacement) }}</td>
+                         </tr>
+                          <tr>
+                               <td>Quantité Inventaire:</td>
+                               <td>{{ form_widget(form.quantiteInventaire) }}</td>
+                          </tr>
+                     </table>
+                </div>
+         </div>
+       <tfoot>
+       <input type="submit" value = "Valider" name="bt" class="btn btn-success">
+       </tfoot>
+   </div>
+    {{ form_end(form) }}
+{% endblock %}

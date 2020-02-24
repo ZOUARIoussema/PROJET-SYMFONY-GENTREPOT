@@ -1,36 +1,39 @@
 {% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
-<html>
-<head>
-    <title>Modifier un Club</title>
 
-</head>
-<body>
-<center><h1>Bienvenue à la page de modification d'un entrepot</h1>
-    <fieldset style="width: 50%">
-        <form method="POST">
-            <table>
-            <tr>
-                <td>Matricule fiscale:</td><td><input type="text" name="matriculeFiscal" value="{{entrepot.matriculeFiscal}}"></td>
-            </tr>
-                <tr>
-                    <td>Adresse:</td><td><input type="text" name="adresse" value="{{entrepot.adresse}}"></td>
-                </tr>
-                <tr>
-                    <td>Raison social:</td><td><input type="text" name="raisonSocial" value="{{entrepot.raisonSocial}}"></td>
-                </tr>
-                <tr>
-                    <td>Adresse Mail:</td><td><input type="text" name="adresseMail" value="{{entrepot.adresseMail}}"></td>
-                </tr>
-                <tr>
-                    <td>Numéro Téléphone:</td><td><input type="text" name="numeroTel" value="{{entrepot.numeroTel}}"></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Enregistrer"></td><td></td>
-                </tr>
-            </table>
-        </form>
-    </fieldset>
-</center>
-</body>
+{% block content %}
+    <div class ="container">
+        <div class="panel panel-primary">
+            <div class ="panel-heading">
+                <i class ="icon_menu"></i>Liste Des Pertes
+            </div>
 
-</html>
+            <div class ="panel-body">
+                <fieldset style="width: 50%">
+                    <form method="POST">
+                        <table class ="table-condensed">
+                            <tr>
+                                <td class ="col-lg-1">Matricule fiscale:</td><td class ="col-lg-1"><input type="text" name="matriculeFiscal" value="{{entrepot.matriculeFiscal}}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1">Adresse:</td><td class ="col-lg-1"><input type="text" name="adresse" value="{{entrepot.adresse}}"></td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1">Raison social:</td><td class ="col-lg-1"><input type="text" name="raisonSocial" value="{{entrepot.raisonSocial}}"></td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1">Adresse Mail:</td><td class ="col-lg-1"><input type="text" name="adresseMail" value="{{entrepot.adresseMail}}"></td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1">Numéro Téléphone:</td><td class ="col-lg-1"><input type="text" name="numeroTel" value="{{entrepot.numeroTel}}"></td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1"><input type="submit" value="Valider" name ="bt" class="btn btn-success"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+{% endblock %}

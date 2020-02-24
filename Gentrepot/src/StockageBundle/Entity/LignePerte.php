@@ -62,12 +62,6 @@ class LignePerte
         $this->produit = $produit;
     }
 
-    /**
-
-
-
-
-
 
     /**
      * @return mixed
@@ -84,9 +78,6 @@ class LignePerte
     {
         $this->perte = $perte;
     }
-
-
-
 
 
     /**

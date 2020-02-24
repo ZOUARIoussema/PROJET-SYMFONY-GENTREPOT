@@ -139,17 +139,6 @@ class ProduitAchat
      */
     private $prixVente;
 
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
     /**
      * @return string
      */
