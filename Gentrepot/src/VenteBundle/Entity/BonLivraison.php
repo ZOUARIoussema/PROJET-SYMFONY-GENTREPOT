@@ -37,9 +37,30 @@ class BonLivraison
 
 
     /**
-     * @ORM\Column(name="dateCreation", type="date")
+     * @ORM\Column(name="dateCreation", type="datetime")
      */
     private $dateCreation;
+
+    /**
+     * @return mixed
+     */
+    public function getDatesortie()
+    {
+        return $this->datesortie;
+    }
+
+    /**
+     * @param mixed $datesortie
+     */
+    public function setDatesortie($datesortie)
+    {
+        $this->datesortie = $datesortie;
+    }
+
+    /**
+     * @ORM\Column(name="datesortie", type="datetime")
+     */
+    private $datesortie;
 
     /**
      * @return mixed
@@ -56,6 +77,10 @@ class BonLivraison
     {
         $this->dateCreation = $dateCreation;
     }
+
+
+
+
 
     /**
      * @return mixed
@@ -131,5 +156,32 @@ class BonLivraison
     {
         $this->BonLivraison = $BonLivraison;
     }
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="logistiqueBundle\Entity\ordremission")
+     * @ORM\JoinColumn(name="id_ordremission",referencedColumnName="id")
+     */
+
+    private $id_ordemission;
+
+    /**
+     * @return mixed
+     */
+    public function getIdOrdemission()
+    {
+        return $this->id_ordemission;
+    }
+
+    /**
+     * @param mixed $id_ordemission
+     */
+    public function setIdOrdemission($id_ordemission)
+    {
+        $this->id_ordemission = $id_ordemission;
+    }
+
+
+
 }
 

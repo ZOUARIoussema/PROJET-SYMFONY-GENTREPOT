@@ -23,6 +23,8 @@
             <th>id_aidechauff</th>
             <th>id_chauffeur</th>
             <th>id_vehicule</th>
+            <th>Action</th>
+
 
         </tr>
         {% for e in ordremission %}
@@ -32,7 +34,8 @@
                 <td>{{ e.dateretour|date}}</td>
                 <td>{{ e.getIdAidechauff()}}</td>
                 <td>{{ e.getIdChauffeur()}}</td>
-                <td>{{ e.getIdVehicule().getMatricule()}}</td>
+                <td>{{ e.getIdVehicule()}}</td>
+                <td> <a href="{{ path('pdf',{'id':e.id})}}"> Imprimer pdf </a><a href="{{ path('deleteM',{'id':e.id})}}"> Supprimer </a><br><a href="{{ path('updateM',{'id':e.id})}}"> modifier</a></td>
             </tr>
         {% endfor %}
         {% endblock %}
