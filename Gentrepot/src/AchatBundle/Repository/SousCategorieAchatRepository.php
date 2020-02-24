@@ -2,6 +2,8 @@
 
 namespace AchatBundle\Repository;
 
+use AchatBundle\Entity\CategorieAchat;
+
 /**
  * SousCategorieAchatRepository
  *
@@ -10,4 +12,12 @@ namespace AchatBundle\Repository;
  */
 class SousCategorieAchatRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findBys(CategorieAchat $cat){
+        $qb = $this->createQueryBuilder('p')
+            ->where('p.categorie = :c')
+            ->setParameter('c',$cat);
+        $query = $qb->getQuery();
+
+        return $query->execute();
+    }
 }

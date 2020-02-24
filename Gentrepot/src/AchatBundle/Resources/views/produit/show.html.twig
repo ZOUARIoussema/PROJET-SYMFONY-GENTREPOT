@@ -2,72 +2,110 @@
 {% block title %} produit  {% endblock  %}
 
 {% block content %}
-    <h1>Produit</h1>
+
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h2 style="text-align: center">Produit</h2>
+            </div>
+
+        </div>
+
+
+
 
     <table>
         <tbody>
-            <tr>
-                <th>Reference</th>
-                <td>{{ produit.reference }}</td>
-            </tr>
-            <tr>
-                <th>Libelle</th>
-                <td>{{ produit.libelle }}</td>
-            </tr>
-            <tr>
-                <th>Quantite en stock</th>
-                <td>{{ produit.quantiteEnStock }}</td>
-            </tr>
-            <tr>
-                <th>Classe</th>
-                <td>{{ produit.classe }}</td>
-            </tr>
-            <tr>
-                <th>Quantite en stock securite</th>
-                <td>{{ produit.quantiteStockSecurite }}</td>
-            </tr>
-            <tr>
-                <th>Dernier prix d'achat</th>
-                <td>{{ produit.dernierPrixAchat }}</td>
-            </tr>
-            <tr>
-                <th>TVA</th>
-                <td>{{ produit.tVA }}</td>
-            </tr>
-            <tr>
-                <th>Dimension</th>
-                <td>{{ produit.dimension }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ produit.description }}</td>
-            </tr>
-            <tr>
-                <th>Typede de conditionnement</th>
-                <td>{{ produit.typeDeConditionnement }}</td>
-            </tr>
-            <tr>
-                <th>Prix de vente</th>
-                <td>{{ produit.prixVente }}</td>
-            </tr>
+        <tr>
+            <th>Reference</th>
+            <td>{{ produit.reference }}</td>
+        </tr>
+        <tr>
+            <th>Libelle</th>
+            <td>{{ produit.libelle }}</td>
+        </tr>
+        <tr>
+            <th>Quantite en stock</th>
+            <td>{{ produit.quantiteEnStock }}</td>
+        </tr>
+        <tr>
+            <th>Classe</th>
+            <td>{{ produit.classe }}</td>
+        </tr>
+        <tr>
+            <th>Quantite en stock securite</th>
+            <td>{{ produit.quantiteStockSecurite }}</td>
+        </tr>
+        <tr>
+            <th>Dernier prix d'achat</th>
+            <td>{{ produit.dernierPrixAchat }}</td>
+        </tr>
+        <tr>
+            <th>TVA</th>
+            <td>{{ produit.tVA }}</td>
+        </tr>
+        <tr>
+            <th>Dimension</th>
+            <td>{{ produit.dimension }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ produit.description }}</td>
+        </tr>
+        <tr>
+            <th>Typede de conditionnement</th>
+            <td>{{ produit.typeDeConditionnement }}</td>
+        </tr>
+        <tr>
+            <th>Prix de vente</th>
+            <td>{{ produit.prixVente }}</td>
+        </tr>
 
-            <tr>
-                <th>Sous categorie</th>
-                <td>{{ produit.sousCategorie }}</td>
-            </tr>
+        <tr>
+            <th>Sous categorie</th>
+            <td>{{ produit.sousCategorie }}</td>
+        </tr>
+
+        <tr>
+            <th>Image</th>
+            <td><img src="{{ asset('uploads/images/' ~ produit.getImage) }} " width="450" height="450"> </td>
+        </tr>
+
+        <tr>
+            <th>Image1</th>
+            <td><img src="{{ asset('uploads/images/') }}{{ produit.getImage1() }}" style="width: 150 px ;height:150px "> </td>
+        </tr>
+
+        <tr>
+            <th>Image2</th>
+            <td><img src="{{ asset('uploads/images/') }}{{ produit.getImage2() }}" style="width: 150 px ;height:150px "> </td>
+        </tr>
+
+        <tr>
+            <th>Image3</th>
+            <td><img src="{{ asset('uploads/images/') }}{{ produit.getImage3() }}" style="width: 150 px ;height:150px "> </td>
+        </tr>
+
+        <tr>
+            <th>Image3</th>
+            <td><img src="{{ asset('uploads/images/') }}{{ produit.getImage4() }}" style="width: 150 px ;height:150px "> </td>
+        </tr>
+
+
+
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('produit_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('produit_edit', { 'reference': produit.reference }) }}">Edit</a>
-        </li>
-        <li>
+
+            <a href="{{ path('produit_index') }}"><button type="button" class="btn btn-primary btn-wide">
+                Retour a la liste</button></a>
+
+            <a href="{{ path('produit_edit', { 'reference': produit.reference }) }}"><button type="button" class="btn btn-primary btn-wide">
+                Modifier</button></a>
+
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>
