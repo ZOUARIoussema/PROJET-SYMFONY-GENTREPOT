@@ -1,6 +1,10 @@
 
+
+
 {% extends 'backend/AgentCaisse/indexAgentCaisse.html.twig' %}
-{% block title %} table {% endblock %}
+
+
+
 
 
 
@@ -8,123 +12,89 @@
 
 {% block content %}
 
-{% block javascripts  %}
 
 
 
-    <script src="{{ asset('backend/js/prism/prism.js')  }}"></script>
-    <script src="{{ asset('backend/js/DataTables/datatables.min.js')  }}"></script>
-    <script src="{{ asset('backend/js/main.js')  }}"></script>
 
+
+    <h1>Liste des inbentaires caisses</h1>
+
+    <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>Date creation</th>
+            <th>Solde cheque</th>
+            <th>Solde espece</th>
+            <th>Solde theorique</th>
+            <th>Solde calculer</th>
+            <th>Ecart</th>
+
+            <th >Action</th>
+        </tr>
+        </thead>
+        {% for inventaireCaisse in inventaireCaisses %}
+        <tbody>
+        <tr>
+
+
+
+            <td>{{ inventaireCaisse.dateCreation|date('Y-m-d ') }}</td>
+            <td>{{ inventaireCaisse.soldeCheque }}</td>
+            <td>{{ inventaireCaisse.soldeEspece }}</td>
+            <td>{{ inventaireCaisse.soldeTheorique }}</td>
+            <td>{{ inventaireCaisse.soldeCalculer }}</td>
+            <td>{{ inventaireCaisse.ecart }}</td>
+
+
+
+            <td>
+                {% if ("now"|date('Y-m-d') ==  inventaireCaisse.dateCreation|date('Y-m-d') ) %}
+                    <a  class="btn btn-success btn-xs btn-labeled" href="{{ path('inventairecaisse_modifier',{'id':inventaireCaisse.id}) }}">modifier<span class="btn-label btn-label-right"><i class="fa fa-pencil"></i></span></a>
+                    <a class="btn btn-danger btn-xs btn-labeled" href="{{ path('inventaire_supprimer',{'id':inventaireCaisse.id}) }}">supprimer <span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a>
+                    <a class="btn btn-success btn-xs btn-labeled" href="{{ path('imp',{'id':inventaireCaisse.id}) }}">imprimer </a>
+
+
+                {% endif %}
+            </td>
+
+
+
+
+
+
+        </tr>
+
+        </tbody>
+        {% endfor %}
+
+        <tfoot>
+        <tr>
+            <th>Total</th>
+            <th>{{ tc }}</th>
+            <th>{{tespece  }}</th>
+            <th>{{ tt }}</th>
+            <th>{{ tcalculer }}</th>
+            <th>{{ tecart }}</th>
+
+        </tr>
+        </tfoot>
+
+    </table>
+    <!-- ========== JS ========== -->
     <script>
-
-
-
-
-
         $(function($) {
-
-
-            $('#tab1').DataTable( {
-                "scrollY":        "300px",
-                "scrollCollapse": true,
-                "paging":         false
-            } );
-
-
+            $('#example').DataTable();
         });
     </script>
 
 
 
-        {% endblock %}
-
-
-
-    <h1 class="panel-body p-20">Liste des inbentaires caisses</h1>
-
-
-
-            <table id="tab1" class="display table table-bordered table-striped" cellspacing="0" width="100%">
-
-
-                <thead>
-                <tr>
-
-
-            <th>Date creation</th>
-            <th>Solde cheque</th>
-            <th>Solde espece</th>
-            <th>Solde theorique</th>
-
-            <th>Solde calculer</th>
-            <th>Ecart</th>
-                    <th>Action</th>
-
-        </tr>
-                </thead>
-
-
-        {% for inventaireCaisse in inventaireCaisses %}
-
-                <tbody>
-            <tr>
-
-                <td>{% if inventaireCaisse.dateCreation %}{{ inventaireCaisse.dateCreation|date('Y-m-d ') }}{% endif %}</td>
-                <td>{{ inventaireCaisse.soldeCheque }}</td>
-                <td>{{ inventaireCaisse.soldeEspece }}</td>
-                <td>{{ inventaireCaisse.soldeTheorique }}</td>
-                <td>{{ inventaireCaisse.soldeCalculer }}</td>
-                <td>{{ inventaireCaisse.ecart }}</td>
-
-
-
-
-
-                {% if ("now"|date('Y-m-d') ==  inventaireCaisse.dateCreation|date('Y-m-d') ) %}
-
-                <td>
-
-                    <a  class="btn btn-success btn-xs btn-labeled" href="{{ path('inventairecaisse_modifier',{'id':inventaireCaisse.id}) }}">modifier<span class="btn-label btn-label-right"><i class="fa fa-pencil"></i></span></a>
-                    <a class="btn btn-danger btn-xs btn-labeled" href="{{ path('inventaire_supprimer',{'id':inventaireCaisse.id}) }}">supprimer <span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></a>
-
-
-
-                </td>
-
-                {% endif %}
-
-
-
-            </tr>
-                </tbody>
-        {% endfor %}
-
-
-                <tr>
-
-
-                    <td>Total</td>
-
-                    <td>{{ tc }}</td>
-                    <td>{{tespece  }}</td>
-                    <td>{{ tt }}</td>
-
-                    <td>{{ tcalculer }}</td>
-
-                    <td>{{ tecart }}</td>
-
-
-
-
-
-
-                </tr>
-
-    </table>
-
-
     <a class="label label-success label-bordered" href="{{  path('Tresorerie_inventairecaisse_ajouter') }}">Ajouter inventaire caisse</a>
+
+
+
+
+
 
 
 {% endblock %}
