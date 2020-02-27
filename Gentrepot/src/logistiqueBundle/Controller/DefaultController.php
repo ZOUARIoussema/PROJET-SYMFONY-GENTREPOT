@@ -23,6 +23,7 @@ class DefaultController extends Controller
         if ($form->isSubmitted())
         {
             $em= $this->getDoctrine()->getManager();
+            $vehicule->setEtat('disponible');
             $em-> persist($vehicule);
             $em->flush();
 

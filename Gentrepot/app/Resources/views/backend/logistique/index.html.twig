@@ -215,6 +215,89 @@
                 <script src="{{ asset('backend/js/production-chart.js') }}"></script>
                 <script src="{{ asset('backend/js/traffic-chart.js') }}"></script>
                 <script src="{{ asset('backend/js/task-list.js') }}"></script>
+                <!-- ========== COMMON JS FILES ========== -->
+                <script src="{{ asset('backend/js/jquery/jquery-2.2.4.min.js') }}"></script>
+                <script src="{{ asset('backend/js/jquery-ui/jquery-ui.min.js') }}"></script>
+                <script src="{{ asset('backend/js/bootstrap/bootstrap.min.js') }}"></script>
+                <script src="{{ asset('backend/js/pace/pace.min.js') }}"></script>
+                <script src="{{ asset('backend/js/lobipanel/lobipanel.min.js') }}"></script>
+                <script src="{{ asset('backend/js/iscroll/iscroll.js') }}"></script>
+
+                <!-- ========== PAGE JS FILES ========== -->
+                <script src="{{ asset('backend/js/prism/prism.js') }}"></script>
+                <script src="{{ asset('backend/js/waypoint/waypoints.min.js') }}"></script>
+                <script src="{{ asset('backend/js/counterUp/jquery.counterup.min.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/amcharts.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/serial.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/plugins/export/export.min.js') }}"></script>
+            <link rel="stylesheet" href="{{ asset('backend/js/amcharts/plugins/export/export.css') }}" type="text/css" media="all" />
+                <script src="{{ asset('backend/js/amcharts/themes/light.js') }}"></script>
+                <script src="{{ asset('backend/js/toastr/toastr.min.js') }}"></script>
+                <script src="{{ asset('backend/js/icheck/icheck.min.js') }}"></script>
+                <script src="{{ asset('backend/js/bootstrap-tour/bootstrap-tour.js') }}"></script>
+
+                <!-- ========== THEME JS ========== -->
+                <script src="{{ asset('backend/js/main.js') }}"></script>
+                <script src="{{ asset('backend/js/production-chart.js') }}"></script>
+                <script src="{{ asset('backend/js/traffic-chart.js') }}"></script>
+                <script src="{{ asset('backend/js/task-list.js') }}"></script>
+                <script src="{{ asset('backend/js/jquery/jquery-2.2.4.min.js') }}"></script>
+                <script src="{{ asset('backend/js/bootstrap/bootstrap.min.js') }}"></script>
+                <script src="{{ asset('backend/js/pace/pace.min.js') }}"></script>
+                <script src="{{ asset('backend/js/lobipanel/lobipanel.min.js') }}"></script>
+                <script src="{{ asset('backend/js/iscroll/iscroll.js') }}"></script>
+
+                <!-- ========== PAGE JS FILES ========== -->
+                <script src="{{ asset('backend/js/prism/prism.js') }}"></script>
+                <script src="{{ asset('backend/js/DataTables/datatables.min.js') }}"></script>
+                <script src="{{ asset('backend/js/waypoint/waypoints.min.js') }}"></script>
+                <script src="{{ asset('backend/js/counterUp/jquery.counterup.min.js') }}"></script>
+                <script src="{{ asset('backend/js/main.js') }}"></script>
+                <script>
+                    $(function(){
+
+                        // Counter for dashboard stats
+                        $('.counter').counterUp({
+                            delay: 10,
+                            time: 1000
+                        });
+
+                        // Welcome notification
+                        toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": false,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "3500",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+
+                    });
+                    $(function($) {
+                        // Counter for dashboard stats
+
+                        // data table
+                        $('#example').DataTable();
+
+                        $('#example2').DataTable( {
+                            "scrollY":        "300px",
+                            "scrollCollapse": true,
+                            "paging":         false
+                        } );
+
+                        $('#example3').DataTable();
+                    });
+                </script>
+            {% endblock %}
                 <script>
                     $(function(){
 
@@ -245,8 +328,8 @@
                         toastr["success"]("", "Welcome !");
 
                     });
+
                 </script>
-            {% endblock %}
             <!-- ========== ADD custom.js FILE BELOW WITH YOUR CHANGES ========== -->
         </div>
     </div>

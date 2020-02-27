@@ -2,6 +2,7 @@
 
 namespace logistiqueBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -21,6 +22,16 @@ class ordremission
     private $id;
 
     /**
+     * ordremission constructor.
+     * @param $bondelivraisons
+     */
+    public function __construct()
+    {
+
+        $this->bondelivraisons= new ArrayCollection();
+    }
+
+    /**
      * @return int
      */
     public function getId()
@@ -34,6 +45,27 @@ class ordremission
     public function setId($id)
     {
         $this->id = $id;
+    }
+
+    /**
+     * @ORM\Column(name="bondelivraison" ,type="array",nullable=TRUE)
+     */
+    private $bondelivraisons;
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getBondelivraisons()
+    {
+        return $this->bondelivraisons;
+    }
+
+    /**
+     * @param ArrayCollection $bondelivraisons
+     */
+    public function setBondelivraisons($bondelivraisons)
+    {
+        $this->bondelivraisons = $bondelivraisons;
     }
 
 

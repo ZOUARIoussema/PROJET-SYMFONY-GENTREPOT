@@ -2,9 +2,11 @@
 
 namespace logistiqueBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use VenteBundle\Entity\BonLivraison;
 
 class ordremissionType extends AbstractType
 {
@@ -13,7 +15,13 @@ class ordremissionType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('id')->add('datecreation')->add('datesortie')->add('dateretour')->add('id_vehicule')->add('id_chauffeur')->add('id_aidechauff');
+        $builder->add('id')->add('datecreation')->add('datesortie')->add('dateretour')
+
+
+            ->add('id_vehicule')
+          //  ->add('id_chauffeur')
+            ->add('id_aidechauff')
+        ->add('bondelivraisons',EntityType::class,['class'=>BonLivraison::class,'choice_label'=>'id','multiple'=>true]);
     }/**
      * {@inheritdoc}
      */

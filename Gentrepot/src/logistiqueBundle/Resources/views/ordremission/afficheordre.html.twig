@@ -1,42 +1,75 @@
 {% extends 'backend/logistique/index.html.twig' %}
-{% block title %} ordre mission {% endblock %}
+{% block title %} Liste des Ordres de Mission {% endblock %}
+
 {% block content %}
-    <section class="section">
+
+    <section class="section" >
+        <div class="container-fluid">
+
+            <div class="row" >
+                <div class="col-md-8 col-md-offset-2" >
 
 
-    <div class="col-md-8 col-md-offset-2">
-    <div class="panel">
-    <div class="panel-heading">
-        <div class="panel-title">
-            <h5 style="text-align: center">ordre mission</h5>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h5 class="container-fluid" style="text-align: center">Ordre de Mission</h5>
+                            </div>
+                        </div>
+                        <div class="panel-body p-20">
+                            <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+
+                                <tr>
+                                    <th>datecreation</th>
+                                    <th>datesortie</th>
+                                    <th>dateretour</th>
+                                    <th>id_aidechauff</th>
+                                    <th>id_chauffeur</th>
+                                    <th>id_vehicule</th>
+                                    <th>Action</th>
+                                    <th> bon de livraison</th>
+
+                                </tr>
+                                </thead>
+                                {% for e in ordremission %}
+                                    <tr>
+                                        <td>{{ e.datecreation|date}}</td>
+                                        <td>{{ e.datesortie|date}}</td>
+                                        <td>{{ e.dateretour|date}}</td>
+                                        <td>{{ e.getIdAidechauff()}}</td>
+                                        <td>{{ e.getIdChauffeur().getNom()}}</td>
+                                        <td>{{ e.getIdVehicule()}}</td>
+
+
+
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-xs btn-labeled" style="color:white"><a href="{{ path('deleteM',{'id':e.id})}}" class="checkout-button button alt wc-forward rounded" style="color: white">Supprimer<span class="btn-label btn-label-right"><i class="fa fa-times"></i></span></button>
+                                           &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-success btn-xs btn-labeled">  <a href="{{ path('pdf',{'id':e.id})}}" class="checkout-button button alt wc-forward rounded"style="color: white">imprimer</a><span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
+
+                                            <button type="button" class="btn btn-success btn-xs btn-labeled"style="color: white">  <a href="{{ path('updateM',{'id':e.id})}}" class="checkout-button button alt wc-forward rounded"style="color: white">Modifier</a><span class="btn-label btn-label-right"style="color: white"><i class="fa fa-check"></i></span></button>
+
+                                        </td>
+                                        <td><button type="button" class="btn btn-success btn-xs btn-labeled"style="color: white">  <a href="{{ path('details',{'id':e.id})}}" class="checkout-button button alt wc-forward rounded"style="color: white">Details</a><span class="btn-label btn-label-right"style="color: white"><i class="fa fa-check"></i></span></button></td>
+
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+
+                            </table>
+
+                            <!-- ========== JS ========== -->
+                            <script>
+                                $(function($) {
+                                    $('#example').DataTable();
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="panel-body p-20">
+    </section>
 
-    <table class="table table-striped">
-    {% block body %}
-    <table border="2">
-        <tr>
-            <th>datecreation</th>
-            <th>datesortie</th>
-            <th>dateretour</th>
-            <th>id_aidechauff</th>
-            <th>id_chauffeur</th>
-            <th>id_vehicule</th>
-            <th>Action</th>
-
-
-        </tr>
-        {% for e in ordremission %}
-            <tr>
-                <td>{{ e.datecreation|date}}</td>
-                <td>{{ e.datesortie|date}}</td>
-                <td>{{ e.dateretour|date}}</td>
-                <td>{{ e.getIdAidechauff()}}</td>
-                <td>{{ e.getIdChauffeur()}}</td>
-                <td>{{ e.getIdVehicule()}}</td>
-                <td> <a href="{{ path('pdf',{'id':e.id})}}"> Imprimer pdf </a><a href="{{ path('deleteM',{'id':e.id})}}"> Supprimer </a><br><a href="{{ path('updateM',{'id':e.id})}}"> modifier</a></td>
-            </tr>
-        {% endfor %}
-        {% endblock %}
 {% endblock %}

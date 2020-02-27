@@ -115,6 +115,46 @@ class chauffeur
     }
 
     /**
+     * @return mixed
+     */
+    public function getVoyage()
+    {
+        return $this->voyage;
+    }
+
+    /**
+     * @param mixed $voyage
+     */
+    public function setVoyage($voyage)
+    {
+        $this->voyage = $voyage;
+    }
+
+    /**
+     * @ORM\Column(name="voyage",type="integer",options={"default":0})
+     */
+    private $voyage;
+
+    /**
+     * @return mixed
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param mixed $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
+    /**
+     * @ORM\Column(name="etat",type="string")
+     */
+    private $etat;
+    /**
      * @param string $cin
      */
     public function setCin($cin)

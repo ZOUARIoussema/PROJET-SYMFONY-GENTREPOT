@@ -59,3 +59,7 @@ afficheBon:
 pdf:
     path:     /pdf/{id}
     defaults: { _controller: logistiqueBundle:ordremission:PDF}
+
+details:
+    path:     /details/{id}
+    defaults: { _controller: logistiqueBundle:ordremission:details}

@@ -1,0 +1,43 @@
+{% extends 'backend/logistique/index.html.twig' %}
+
+{% block content %}
+<section class="section" >
+    <div class="container-fluid">
+
+        <div class="row" >
+            <div class="col-md-8 col-md-offset-2" >
+
+
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <h5 class="container-fluid" style="text-align: center">Ordre de Mission</h5>
+                        </div>
+                    </div>
+                    <div class="panel-body p-20">
+                        <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+
+                            <tr>
+
+                                <th>adresse Livraison</th>
+                                <th>date de sortie</th>
+                                <th>date de Creation </th>
+                                <th>Etat </th>
+
+                            </tr>
+                            </thead>
+                            {% for e in list %}
+                            <tr>
+
+                                <td>{{ e.adresseLivraison}}</td>
+
+                                <td>{{ e.datesortie |date }}</td>
+                                <td>{{ e.dateCreation |date}}</td>
+                                <td>{{ e.etat}}</td>
+                            </tr>
+
+                            {% endfor %}
+
+
+                            {% endblock %}
