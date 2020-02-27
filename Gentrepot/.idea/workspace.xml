@@ -89,7 +89,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Gentrepot" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -236,6 +236,9 @@
       <workItem from="1582376204566" duration="33000" />
       <workItem from="1582376299392" duration="640000" />
       <workItem from="1582400195222" duration="11361000" />
+      <workItem from="1582468900838" duration="4234000" />
+      <workItem from="1582554000848" duration="403000" />
+      <workItem from="1582560230689" duration="218000" />
     </task>
     <servers />
   </component>
