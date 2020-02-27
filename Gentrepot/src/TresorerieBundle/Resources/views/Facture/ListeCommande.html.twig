@@ -9,7 +9,9 @@
         <tr>
             <th>Numero</th>
             <th>Total</th>
+            <th>etat</th>
             <th>Date creation</th>
+
             <th>Action</th>
 
 
@@ -20,6 +22,11 @@
 
             <td>{{c.numeroC}}</td>
             <td>{{c.totalC}}</td>
+
+            <td>
+
+                <span class="btn btn-success btn-xs btn-labeled">{{c.etat}}</span>
+            </td>
             <td>{{c.dateCreation|date('Y-m-d')}}</td>
 
 

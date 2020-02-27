@@ -21,7 +21,10 @@
         {%for f in factures %}  <tr>
             <td>{{f.numeroF}}</td>
             <td>{{f.dateCreation|date}}</td>
-            <td>{{f.etat}}</td>
+            <td>
+
+                <span class="btn btn-success btn-xs btn-labeled">{{f.etat}}</span>
+            </td>
             <td>{{f.totalTTC}}</td>
             <td>{{f.totalPaye}}</td>
             <td>{{f.resteAPaye}}</td>

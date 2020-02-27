@@ -1,0 +1,31 @@
+
+
+<tr><td>utilisateur </td><td> {{ app.user.username }}</td><td>
+<h1 style="text-align: center;color: black">Inventaire caisse</h1>
+
+
+
+
+<table width="1000" height="300"  border="6">
+
+
+    <tr><td>Date Creation</td><td>{{inventaire.dateCreation|date('y-m-d')}}</td></tr>
+    <tr><td>Total solde cheque</td><td>{{ inventaire.soldeCheque }}</td></tr>
+    <tr><td>Total solde espece</td><td>{{ inventaire.soldeEspece }}</td></tr>
+    <tr><td>Total solde theorique</td><td>{{ inventaire.SoldeTheorique }}</td></tr>
+    <tr><td>Solde calculer</td><td>{{ inventaire.soldeCalculer }}</td></tr>
+
+    <tr><td>ecart</td><td>{{ inventaire.ecart }}</td></tr>
+
+
+
+
+
+
+</table>
+
+
+
+
+
+

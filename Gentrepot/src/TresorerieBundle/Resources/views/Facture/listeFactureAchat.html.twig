@@ -20,16 +20,20 @@
 
     </tr>
     {%for f in factures %}  <tr>
-        {% if(f.etat == "non_paye") %}
+
         <td>{{f.numeroF}}</td>
         <td>{{f.dateCreation|date('Y-m-d')}}</td>
-        <td>{{f.etat}}</td>
+        <td>
+
+            <span class="btn btn-success btn-xs btn-labeled">{{f.etat}}</span>
+        </td>
         <td>{{f.totalTTC}}</td>
         <td>{{f.totalPaye}}</td>
         <td>{{f.resteAPaye}}</td>
 
 
 
+        {% if(f.resteAPaye != 0) %}
 
             <td><a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_ajouterRCParFacture',{'numeroF':f.numeroF}) }}">payer par cheque<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></a>
            <a class="btn btn-success btn-xs btn-labeled" href="{{ path('tresorerie_ajouterREParFacture',{'numeroF':f.numeroF}) }}">payer en espece<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></a> </td>
@@ -45,6 +49,7 @@
 
     </tr>    {% endfor %}
 
+    <tfoot>
 
     <tr>
 
@@ -67,6 +72,7 @@
 
 
     </tr>
+    </tfoot>
 
 </table>
 

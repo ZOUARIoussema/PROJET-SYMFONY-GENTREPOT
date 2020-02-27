@@ -97,3 +97,12 @@ lettreDerelance_ajouterLettreDeRelance:
 inventaire_supprimer:
     path:     /supprimerInventaire{id}
     defaults: { _controller: TresorerieBundle:InventaireCaisse:deleteInventaire }
+
+
+imp:
+    path:     /imprimerInventaire{id}
+    defaults: { _controller: TresorerieBundle:InventaireCaisse:imprimer }
+messageAgentCaisse:
+    path:     /magentCaisse
+    defaults: { _controller: TresorerieBundle:Default:message }
+
