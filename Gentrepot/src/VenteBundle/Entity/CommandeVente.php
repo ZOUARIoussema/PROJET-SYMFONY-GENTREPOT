@@ -15,6 +15,13 @@ use VenteBundle\Entity\LigneCommande;
 class CommandeVente
 {
     /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")

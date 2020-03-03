@@ -10,4 +10,16 @@ namespace VenteBundle\Repository;
  */
 class FactureVenteRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findByNombre()
+{
+    $queryBuilder = $this->_em->createQueryBuilder()
+        ->select('COUNT(e)')
+        ->from('VenteBundle:FactureVente', 'e');
+
+    return $queryBuilder->getQuery()->getSingleScalarResult();
+
+}
+
+
 }

@@ -165,6 +165,5 @@ class Entrepot
         return(String) $this->matriculeFiscal;
     }
 
-
 }
 

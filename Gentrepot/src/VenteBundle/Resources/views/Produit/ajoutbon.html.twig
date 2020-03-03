@@ -1,0 +1,29 @@
+{% extends 'frontend/Vente/index.html.twig' %}
+{% block title %} Bon {% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<div class="container" style="width:800px ;margin-left: 50px">
+{{ form_start(form) }}
+
+{{ form_widget(form) }}
+
+    <br>
+    <div>
+        <button  class="btn btn-outline rounded" type="submit" id="_submit" name="_submit" value="" /> Valider</button>
+<br>
+    </div>
+    {{ form_end(form) }}
+</div>
+            </div>
+    <br>
+    <div class="col-lg-3 col-md-3 col-sm-6 " style="left: 500px;size: 800px">
+    <img src="{{ asset('uploads/images/liv.png') }}" sizes="500">
+    </div></div></div></section>
+</div>
+    <br>
+
+{% endblock %}

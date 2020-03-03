@@ -33,6 +33,7 @@ class User extends BaseUser implements ParticipantInterface,NotifiableInterface
     protected $id;
 
     /**
+     * @var string
      * @ORM\Column(type="string")
      * @Assert\NotBlank
      * @Assert\Length(
@@ -211,4 +212,35 @@ class User extends BaseUser implements ParticipantInterface,NotifiableInterface
      * @ORM\Column(type="string")
      */
     private $type;
+
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="cin", type="integer")
+     */
+    private $cin;
+    /**
+     * Set cin
+     *
+     * @param integer $cin
+     *
+     * @return User
+     */
+    public function setCin($cin)
+    {
+        $this->cin = $cin;
+
+        return $this;
+    }
+
+    /**
+     * Get cin
+     *
+     * @return integer
+     */
+    public function getCin()
+    {
+        return $this->cin;
+    }
 }

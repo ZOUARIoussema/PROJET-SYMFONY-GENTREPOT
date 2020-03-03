@@ -24,7 +24,7 @@ class FactureVente
 
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date",nullable=true)
      */
     private $dateCreation;
 
@@ -156,33 +156,33 @@ class FactureVente
         $this->fraisTransport = $fraisTransport;
     }
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date",nullable=true)
      */
     private $dateEchaillancePaiement;
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float",nullable=true)
      */
     private $totalTTC;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      */
     private $etat;
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float",nullable=true)
      */
     private $totalPaye;
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float",nullable=true)
      */
     private $resteAPaye;
 
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float",nullable=true)
      */
     private $timbreFiscale;
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="float",nullable=true)
      */
     private $fraisTransport;
 
@@ -206,7 +206,7 @@ class FactureVente
     /**
      *
      * @ORM\OneToOne(targetEntity="BonLivraison")
-     * @ORM\JoinColumn(name="numeroBL_BonLivraison",referencedColumnName="id")
+     * @ORM\JoinColumn(name="numeroBL_BonLivraison",referencedColumnName="id",nullable=true)
      */
     private $BonLivraison;
 

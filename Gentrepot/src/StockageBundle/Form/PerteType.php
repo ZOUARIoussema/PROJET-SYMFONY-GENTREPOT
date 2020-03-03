@@ -13,7 +13,7 @@ class PerteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('dateCreation');
+        //$builder->add('dateCreation');
     }/**
      * {@inheritdoc}
      */

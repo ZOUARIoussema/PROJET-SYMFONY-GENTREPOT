@@ -2,6 +2,7 @@
 
 namespace logistiqueBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -21,6 +22,16 @@ class ordremission
     private $id;
 
     /**
+     * ordremission constructor.
+     * @param $bondelivraisons
+     */
+    public function __construct()
+    {
+
+        $this->bondelivraisons= new ArrayCollection();
+    }
+
+    /**
      * @return int
      */
     public function getId()
@@ -34,6 +45,27 @@ class ordremission
     public function setId($id)
     {
         $this->id = $id;
+    }
+
+    /**
+     * @ORM\Column(name="bondelivraison" ,type="array",nullable=TRUE)
+     */
+    private $bondelivraisons;
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getBondelivraisons()
+    {
+        return $this->bondelivraisons;
+    }
+
+    /**
+     * @param ArrayCollection $bondelivraisons
+     */
+    public function setBondelivraisons($bondelivraisons)
+    {
+        $this->bondelivraisons = $bondelivraisons;
     }
 
 
@@ -105,44 +137,25 @@ class ordremission
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="datecreation", type="date")
+     * @ORM\Column(name="datecreation", type="datetime")
      */
     private $datecreation;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="datesortie", type="date")
+     * @ORM\Column(name="datesortie", type="datetime")
      */
     private $datesortie;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateretour", type="date")
+     * @ORM\Column(name="dateretour", type="datetime")
      */
     private $dateretour;
 
-
-
-
     /**
-     * Set datecreation
-     *
-     * @param \DateTime $datecreation
-     *
-     * @return ordremission
-     */
-    public function setDatecreation($datecreation)
-    {
-        $this->datecreation = $datecreation;
-
-        return $this;
-    }
-
-    /**
-     * Get datecreation
-     *
      * @return \DateTime
      */
     public function getDatecreation()
@@ -151,22 +164,14 @@ class ordremission
     }
 
     /**
-     * Set datesortie
-     *
-     * @param \DateTime $datesortie
-     *
-     * @return ordremission
+     * @param \DateTime $datecreation
      */
-    public function setDatesortie($datesortie)
+    public function setDatecreation($datecreation)
     {
-        $this->datesortie = $datesortie;
-
-        return $this;
+        $this->datecreation = $datecreation;
     }
 
     /**
-     * Get datesortie
-     *
      * @return \DateTime
      */
     public function getDatesortie()
@@ -175,27 +180,32 @@ class ordremission
     }
 
     /**
-     * Set dateretour
-     *
-     * @param \DateTime $dateretour
-     *
-     * @return ordremission
+     * @param \DateTime $datesortie
      */
-    public function setDateretour($dateretour)
+    public function setDatesortie($datesortie)
     {
-        $this->dateretour = $dateretour;
-
-        return $this;
+        $this->datesortie = $datesortie;
     }
 
     /**
-     * Get dateretour
-     *
      * @return \DateTime
      */
     public function getDateretour()
     {
         return $this->dateretour;
     }
+
+    /**
+     * @param \DateTime $dateretour
+     */
+    public function setDateretour($dateretour)
+    {
+        $this->dateretour = $dateretour;
+    }
+
+
+
+
+
 }
 

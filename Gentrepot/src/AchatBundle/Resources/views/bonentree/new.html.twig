@@ -1,19 +1,29 @@
 {% extends 'backend/achat/index.html.twig' %}
 {% block title %} ajout bon entree  {% endblock  %}
 
-
 {% block content %}
-    <h1>Creer un bon d'entree</h1>
+
+
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h4 style="text-align: center">Creer un bon d entree</h4>
+            </div>
+
+        </div>
+
+
+
+
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+    <button type="submit" class="btn btn-success btn-labeled ">ajouter<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('bonentree_index') }}">Back to the list</a>
 
-        </li>
-    </ul>
+            <a href="{{ path('bonentree_index') }}"><button type="button" class="btn btn-success">retour à la liste</button></a>
+
+
 {% endblock %}

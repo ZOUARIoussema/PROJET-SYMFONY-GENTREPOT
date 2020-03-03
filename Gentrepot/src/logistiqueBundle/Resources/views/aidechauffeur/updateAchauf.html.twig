@@ -1,76 +1,70 @@
 {% extends 'backend/logistique/index.html.twig' %}
-{% block title %} Modifier Aide chaufeur{% endblock %}
+{% block title %}Modifier aide chauffeur{% endblock %}
 {% block content %}
-{{ form_start (form) }}
-{{ form_widget(form) }}
-<div class="section-title">
-    <p class="sub-title text-muted">Modifier Aide chaffeur</p>
-</div>
+    <h5 style="text-align:">Modifier aide chauffeur</h5>
+    {{ form_start (form ) }}
+    {{ form_widget(form) }}
 
-<form action="index.html" class="form-horizontal">
-    <div class="form-group left-icon">
-        <label for="name" class="col-sm-3 control-label">Full Name</label>
-        <div class="col-sm-9">
-            <span class="glyphicon glyphicon-user form-left-icon"></span>
-            <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name">
-        </div>
-    </div>
-    <div class="form-group left-icon">
-        <label for="exampleInputEmail1" class="col-sm-3 control-label">Email Id</label>
-        <div class="col-sm-9">
-            <span class="glyphicon glyphicon-envelope form-left-icon"></span>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Email Id">
-        </div>
-    </div>
-    <div class="form-group left-icon">
-        <label for="exampleInputPassword1" class="col-sm-3 control-label">Password</label>
-        <div class="col-sm-9">
-            <span class="glyphicon glyphicon-tags form-left-icon"></span>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-            <div class="checkbox op-check">
-                <label>
-                    <input type="checkbox" name="remember" class="flat-blue-style" checked> <span class="ml-10">I agree <a href="#">terms & conditions</a></span>
-                </label>
+
+    <form action="index.html" class="form-horizontal">
+        <div class="form-group left-icon">
+
+            <div class="col-sm-9">
+
             </div>
         </div>
-    </div>
-    <div class="form-group mt-20">
-        <div class="">
-            <a href="#" class="form-link"><small class="muted-text">Already Registered?</small></a>
-            <button type="submit" class="btn btn-success btn-labeled pull-right">Register<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
-            <div class="clearfix"></div>
+        <div class="form-group left-icon">
+
+            <div class="col-sm-9">
+
+
+            </div>
         </div>
+        <div class="form-group left-icon">
+
+            <div class="col-sm-9">
+
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <div class="checkbox op-check">
+                    <label>
+
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group mt-20">
+            <div class="">
+                <a href="#" class="form-link"><small class="muted-text"></small></a>
+                <button type="submit" class="btn btn-success btn-labeled">Ajouter<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </form>
+
+    <hr>
+
+    <h5 class="text-center mt-10 mb-20"></h5>
+
+    <div class="text-center">
+
     </div>
-</form>
+    <!-- /.text-center -->
 
-<hr>
+    </div>
+    </div>
+    <!-- /.panel -->
+    <p class="text-muted text-center"><small>Copyright © SaltTechno 2017</small></p>
+    </div>
+    <!-- /.col-md-6 col-md-offset-3 -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /. -->
 
-<h5 class="text-center mt-10 mb-20">Or Register With</h5>
-
-<div class="text-center">
-    <button type="button" class="btn btn-primary bg-primary-600 btn-labeled">Facebook<span class="btn-label btn-label-right"><i class="fa fa-facebook"></i></span></button>
-    <button type="button" class="btn btn-primary bg-primary-300 btn-labeled ml-5">Twitter<span class="btn-label btn-label-right"><i class="fa fa-twitter"></i></span></button>
-    <button type="button" class="btn btn-danger bg-danger-300 btn-labeled ml-5">Google<span class="btn-label btn-label-right"><i class="fa fa-google-plus"></i></span></button>
-</div>
-<!-- /.text-center -->
-
-</div>
-</div>
-<!-- /.panel -->
-<p class="text-muted text-center"><small>Copyright © SaltTechno 2017</small></p>
-</div>
-<!-- /.col-md-6 col-md-offset-3 -->
-</div>
-<!-- /.row -->
-</div>
-<!-- /. -->
-
-</div>
-
-<input type="submit" value="update aidechauffeur">
-{{ form_end (form ) }}
+    </div>
+    {{ form_end (form ) }}
 {% endblock %}

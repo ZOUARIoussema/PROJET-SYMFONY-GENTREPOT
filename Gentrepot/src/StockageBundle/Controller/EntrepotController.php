@@ -63,7 +63,7 @@ class EntrepotController extends Controller
             //fresh the data base
             $em->flush();
             //Redirect to the read
-            return $this->redirectToRoute('stockage_afficherEntrepot');
+           // return $this->redirectToRoute('stockage_afficherEntrepot');
         }
         //second step:
         // send the view to the user

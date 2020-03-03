@@ -55,7 +55,7 @@ class DefaultController extends Controller
 
         if ($authChecker->isGranted('ROLE_STOCK')) {
 
-            return $this->render('@Test/backend/table.html.twig', array(
+            return $this->render('@Stockage/Default/index.html.twig', array(
                 'user' => $user,
 
 
@@ -73,9 +73,17 @@ class DefaultController extends Controller
         }
 
 
-        if ($authChecker->isGranted('ROLE_CLIEN')) {
+        if ($authChecker->isGranted('ROLE_RACHA')) {
 
-            return $this->render('@Vente/Produit/affiche.html.twig', array(
+            return $this->render('@Achat/Default/index.html.twig', array(
+                'user' => $user,
+
+
+            ));
+        }
+        if ($authChecker->isGranted('ROLE_CPARC')) {
+
+            return $this->render('@logistique/Default/index.html.twig', array(
                 'user' => $user,
 
 
@@ -83,9 +91,10 @@ class DefaultController extends Controller
         }
 
 
-        if ($authChecker->isGranted('ROLE_ADMIN')) {
 
-            return $this->render('@User/Default/index.html.twig', array(
+        if ($authChecker->isGranted('ROLE_ACAIS')) {
+
+            return $this->render('@Tresorerie/Default/index.html.twig', array(
                 'user' => $user,
 
 

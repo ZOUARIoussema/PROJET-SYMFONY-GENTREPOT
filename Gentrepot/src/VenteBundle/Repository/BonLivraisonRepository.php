@@ -10,4 +10,33 @@ namespace VenteBundle\Repository;
  */
 class BonLivraisonRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findByNombre()
+    {
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT count(e) 
+                            FROM VenteBundle:BonLivraison e where e.etat = 'en cours'
+                            ");
+
+        return $qb->getSingleScalarResult();
+
+    }
+
+
+    public function findalllivrasion(){
+        $qb = $this->createQueryBuilder('p')
+            ->orderBy('p.dateCreation', 'DESC');
+        $query = $qb->getQuery();
+
+        return $query->execute();
+    }
+    public function findallLivrasionBydate(){
+        $entityManager = $this->getEntityManager();
+        $date =  date('Y-m-d');
+        $query = $this->createQueryBuilder('p')
+            ->where('p.datesortie=:dn')
+            ->setParameter('dn',$date)
+            ->getQuery();
+        return $query->execute();
+    }
 }

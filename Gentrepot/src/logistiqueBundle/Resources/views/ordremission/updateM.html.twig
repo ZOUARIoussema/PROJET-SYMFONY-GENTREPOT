@@ -1,0 +1,70 @@
+{% extends 'backend/logistique/index.html.twig' %}
+{% block title %} Modifier ordre de mission{% endblock %}
+{% block content %}
+    <h5 style="text-align:">Modifier ordre de mission</h5>
+    {{ form_start (form ) }}
+    {{ form_widget(form) }}
+
+
+    <form action="index.html" class="form-horizontal">
+        <div class="form-group left-icon">
+
+            <div class="col-sm-9">
+
+            </div>
+        </div>
+        <div class="form-group left-icon">
+
+            <div class="col-sm-9">
+
+
+            </div>
+        </div>
+        <div class="form-group left-icon">
+
+            <div class="col-sm-9">
+
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <div class="checkbox op-check">
+                    <label>
+
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group mt-20">
+            <div class="">
+                <a href="#" class="form-link"><small class="muted-text"></small></a>
+                <button type="submit" class="btn btn-success btn-labeled">Ajouter<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </form>
+
+    <hr>
+
+    <h5 class="text-center mt-10 mb-20"></h5>
+
+    <div class="text-center">
+
+    </div>
+    <!-- /.text-center -->
+
+    </div>
+    </div>
+    <!-- /.panel -->
+    <p class="text-muted text-center"><small>Copyright © SaltTechno 2017</small></p>
+    </div>
+    <!-- /.col-md-6 col-md-offset-3 -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /. -->
+
+    </div>
+    {{ form_end (form ) }}
+{% endblock %}

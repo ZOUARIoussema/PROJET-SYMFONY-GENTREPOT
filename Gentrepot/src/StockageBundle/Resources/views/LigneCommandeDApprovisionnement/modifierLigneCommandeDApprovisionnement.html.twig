@@ -1,0 +1,43 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+
+{% block content %}
+    <div class ="container">
+    <div class="panel panel-primary">
+    <div class ="panel-heading">
+        <i class ="icon_menu"></i>Liste Des Pertes
+    </div>
+
+    <div class ="panel-body">
+    <fieldset style="width: 50%">
+        <form method="POST">
+            <table class ="table-condensed">
+                <tr>
+                    <td >Produit:</td><td ><input type="text" name="produit" value="{{lcommande.getProduit().getLibelle()}}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Qté:</td><td><input type="text" name="quantite" value="{{lcommande.quantite }}"></td>
+                </tr>
+                <tr>
+                    <td>Prix:</td><td><input type="text" name="prix" value="{{lcommande.prix }}"></td>
+                </tr>
+                <tr>
+                    <td>Prix Total:</td><td><input type="text" name="total" value="{{lcommande.total}}"></td>
+                </tr>
+                <tr>
+                    <td>Prix Total Tva:</td><td><input type="text" name="tva" value="{{lcommande.tva }}"></td>
+                </tr>
+                <tr>
+                    <td>Prix Total Tva:</td><td><input type="text" name="perte" value="{{lcommande.getCommande().getNumeroC() }}"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Valider"></td><td></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    </div>
+    </div>
+    </div>
+{% endblock %}

@@ -58,12 +58,13 @@
                         <li class="hidden-sm hidden-xs"><a href="#" class="full-screen-handle"><i class="fa fa-arrows-alt"></i></a></li>
                         <li class="hidden-sm hidden-xs"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="hidden-xs hidden-xs"><!-- <a href="#">My Tasks</a> --></li>
-                        <li class=""><a href="#" class="color-primary"><i class="fa fa-diamond"></i> Upgrade</a></li>
+
                     </ul>
                     <!-- /.nav navbar-nav -->
 
                     <ul class="nav navbar-nav navbar-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-                        <li class="dropdown">
+
+                       {# <li class="dropdown">
                             <a href="#" class="dropdown-toggle bg-primary tour-one" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-circle"></i> Add New <span class="caret"></span></a>
                             <ul class="dropdown-menu" >
                                 <li><a href="#"><i class="fa fa-plus-square-o"></i> Customer</a></li>
@@ -77,11 +78,21 @@
                                 <li><a href="#">Generate Report</a></li>
                             </ul>
                         </li>
+                        #}
 
 
 
                         <!-- /.dropdown -->
-                        <li><a href="#" class=""><i class="fa fa-bell"></i><span class="badge badge-danger">6</span></a></li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle bg-primary tour-one" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge badge-danger">{{ mgilet_notification_count(app.user) }}</span></a>
+
+                            <ul class="dropdown-menu" >
+
+                                <li><a href="#"><i class="fa fa-plus-square-o"></i> {{ mgilet_notification_render(app.user) }}</a></li>
+
+
+                            </ul>
+                        </li>
                         <li><a href="{{ path('fos_message_inbox') }}" class=""><i class="fa fa-comments"></i><span class="badge badge-warning">{{ fos_message_nb_unread() }}</span></a></li>
                         <li class="dropdown tour-two">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">John Doe <span class="caret"></span></a>
@@ -256,6 +267,8 @@
 
             {% endblock %}<!-- /.section -->
 
+
+
             {% block js %}
                 <!-- ========== COMMON JS FILES ========== -->
                 <script src="{{ asset('backend/js/jquery/jquery-2.2.4.min.js') }}"></script>
@@ -272,7 +285,7 @@
                 <script src="{{ asset('backend/js/amcharts/amcharts.js') }}"></script>
                 <script src="{{ asset('backend/js/amcharts/serial.js') }}"></script>
                 <script src="{{ asset('backend/js/amcharts/plugins/export/export.min.js') }}"></script>
-                <link rel="stylesheet" href="{{ asset('backend/js/amcharts/plugins/export/export.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('backend/js/amcharts/plugins/export/export.css') }}" type="text/css" media="all" />
                 <script src="{{ asset('backend/js/amcharts/themes/light.js') }}"></script>
                 <script src="{{ asset('backend/js/toastr/toastr.min.js') }}"></script>
                 <script src="{{ asset('backend/js/icheck/icheck.min.js') }}"></script>
@@ -283,6 +296,44 @@
                 <script src="{{ asset('backend/js/production-chart.js') }}"></script>
                 <script src="{{ asset('backend/js/traffic-chart.js') }}"></script>
                 <script src="{{ asset('backend/js/task-list.js') }}"></script>
+                <!-- ========== COMMON JS FILES ========== -->
+                <script src="{{ asset('backend/js/jquery/jquery-2.2.4.min.js') }}"></script>
+                <script src="{{ asset('backend/js/jquery-ui/jquery-ui.min.js') }}"></script>
+                <script src="{{ asset('backend/js/bootstrap/bootstrap.min.js') }}"></script>
+                <script src="{{ asset('backend/js/pace/pace.min.js') }}"></script>
+                <script src="{{ asset('backend/js/lobipanel/lobipanel.min.js') }}"></script>
+                <script src="{{ asset('backend/js/iscroll/iscroll.js') }}"></script>
+
+                <!-- ========== PAGE JS FILES ========== -->
+                <script src="{{ asset('backend/js/prism/prism.js') }}"></script>
+                <script src="{{ asset('backend/js/waypoint/waypoints.min.js') }}"></script>
+                <script src="{{ asset('backend/js/counterUp/jquery.counterup.min.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/amcharts.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/serial.js') }}"></script>
+                <script src="{{ asset('backend/js/amcharts/plugins/export/export.min.js') }}"></script>
+            <link rel="stylesheet" href="{{ asset('backend/js/amcharts/plugins/export/export.css') }}" type="text/css" media="all" />
+                <script src="{{ asset('backend/js/amcharts/themes/light.js') }}"></script>
+                <script src="{{ asset('backend/js/toastr/toastr.min.js') }}"></script>
+                <script src="{{ asset('backend/js/icheck/icheck.min.js') }}"></script>
+                <script src="{{ asset('backend/js/bootstrap-tour/bootstrap-tour.js') }}"></script>
+
+                <!-- ========== THEME JS ========== -->
+                <script src="{{ asset('backend/js/main.js') }}"></script>
+                <script src="{{ asset('backend/js/production-chart.js') }}"></script>
+                <script src="{{ asset('backend/js/traffic-chart.js') }}"></script>
+                <script src="{{ asset('backend/js/task-list.js') }}"></script>
+                <script src="{{ asset('backend/js/jquery/jquery-2.2.4.min.js') }}"></script>
+                <script src="{{ asset('backend/js/bootstrap/bootstrap.min.js') }}"></script>
+                <script src="{{ asset('backend/js/pace/pace.min.js') }}"></script>
+                <script src="{{ asset('backend/js/lobipanel/lobipanel.min.js') }}"></script>
+                <script src="{{ asset('backend/js/iscroll/iscroll.js') }}"></script>
+
+                <!-- ========== PAGE JS FILES ========== -->
+                <script src="{{ asset('backend/js/prism/prism.js') }}"></script>
+                <script src="{{ asset('backend/js/DataTables/datatables.min.js') }}"></script>
+                <script src="{{ asset('backend/js/waypoint/waypoints.min.js') }}"></script>
+                <script src="{{ asset('backend/js/counterUp/jquery.counterup.min.js') }}"></script>
+                <script src="{{ asset('backend/js/main.js') }}"></script>
                 <script>
                     $(function(){
 
@@ -310,11 +361,62 @@
                             "showMethod": "fadeIn",
                             "hideMethod": "fadeOut"
                         }
-                        toastr["success"]("One stop solution to your website admin panel!", "Welcome to Options!");
 
+                    });
+                    $(function($) {
+                        // Counter for dashboard stats
+
+                        // data table
+                        $('#example').DataTable();
+
+                        $('#example2').DataTable( {
+                            "scrollY":        "300px",
+                            "scrollCollapse": true,
+                            "paging":         false
+                        } );
+
+                        $('#example3').DataTable();
                     });
                 </script>
             {% endblock %}
+
+
+                <script>
+                    $(function(){
+
+                        // Counter for dashboard stats
+                        $('.counter').counterUp({
+                            delay: 10,
+                            time: 1000
+                        });
+
+                        // Welcome notification
+                        toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": false,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "3500",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+                        toastr["success"]("", "Bienvenue agent caisse !");
+
+                    });
+
+                </script>
+
+                <!-- ========== ADD custom.js FILE BELOW WITH YOUR CHANGES ========== -->
+
+
             <!-- ========== ADD custom.js FILE BELOW WITH YOUR CHANGES ========== -->
         </div>
     </div>

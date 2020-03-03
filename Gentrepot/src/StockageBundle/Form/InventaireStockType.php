@@ -1,8 +1,9 @@
 <?php
 
 namespace StockageBundle\Form;
-use StockageBundle\Entity\Emplacement;
+
 use AchatBundle\Entity\ProduitAchat;
+use StockageBundle\Entity\Emplacement;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

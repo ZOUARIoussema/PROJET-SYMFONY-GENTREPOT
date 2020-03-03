@@ -41,7 +41,6 @@ class CommandeDAprovisionnement
     private $dateCreation;
 
     /**
-     *
      * @ORM\Column(type="string",options={"default":"non_facturer"})
      */
     private $etat;

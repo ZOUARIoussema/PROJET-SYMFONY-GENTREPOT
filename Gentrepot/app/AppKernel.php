@@ -1,6 +1,6 @@
 <?php
 
-
+use Egyg33k\CsvBundle\Egyg33kCsvBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -30,7 +30,10 @@ class AppKernel extends Kernel
             new MessageBundle\MessageBundle(),
             new Mgilet\NotificationBundle\MgiletNotificationBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Egyg33k\CsvBundle\Egyg33kCsvBundle(),
             new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
+            new FOS\CKEditorBundle\FOSCKEditorBundle(),
 
         ];
 

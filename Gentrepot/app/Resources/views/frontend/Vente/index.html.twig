@@ -277,7 +277,7 @@
 												</div>
 												<div class="navbar-minicart navbar-minicart-topbar">
 													<div class="navbar-minicart">
-														<a class="minicart-link" href="#">
+														<a class="minicart-link" href="{{ path('index') }}">
 															<span class="minicart-icon">
 																<i class="fa fa-shopping-cart"></i>
 																<span>0</span>
@@ -575,17 +575,16 @@
 		</div>
 		<div class="minicart-side">
 			<div class="minicart-side-title">
-				<h4>Shopping Cart</h4>
+				<h4>Panier</h4>
 			</div>
 			<div class="minicart-side-content">
 				<div class="minicart">
 					<div class="minicart-header no-items show">
-						Your shopping bag is empty.
 					</div>
 					<div class="minicart-footer">
 						<div class="minicart-actions clearfix">
-							<a class="button no-item-button" href="#">
-								<span class="text">Go to the shop</span>
+							<a class="button no-item-button" href="{{ path('index') }}">
+								<span class="text">Aller au panier</span>
 							</a>
 						</div>
 					</div>

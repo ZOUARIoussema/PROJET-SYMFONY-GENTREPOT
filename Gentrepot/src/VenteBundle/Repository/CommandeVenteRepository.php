@@ -10,4 +10,16 @@ namespace VenteBundle\Repository;
  */
 class CommandeVenteRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findByTotal()
+    {
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT sum (c.totalC)
+                            FROM VenteBundle:CommandeVente c
+                            ");
+
+        return $qb->getSingleScalarResult();
+    }
+
 }

@@ -22,3 +22,7 @@ bonentree_delete:
     path:     /{id}/delete
     defaults: { _controller: "AchatBundle:BonEntree:delete" }
     methods:  DELETE
+PDF_new:
+    path:     /PDF_new/{id}
+    defaults: { _controller: "AchatBundle:BonEntree:PDF" }
+    methods:  [GET, POST]

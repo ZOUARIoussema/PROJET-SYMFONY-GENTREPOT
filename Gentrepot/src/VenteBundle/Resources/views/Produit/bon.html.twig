@@ -1,0 +1,218 @@
+{% extends 'backend/Vente/index.html.twig' %}
+{% block title %} Liste des Bon de livraisons {% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
+
+    <section class="section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <a class="dashboard-stat bg-success" href="#">
+                        <span class="number counter">{{facture}}</span>
+                        <span class="name">Facturé</span>
+                        <span class="bg-icon"><i class="fa fa-check"></i></span>
+                    </a>
+
+                    <!-- /.dashboard-stat -->
+
+                    <div class="src-code">
+                                            <pre class="language-html"><code class="language-html">
+
+
+
+
+                                            </code></pre>
+
+                    </div>
+
+                    <!-- /.src-code -->
+                </div>
+                <!-- /.col-lg-3 col-md-3 col-sm-6 col-xs-12 -->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <a class="dashboard-stat bg-info" href="#">
+                        <span class="number counter">000000</span>
+                        <span class="name">Comming soon</span>
+                        <span class="bg-icon"><i class="fa fa-hourglass-half"></i></span>
+                    </a>
+                    <!-- /.dashboard-stat -->
+
+                    <div class="src-code">
+                                            <pre class="language-html"><code class="language-html">
+&lt;a class="dashboard-stat bg-info" href="#"&gt;
+    &lt;span class="number counter"&gt;1,200&lt;/span&gt;
+    &lt;span class="name"&gt;Pending&lt;/span&gt;
+    &lt;span class="bg-icon"&gt;&lt;i class="fa fa-hourglass-half"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;!-- /.dashboard-stat --&gt;
+
+&lt;!-- ========== JS ========== --&gt;
+&lt;script&gt;
+    $(function(){
+        $('.counter').counterUp();
+    });
+&lt;/script&gt;
+                                            </code></pre>
+                    </div>
+                    <!-- /.src-code -->
+                </div>
+                <!-- /.col-lg-3 col-md-3 col-sm-6 col-xs-12 -->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <a class="dashboard-stat bg-warning" href="#">
+                        <span class="number counter">{{ bon }}</span>
+                        <span class="name">En cours</span>
+                        <span class="bg-icon"><i class="fa fa-exclamation-triangle"></i></span>
+                    </a>
+                    <!-- /.dashboard-stat -->
+
+                    <div class="src-code">
+                                            <pre class="language-html"><code class="language-html">
+&lt;a class="dashboard-stat bg-warning" href="#"&gt;
+    &lt;span class="number counter"&gt;125&lt;/span&gt;
+    &lt;span class="name"&gt;On Hold&lt;/span&gt;
+    &lt;span class="bg-icon"&gt;&lt;i class="fa fa-exclamation-triangle"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;!-- /.dashboard-stat --&gt;
+
+&lt;!-- ========== JS ========== --&gt;
+&lt;script&gt;
+    $(function(){
+        $('.counter').counterUp();
+    });
+&lt;/script&gt;
+                                            </code></pre>
+                    </div>
+                    <!-- /.src-code -->
+                </div>
+                <!-- /.col-lg-3 col-md-3 col-sm-6 col-xs-12 -->
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <a class="dashboard-stat bg-danger" href="#">
+                        <span class="number counter">00000</span>
+                        <span class="name">Comming soon</span>
+                        <span class="bg-icon"><i class="fa fa-times"></i></span>
+                    </a>
+                    <!-- /.dashboard-stat -->
+
+                    <div class="src-code">
+                                            <pre class="language-html"><code class="language-html">
+&lt;a class="dashboard-stat bg-danger" href="#"&gt;
+    &lt;span class="number counter"&gt;5&lt;/span&gt;
+    &lt;span class="name"&gt;Not Delivered&lt;/span&gt;
+    &lt;span class="bg-icon"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;!-- /.dashboard-stat --&gt;
+
+&lt;!-- ========== JS ========== --&gt;
+&lt;script&gt;
+    $(function(){
+        $('.counter').counterUp();
+    });
+&lt;/script&gt;
+                                            </code></pre>
+                    </div>
+                    <!-- /.src-code -->
+                </div>
+                <!-- /.col-lg-3 col-md-3 col-sm-6 col-xs-12 -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- ========== JS ========== -->
+    <script>
+        $(function(){
+            $('.counter').counterUp();
+        });
+    </script>
+    <section class="section" >
+        <div class="container-fluid">
+
+            <div class="row" >
+                <div class="col-md-8 col-md-offset-2" >
+
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <h5 class="container-fluid" style="text-align: center">Bon Livraisons</h5>
+
+
+                            </div>
+                        </div>
+                        <div class="panel-body p-20">
+
+
+
+
+
+
+
+
+
+
+
+                            <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+
+                                <thead>
+
+                                <tr>
+                                    <th>Id</th>
+                                    <th> Ordre mission</th>
+                                    <th>Adresse Livraison</th>
+                                    <th>etat</th>
+                                    <th>Date creation</th>
+                                    <th>Date sortie</th>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th class="ecomm-action-icon">Facturer</th>
+                                </tr>
+                                </thead>
+                                {% for e in liste %}
+                                <tr>
+                                    <td>{{e.id}}</td>
+                                    <td>{{e.getIdOrdemission()}}</td>
+                                    <td>{{e.adresseLivraison}}</td>
+                                    <td>{% if e.etat == 'valider' %}<span class="label label-success label-wide">{{e.etat}}</span>
+                                        {% elseif e.etat == 'en cours' %}
+                                        <span class="label label-warning label-wide">{{e.etat}}</span>
+{% endif %}
+                                    </td>
+                                    <td>{{e.dateCreation | date}}</td>
+                                    <td>{{e.datesortie | date}}</td>
+                                    <td> {{e.nom}} </td>
+                                    <td> {{e.prenom}} </td>
+
+
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-xs btn-labeled">  <a href="{{ path('facture',{'id':e.id}) }}" class="checkout-button button alt wc-forward rounded" style="color: white"> facturer </a><span class="btn-label btn-label-right" style="color: white"><i class="fa fa-check"></i></span></button>
+
+
+                                    </td>
+
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+
+                            </table>
+
+                            <!-- ========== JS ========== -->
+                            <script>
+                                $(function($) {
+                                    $('#example').DataTable();
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

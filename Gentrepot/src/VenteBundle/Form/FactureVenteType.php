@@ -13,7 +13,16 @@ class FactureVenteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('dateCreation')->add('dateEchaillancePaiement')->add('totalTTC')->add('etat')->add('totalPaye')->add('resteAPaye')->add('timbreFiscale')->add('fraisTransport')->add('BonLivraison');
+        $builder
+            //->add('dateCreation')
+            ->add('dateEchaillancePaiement')
+            ->add('totalTTC')
+            //->add('etat')
+            //->add('totalPaye')
+           // ->add('resteAPaye')
+            ->add('timbreFiscale')
+            ->add('fraisTransport');
+            //->add('BonLivraison');
     }/**
      * {@inheritdoc}
      */

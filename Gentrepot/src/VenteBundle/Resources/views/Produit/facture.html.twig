@@ -1,0 +1,55 @@
+{% extends 'backend/Vente/index.html.twig' %}
+{% block title %} ajouter facture{% endblock %}
+{% block content %}
+<div class="container">
+    {{ form_start(form) }} <br>
+    {{ form_widget(form) }}
+{{ total }}
+    <input type="submit" value="ajouter">
+
+    <div class="panel-body p-20">
+
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>Reference</th>
+                <th>Libelle</th>
+                <th>Prix</th>
+                <th>tva</th>
+                <th>classe</th>
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            {% for e in produit %}
+
+                <tr>
+                    <th scope="row">{{e.produit.reference}}</th>
+
+
+                      <td>{{ e.produit.libelle }}</td>
+
+
+                     <td>{{ e.produit.prixVente }}</td>
+
+
+                    <td>{{ e.produit.tVA }}</td>
+                    <td>{{ e.produit.classe }}</td>
+
+
+                </tr>
+
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+
+    {{ form_end(form) }}
+    </div>
+{% endblock %}

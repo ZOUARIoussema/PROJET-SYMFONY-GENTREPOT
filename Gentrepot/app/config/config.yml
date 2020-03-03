@@ -97,20 +97,33 @@ fos_user:
       form:
         type: UserBundle\Form\RegistrationFormType
 
+# app/config/config.yml (or config/packages/knp_snappy.yaml if using Symfony4 and the Flex recipe)
+
+
 knp_snappy:
     pdf:
         enabled:    true
-        binary:     /usr/local/bin/wkhtmltopdf #"\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\"" for Windows users
+        # If you have wkhtmltopdf as an environment variable you don't need to provide the
+        # full path to the executable, use it in the same way as you use in the console
+        #binary:  "wkhtmltopdf"
+        binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\""
+        options:
+            no-outline: true
+    image:
+        enabled:    true
+        binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\""
         options:    []
-
-
-
 # app/config/config.yml
 
 fos_message:
     db_driver: orm
     thread_class: AppBundle\Entity\Thread
     message_class: AppBundle\Entity\Message
-# app/config/config.yml
+
 cmen_google_charts:
     version: "current"
+
+fos_ck_editor:
+  # ...
+  base_path: "build/ckeditor"
+  js_path:   "build/ckeditor/ckeditor.js"

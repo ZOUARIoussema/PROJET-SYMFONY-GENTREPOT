@@ -94,6 +94,48 @@ pdf:
   defaults: { _controller: VenteBundle:Commande:pdf }
 
 
+pdff:
+  path:     /pdff
+  defaults: { _controller: VenteBundle:Commande:pdff }
+
+client:
+  path:     /client
+  defaults: { _controller: VenteBundle:Cart:show }
+
+
+bon:
+  path:     /newbon/{id}
+  defaults: { _controller: VenteBundle:Cart:ajouterBonlivraison }
+
+
+
+valide:
+  path:     /validation
+  defaults: { _controller: VenteBundle:Cart:valide }
+
+bonlivraison:
+  path:     /bonlivraison
+  defaults: { _controller: VenteBundle:Cart:affichebon }
+
+
+facture:
+  path:     /facture/{id}
+  defaults: { _controller: VenteBundle:Cart:ajoutfacture }
+
+
+commandevalide:
+  path:     /valide
+  defaults: { _controller: VenteBundle:Cart:commande }
+
+factureaffiche:
+  path:     /listfacture
+  defaults: { _controller: VenteBundle:Cart:afficheFacture }
+
+facturepdf:
+  path:     /facturepdf/{id}
+  defaults: { _controller: VenteBundle:Cart:PDFfacture }
+
+
 
 
 

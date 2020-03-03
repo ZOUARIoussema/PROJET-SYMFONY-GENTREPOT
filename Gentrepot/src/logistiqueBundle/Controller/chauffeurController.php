@@ -19,6 +19,9 @@ class chauffeurController extends Controller
         if ($form->isSubmitted())
         {
             $em= $this->getDoctrine()->getManager();
+            $chauffeur->setEtat('disponible');
+            $chauffeur->setVoyage(0);
+
             $em-> persist($chauffeur);
             $em->flush();
 

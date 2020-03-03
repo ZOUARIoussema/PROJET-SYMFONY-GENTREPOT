@@ -10,7 +10,6 @@ stockage_modifierEntrepot:
 Stockage_graphePie:
     path:     /index
     defaults: { _controller: StockageBundle:Emplacement:index}
-
 stockage_afficherEntrepot:
     path:     /afficherEntrepot/
     defaults: { _controller: StockageBundle:Entrepot:afficherEntrepot }
@@ -26,6 +25,9 @@ stockage_modifierLigneCommandeDApprovisionnement:
 stockage_supprimerLigneCommandeDApprovisionnement:
     path:     /supprimerLigneCommandeDApprovisionnement/{id}
     defaults: { _controller: StockageBundle:LigneCommandeDApprovisionnement:supprimerLigneCommandeDApprovisionnement}
+stockage_supprimerLigneCommandeDApprovisionnementTemp:
+    path:     /supprimerLigneCommandeDApprovisionnementTemp/{id}
+    defaults: { _controller: StockageBundle:CommandeDAprovisionnement:supprimerLigneCommandeDApprovisionnementTemp}
 stockage_passerPerte:
     path:     /passerPerte
     defaults: { _controller: StockageBundle:Perte:passerPerte }
@@ -38,6 +40,9 @@ stockage_modifierLignePerte:
 stockage_supprimerLignePerte:
     path:     /supprimerLignePerte/{id}
     defaults: { _controller: StockageBundle:LignePerte:supprimerLignePerte}
+stockage_supprimerLignePerteTemp:
+    path:     /supprimerLignePerteTemp/{id}
+    defaults: { _controller: StockageBundle:Perte:supprimerLignePerteTemp}
 stockage_faireInventaireStock:
     path:     /faireInventaireStock
     defaults: { _controller: StockageBundle:InventaireStock:faireInventaireStock}
@@ -53,3 +58,17 @@ stockage_modifierInventaireStock:
 stockage_supprimerInventaireStock:
     path:     /supprimerInventaireStock/{id}
     defaults: { _controller: StockageBundle:InventaireStock:supprimerInventaireStock}
+stockage_exportInventaireStock:
+    path:     /exportInventaireStock/
+    defaults: { _controller: StockageBundle:InventaireStock:exportInventaireStock}
+stockage_listeEmplacement:
+    path:     /listeEmplacement
+    defaults: { _controller: StockageBundle:Emplacement:afficher}
+stockage_modifierEmplacement:
+    path:     /modifierEmplacement/{id}
+    defaults: { _controller: StockageBundle:Emplacement:modifierEmplacement}
+stockage_supprimerEmplacement:
+    path:     /supprimerEmplacement/{id}
+    defaults: { _controller: StockageBundle:Emplacement:supprimerEmplacement}
+
+

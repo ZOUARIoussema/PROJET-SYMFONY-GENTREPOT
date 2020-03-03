@@ -8,15 +8,21 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use FOS\UserBundle\Form\Type\RegistrationFormType as BaseRegistrationFormType;
 
-class RegistrationFormType extends AbstractType
+class RegistrationFormType extends UserType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom')
+            ->add('nom',TextType::class,[
+                'attr' => [
+                    'class' =>'input-text',
+                    'cols' => 10,
+                ]
+            ])
             ->add('prenom')
             ->add('ville')
              ->add('DateNaissance',DateType::class ,[

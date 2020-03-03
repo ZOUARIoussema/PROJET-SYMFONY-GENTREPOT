@@ -1,8 +1,71 @@
 
-{% extends 'frontend/Vente/index.html.twig' %}
-{% block title %} facture {% endblock %}
-{% block content %}
-facture crées
 
 
-{% endblock %}
+
+<h1 style="text-align: center;color: black"> Facture </h1><br>
+<img src="C:\xampp\htdocs\Mehdy+oussema+oumayma+rodrigue\Gentrepot\web\uploads\images\11.png" alt="" width="221" height="228" data-ww="221px" data-hh="228px" >
+<div class="container-fluida" style="align-content: center">
+
+
+
+
+                            <table width="1000" height="100"  border="6">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Date de creation</th>
+                                    <th>Date echaillance paiement</th>
+                                    <th>Total</th>
+                                    <th>etat</th>
+                                    <th>total paye</th>
+                                    <th>rest paye</th>
+                                    <th>Timbre fiscale</th>
+                                    <th>Frais transport</th>
+                                    <th>Num Bl</th>
+
+
+
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+                                {% for e in liste %}
+                                    <br><h3 style="text-align: center;color: black">Numéro  de facture : {{  e.id}}</h3><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <tr>
+                                        <th scope="row">{{e.id}}</th>
+
+                                        <td>{{e.dateCreation | date}}</td>
+                                        <td>{{e.dateechaillancePaiement | date}}</td>
+                                        <td> {{ e.totalTTC }} </td>
+
+                                        <td>{{e.etat}}</td>
+                                        <td>{{e.totalPaye}}</td>
+                                        <td>{{e.resteAPaye}}</td>
+                                        <td>{{e.timbreFiscale}}</td>
+                                        <td>{{e.fraisTransport}}</td>
+                                        <td>{{e.getBonLivraison().getId()}}</td>
+
+
+
+
+
+
+
+
+
+
+                                        </td>
+
+                                    </tr>
+
+                                {% endfor %}
+
+
+                            </table>
+
+</div>

@@ -2,7 +2,18 @@
 {% block title %} produit  {% endblock  %}
 
 {% block content %}
-    <h1>Produit</h1>
+
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h2 style="text-align: center">Produit</h2>
+            </div>
+
+        </div>
+
+
+
 
     <table>
         <tbody>
@@ -40,7 +51,7 @@
         </tr>
         <tr>
             <th>Description</th>
-            <td>{{ produit.description }}</td>
+            <td>{{ produit.description|raw }}</td>
         </tr>
         <tr>
             <th>Typede de conditionnement</th>
@@ -86,17 +97,18 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('produit_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('produit_edit', { 'reference': produit.reference }) }}">Edit</a>
-        </li>
-        <li>
+
+            <a href="{{ path('produit_index') }}"><button type="button" class="btn btn-primary btn-wide">
+                Retour a la liste</button></a>
+
+            <a href="{{ path('produit_edit', { 'reference': produit.reference }) }}"><button type="button" class="btn btn-primary btn-wide">
+                Modifier</button></a>
+
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>
+
+        {{ dump(produit) }}
 {% endblock %}

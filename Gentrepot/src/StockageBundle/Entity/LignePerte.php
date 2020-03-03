@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class LignePerte
 {
+
     /**
      * @var int
      *
@@ -24,10 +25,8 @@ class LignePerte
 
 
 
-
-
     /**
-     * @ORM\ManyToOne(targetEntity="Perte")
+     * @ORM\ManyToOne(targetEntity="Perte",cascade={"persist"})
      * @ORM\JoinColumn(name="id_perte",referencedColumnName="id")
      *
      */
@@ -39,7 +38,7 @@ class LignePerte
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="AchatBundle\Entity\ProduitAchat")
+     * @ORM\ManyToOne(targetEntity="AchatBundle\Entity\ProduitAchat",cascade={"persist"})
      * @ORM\JoinColumn(name="ref_produit",referencedColumnName="reference")
      *
      */
@@ -61,7 +60,6 @@ class LignePerte
     {
         $this->produit = $produit;
     }
-
 
     /**
      * @return mixed

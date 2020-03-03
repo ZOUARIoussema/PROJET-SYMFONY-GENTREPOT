@@ -1,0 +1,43 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+{% block title %} table {% endblock %}
+
+{% block content %}
+    <div class ="container">
+    <div class="panel panel-primary">
+    <div class ="panel-heading">
+        <i class ="icon_menu"></i>Parametres Emplacement
+    </div>
+
+    <div class ="panel-body">
+    <table class ="table-condensed">
+    <tr>
+
+        <th class="col-md-1">Adresse</th>
+        <th class="col-md-1">capacite de stockagee</th>
+        <th class="col-md-1">quantite stocker</th>
+        <th class="col-md-1">classe</th>
+        <th class="col-md-1">Action <br> Modification</th>
+        <th class="col-md-1">Action <br>Suppression</th>
+
+
+
+    </tr>
+    {%for f in emplacements %}
+        <tr>
+
+        <td class="col-md-1">{{f.adresse}}</td>
+        <td class="col-md-1">{{f.capaciteStockage}}</td>
+        <td class="col-md-1">{{f.quantiteStocker}}</td>
+        <td class="col-md-1">{{f.classe}}</td>
+            <td><a href="{{ path('stockage_modifierEmplacement',{'id':f.id}) }}"><button type="button" class="btn btn-warning" >Modifier</button></a> </td>
+        <td><a href="{{ path('stockage_supprimerEmplacement',{'id':f.id}) }}"><button type="button" class="btn btn-warning" >Supprimer</button></a> </td>
+    </tr>
+    {% endfor %}
+
+</table>
+    </div>
+    </div>
+    </div>
+
+
+{% endblock %}

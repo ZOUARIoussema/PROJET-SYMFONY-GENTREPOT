@@ -10,4 +10,12 @@ namespace logistiqueBundle\Repository;
  */
 class ordremissionRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findByEtat(){
+        $qb = $this->createQueryBuilder()
+            ->select('', 'DESC');
+        $query = $qb->getQuery();
+
+        return $query->execute();
+    }
 }

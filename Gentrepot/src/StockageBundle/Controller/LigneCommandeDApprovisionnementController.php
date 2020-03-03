@@ -11,24 +11,24 @@ class LigneCommandeDApprovisionnementController extends Controller
     public function modifierLigneCommandeDApprovisionnementAction(Request $request,$id)
     {
         $em = $this->getDoctrine()->getManager();
-        $lcom = $em->getRepository(LigneCommandeDApprovisionnement::class)->find($id);
+        $lcommande = $em->getRepository(LigneCommandeDApprovisionnement::class)->find($id);
 
 
         if ($request->isMethod('POST')) {
 
-            $lcom->setProduit($request->get('getId()'));
-            $lcom->setProduit($request->get('getPrix()'));
-            $lcom->setProduit($request->get('getQuantite()'));
-            $lcom->setProduit($request->get('getProduit().getLibelle()'));
-            $lcom->setProduit($request->get('getTotal()'));
-            $lcom->setProduit($request->get('getTva()'));
+            $lcommande->setProduit($request->get('getId()'));
+            $lcommande->setProduit($request->get('getPrix()'));
+            $lcommande->setProduit($request->get('getQuantite()'));
+            $lcommande->setProduit($request->get('getProduit().getLibelle()'));
+            $lcommande->setProduit($request->get('getTotal()'));
+            $lcommande->setProduit($request->get('getTva()'));
             //fresh the data base
             $em->flush();
 
             return $this->redirectToRoute('stockage_listeCommandeDAprovisionnement');
 
         }
-        return $this->render('@Stockage/LigneCommandeDApprovisionnement/modifierLignePerte.html.twig', array('lcom' => $lcom));
+        return $this->render('@Stockage/LigneCommandeDApprovisionnement/modifierLigneCommandeDApprovisionnement.html.twig', array('lcommande' => $lcommande));
     }
     public function supprimerLigneCommandeDApprovisionnementAction($id){
 

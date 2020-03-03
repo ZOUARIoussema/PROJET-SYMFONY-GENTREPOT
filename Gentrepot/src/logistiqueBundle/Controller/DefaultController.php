@@ -22,6 +22,7 @@ class DefaultController extends Controller
         if ($form->isSubmitted())
         {
             $em= $this->getDoctrine()->getManager();
+            $vehicule->setEtat('disponible');
             $em-> persist($vehicule);
             $em->flush();
 
@@ -56,5 +57,27 @@ class DefaultController extends Controller
             return $this->redirectToRoute('vehiculeaff');
         }
         return $this->render('@logistique/Default/updatev.html.twig',array('form'=>$form->createView()));
+    }
+    public function afficheBonAction(){
+        $em= $this->getDoctrine()->getManager();
+        $em=$this->getDoctrine()->getManager();
+        $B= $em->getRepository("VenteBundle:BonLivraison")->findalllivrasion();
+        // $bon = $em->getRepository("VenteBundle:BonLivraison")->findallLivrasionBydate();
+        $em=$this->getDoctrine()->getManager();
+
+        /*foreach ($bon as $b ){
+            $order = new ordremission();
+            $order->setDatecreation(new \DateTime(date('Y-m-d H:i:s')));
+            $order->setDateretour( new \DateTime(date('Y-m-d H:i:s')));
+            $order->setDatesortie($b->getDatesortie());
+            $order->setId($b->getDatesortie());
+
+            $em->persist($order);
+
+            $em->flush($order);
+        }*/
+        $B= $em->getRepository("VenteBundle:BonLivraison")->findalllivrasion();
+
+        return $this->render('@logistique/Default/afficheBon.html.twig',array('bon'=>$B));
     }
 }

@@ -1,0 +1,36 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+
+{% block content %}
+    <div class ="container">
+        <div class="panel panel-primary">
+            <div class ="panel-heading">
+                <i class ="icon_menu"></i>Modifier l'emplacement
+            </div>
+
+            <div class ="panel-body">
+                <fieldset style="width: 50%">
+                    <form method="POST">
+                        <table class ="table-condensed">
+
+                            <tr>
+                                <td class ="col-lg-1">Adresse:</td><td class ="col-lg-1"><input type="text" name="adresse" value="{{emplacement.adresse}}"></td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1">Capacite Stockage:</td><td class ="col-lg-1"><input type="text" name="capaciteStockage" value="{{emplacement.capaciteStockage}}"></td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1">Quantite Stocker:</td><td class ="col-lg-1"><input type="text" name="quantiteStocker" value="{{emplacement.quantiteStocker}}"></td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1">Classe:</td><td class ="col-lg-1"><input type="text" name="classe" value="{{emplacement.classe}}"></td>
+                            </tr>
+                            <tr>
+                                <td class ="col-lg-1"><input type="submit" value="Valider" name ="bt" class="btn btn-success"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+{% endblock %}

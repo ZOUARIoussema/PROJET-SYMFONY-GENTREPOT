@@ -5,6 +5,7 @@ namespace TresorerieBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use TresorerieBundle\Entity\InventaireCaisse;
 use TresorerieBundle\Entity\RecouvrementClientCheque;
 use TresorerieBundle\Entity\RecouvrementClientEspece;
@@ -141,4 +142,28 @@ class InventaireCaisseController extends Controller
 
 
     }
+
+    public function imprimerAction(Request $request,$id)
+    {
+        $snappy = $this->get('knp_snappy.pdf');
+        $em=$this->getDoctrine()->getManager();
+        $iventaire=  $em->getRepository(InventaireCaisse::class)->find($id);
+
+
+        $html = $this->renderView('@Tresorerie/Inventaire/Imprimer.html.twig',array("inventaire"=>$iventaire)
+
+        );
+
+        $filename = 'myFirstSnappyPDF';
+
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+            )
+        );
+    }
+
 }

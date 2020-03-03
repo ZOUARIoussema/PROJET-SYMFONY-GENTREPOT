@@ -6,6 +6,7 @@ use AchatBundle\Entity\BonEntree;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class BonEntreeController extends Controller
 {
@@ -119,6 +120,28 @@ class BonEntreeController extends Controller
             ->getForm()
             ;
     }
+public function PDFAction($id,Request $request)
+{
+    $snappy = $this->get('knp_snappy.pdf');
+    $em=$this->getDoctrine()->getManager();
+    $html = $em->getRepository("AchatBundle:BonEntree")->findBy(array('id'=>$id));
+
+
+    $html = $this->renderView('@Achat/Default/template.html.twig', array(
+        'date' => $html
+    ));
+
+    $filename = 'myFirstSnappyPDF';
+
+    return new Response(
+        $snappy->getOutputFromHtml($html),
+        200,
+        array(
+            'Content-Type'          => 'application/pdf',
+            'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+        )
+    );
+}
 
 
 }

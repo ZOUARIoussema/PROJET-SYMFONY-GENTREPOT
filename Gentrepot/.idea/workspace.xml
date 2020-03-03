@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_23_02_2020_16_28_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_23_02_2020_21_12_c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
-    </list>
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Emplacement/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Gentrepot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gentrepot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/ResponsableStockage/indexStockage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/ResponsableStockage/indexStockage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/EmplacementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/EmplacementController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Entity/Emplacement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Entity/Emplacement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/config/routing.yml" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +76,12 @@
       <path value="$PROJECT_DIR$/vendor/mgilet/notification-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/egyg33k/csv-bundle" />
+      <path value="$PROJECT_DIR$/vendor/league/csv" />
       <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XX11k2ee2q35t04JA9qFuUhCD6" />
@@ -114,9 +98,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Gentrepot" />
-    <property name="last_opened_file_path" value="D:/tr/Gentrepot" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/StockageBundle/Resources/views/Emplacement" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -129,6 +111,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\IntegrationFinal\Gentrepot\web" />
+      <recent name="C:\xampp\htdocs\IntegrationFinal\Gentrepot\src\AchatBundle\Resources" />
+      <recent name="C:\xampp\htdocs\IntegrationFinal\Gentrepot\app\Resources\views\frontend" />
+      <recent name="C:\xampp\htdocs\IntegrationFinal\Gentrepot\app\Resources\views\backend\achat" />
+      <recent name="C:\xampp\htdocs\Mehdy+oussema+oumayma+rodrigue\Gentrepot\src\StockageBundle\Resources\views\Emplacement" />
       <recent name="C:\xampp\htdocs\PROJET-SYMFONY-GENTREPOT\Gentrepot\app\Resources\FOSMessageBundle" />
       <recent name="C:\xampp\htdocs\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\MessageBundle\Resources\views\Message" />
       <recent name="C:\xampp\htdocs\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\TresorerieBundle\Form" />
@@ -143,19 +130,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
       <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\CommandeDAprovisionnement" />
-      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\LigneCommandeDApprovisionnement" />
-      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\LignePerte" />
-      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
-      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\Emplacement" />
-      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\CommandeDAprovisionnement" />
-      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\InventaireStock" />
-      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\Perte" />
-      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -202,14 +176,10 @@
       <command value="s doctrine:generate:form logistiqueBundle:ordremission" />
       <command value="run server" />
       <command value="s server:stop" />
-      <command value="s cache:clear" />
       <command value="s doctrine:generate:form VenteBundle:FactureVente" />
-      <command value="c install" />
-      <command value="s server:run" />
       <command value="s doctrine:generate:entity" />
       <command value="s generate:bundle" />
       <command value="s generate:controller" />
-      <command value="s cache:clear" />
       <command value="s doctrine:database:drop --force" />
       <command value="s doctrine:database:create" />
       <command value="s doctrine:database:create" />
@@ -217,35 +187,25 @@
       <command value="s doctrine:generate:form VenteBundle:BonLivraison" />
       <command value="s doctrine:schema:validate User" />
       <command value="s doctrine:schema:validate --skip-mapping" />
-      <command value="s cache:clear" />
       <command value="s doctrine:schema:validate" />
-      <command value="s doctrine:schema:update --force" />
-      <command value="c dump-autoload" />
-      <command value="c dump-autoload" />
       <command value="c install" />
-      <command value="s doctrine:database:create" />
-      <command value="schema update --force" />
-      <command value="c diagnose" />
-      <command value="c self-update" />
-      <command value="c self-update --rollback" />
-      <command value="curl -sS https://getcomposer.org/installer | php -- --check" />
-      <command value="c clear-cache" />
-      <command value="c require cmen/google-charts-bundle" />
       <command value="c dump-autoload" />
-      <command value="?" />
-      <command value="s doctrine:schema:update --dump-sql" />
+      <command value="s cache:clear" />
       <command value="s doctrine:schema:update --force" />
+      <command value="s cache:clear" />
+      <command value="c dump-autoload" />
+      <command value="s server:run" />
     </option>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -317,31 +277,21 @@
       <workItem from="1582376299392" duration="640000" />
       <workItem from="1582400195222" duration="11361000" />
       <workItem from="1582471601918" duration="2025000" />
-      <workItem from="1582486827311" duration="1042000" />
-      <workItem from="1582488688179" duration="1228000" />
-      <workItem from="1582238409877" duration="32418000" />
-      <workItem from="1582362788743" duration="1896000" />
-      <workItem from="1582497053028" duration="1085000" />
-      <workItem from="1582503678358" duration="162000" />
-      <workItem from="1582468900838" duration="4234000" />
-      <workItem from="1582554000848" duration="403000" />
-      <workItem from="1582560230689" duration="218000" />
-      <workItem from="1582497053028" duration="1523000" />
-      <workItem from="1582628290429" duration="792000" />
-      <workItem from="1582647465878" duration="665000" />
-      <workItem from="1582050525913" duration="1865000" />
-      <workItem from="1582116649773" duration="16880000" />
-      <workItem from="1582138013415" duration="1867000" />
-      <workItem from="1582162070894" duration="33223000" />
-      <workItem from="1582219084478" duration="8515000" />
-      <workItem from="1582241400940" duration="13883000" />
-      <workItem from="1582261667443" duration="9284000" />
-      <workItem from="1582273995093" duration="6391000" />
-      <workItem from="1582288148411" duration="822000" />
-      <workItem from="1582315899531" duration="1784000" />
-      <workItem from="1582357306886" duration="33250000" />
-      <workItem from="1582446860744" duration="10832000" />
-      <workItem from="1582510794682" duration="6341000" />
+      <workItem from="1582540303839" duration="732000" />
+      <workItem from="1582541171955" duration="525000" />
+      <workItem from="1582560450708" duration="3882000" />
+      <workItem from="1582644955147" duration="4460000" />
+      <workItem from="1582652373925" duration="21789000" />
+      <workItem from="1582732962555" duration="229000" />
+      <workItem from="1582733977556" duration="23731000" />
+      <workItem from="1582815485357" duration="10411000" />
+      <workItem from="1582830944970" duration="247000" />
+      <workItem from="1582831402788" duration="3131000" />
+      <workItem from="1582836694290" duration="216000" />
+      <workItem from="1582841440795" duration="3587000" />
+      <workItem from="1582851727897" duration="11608000" />
+      <workItem from="1582863706996" duration="16258000" />
+      <workItem from="1583270712253" duration="2368000" />
     </task>
     <servers />
   </component>
@@ -377,97 +327,67 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="199" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1581997774749" />
-    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582412525532">
+    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582833625206">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582412525532" />
-    <state x="540" y="118" width="620" height="318" key="#com.jetbrains.php.framework.ui.FailedToParseDialog" timestamp="1582472213406">
+    <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582833625206" />
+    <state x="540" y="118" width="620" height="318" key="#com.jetbrains.php.framework.ui.FailedToParseDialog" timestamp="1583272054885">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="540" y="118" width="620" height="318" key="#com.jetbrains.php.framework.ui.FailedToParseDialog/0.0.1366.728@0.0.1366.728" timestamp="1582472213406" />
-    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1582488778501">
+    <state x="540" y="118" width="620" height="318" key="#com.jetbrains.php.framework.ui.FailedToParseDialog/0.0.1366.728@0.0.1366.728" timestamp="1583272054885" />
+    <state x="407" y="241" key="ComposerCompositePathDialog" timestamp="1583271864617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582488778501" />
-    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1582488989390">
+    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1583271864617" />
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1583272677063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582488989390" />
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1582490467477">
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583272677063" />
+    <state width="1306" height="168" key="GridCell.Tab.0.bottom" timestamp="1583273535915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582490467477" />
-    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1582490467476">
+    <state width="1306" height="168" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583273535915" />
+    <state width="1306" height="168" key="GridCell.Tab.0.center" timestamp="1583273535915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582490467476" />
-    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1582490467476">
+    <state width="1306" height="168" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583273535915" />
+    <state width="1306" height="168" key="GridCell.Tab.0.left" timestamp="1583273535915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582490467476" />
-    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1582490467477">
-    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582238855663" />
-    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582238428115" />
-    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1582648154009">
+    <state width="1306" height="168" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583273535915" />
+    <state width="1306" height="168" key="GridCell.Tab.0.right" timestamp="1583273535915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582648154009" />
-    <state width="1323" height="187" key="GridCell.Tab.0.bottom" timestamp="1582279982694">
+    <state width="1306" height="168" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583273535915" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1583272687571">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582279982694" />
-    <state width="1323" height="187" key="GridCell.Tab.0.center" timestamp="1582279982694">
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583272687571" />
+    <state x="494" y="265" key="SymfonyPathDialog" timestamp="1583272677847">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582279982694" />
-    <state width="1323" height="187" key="GridCell.Tab.0.left" timestamp="1582279982694">
+    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1583272677847" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1583270712237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582279982694" />
-    <state width="1323" height="187" key="GridCell.Tab.0.right" timestamp="1582279982694">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583270712237" />
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1583272706142">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582279982694" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1582238864796">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582490467477" />
-    <state x="62" y="0" key="SettingsEditor" timestamp="1582488993533">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="62" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582488993533" />
-    <state x="494" y="265" key="SymfonyPathDialog" timestamp="1582488990234">
-    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582055476393" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582503727390">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582503727390" />
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582234097160">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582488990234" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582486839133">
-    <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582238857547" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582647465662">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582647465662" />
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582254168647">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582486839133" />
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582488808385">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582488808385" />
+    <state x="339" y="157" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583272706142" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/VenteBundle/Resources/views/Default/pdf.html.twig</url>
-          <line>6</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$USER_HOME$/Desktop/pidevgtc/Gentrepot/src/StockageBundle/Form/CommandeDAprovisionnementType.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/VenteBundle/Resources/views/Produit/factureaffiche.html.twig</url>
+          <line>59</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

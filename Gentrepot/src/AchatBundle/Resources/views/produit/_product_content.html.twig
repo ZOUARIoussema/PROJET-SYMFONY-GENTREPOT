@@ -1,0 +1,61 @@
+<div class="shop-loop grid js-filter-content ">
+    <ul class="products">
+
+
+        {% for e in list %}
+            <li class="product masonry-item product-no-border style-2 col-md-3 col-sm-6 product ">
+                <div class="product-container">
+                    <figure>
+                        <div class="product-wrap">
+                            <div class="product-images">
+                                <span class="onsale">En stock!</span>
+                                <div class="shop-loop-thumbnail shop-loop-front-thumbnail">
+                                    <a href="{{ path('produit_detail', { 'reference': e.reference }) }}"><img
+                                                width="450" height="450"
+                                                src="{{ asset('images/products/product_328x328alt.jpg') }}"
+                                                alt=""/></a>
+                                </div>
+                                <div class="shop-loop-thumbnail shop-loop-back-thumbnail">
+                                    <a href="{{ path('produit_detail', { 'reference': e.reference }) }}"><img
+                                                width="450" height="450"
+                                                src="{{ asset('uploads/images/' ~ e.getImage) }}"
+                                                alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                            <div class="shop-loop-product-info">
+                                <div class="info-meta clearfix">
+                                    <div class="star-rating">
+
+
+                                    </div>
+                                </div>
+                                <div class="info-content-wrap">
+                                    <h3 class="product_title">
+                                        <a href="{{ path('produit_detail', { 'reference': e.reference }) }}">{{ e.libelle }}</a>
+                                    </h3>
+                                    <div class="info-price">
+																			<span class="price">
+                                                                                <span class="amount">{{ e.prixVente }}</span>
+
+																			</span>
+                                    </div>
+                                    <div class="loop-action">
+                                        <div class="loop-add-to-cart">
+                                            <a href="{{ path('panier' , {'reference':e.reference}) }}"
+                                               class="add_to_cart_button">
+                                                Add to cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </li>
+        {% endfor %}
+
+    </ul>
+</div>

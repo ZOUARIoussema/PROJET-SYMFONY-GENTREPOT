@@ -1,86 +1,57 @@
 {% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
 
-{% block content %}
-
+{% block  content %}
     {{ form_start(form) }}
-   <div class ="container">
-         <div class="panel panel-primary">
-             <div class ="panel-heading">
-            <i class ="icon_menu"></i>Passer Une Commande d'Approvisionnement
-             </div>
-
-                <div class ="panel-body">
-                     <table class ="table-condensed">
-                          <tr>
-                               <td>Numéro commande :</td>
-                               <td>{{ form_widget(form.numeroC) }}</td>
-                               <td>Date Commande :</td>
-                               <td>{{ form_widget(form.dateCreation) }}</td>
-                          </tr>
-                          <tr>
-                               <td>Fournisseur :</td>
-                               <td>{{ form_widget(form.fournisseur) }}</td>
-                               <td>Taux de Réduction :</td>
-                               <td>{{ form_widget(form.tauxRemise) }}</td>
-                          </tr>
-                          <tr>
-                               <td>Etat :</td>
-                               <td>{{ form_widget(form.etat) }}</td>
-                          </tr>
-                     </table>
-                </div>
-         </div>
-       <tfoot>
-       <input type="submit" value = "Valider" name="bt" class="btn btn-success">
-       </tfoot>
-   </div>
-    {{ form_end(form) }}
     <div class ="container">
         <div class="panel panel-primary">
             <div class ="panel-heading">
-                <i class ="icon_menu"></i>Ajouter une ligne de Commande d'Approvisionnement
+                <i class ="icon_menu"></i>Passer Une Commande d'Approvisionnement
             </div>
 
             <div class ="panel-body">
-                     {{ form_start(f) }}
-                     <table class ="table">
-                         <tr>
-                         <th class="col-md-1">Produit</th>
-                         <th class="col-md-1">Prix Unitaire</th>
-                         <th class="col-md-1">Qté</th>
-                         <th class="col-md-1">tva</th>
+                <table class ="table-condensed">
+                    <tr>
+                        <td>Date Commande :</td>
+                        <td>{{ form_widget(form.dateCreation) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Fournisseur :</td>
+                        <td>{{ form_widget(form.fournisseur) }}</td>
+                        <td>Taux de Réduction :</td>
+                        <td>{{ form_widget(form.tauxRemise) }}</td>
+                    </tr>
+                </table>
+                {{ form_start(f) }}
+                <table class ="table">
+                    <tr>
+                        <th class="col-md-1">Produit</th>
+                        <th class="col-md-1">Prix Unitaire</th>
+                        <th class="col-md-1">Qté</th>
+                        <th class="col-md-1">tva</th>
+                    </tr>
+                    <tr>
+                        <td class ="col-lg-1">
+                            {{ form_widget(f.produit) }}
+                        </td>
+                        <td class ="col-lg-1">
+                            {{ form_widget(f.prix) }}
+                        </td>
+                        <td class ="col-lg-1">
+                            {{ form_widget(f.quantite) }}
+                        </td>
+                        <td class ="col-lg-1">
+                            {{ form_widget(f.tva) }}
+                        </td>
+                        <td class ="col-lg-1">
+                            <input type="submit" value="Add" name ="bt" class="btn btn-success">
+                        </td>
+                    </tr>
+                </table>
+                {{ form_end(f) }}
+                <input type="submit" value = "Valider" name="bt" class="btn btn-success">
 
-                         </tr>
-                         <tr>
-                              <td class ="col-lg-1">
-                                   {{ form_widget(f.produit) }}
-                              </td>
-                              <td class ="col-lg-1">
-                                   {{ form_widget(f.prix) }}
-                              </td>
-                              <td class ="col-lg-1">
-                                   {{ form_widget(f.quantite) }}
-                              </td>
-                              <td class ="col-lg-1">
-                                   {{ form_widget(f.tva) }}
-                              </td>
-                         </tr>
-                         <tr>
-                             <th class="col-md-1">Commande</th>
-                         </tr>
-                         <tr>
-                             <td class ="col-lg-1">
-                                 {{ form_widget(f.commande) }}
-                             </td>
-                         </tr>
-                     </table>
-         </div>
-
+            </div>
+        </div>
     </div>
-        <tfoot>
-        <input type="submit" value="Add" name ="bt" class="btn btn-success" >
-        </tfoot>
-    </div>
-    {{ form_end(f) }}
-
+    {{ form_end(form) }}
 {% endblock %}

@@ -12,18 +12,24 @@
                      <table class ="table-condensed">
                           <tr>
                               <td>Date Perte :</td>
-                              <td>{{ form_widget(form.dateCreation) }}</td>
+                              <td>
+                                  <input type="submit" value = "DATE DU JOUR" name="bt" class="btn btn-success">
+                              </td>
                           </tr>
                      </table>
                     {{ form_start(f) }}
                      <table class ="table">
                          <tr>
+                             <th class="col-md-1">Perte</th>
                               <th class="col-md-1">Produit</th>
                               <th class="col-md-1">Qté</th>
                               <th class="col-md-1">Raison Perte</th>
                              <th class="col-md-1">Action</th>
                          </tr>
                          <tr>
+                             <td class ="col-lg-1">
+                                 {{ form_widget(f.perte) }}
+                             </td>
                               <td class ="col-lg-1">
                                    {{ form_widget(f.produit) }}
                               </td>
@@ -34,43 +40,14 @@
                                    {{ form_widget(f.raisonPerte) }}
                               </td>
                              <td class ="col-lg-1">
-                                 <input type="submit" value="Add" name ="bt" class="btn btn-success">
+                                 <input type="submit" value="PERDU" name ="bt" class="btn btn-warning">
                              </td>
+                         </tr>
+                         <tr>
+                             <td class ="col-lg-1"><a href="{{ path('stockage_listePerte') }}">VOIR LES PERTES</a></td>
                          </tr>
                      </table>
                      {{ form_end(f) }}
-                     <table class ="table table-condensed">
-                         <thead class="thead-dark">
-                             <tr>
-                                 <th class="col-md-1">Produit</th>
-                                 <th class="col-md-1">Qté</th>
-                                 <th class="col-md-1">Raison Perte</th>
-                                 <th class="col-md-1">Action</th>
-                             </tr>
-                         </thead>
-                         <tbody>
-                         {% for lper in lpertes %}
-                             <tr>
-                                 <td class ="col-lg-1">
-                                     {{ lper.getProduit().getReference() }}
-                                 </td>
-                                 <td class ="col-lg-1">
-                                     {{ lper.quantite }}
-                                 </td>
-                                 <td class ="col-lg-1">
-                                     {{ lper.raisonPerte }}
-                                 </td>
-                                 <td class ="col-lg-1"><a href="#" class="btn btn-danger">
-                                 <i class="glyphicon glyphicon-trash"></i>Supprimer</a>
-                                 </td>
-                             </tr>
-                         {% endfor %}
-                         </tbody>
-                         <tfoot>
-
-                         </tfoot>
-                     </table>
-                    <input type="submit" value = "Valider" name="bt" class="btn btn-success">
 
                 </div>
              </div>

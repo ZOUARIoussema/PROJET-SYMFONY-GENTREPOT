@@ -2,8 +2,10 @@
 
 namespace VenteBundle\Controller;
 
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use VenteBundle\Controller\CartController;
 
@@ -115,9 +117,10 @@ class CommandeController extends Controller
 
     public function showAction()
     {
-        $list=$this->getDoctrine()->getManager()
-            ->getRepository(CommandeVente::class)->findAll();
-        return ($this->render('@Vente/Default/listCommande.html.twig',array ("liste"=>$list)));}
+        $list=$this->getDoctrine()->getManager()->getRepository(CommandeVente::class)->findAll();
+        $total=$this->getDoctrine()->getManager()->getRepository(CommandeVente::class)->findByTotal();
+        return ($this->render('@Vente/Default/listCommande.html.twig',array ("liste"=>$list
+        ,'total'=>$total)));}
 
 
 
@@ -131,21 +134,26 @@ class CommandeController extends Controller
 
         }
 
-    public function pdfAction()
-    {
 
+    public function PDFfAction(Request $request)
+    {
+        $snappy = $this->get('knp_snappy.pdf');
         $em=$this->getDoctrine()->getManager();
 
-        $facture= new FactureVente();
-        $facture->setEtat("non payé");
-        $facture->setDateCreation(new \DateTime());
-        $em->persist($facture);
-        $em->flush();
 
+        $html = $this->renderView('@Vente/Default/pdf.html.twig'
 
-        return ($this->render('@Vente/Default/pdf.html.twig',array ("liste"=>$facture)));}
+        );
 
+        $filename = 'myFirstSnappyPDF';
 
-
-
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+            )
+        );
+    }
 }

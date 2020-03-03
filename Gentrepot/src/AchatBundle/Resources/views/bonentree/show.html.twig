@@ -3,7 +3,19 @@
 
 
 {% block content %}
-    <h1>Bon d'entree</h1>
+
+<div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h2 style="text-align: center">Bon d'entree</h2>
+            </div>
+
+        </div>
+
+
+
+
 
     <table>
         <tbody>
@@ -26,14 +38,13 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('bonentree_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('bonentree_edit', { 'id': bonEntree.id }) }}">Edit</a>
-        </li>
-        <li>
+
+            <a href="{{ path('bonentree_index') }}"><button type="button" class="btn btn-primary btn-wide">
+                    Retour a la liste</a>
+
+            <a href="{{ path('bonentree_edit', { 'id': bonEntree.id }) }}"><button type="button" class="btn btn-primary btn-wide">
+                    Modifier</button></a>
+
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">
             {{ form_end(delete_form) }}

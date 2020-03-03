@@ -25,7 +25,7 @@ class LigneCommandeDApprovisionnement
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="CommandeDAprovisionnement")
+     * @ORM\ManyToOne(targetEntity="CommandeDAprovisionnement",cascade={"persist"})
      * @ORM\JoinColumn(name="numeroC_commandeAp",referencedColumnName="numeroC")
      *
      */
@@ -34,7 +34,7 @@ class LigneCommandeDApprovisionnement
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="AchatBundle\Entity\ProduitAchat")
+     * @ORM\ManyToOne(targetEntity="AchatBundle\Entity\ProduitAchat",cascade={"persist"})
      * @ORM\JoinColumn(name="ref_produit",referencedColumnName="reference")
      *
      */

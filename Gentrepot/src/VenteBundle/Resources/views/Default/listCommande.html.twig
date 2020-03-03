@@ -1,10 +1,18 @@
 {% extends 'backend/Vente/index.html.twig' %}
 {% block title %} Liste des Commandes {% endblock %}
 {% block head %}
-<meta http-equiv="refresh" content="5">
 {% endblock %}
 {% block content %}
 
+    <section class="section" style="align-content: center">
+    <div class="container-fluid"  style="align-items: center" align="center">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">    <a class="dashboard-stat bg-success" href="#">
+        <span class="number counter">{{ total }}</span>
+        <span class="name">Total Revenu</span>
+        <span class="bg-icon"><i class="fa fa-check"></i></span>
+    </a>
+    </div></div></div></section>
     <section class="section">
         <div class="container-fluid">
 
@@ -51,14 +59,20 @@
 
                                         <td>{{e.totalC}}</td>
                                         <td>{{e.dateC | date}}</td>
-                                        <td>{{e.etat}}</td>
+                                        <td>
+                                            {% if e.etat == 'valider' %}<span class="label label-success label-wide">{{e.etat}}</span>
+                                            {% elseif e.etat == 'En attente' %}
+                                                <span class="label label-warning label-wide">{{e.etat}}</span>
+                                            {% endif %}
+                                        </td>
                                         <td>{{e.tauxRemise}}</td>
 
 
 
                                         <td>{{e.user}}</td>
 
-                               <td>  <a href="{{ path('detail-commande',{'id':e.id}) }}" class="checkout-button button alt wc-forward rounded"> Details </a> </td>
+                               <td>                                         <button type="button" class="btn btn-info btn-xs btn-labeled next-btn">   <a href="{{ path('detail-commande',{'id':e.id}) }}" class="checkout-button button alt wc-forward rounded"> Details </a><span class="btn-label btn-label-right"><i class="fa fa-pencil"></i></span></button>
+                               </td>
 
 
                                     </tr>

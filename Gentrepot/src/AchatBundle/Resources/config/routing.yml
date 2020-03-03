@@ -18,6 +18,10 @@ achat_bonretour:
     resource: "@AchatBundle/Resources/config/routing/bonretour.yml"
     prefix:   /bonretour
 
+achat_image:
+    resource: "@AchatBundle/Resources/config/routing/image.yml"
+    prefix:   /image
+
 achat_bonentree:
     resource: "@AchatBundle/Resources/config/routing/bonentree.yml"
     prefix:   /bonentree
@@ -25,4 +29,3 @@ achat_bonentree:
 achat_homepage:
     path:     /
     defaults: { _controller: AchatBundle:Default:index }
-

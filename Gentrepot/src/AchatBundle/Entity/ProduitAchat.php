@@ -18,6 +18,14 @@ class ProduitAchat
      *
      * @ORM\Column(name="reference", type="string")
      * @ORM\Id
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 50,
+     *      minMessage = "la reference du produit doit comporter au moins 3 caractères",
+     *      maxMessage = "la reference du produit ne doit pas dépasser les {{limit}} 50 caractères"
+     *
+     * )
+     ** @Assert\NotNull(message="La reference doit etre non null ")
 
      */
     private $reference;
@@ -27,6 +35,13 @@ class ProduitAchat
      * @ORM\JoinColumn(name="sousCategorie_id",referencedColumnName="id")
      */
     private $sousCategorie;
+
+    /**
+     * ProduitAchat constructor.
+     */
+    public function __construct()
+    {
+    }
 
     /**
      * @return mixed
@@ -48,6 +63,14 @@ class ProduitAchat
      * @var string
      *
      * @ORM\Column(name="libelle", type="string", length=255)
+     * @Assert\Length(
+     *      min = 4,
+     *      max = 10,
+     *      minMessage = "le libelle doit comporter au moins 4 caractères",
+     *      maxMessage = "le libelle ne doit pas dépasser les {{limit}} 10 caractères"
+     *
+     * )
+     ** @Assert\NotNull(message="Le libelle doit etre non null ")
      */
     private $libelle;
 
@@ -59,6 +82,11 @@ class ProduitAchat
      * @ORM\Column(name="quantiteEnStock", type="integer")
      */
     private $quantiteEnStock;
+
+
+
+
+
 
     /**
      * @var string
@@ -98,7 +126,14 @@ class ProduitAchat
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="description", type="string", length=1000)
+     * @Assert\Length(
+     *      min = 3,
+     *      minMessage = "la description doit comporter au moins 3 caractères",
+
+     *
+     * )
+     ** @Assert\NotNull(message="La description doit etre non null ")
      */
     private $description;
 
@@ -115,6 +150,17 @@ class ProduitAchat
      * @ORM\Column(name="prixVente", type="float")
      */
     private $prixVente;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * @return string
@@ -465,6 +511,7 @@ class ProduitAchat
      * @Assert\NotBlank(message="Please Upload Image")
      */
     private $image4;
+
 
 }
 

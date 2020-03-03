@@ -13,7 +13,11 @@ class CommandeVenteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('totalC')->add('dateC')->add('etat')->add('tauxRemise');
+       // $builder
+            //->add('totalC')
+            //->add('dateC')
+            //->add('etat')
+            //->add('tauxRemise');
     }/**
      * {@inheritdoc}
      */

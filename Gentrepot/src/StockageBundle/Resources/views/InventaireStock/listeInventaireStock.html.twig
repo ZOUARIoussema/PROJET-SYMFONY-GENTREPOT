@@ -34,6 +34,10 @@
                                     <td class ="col-lg-1"><a href="{{ path('stockage_supprimerInventaireStock',{'id':inv.id}) }}"><button type="button" class="btn btn-danger" >Supprimer</button></a></td>
                                 </tr>
                         {% endfor %}
+                    <tr>
+                        <td class ="col-lg-1"><a href="{{ path('stockage_exportInventaireStock') }}"><button type="button" class="btn btn-primary" >Sauvegarder</button></a></td>
+
+                    </tr>
                 </table>
             </div>
         </div>

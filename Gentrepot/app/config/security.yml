@@ -38,12 +38,12 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/cart, role: ROLE_SUPER_ADMIN }
-        - { path: ^/table, role: ROLE_STOCK }
+        - { path: ^/stockage, role: ROLE_STOCK }
         - { path: ^/cart, role: ROLE_FOURN }
-        - { path: ^/listcom, role: ROLE_RVENT }
         - { path: ^/list, role: ROLE_RVENT }
-
-        - { path: ^/admin, role: ROLE_RVENT }
+        - { path: ^/achat, role: ROLE_RACHA }
+        - { path: ^/tresorerie, role: ROLE_ACAIS }
+        - { path: ^/logistique, role: ROLE_CPARC }
 
 
 

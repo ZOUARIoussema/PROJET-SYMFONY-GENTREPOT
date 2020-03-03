@@ -4,6 +4,7 @@ namespace StockageBundle\Controller;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
 use StockageBundle\Entity\Emplacement;
+use StockageBundle\Entity\Entrepot;
 use StockageBundle\Form\EmplacementType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,10 +25,10 @@ class EmplacementController extends Controller
             $ef= $this->getDoctrine()->getManager();
             $ef->persist($emplacement);
             $ef->flush();
-            // return $this->redirectToRoute("stockage_listEmplacement");
+            return $this->redirectToRoute("stockage_listeEmplacement");
 
         }
-        return $this->render("@Stockage/Emplacement/ajouterEmplacement.html.twig",array("form"=> $form->createView()));
+        return $this->render("@Stockage/Emplacement/listeEmplacement.html.twig",array("form"=> $form->createView()));
 
     }
     public function indexAction()
@@ -67,6 +68,45 @@ class EmplacementController extends Controller
 
 
         return $this->render('@Stockage\Emplacement\index.html.twig', array('piechart' => $pieChart));
+    }
+
+    public function afficherAction()
+    {
+        $emplacements= $this->getDoctrine()-> getRepository(Emplacement::class)-> findAll();
+
+        return $this->render("@Stockage/Emplacement/listeEmplacement.html.twig",array ('emplacements'=>$emplacements));
+    }
+    public function supprimerEmplacementAction($id)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $emplacement= $em->getRepository(Emplacement::class)->find($id);
+        $em->remove($emplacement);
+        $em->flush();
+        return $this->redirectToRoute('stockage_listeEmplacement');
+    }
+    public function modifierEmplacementAction(Request $request, $id)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $emplacement = $em->getRepository(Emplacement::class)->find($id);
+
+
+        //third step:
+        // check is the from is sent
+        if ($request->isMethod('POST')) {
+            //update our object given the sent data in the request
+            $emplacement = $em->getRepository(Emplacement::class)->find($id);
+            $emplacement ->setAdresse($request->get('adresse'));
+            $emplacement ->setCapaciteStockage($request->get('capaciteStockage'));
+            $emplacement ->setQuantiteStocker($request->get('quantiteStocker'));
+            $emplacement ->setClasse($request->get('classe'));
+            //fresh the data base
+            $em->flush();
+            return $this->redirectToRoute("stockage_listeEmplacement");
+
+        }
+        //second step:
+        // send the view to the user
+        return $this->render('@Stockage/Emplacement/modifierEmplacement.html.twig', array('emplacement' => $emplacement));
     }
 
 }

@@ -156,11 +156,10 @@
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="{{ path('list') }}"><i class="fa fa-file-text"></i> <span>Gérer les produits</span> <i class="fa fa-angle-up arrow"></i></a>
+                                        <a href="{{ path('bonlivraison') }}"><i class="fa fa-file-text"></i> <span> Bons livraison</span> <i class="fa fa-angle-up arrow"></i></a>
                                         <ul class="child-nav">
 
-                                            <li><a href="{{ path('list') }}"><i class="fa fa-sign-in"></i> <span>List des produits </span></a></li>
-                                            <li><a href="{{ path('produit') }}"><i class="fa fa-sign-in"></i> <span>Ajouter produits</span></a></li>
+                                            <li><a href="{{ path('bonlivraison') }}"><i class="fa fa-sign-in"></i> <span>List des bons livraison </span></a></li>
 
                                         </ul>
                                     </li>
@@ -170,12 +169,18 @@
                                         <a href="{{ path('listco') }}"><i class="fa fa-file-text"></i> <span>Gérer les Commandes</span> <i class="fa fa-angle-up arrow"></i></a>
                                         <ul class="child-nav">
 
-                                            <li><a href="{{ path('listco') }}"><i class="fa fa-sign-in"></i> <span>List des ligne commande </span></a></li>
-                                            <li><a href="{{ path('ajout') }}"><i class="fa fa-sign-in"></i> <span>Ajouter ligne commande</span></a></li>
+                                            <li><a href="{{ path('listco') }}"><i class="fa fa-sign-in"></i> <span>List des Commandes  </span></a></li>
 
                                         </ul>
                                     </li>
+                                    <li class="has-children">
+                                        <a href="{{ path('factureaffiche') }}"><i class="fa fa-file-text"></i> <span>Gérer les Factures</span> <i class="fa fa-angle-up arrow"></i></a>
+                                        <ul class="child-nav">
 
+                                            <li><a href="{{ path('factureaffiche') }}"><i class="fa fa-sign-in"></i> <span>List des Factures </span></a></li>
+
+                                        </ul>
+                                    </li>
 
 
 
@@ -236,6 +241,18 @@
         <script src="{{ asset('backend/js/production-chart.js') }}"></script>
         <script src="{{ asset('backend/js/traffic-chart.js') }}"></script>
         <script src="{{ asset('backend/js/task-list.js') }}"></script>
+    <script src="{{ asset('backend/js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ asset('backend/js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('backend/js/pace/pace.min.js') }}"></script>
+    <script src="{{ asset('backend/js/lobipanel/lobipanel.min.js') }}"></script>
+    <script src="{{ asset('backend/js/iscroll/iscroll.js') }}"></script>
+
+    <!-- ========== PAGE JS FILES ========== -->
+    <script src="{{ asset('backend/js/prism/prism.js') }}"></script>
+    <script src="{{ asset('backend/js/DataTables/datatables.min.js') }}"></script>
+    <script src="{{ asset('backend/js/waypoint/waypoints.min.js') }}"></script>
+    <script src="{{ asset('backend/js/counterUp/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('backend/js/main.js') }}"></script>
         <script>
             $(function(){
 
@@ -264,6 +281,20 @@
                     "hideMethod": "fadeOut"
                 }
 
+            });
+            $(function($) {
+                // Counter for dashboard stats
+
+                // data table
+                $('#example').DataTable();
+
+                $('#example2').DataTable( {
+                    "scrollY":        "300px",
+                    "scrollCollapse": true,
+                    "paging":         false
+                } );
+
+                $('#example3').DataTable();
             });
         </script>
                     {% endblock %}
