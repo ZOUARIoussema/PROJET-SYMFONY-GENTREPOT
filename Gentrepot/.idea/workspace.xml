@@ -100,6 +100,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Gentrepot" />
+    <property name="last_opened_file_path" value="D:/tr/Gentrepot" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -282,6 +283,9 @@
       <workItem from="1582468900838" duration="4234000" />
       <workItem from="1582554000848" duration="403000" />
       <workItem from="1582560230689" duration="218000" />
+      <workItem from="1582497053028" duration="1523000" />
+      <workItem from="1582628290429" duration="792000" />
+      <workItem from="1582647465878" duration="665000" />
     </task>
     <servers />
   </component>
@@ -347,6 +351,11 @@
     <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582490467476" />
     <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1582490467477">
     <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582238855663" />
+    <state x="407" y="241" key="ComposerCompositePathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582238428115" />
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1582648154009">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582648154009" />
     <state width="1323" height="187" key="GridCell.Tab.0.bottom" timestamp="1582279982694">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -383,10 +392,10 @@
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582488990234" />
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582486839133">
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582238857547" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582497061306">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1582647465662">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582497061306" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582647465662" />
     <state x="339" y="157" width="672" height="677" key="run.anything.popup" timestamp="1582254168647">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
