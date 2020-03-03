@@ -23,14 +23,17 @@
         {%for f in factures %}  <tr>
             <td>{{f.id}}</td>
             <td>{{f.dateCreation|date('Y-m-d')}}</td>
-            <td>{{f.etat}}</td>
+            <td>
+
+                <span class="btn btn-success btn-xs btn-labeled">{{f.etat}}</span>
+            </td>
             <td>{{f.totalTTC}}</td>
             <td>{{f.totalPaye}}</td>
             <td>{{f.resteAPaye}}</td>
             <td>{{f.dateEchaillancePaiement|date('Y-m-d')}}</td>
 
 
-             {% if(f.resteAPaye == 0) %}
+             {% if(f.resteAPaye != 0) %}
 
 
 
