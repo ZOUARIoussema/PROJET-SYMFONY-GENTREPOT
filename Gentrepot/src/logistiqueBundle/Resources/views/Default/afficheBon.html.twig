@@ -1,59 +1,48 @@
 {% extends 'backend/logistique/index.html.twig' %}
-{% block title %} Liste des chauffeurs {% endblock %}
-{% block head %}
-{% endblock %}
+{% block title %} liste des bons de livraison{% endblock %}
 {% block content %}
-
-    <section class="section" >
-        <div class="container-fluid">
-
-            <div class="row" >
-                <div class="col-md-8 col-md-offset-2" >
+    <section class="section">
 
 
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <div class="panel-title">
-                                <h5 class="container-fluid" style="text-align: center">chauffeur</h5>
-                            </div>
-                        </div>
-                        <div class="panel-body p-20">
-                            <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
-                                <thead>
-                                <tr>
-                                    tr>
-                                    <th>id</th>
-                                    <th>adresseLivraison</th>
-                                    <th>etat </th>
-                                    <th>dateCreation </th>
-                                    <th>datesortie </th>
-
-                                </tr>
-                                </thead>
-                                {% for e in bon %}
-                                    <tr>
-                                        <td>{{ e.id }}</td>
-                                        <td>{{ e.adresseLivraison}}</td>
-                                        <td>{{ e.etat}}</td>
-                                        <td>{{ e.datecreation |date}}</td>
-                                        <td>{{ e.datesortie |date}}</td>
-                                    </tr>
-                                {% endfor %}
-
-                            </table>
-
-                            <!-- ========== JS ========== -->
-                            <script>
-                                $(function($) {
-                                    $('#example').DataTable();
-                                });
-                            </script>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="col-md-8 col-md-offset-2">
+    <div class="panel">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <h5 style="text-align: center">Liste des bon de livraison</h5>
         </div>
-    </section>
+    </div>
+    <div class="panel-body p-20">
 
+    <table class="table table-striped">
+    {% block body %}
+    <table border="2">
+        <tr>
+            <th>id</th>
+            <th>adresseLivraison</th>
+            <th>etat </th>
+            <th>dateCreation </th>
+            <th>datesortie </th>
+
+
+        </tr>
+        {% for e in bon %}
+            <tr>
+                <td>{{ e.id }}</td>
+                <td>{{ e.adresseLivraison}}</td>
+                <td>{{ e.etat}}</td>
+                <td>{{ e.datecreation |date}}</td>
+                <td>{{ e.datesortie |date}}</td>
+            </tr>
+        {% endfor %}
+      {# {% for i in bonLiv %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.adrlivraison}}</td>
+                <td>{{ i.etat}}</td>
+                <td>{{ i.datecreation |date}}</td>
+                <td>{{ i.datesortie |date}}</td>
+            </tr>
+        {% endfor %}#}
+
+        {% endblock %}
 {% endblock %}
