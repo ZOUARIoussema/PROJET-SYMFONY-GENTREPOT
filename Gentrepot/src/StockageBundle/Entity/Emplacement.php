@@ -123,7 +123,7 @@ class Emplacement
     }
 
     /**
-     * Get quantiteStocker
+     * Get getQuantiteStocker()
      *
      * @return int
      */

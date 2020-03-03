@@ -2,36 +2,40 @@
 {% block title %} table {% endblock %}
 
 {% block content %}
+    <div class ="container">
+    <div class="panel panel-primary">
+    <div class ="panel-heading">
+        <i class ="icon_menu"></i>Parametres Entrepot
+    </div>
 
-<h2>liste des entrepots </h2>
-
-<table border="1">
+    <div class ="panel-body">
+    <table class ="table-condensed">
     <tr>
-        <th>Matricule fiscale</th>
-        <th>Adresse</th>
-        <th>Raison sociale</th>
-        <th>Adresse mail</th>
-        <th>Numéro de téléphone</th>
-        <th>Action <br> Modification</th>
-        <th>Action <br> Suppression</th>
-
-
-
+        <th class="col-md-1">Matricule fiscale</th>
+        <th class="col-md-1">Adresse</th>
+        <th class="col-md-1">Raison sociale</th>
+        <th class="col-md-1">Adresse mail</th>
+        <th class="col-md-1">Numéro de téléphone</th>
+        <th class="col-md-1">Action <br> Modification</th>
+        {#<th>Action <br> Suppression</th>#}
 
     </tr>
     {%for f in entrepots %}
         <tr>
-        <td>{{f.matriculeFiscal}}</td>
-        <td>{{f.adresse}}</td>
-        <td>{{f.raisonSocial}}</td>
-        <td>{{f.adresseMail}}</td>
-        <td>{{f.numeroTel}}</td>
-        <td><a href="{{ path('stockage_modifierEntrepot',{'matriculeFiscal':f.matriculeFiscal}) }}">Modifier</a></td>
-        <td><a href="{{ path('stockage_supprimerEntrepot',{'matriculeFiscal':f.matriculeFiscal}) }}">Supprimer</a> </td>
+        <td class="col-md-1">{{f.matriculeFiscal}}</td>
+        <td class="col-md-1">{{f.adresse}}</td>
+        <td class="col-md-1">{{f.raisonSocial}}</td>
+        <td class="col-md-1">{{f.adresseMail}}</td>
+        <td class="col-md-1">{{f.numeroTel}}</td>
+        <td class="col-md-1"><a href="{{ path('stockage_modifierEntrepot',{'matriculeFiscal':f.matriculeFiscal}) }}"><button type="button" class="btn btn-warning" >Modifier</button></a></td>
+        {#<td><a href="{{ path('stockage_supprimerEntrepot',{'matriculeFiscal':f.matriculeFiscal}) }}">Supprimer</a> </td>#}
     </tr>
     {% endfor %}
 
 </table>
+    </div>
+    </div>
+    </div>
 
 
 {% endblock %}

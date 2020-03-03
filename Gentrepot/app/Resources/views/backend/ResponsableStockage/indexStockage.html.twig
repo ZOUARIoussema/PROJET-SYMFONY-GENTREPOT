@@ -133,7 +133,7 @@
                                     <li class="has-children">
                                         <a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li class="active"><a href="index.html"><i class="fa fa-bolt"></i> <span>Layout 1</span></a></li>
+                                            <li class="active"><a href="{{ path('Stockage_graphePie') }}"><i class="class="fa fa-pie-chart"></i> <span>dashboad 1</span></a></li>
                                             <li><a href="dashboard-2.html"><i class="fa fa-bookmark"></i> <span>Layout 2</span></a></li><li><a href="dashboard-full-width.html"><i class="fa fa-dashboard"></i> <span>Layout 3</span></a></li>
                                         </ul>
                                     </li>
@@ -142,29 +142,29 @@
                                         <span class="">Second</span>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-file-text"></i> <span>Commandes Approvisionnement</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-pencil-square-o"></i> <span>Commandes Approvisionnement</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="  "><i class="fa fa-lock"></i> <span>Passer Une Commande</span></a></li>
-                                            <li><a href="layout-fixed-top-side.html"><i class="fa fa-thumb-tack"></i> <span>Ajouter Une Ligne de Commande</span></a></li>
-                                            <li><a href="layout-static-top-side.html"><i class="fa fa-unlock"></i> <span>Lister Les Commandes </span></a></li>
-                                            {#<li><a href="layout-small-sidebar.html"><i class="fa fa-sign-in"></i> <span>Small Sidebar</span></a></li>#}
+                                            <li><a href="{{ path('stockage_passerCommandeDAprovisionnement') }}"><i class="fa fa-lock"></i> <span>Passer Une Commande</span></a></li>
+                                           <li><a href="{{ path('stockage_listeCommandeDAprovisionnement')}}"><i class="fa fa-thumb-tack"></i> <span>Afficher La Liste Des Commande</span></a></li>
+                                            {#<li><a href="layout-static-top-side.html"><i class="fa fa-unlock"></i> <span>Lister Les Commandes </span></a></li>
+                                           <li><a href="layout-small-sidebar.html"><i class="fa fa-sign-in"></i> <span>Small Sidebar</span></a></li>#}
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-paint-brush"></i> <span>Inventaires Stock</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-check"></i> <span>Inventaires Stock</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="color-primary.html"><i class="fa fa-bank"></i> <span>Faire Un Inventaire De Stock</span></a></li>
-                                            <li><a href="color-danger.html"><i class="fa fa-bell"></i> <span>Gerer Les Inventaires</span></a></li>
+                                            <li><a href="{{ path('stockage_faireInventaireStock') }}"><i class="fa fa-bank"></i> <span>Faire Un Inventaire De Stock</span></a></li>
+                                            <li><a href="{{ path('stockage_listeInventaireStock') }}"><i class="fa fa-bell"></i> <span>Gerer Les Inventaires</span></a></li>
                                             {#<li><a href="color-success.html"><i class="fa fa-check"></i> <span>Success Color</span></a></li>
                                             <li><a href="color-warning.html"><i class="fa fa-info"></i> <span>Warning Color</span></a></li>#}
                                         </ul>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-map-signs"></i> <span>Espaces</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-square-o"></i> <span>Espaces</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="sidebar-light.html"><i class="fa fa-newspaper-o "></i> <span>Créer Un Emplacement</span></a></li>
-                                            <li><a href="sidebar-default.html"><i class="fa fa-leaf "></i> <span>Voir Les Emplacements</span></a></li>
-                                            {#<li><a href="sidebar-primary.html"><i class="fa fa-check"></i> <span>Primary Sidebar</span></a></li>
+                                            <li><a href="{{ path('stockage_ajouterEmplacement') }}"><i class="fa fa-plus "></i> <span>Créer Un Emplacement</span></a></li>
+                                            {#<li><a href=""><i class="fa fa-leaf "></i> <span>Voir Les Emplacements</span></a></li>
+                                            <li><a href="sidebar-primary.html"><i class="fa fa-check"></i> <span>Primary Sidebar</span></a></li>
                                             <li><a href="sidebar-indigo.html"><i class="fa fa-info"></i> <span>Indigo Sidebar</span></a></li>
                                             <li><a href="sidebar-sea-green.html"><i class="fa fa-male"></i> <span>Sea Green Sidebar</span></a></li>
                                             <li><a href="sidebar-navy.html"><i class="fa fa-sign-in"></i> <span>Navy Sidebar</span></a></li>#}
@@ -175,10 +175,10 @@
                                         <span class="">Components</span>
                                     </li>#}
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-magic"></i> <span>Pertes</span>  <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-level-down"></i> <span>Pertes</span>  <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="ui-buttons.html"><i class="fa fa-plane"></i> <span>Passer En perte</span></a></li>
-                                            <li><a href="ui-panels.html"><i class="fa fa-puzzle-piece"></i> <span>Gerer Les Pertes </span></a></li>
+                                            <li><a href="{{ path('stockage_passerPerte')}}"><i class="fa fa-plane"></i> <span>Passer En perte</span></a></li>
+                                            <li><a href="{{ path('stockage_listePerte')}}"><i class="fa fa-puzzle-piece"></i> <span>AfficherLes Pertes </span></a></li>
                                             {#<li><a href="ui-modals.html"><i class="fa fa-random"></i> <span>Modals</span></a></li>
                                             <li><a href="ui-page-headers.html"><i class="fa fa-road"></i> <span>Page Headers</span></a></li>
                                             <li><a href="ui-loaders.html"><i class="fa fa-spinner"></i> <span>Loaders</span></a></li>
@@ -197,21 +197,21 @@
                                     <li><a href="animations.html"><i class="fa fa-spinner animate"></i> <span>CSS Animations</span></a></li>
                                     <li class="nav-header">
                                         <span class="">Charts</span>
-                                    </li>
+                                    </li>#}
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span>Amcharts</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-cog fa-fw"></i> <span>PARAMETRES</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="chart-column-bar.html"><i class="fa fa-barcode"></i> <span>Column & Bar Charts</span></a></li>
-                                            <li><a href="chart-line-area.html"><i class="fa fa-line-chart"></i> <span>Line & Area Charts</span></a></li>
-                                            <li><a href="chart-pie-chart.html"><i class="fa fa-pie-chart"></i> <span>Pie Charts</span></a></li>
+                                            <li><a href="{{ path('stockage_ajouterEntrepot')}}"><i class="fa fa-plus"></i> <span>Ajouter Les Parametres de L'Entrepot</span></a></li>
+                                           <li><a href="{{ path('stockage_afficherEntrepot')}}"><i class="fa fa-pencil fa-fw"></i> <span>Modifer Les Parametres</span></a></li>
+                                            {#<li><a href="chart-pie-chart.html"><i class="fa fa-pie-chart"></i> <span>Pie Charts</span></a></li>
                                             <li><a href="chart-funnel.html"><i class="fa fa-area-chart"></i> <span>Funnel Chart</span></a></li>
-                                            <li><a href="chart-others.html"><i class="fa fa-comments"></i> <span>Other Charts</span></a></li>
+                                            <li><a href="chart-others.html"><i class="fa fa-comments"></i> <span>Other Charts</span></a></li>#}
                                         </ul>
                                     </li>
-                                    <li><a href="charts-high-chart.html"><i class="fa fa-area-chart"></i> <span>High Chart</span></a></li>
-                                    <li><a href="charts-chartjs.html"><i class="fa fa-area-chart"></i> <span>Chart.js</span></a></li>
+                                   {#<li><a href="charts-high-chart.html"><i class="fa fa-area-chart"></i> <span>High Chart</span></a></li>
+                                    <li><a href="charts-chartjs.html"><i class="fa fa-area-chart"></i> <span>Chart.js</span></a></li>#}
 
-                                    <li class="nav-header">
+                                    {#<li class="nav-header">
                                         <span class="">Forms</span>
                                     </li>
                                     <li class=""><a href="form-basic.html"><i class="fa fa-cloud"></i> <span>Basic Forms</span></a></li>
@@ -270,18 +270,18 @@
                                     <li class=""><a href="pages-error-404.html"><i class="fa fa-info"></i> <span>Error 404</span></a></li>
                                     <li class=""><a href="pages-error-500.html"><i class="fa fa-info-circle"></i> <span>Error 500</span></a></li>
                                     <li class=""><a href="pages-profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
-                                    <li class=""><a href="pages-pricing.html"><i class="fa fa-user-secret"></i> <span>Pricing</span></a></li>
+                                    <li class=""><a href="pages-pricing.html"><i class="fa fa-user-secret"></i> <span>Pricing</span></a></li>#}
                                 </ul>
-                                <!-- /.side-nav -->
+                                {#<!-- /.side-nav -->
                                 <div class="purchase-btn hidden-sm hidden-xs">
                                     <a href="https://themeforest.net/item/options-admin-responsive-web-application-ui-kit/19796742?license=regular&open_purchase_for_item_id=19796742&purchasable=source&ref=salttechno" target="_blank" class="btn btn-success btn-labeled">Purchase Now<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></a>
-                                </div>
+                                </div>#}
                             </div>
                             <!-- /.sidebar-nav -->
                         </div>
                         <!-- /.sidebar-content -->
                     </div>
-                    <!-- /.left-sidebar -->#}
+                    <!-- /.left-sidebar -->
 {% endblock %}
 
               {% block content%}

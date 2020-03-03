@@ -9,6 +9,20 @@
       <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
     </list>
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/views/Emplacement/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Gentrepot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gentrepot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/backend/ResponsableStockage/indexStockage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/backend/ResponsableStockage/indexStockage.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Controller/EmplacementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Controller/EmplacementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Entity/Emplacement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Entity/Emplacement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Resources/config/routing.yml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,6 +97,7 @@
       <path value="$PROJECT_DIR$/vendor/mgilet/notification-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XX11k2ee2q35t04JA9qFuUhCD6" />
@@ -101,6 +116,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Gentrepot" />
     <property name="last_opened_file_path" value="D:/tr/Gentrepot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/StockageBundle/Resources/views/Emplacement" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -127,6 +143,19 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
       <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\CommandeDAprovisionnement" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\LigneCommandeDApprovisionnement" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\LignePerte" />
+      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\src\VenteBundle\Resources\views\Default" />
+      <recent name="C:\xampp\htdocs\GTC\PIDEV-GEntrepot-GTC\Gentrepot\app\Resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\Emplacement" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\CommandeDAprovisionnement" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\InventaireStock" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views\Perte" />
+      <recent name="C:\wamp64\www\PROJET-SYMFONY-GENTREPOT\Gentrepot\src\StockageBundle\Resources\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -173,7 +202,9 @@
       <command value="s doctrine:generate:form logistiqueBundle:ordremission" />
       <command value="run server" />
       <command value="s server:stop" />
+      <command value="s cache:clear" />
       <command value="s doctrine:generate:form VenteBundle:FactureVente" />
+      <command value="c install" />
       <command value="s server:run" />
       <command value="s doctrine:generate:entity" />
       <command value="s generate:bundle" />
@@ -192,17 +223,29 @@
       <command value="c dump-autoload" />
       <command value="c dump-autoload" />
       <command value="c install" />
+      <command value="s doctrine:database:create" />
+      <command value="schema update --force" />
+      <command value="c diagnose" />
+      <command value="c self-update" />
+      <command value="c self-update --rollback" />
+      <command value="curl -sS https://getcomposer.org/installer | php -- --check" />
+      <command value="c clear-cache" />
+      <command value="c require cmen/google-charts-bundle" />
+      <command value="c dump-autoload" />
+      <command value="?" />
+      <command value="s doctrine:schema:update --dump-sql" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -286,6 +329,19 @@
       <workItem from="1582497053028" duration="1523000" />
       <workItem from="1582628290429" duration="792000" />
       <workItem from="1582647465878" duration="665000" />
+      <workItem from="1582050525913" duration="1865000" />
+      <workItem from="1582116649773" duration="16880000" />
+      <workItem from="1582138013415" duration="1867000" />
+      <workItem from="1582162070894" duration="33223000" />
+      <workItem from="1582219084478" duration="8515000" />
+      <workItem from="1582241400940" duration="13883000" />
+      <workItem from="1582261667443" duration="9284000" />
+      <workItem from="1582273995093" duration="6391000" />
+      <workItem from="1582288148411" duration="822000" />
+      <workItem from="1582315899531" duration="1784000" />
+      <workItem from="1582357306886" duration="33250000" />
+      <workItem from="1582446860744" duration="10832000" />
+      <workItem from="1582510794682" duration="6341000" />
     </task>
     <servers />
   </component>

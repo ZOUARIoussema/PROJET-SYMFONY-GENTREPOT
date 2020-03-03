@@ -1,5 +1,6 @@
 <?php
 
+
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -29,6 +30,8 @@ class AppKernel extends Kernel
             new MessageBundle\MessageBundle(),
             new Mgilet\NotificationBundle\MgiletNotificationBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

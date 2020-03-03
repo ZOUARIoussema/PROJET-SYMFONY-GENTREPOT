@@ -1,9 +1,16 @@
 {% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
 
 {% block content %}
-    <h1>Ajouter emplacement</h1>
     {{ form_start(form) }}
-    <table>
+    <div class ="container">
+    <div class="panel panel-primary">
+    <div class ="panel-heading">
+        <i class ="icon_menu"></i>Ajouter emplacement
+    </div>
+
+    <div class ="panel-body">
+    <table class ="table-condensed">
+        <tr><td>Matricule entrepot</td><td>{{ form_widget(form.entrepot) }}</td></tr>
         <tr><td>adresse</td><td>{{ form_widget(form.adresse) }}</td></tr>
         <tr><td>capacité de stockage</td><td>{{ form_widget(form.capaciteStockage) }}</td></tr>
         <tr><td>quantité stockée</td><td>{{ form_widget(form.quantiteStocker) }}</td></tr>
@@ -11,11 +18,13 @@
         <tr>
             {#<td>Entrepot:*</td><td>{{ form_widget(form.entrepot) }}</td>#}
         </tr>
-        <tr><td></td><td>{{ form_widget(form.Ajout) }}</td></tr>
-        {{ form_end(form) }}
     </table>
-
-
-
+    </div>
+    </div>
+        <tfoot>
+        <input type="submit" value = "Valider" name="bt" class="btn btn-success">
+        </tfoot>
+    </div>
+    {{ form_end(form) }}
 
 {% endblock %}

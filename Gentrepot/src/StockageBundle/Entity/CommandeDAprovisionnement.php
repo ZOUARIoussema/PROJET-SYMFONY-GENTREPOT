@@ -22,6 +22,13 @@ class CommandeDAprovisionnement
     private $numeroC;
 
     /**
+     * @ORM\ManyToOne(targetEntity="AchatBundle\Entity\Fournisseur")
+     * @ORM\JoinColumn(name="id_fournisseur",referencedColumnName="id")
+     *
+     */
+    private $fournisseur;
+
+    /**
      * @ORM\Column(type="float")
      */
     private $totalC;
@@ -34,7 +41,8 @@ class CommandeDAprovisionnement
     private $dateCreation;
 
     /**
-     * @ORM\Column(type="string")
+     *
+     * @ORM\Column(type="string",options={"default":"non_facturer"})
      */
     private $etat;
 
@@ -42,6 +50,22 @@ class CommandeDAprovisionnement
      * @ORM\Column(type="float")
      */
     private $tauxRemise;
+
+    /**
+     * @return mixed
+     */
+    public function getFournisseur()
+    {
+        return $this->fournisseur;
+    }
+
+    /**
+     * @param mixed $fournisseur
+     */
+    public function setFournisseur($fournisseur)
+    {
+        $this->fournisseur = $fournisseur;
+    }
 
 
     /**

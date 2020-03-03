@@ -1,0 +1,41 @@
+{% extends 'backend/ResponsableStockage/indexStockage.html.twig' %}
+
+{% block content %}
+    <div class ="container">
+        <div class="panel panel-primary">
+            <div class ="panel-heading">
+                <i class ="icon_menu"></i>Liste Des Inventaires
+            </div>
+
+            <div class ="panel-body">
+                <table class ="table-condensed">
+                        <tr>
+                            <th class="col-md-1">Numéro</th>
+                            <th class="col-md-1">Date Inventaire</th>
+                            <th class="col-md-1">Produit</th>
+                            <th class="col-md-1">Emplacement</th>
+                            <th class="col-md-1">Qté Inventaire</th>
+                            <th class="col-md-1">Qté Théorique</th>
+                            <th class="col-md-1">Ecart</th>
+                            <th class="col-md-1">Action1</th>
+                            <th class="col-md-1">Action2</th>
+                        </tr>
+
+                        {% for inv in Tabinvs %}
+                                <tr>
+                                    <td class ="col-lg-1">{{ inv.id }}</td>
+                                    <td class ="col-lg-1">{{ inv.dateCreation|date }}</td>
+                                    <td class ="col-lg-1">{{ inv.getProduit().getLibelle() }}</td>
+                                    <td class ="col-lg-1">{{ inv.getEmplacement().getAdresse() }}</td>
+                                    <td class ="col-lg-1">{{ inv.quantiteInventaire }}</td>
+                                    <td class ="col-lg-1">{{ inv.quantiteTheorique }}</td>
+                                    <td class ="col-lg-1">{{ inv.ecart }}</td>
+                                    <td class ="col-lg-1"><a href="{{ path('stockage_modifierInventaireStock',{'id':inv.id}) }}"><button type="button" class="btn btn-warning" >Modifier</button></a></td>
+                                    <td class ="col-lg-1"><a href="{{ path('stockage_supprimerInventaireStock',{'id':inv.id}) }}"><button type="button" class="btn btn-danger" >Supprimer</button></a></td>
+                                </tr>
+                        {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
