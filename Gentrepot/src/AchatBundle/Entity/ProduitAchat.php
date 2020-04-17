@@ -74,6 +74,11 @@ class ProduitAchat
      */
     private $libelle;
 
+    public function __toString()
+    {
+
+        return $this->reference;
+    }
 
 
     /**

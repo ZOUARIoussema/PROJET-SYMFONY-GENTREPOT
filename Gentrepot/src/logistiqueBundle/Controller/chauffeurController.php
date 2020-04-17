@@ -33,7 +33,9 @@ class chauffeurController extends Controller
     public function chauffeuraffAction(){
         $em= $this->getDoctrine()->getManager();
         $chauffeur = $em->getRepository("logistiqueBundle:chauffeur")->findAll();
-        return $this->render('@logistique/chauffeur/affichechauf.html.twig',array('chauffeur'=>$chauffeur));
+
+
+        return $this->render('@logistique/chauffeur/affichechauf.html.twig',array('aaa'=>$chauffeur));
     }
     public function  deletechaufAction($cin){
         $em=$this->getDoctrine()->getManager();
@@ -41,7 +43,6 @@ class chauffeurController extends Controller
         $em->remove($chauff);
         $em->flush();
         return $this->redirectToRoute('chauffeuraff');
-
     }
     public function updatechaufAction($cin,Request $request)
     {

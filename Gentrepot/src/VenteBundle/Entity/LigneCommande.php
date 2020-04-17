@@ -34,7 +34,7 @@ class LigneCommande
 
     /**
      *
-     * @ORM\ManyToOne(targetEntity="Produit")
+     * @ORM\ManyToOne(targetEntity="AchatBundle\Entity\ProduitAchat")
      * @ORM\JoinColumn(name="idP_produit",referencedColumnName="reference",nullable=true)
      */
 

@@ -135,7 +135,7 @@ class CommandeVente
         return(string) $this->id ;   }
 
     /**
-     * @ORM\Column(name="lignecommande", type="array")
+     * @ORM\Column(name="lignecommande", type="array",nullable=true)
      */
     private  $lignecommandes;
 
@@ -192,7 +192,7 @@ class CommandeVente
 
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",nullable=true)
      */
     private $user;
 

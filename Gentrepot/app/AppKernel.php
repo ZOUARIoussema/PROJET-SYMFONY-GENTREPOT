@@ -34,7 +34,7 @@ class AppKernel extends Kernel
             new Egyg33k\CsvBundle\Egyg33kCsvBundle(),
             new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
             new FOS\CKEditorBundle\FOSCKEditorBundle(),
-
+            new AeeBundle\AeeBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

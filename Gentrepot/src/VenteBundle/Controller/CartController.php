@@ -2,6 +2,7 @@
 
 namespace VenteBundle\Controller;
 
+use AchatBundle\Entity\ProduitAchat;
 use Mgilet\NotificationBundle\Entity\Notification;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -44,7 +45,7 @@ class CartController extends Controller
             $panierWithData[] = [
 
 
-                'produit' => $this->getDoctrine()->getRepository(Produit::class)->find($reference),
+                'produit' => $this->getDoctrine()->getRepository(ProduitAchat::class)->find($reference),
 
                 'quantiteEnStock' => $quantiteEnStock,
                 'quantite' => isset($items[$i]['quantite']) ? $items[$i]['quantite'] : 0
@@ -334,7 +335,7 @@ $facture=$this->getDoctrine()->getManager()
             $i = 0;
             $panierWithData[] = [
 
-                'produit' => $this->getDoctrine()->getRepository(Produit::class)->find($reference),
+                'produit' => $this->getDoctrine()->getRepository(ProduitAchat::class)->find($reference),
 
                 'quantiteEnStock' => $quantiteEnStock,
                 'quantite' => isset($items[$i]['quantite']) ? $items[$i]['quantite'] : 0

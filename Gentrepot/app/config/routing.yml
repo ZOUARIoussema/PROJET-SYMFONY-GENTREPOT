@@ -1,7 +1,12 @@
+aee:
+    resource: "@AeeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 
 logistique:
     resource: "@logistiqueBundle/Resources/config/routing.yml"
-    prefix:   /logistique
+    prefix:   /hamzahjk
 
 achat:
     resource: "@AchatBundle/Resources/config/routing.yml"

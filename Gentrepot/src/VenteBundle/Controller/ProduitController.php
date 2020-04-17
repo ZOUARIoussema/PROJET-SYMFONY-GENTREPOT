@@ -2,6 +2,7 @@
 
 namespace VenteBundle\Controller;
 
+use AchatBundle\Entity\ProduitAchat;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use UserBundle\Entity\User;
@@ -51,7 +52,7 @@ class ProduitController extends Controller
     public function afficheAction()
     {
         $list=$this->getDoctrine()->getManager()
-            ->getRepository(Produit::class)->findAll();
+            ->getRepository(ProduitAchat::class)->findAll();
         return ($this->render('@Vente/Produit/affiche.html.twig',array ("list"=>$list)));}
 
     public function detailAction($reference)

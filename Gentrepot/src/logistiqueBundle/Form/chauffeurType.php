@@ -13,7 +13,11 @@ class chauffeurType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('cin')->add('nom')->add('prenom')->add('adresse');
+        $builder
+            ->add('cin')
+            ->add('nom')
+            ->add('prenom')
+            ->add('adresse');
     }/**
      * {@inheritdoc}
      */

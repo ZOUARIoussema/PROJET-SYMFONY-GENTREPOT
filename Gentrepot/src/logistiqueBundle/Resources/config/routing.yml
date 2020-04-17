@@ -4,7 +4,7 @@ logistique_homepage:
 
 
 vehicule_ajout:
-    path:     /ajout
+    path:     /ajoutaaa
     defaults: { _controller: logistiqueBundle:Default:ajoutvehicule}
 vehiculeaff:
     path:     /aff
@@ -20,9 +20,15 @@ vehicule_update:
 ajoutchauf:
     path:     /ajoutchauf
     defaults: { _controller: logistiqueBundle:chauffeur:ajoutchauf}
+
+
+
 chauffeuraff:
     path:     /affchauf
     defaults: { _controller: logistiqueBundle:chauffeur:chauffeuraff}
+
+
+
 deletechauf:
     path:     /supchauf/{cin}
     defaults: { _controller: logistiqueBundle:chauffeur:deletechauf}

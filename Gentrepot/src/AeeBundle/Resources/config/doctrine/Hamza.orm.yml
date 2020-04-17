@@ -1,0 +1,17 @@
+AeeBundle\Entity\Hamza:
+    type: entity
+    table: null
+    repositoryClass: AeeBundle\Repository\HamzaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: integer
+    lifecycleCallbacks: {  }
