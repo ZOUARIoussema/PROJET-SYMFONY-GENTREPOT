@@ -178,5 +178,15 @@ class Emplacement
     {
         $this->entrepot = $entrepot;
     }
+
+
+
+
+
+
+
+
+
+    
 }
 

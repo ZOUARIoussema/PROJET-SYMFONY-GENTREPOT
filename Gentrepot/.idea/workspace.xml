@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="" />
+    <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_22_04_2020_11_45_c.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_22_04_2020_11_50_s.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Gentrepot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gentrepot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockageBundle/Entity/Emplacement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockageBundle/Entity/Emplacement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +195,6 @@
       <command value="s doctrine:schema:validate User" />
       <command value="s doctrine:schema:validate --skip-mapping" />
       <command value="s doctrine:schema:validate" />
-      <command value="c install" />
       <command value="s server:run" />
       <command value="c dump-autoload" />
       <command value="s cache:clear" />
@@ -196,17 +205,18 @@
       <command value="s doctrine:database:create" />
       <command value="s doctrine:database:create" />
       <command value="s doctrine:schema:update --force" />
+      <command value="c install" />
     </option>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -313,6 +323,7 @@
       <workItem from="1586954262914" duration="664000" />
       <workItem from="1586967311321" duration="444000" />
       <workItem from="1587116145174" duration="130000" />
+      <workItem from="1587548632077" duration="413000" />
     </task>
     <servers />
   </component>
