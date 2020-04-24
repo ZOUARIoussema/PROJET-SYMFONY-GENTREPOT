@@ -97,6 +97,12 @@ lettreDerelance_ajouterLettreDeRelance:
 inventaire_supprimer:
     path:     /supprimerInventaire{id}
     defaults: { _controller: TresorerieBundle:InventaireCaisse:deleteInventaire }
+api_user_findAll:
+    path:     /apiUser/findAll
+    defaults: { _controller: TresorerieBundle:ApiUser:all }
+api_user_add:
+    path:     /apiUser/add
+    defaults: { _controller: TresorerieBundle:ApiUser:new }
 
 
 imp:
