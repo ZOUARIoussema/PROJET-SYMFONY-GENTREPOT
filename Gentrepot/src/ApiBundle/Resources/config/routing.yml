@@ -1,0 +1,15 @@
+api_homepage:
+    path:     /
+    defaults: { _controller: ApiBundle:Default:index }
+api_user_findAll:
+    path:     /apiUser/findAll
+    defaults: { _controller: ApiBundle:ApiUser:all }
+api_user_add:
+    path:     /apiUser/add
+    defaults: { _controller: ApiBundle:ApiUser:new }
+api_invrntaire_add:
+    path:     /apiInventaire/add
+    defaults: { _controller: ApiBundle:ApiInventaireCaisse:new }
+api_inventaire_findAll:
+    path:     /apiInventaire/findAll
+    defaults: { _controller: ApiBundle:ApiInventaireCaisse:all }

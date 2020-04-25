@@ -35,6 +35,7 @@ class AppKernel extends Kernel
             new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
             new FOS\CKEditorBundle\FOSCKEditorBundle(),
             new AeeBundle\AeeBundle(),
+            new ApiBundle\ApiBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

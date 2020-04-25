@@ -1,16 +1,17 @@
 <?php
 
-namespace TresorerieBundle\Controller;
+namespace ApiBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
-use UserBundle\Entity\User;
+use TresorerieBundle\Entity\InventaireCaisse;
 
 
-class ApiUserController extends Controller
+
+class ApiInventaireCaisseController extends Controller
 {
 
 
@@ -18,7 +19,7 @@ class ApiUserController extends Controller
     public function allAction()
     {
         $tasks = $this->getDoctrine()->getManager()
-            ->getRepository(User::class)
+            ->getRepository(InventaireCaisse::class)
             ->findAll();
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($tasks);
@@ -29,17 +30,19 @@ class ApiUserController extends Controller
     public function newAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $user = new User();
-        $user->setUsername($request->get('username'));
-        $user->setUsernameCanonical($user->getUsername());
-        $user->setEmail($request->get('email'));
-        $user->setEmailCanonical($user->getEmail());
-        $user->setPassword($request->get('password'));
+        $inventaire = new InventaireCaisse();
+        $inventaire->setSoldeCheque($request->get('soldeCheque'));
+        $inventaire->setSoldeEspece($request->get('soldeEspece'));
+        $inventaire->setSoldeTheorique($request->get('soldeTheorique'));
+        $inventaire->setDateCreation($request->get('dateC'));
+        $inventaire->setSoldeCalculer($request->get('soldecalculer'));
+        $inventaire->setEcart($request->get('ecart'));
 
-        $em->persist($user);
+
+        $em->persist($inventaire);
         $em->flush();
         $serializer = new Serializer([new ObjectNormalizer()]);
-        $formatted = $serializer->normalize($user);
+        $formatted = $serializer->normalize($inventaire);
         return new JsonResponse($formatted);
     }
 
