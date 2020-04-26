@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ApiBundle/ApiBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiInventaireCaisseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiLettreDeRelanceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/DefaultController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Resources/config/services.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Resources/views/Default/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/ApiBundle/Controller/DefaultControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Controller/ApiUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TresorerieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TresorerieBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiUserController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,6 +325,7 @@
       <workItem from="1587761028719" duration="135000" />
       <workItem from="1587761184596" duration="5244000" />
       <workItem from="1587810247171" duration="4277000" />
+      <workItem from="1587852741743" duration="3478000" />
     </task>
     <servers />
   </component>
@@ -435,13 +424,13 @@
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582841658531" />
     <state x="579" y="313" key="SymfonyPathDialog/0.0.1600.860@0.0.1600.860" timestamp="1586967724489" />
     <state x="579" y="313" key="SymfonyPathDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1587680271174" />
-    <state x="443" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1587810247537">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="1978" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1587852749473">
+      <screen x="1600" y="0" width="1366" height="728" />
     </state>
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582841441041" />
     <state x="443" y="220" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1587116166413" />
     <state x="443" y="220" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1587810247537" />
-    <state x="1978" y="186" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@1600.0.1366.728" timestamp="1587748940368" />
+    <state x="1978" y="186" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@1600.0.1366.728" timestamp="1587852749473" />
     <state x="397" y="185" width="788" height="800" key="run.anything.popup" timestamp="1587811722738">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

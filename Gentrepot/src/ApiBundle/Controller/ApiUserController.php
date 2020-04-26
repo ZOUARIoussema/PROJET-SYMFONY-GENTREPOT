@@ -2,6 +2,7 @@
 
 namespace ApiBundle\Controller;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,6 +36,11 @@ class ApiUserController extends Controller
         $user->setEmail($request->get('email'));
         $user->setEmailCanonical($user->getEmail());
         $user->setPassword($request->get('password'));
+
+
+
+            $user->setRoles(array('Client' => 'ROLE_CLIEN'));
+
 
         $em->persist($user);
         $em->flush();
