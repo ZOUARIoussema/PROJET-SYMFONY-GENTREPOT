@@ -13,3 +13,16 @@ api_invrntaire_add:
 api_inventaire_findAll:
     path:     /apiInventaire/findAll
     defaults: { _controller: ApiBundle:ApiInventaireCaisse:all }
+api_inventaire_recupere:
+    path:     /apiInventaire/recupere
+    defaults: { _controller: ApiBundle:ApiInventaireCaisse:recuperer }
+api_lettre_add:
+    path:     /apiLettre/new
+    defaults: { _controller: ApiBundle:ApiLettreDeRelance:new }
+api_lettre_allFacture:
+    path:     /apiLettre/allF
+    defaults: { _controller: ApiBundle:ApiLettreDeRelance:allFacture }
+api_lettre_alle:
+    path:     /apiLettre/all
+    defaults: { _controller: ApiBundle:ApiLettreDeRelance:all }
+

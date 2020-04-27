@@ -225,5 +225,22 @@ class FactureVente
     {
         $this->BonLivraison = $BonLivraison;
     }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+
+
+
+
+
+
+
+
 }
 
