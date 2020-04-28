@@ -16,6 +16,9 @@ api_inventaire_findAll:
 api_inventaire_recupere:
     path:     /apiInventaire/recupere
     defaults: { _controller: ApiBundle:ApiInventaireCaisse:recuperer }
+api_inventaire_delete:
+    path:     /apiInventaire/delete
+    defaults: { _controller: ApiBundle:ApiInventaireCaisse:delete }
 api_lettre_add:
     path:     /apiLettre/new
     defaults: { _controller: ApiBundle:ApiLettreDeRelance:new }
@@ -25,4 +28,8 @@ api_lettre_allFacture:
 api_lettre_alle:
     path:     /apiLettre/all
     defaults: { _controller: ApiBundle:ApiLettreDeRelance:all }
+api_lettre_delete:
+    path:     /apiLettre/delete
+    defaults: { _controller: ApiBundle:ApiLettreDeRelance:delete }
+
 

@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiInventaireCaisseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiInventaireCaisseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiLettreDeRelanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiLettreDeRelanceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VenteBundle/Entity/FactureVente.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VenteBundle/Entity/FactureVente.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,6 +331,7 @@
       <workItem from="1587909587752" duration="1389000" />
       <workItem from="1587947410567" duration="1326000" />
       <workItem from="1587986542421" duration="6584000" />
+      <workItem from="1588013723631" duration="5967000" />
     </task>
     <servers />
   </component>
@@ -432,12 +432,12 @@
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582841658531" />
     <state x="579" y="313" key="SymfonyPathDialog/0.0.1600.860@0.0.1600.860" timestamp="1586967724489" />
     <state x="579" y="313" key="SymfonyPathDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1587680271174" />
-    <state x="443" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1587986550247">
+    <state x="443" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1588017532279">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582841441041" />
     <state x="443" y="220" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1587116166413" />
-    <state x="443" y="220" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1587986550247" />
+    <state x="443" y="220" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1588017532279" />
     <state x="1978" y="186" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@1600.0.1366.728" timestamp="1587852749473" />
     <state x="397" y="185" width="788" height="800" key="run.anything.popup" timestamp="1587811722738">
       <screen x="0" y="0" width="1600" height="860" />

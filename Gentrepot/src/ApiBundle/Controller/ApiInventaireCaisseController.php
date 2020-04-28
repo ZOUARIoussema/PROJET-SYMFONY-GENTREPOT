@@ -98,6 +98,23 @@ class ApiInventaireCaisseController extends Controller
 
 
 
+    public function deleteAction(Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $inv=$this->getDoctrine()->getRepository(InventaireCaisse::class)->find($request->get('idI'));
+
+        $em->remove($inv);
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($inv);
+        return new JsonResponse($formatted);
+
+    }
+
+
+
 
 
 
