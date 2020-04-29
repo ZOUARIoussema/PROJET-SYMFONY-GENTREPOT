@@ -4,7 +4,7 @@
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiInventaireCaisseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiInventaireCaisseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiLettreDeRelanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiLettreDeRelanceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Resources/config/routing.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -332,6 +332,8 @@
       <workItem from="1587947410567" duration="1326000" />
       <workItem from="1587986542421" duration="6584000" />
       <workItem from="1588013723631" duration="5967000" />
+      <workItem from="1588106916736" duration="3483000" />
+      <workItem from="1588168018484" duration="2299000" />
     </task>
     <servers />
   </component>
@@ -369,11 +371,11 @@
     </state>
     <state x="199" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1581997774749" />
     <state x="233" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1587762348980" />
-    <state x="494" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587990969599">
+    <state x="494" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1588108696616">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="422" y="164" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582833625206" />
-    <state x="494" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1587990969599" />
+    <state x="494" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1588108696616" />
     <state x="633" y="139" width="620" height="318" key="#com.jetbrains.php.framework.ui.FailedToParseDialog" timestamp="1587680243373">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -432,12 +434,12 @@
     <state x="494" y="265" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1582841658531" />
     <state x="579" y="313" key="SymfonyPathDialog/0.0.1600.860@0.0.1600.860" timestamp="1586967724489" />
     <state x="579" y="313" key="SymfonyPathDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1587680271174" />
-    <state x="443" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1588017532279">
+    <state x="443" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1588168038590">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582841441041" />
     <state x="443" y="220" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1587116166413" />
-    <state x="443" y="220" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1588017532279" />
+    <state x="443" y="220" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@0.0.1600.860" timestamp="1588168038590" />
     <state x="1978" y="186" key="com.intellij.ide.util.TipDialog/1600.0.1366.728/0.0.1600.860@1600.0.1366.728" timestamp="1587852749473" />
     <state x="397" y="185" width="788" height="800" key="run.anything.popup" timestamp="1587811722738">
       <screen x="0" y="0" width="1600" height="860" />
