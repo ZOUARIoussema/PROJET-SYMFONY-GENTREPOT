@@ -40,7 +40,6 @@ api_lettre_delete:
 
 
 
-
 api_aideCh_affiche:
     path:     /apiaide/affiche
     defaults: { _controller: ApiBundle:ApiAidechauffeur:affaide }
