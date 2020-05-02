@@ -58,6 +58,27 @@ class ApiLettreDeRelanceController extends Controller
     }
 
 
+    public function deleteAction(Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $lettre=$em ->getRepository(LettreDeRelance::class)->find((int)$request->get('idL'));
+
+
+
+        $em->remove($lettre);
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($lettre);
+        return new JsonResponse($formatted);
+
+
+
+
+    }
+
+
 
 
 

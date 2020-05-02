@@ -69,6 +69,32 @@ class ApiInventaireCaisseController extends Controller
 
 
 
+
+
+    public function modifierAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+
+
+
+        $inventaire = $em->getRepository(InventaireCaisse::class)->find($request->get('id'));
+
+
+
+        $inventaire->setSoldeCalculer((double)$request->get('sc'));
+        $inventaire->setEcart($inventaire->getSoldeTheorique()-(double)$request->get('sc'));
+
+
+
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($inventaire);
+        return new JsonResponse($formatted);
+    }
+
+
+
     public function recupererAction()
     {
 
@@ -93,6 +119,23 @@ class ApiInventaireCaisseController extends Controller
         $formatted = $serializer->normalize($inventaire);
         return new JsonResponse($formatted);
 
+
+    }
+
+
+
+    public function deleteAction(Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $inv=$this->getDoctrine()->getRepository(InventaireCaisse::class)->find($request->get('idI'));
+
+        $em->remove($inv);
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($inv);
+        return new JsonResponse($formatted);
 
     }
 
