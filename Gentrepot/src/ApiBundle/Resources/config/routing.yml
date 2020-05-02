@@ -26,3 +26,16 @@ api_lettre_alle:
     path:     /apiLettre/all
     defaults: { _controller: ApiBundle:ApiLettreDeRelance:all }
 
+
+
+api_aideCh_affiche:
+    path:     /apiaide/affiche
+    defaults: { _controller: ApiBundle:ApiAidechauffeur:affaide }
+
+api_ordreM_affiche:
+    path:     /apiordre/affiche
+    defaults: { _controller: ApiBundle:ApiOrdreDeMission:afficheordre }
+
+api_aideCh_Ajout:
+    path:     /apiAchauf/ajout
+    defaults: { _controller: ApiBundle:ApiAidechauffeur:ajoutAchauf }
