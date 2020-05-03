@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use TresorerieBundle\Entity\LettreDeRelance;
 use UserBundle\Entity\User;
 
 
@@ -48,6 +49,39 @@ class ApiUserController extends Controller
         $formatted = $serializer->normalize($user);
         return new JsonResponse($formatted);
     }
+
+
+
+    public function modifierAction(Request $request){
+
+
+        $em = $this->getDoctrine()->getManager();
+
+        $user=$em ->getRepository(User::class)->find((int)$request->get('id'));
+
+        $user->setPassword($request->get('paswd'));
+
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($user);
+        return new JsonResponse($formatted);
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
