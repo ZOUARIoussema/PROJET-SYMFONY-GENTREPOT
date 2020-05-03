@@ -32,4 +32,9 @@ api_lettre_delete:
     path:     /apiLettre/delete
     defaults: { _controller: ApiBundle:ApiLettreDeRelance:delete }
 
+api_produit_affiche:
+    path:     /apiProduit/affiche
+    defaults: { _controller: ApiBundle:ApiProduit:affiche }
+
+
 

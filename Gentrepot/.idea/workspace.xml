@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d58aee7-732d-45fa-b56f-ac6eb75e70b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiCartController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiCommandeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiProduitController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Tests/Controller/ApiCartControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Tests/Controller/ApiCommandeControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ApiBundle/Tests/Controller/ApiProduitControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Gentrepot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gentrepot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_23_04_2020_23_01_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_28_04_2020_15_59_c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_23_04_2020_23_17_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_28_04_2020_16_00_s.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiInventaireCaisseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiInventaireCaisseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiLettreDeRelanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/ApiLettreDeRelanceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AchatBundle/Entity/ProduitAchat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AchatBundle/Entity/ProduitAchat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ApiBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VenteBundle.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +116,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/TresorerieBundle/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -112,7 +125,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -184,7 +197,6 @@
       <command value="s server:stop" />
       <command value="s doctrine:generate:form VenteBundle:FactureVente" />
       <command value="s doctrine:generate:entity" />
-      <command value="s generate:controller" />
       <command value="s doctrine:database:drop --force" />
       <command value="s doctrine:schema:create" />
       <command value="s doctrine:generate:form VenteBundle:BonLivraison" />
@@ -197,23 +209,24 @@
       <command value="s doctrine:database:create" />
       <command value="s doctrine:database:create" />
       <command value="c install" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s server:run" />
-      <command value="c dump-autoload" />
-      <command value="c dump-autoload" />
       <command value="s generate:bundle" />
       <command value="s generate:bundle" />
+      <command value="c dump-autoload" />
+      <command value="c dump-autoload" />
+      <command value="s generate:controller" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -332,6 +345,13 @@
       <workItem from="1587947410567" duration="1326000" />
       <workItem from="1587986542421" duration="6584000" />
       <workItem from="1588013723631" duration="5967000" />
+      <workItem from="1588081044402" duration="3405000" />
+      <workItem from="1588087458033" duration="597000" />
+      <workItem from="1588106360026" duration="1600000" />
+      <workItem from="1588190961277" duration="448000" />
+      <workItem from="1588204281552" duration="1436000" />
+      <workItem from="1588347751811" duration="2369000" />
+      <workItem from="1588374674422" duration="1623000" />
     </task>
     <servers />
   </component>

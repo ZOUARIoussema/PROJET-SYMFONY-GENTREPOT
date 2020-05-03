@@ -157,15 +157,6 @@ class ProduitAchat
     private $prixVente;
 
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * @return string
@@ -258,7 +249,7 @@ class ProduitAchat
     }
 
     /**
-     * @param int $quantiteStockSecurite
+     * @param int
      */
     public function setQuantiteStockSecurite($quantiteStockSecurite)
     {
