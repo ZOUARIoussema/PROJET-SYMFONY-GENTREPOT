@@ -19,9 +19,7 @@ class ApiChauffeurController extends Controller
         $chauffeur->setNom($request->get('nom'));
         $chauffeur->setPrenom($request->get('prenom'));
         $chauffeur->setAdresse($request->get('adresse'));
-        $chauffeur->setEtat($request->get('etat'));
-
-        /*  $chauffeur->setEtat('disponible');*/
+         $chauffeur->setEtat('disponible');
           $chauffeur->setVoyage(0);
         $em= $this->getDoctrine()->getManager();
         $em-> persist($chauffeur);
