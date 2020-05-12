@@ -56,6 +56,10 @@ api_ordreM_ajout:
     path:     /apiordre/ajout
     defaults: { _controller: ApiBundle:ApiOrdreDeMission:ajoutordreM }
 
+api_ordreM_rec:
+    path:     /apiordre/rec
+    defaults: { _controller: ApiBundle:ApiOrdreDeMission:recM }
+
 api_aideCh_Ajout:
     path:     /apiAchauf/ajout
     defaults: { _controller: ApiBundle:ApiAidechauffeur:ajoutAchauf }
