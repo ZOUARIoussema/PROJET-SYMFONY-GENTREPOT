@@ -28,7 +28,10 @@ class ApiOrdreDeMissionController extends Controller
         $ordre->setIdAidechauff($request->get('cin'));
         $ordre->setIdVehicule($request->get('matricule'));
         $ordre->setBondelivraisons($request->get('bondelivraison'));
-
+        $ordre->getIdVehicule()->setEtat('non disponible');
+        $ordre->getIdChauffeur()->setEtat('non disponible');
+        $nb=$ordre->getIdChauffeur()->getVoyage();
+        $ordre->getIdChauffeur()->setVoyage($nb+1);
             $em= $this->getDoctrine()->getManager();
             $em-> persist($ordre);
             $em->flush();
@@ -36,4 +39,12 @@ class ApiOrdreDeMissionController extends Controller
         $formatted = $serializer->normalize($ordre);
         return new JsonResponse($formatted);
         }
+    /*public function recMAction(Request $request){
+        $em= $this->getDoctrine()->getManager();
+       // $ordrem = $em->getRepository("logistiqueBundle:ordremission")->findAll();
+        $ordrem = $em->getRepository("logistiqueBundle:ordremission")->findByEtat('disponible');
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($ordrem);
+        return new JsonResponse($formatted);
+    }*/
 }

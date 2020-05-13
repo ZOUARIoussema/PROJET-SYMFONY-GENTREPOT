@@ -19,8 +19,8 @@ class ApiChauffeurController extends Controller
         $chauffeur->setNom($request->get('nom'));
         $chauffeur->setPrenom($request->get('prenom'));
         $chauffeur->setAdresse($request->get('adresse'));
-        $chauffeur->setEtat($request->get('etat'));
-        $chauffeur->setVoyage($request->get('voyage'));
+         $chauffeur->setEtat('disponible');
+          $chauffeur->setVoyage(0);
         $em= $this->getDoctrine()->getManager();
         $em-> persist($chauffeur);
         $em->flush();
@@ -38,4 +38,5 @@ class ApiChauffeurController extends Controller
         $formatted = $serializer->normalize($chauffeur);
         return new JsonResponse($formatted);
     }
+
 }
