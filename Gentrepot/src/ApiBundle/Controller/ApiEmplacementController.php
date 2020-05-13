@@ -30,11 +30,10 @@ class ApiEmplacementController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $emp = new Emplacement();
-        $emp->setClasse($request->get('classe'));
         $emp->setAdresse($request->get('adresse'));
-        $emp->setCapaciteStockage($request->get('capstok'));
-        $emp->setQuantiteStocker($request->get('qtestok'));
-        $emp->setProduit($this->getDoctrine()->getRepository(\AchatBundle\Entity\ProduitAchat::class)->find($request->get('refPro')));
+        $emp->setClasse($request->get('classe'));
+        $emp->setCapaciteStockage($request->get('capaciteStockage'));
+        $emp->setQuantiteStocker($request->get('quantiteStocker'));
         $emp->setEntrepot($this->getDoctrine()->getRepository(Entrepot::class)->find($request->get('matriEnp')));
 
         $em->persist($emp);
@@ -49,7 +48,7 @@ class ApiEmplacementController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $emp=$em ->getRepository(Emplacement::class)->find((int)$request->get('idemp'));
+        $emp=$em ->getRepository(Emplacement::class)->find((int)$request->get('id'));
 
         $em->remove($emp);
         $em->flush();

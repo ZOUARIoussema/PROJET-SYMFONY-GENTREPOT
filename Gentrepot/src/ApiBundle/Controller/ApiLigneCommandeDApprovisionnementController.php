@@ -49,7 +49,7 @@ class ApiLigneCommandeDApprovisionnementController
 
         $em = $this->getDoctrine()->getManager();
 
-        $lcommande=$em ->getRepository(LigneCommandeDApprovisionnement::class)->find((int)$request->get('idL'));
+        $lcommande=$em ->getRepository(LigneCommandeDApprovisionnement::class)->find((int)$request->get('id'));
 
         $em->remove($lcommande);
         $em->flush();

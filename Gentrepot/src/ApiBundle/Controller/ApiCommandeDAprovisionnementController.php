@@ -36,8 +36,8 @@ class ApiCommandeDAprovisionnementController extends Controller
         $commande = new CommandeDAprovisionnement();
         $commande->setDateCreation(new \DateTime());
         $commande->setEtat("non_facturer");
-        $commande->setTotalTVA($request->get('pttc'));
-        $commande->setTotalC($request->get('ptht'));
+        $commande->setTotalTVA($request->get('totalTva'));
+        $commande->setTotalC($request->get('totalC'));
         $commande->setTauxRemise($request->get('tauxRemise'));
 
         $commande->setFournisseur($this->getDoctrine()->getRepository(\AchatBundle\Entity\Fournisseur::class)->find($request->get('idF')));

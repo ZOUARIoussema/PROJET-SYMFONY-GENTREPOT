@@ -46,7 +46,7 @@ class ApiLignePerteController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $lpert=$em ->getRepository(LignePerte::class)->find((int)$request->get('idlp'));
+        $lpert=$em ->getRepository(LignePerte::class)->find((int)$request->get('id'));
 
         $em->remove($lpert);
         $em->flush();

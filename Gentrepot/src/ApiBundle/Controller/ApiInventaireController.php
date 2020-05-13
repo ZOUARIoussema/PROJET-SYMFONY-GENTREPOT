@@ -28,7 +28,7 @@ class ApiInventaireController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $inv = new InventaireStock();
-        $inv->setDateCreation();
+        $inv->setDateCreation(new \DateTime());
         $inv->setQuantiteTheorique($request->get('qteth'));
         $inv->getEcart($request->get('ecart'));
         $inv->setQuantiteInventaire($request->get('qteinv'));
@@ -47,7 +47,7 @@ class ApiInventaireController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $emp=$em ->getRepository(Emplacement::class)->find((int)$request->get('idemp'));
+        $emp=$em ->getRepository(Emplacement::class)->find((int)$request->get('id'));
 
         $em->remove($emp);
         $em->flush();

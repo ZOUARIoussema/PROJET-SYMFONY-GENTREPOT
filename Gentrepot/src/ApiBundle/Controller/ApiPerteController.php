@@ -39,11 +39,11 @@ class ApiPerteController extends Controller
 
     }
 
-    public function deleteAction(Request $request){
+    public function deleteAction($id){
 
         $em = $this->getDoctrine()->getManager();
 
-        $pert=$em ->getRepository(Perte::class)->find((int)$request->get('idp'));
+        $pert=$em ->getRepository(Perte::class)->find($id);
 
         $em->remove($pert);
         $em->flush();
