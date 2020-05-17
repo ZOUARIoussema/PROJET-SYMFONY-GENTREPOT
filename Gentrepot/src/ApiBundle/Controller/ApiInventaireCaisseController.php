@@ -57,7 +57,7 @@ class ApiInventaireCaisseController extends Controller
         $inventaire->setSoldeTheorique($cheque+$espece);
         $inventaire->setDateCreation(new \DateTime());
         $inventaire->setSoldeCalculer($request->get('soldecalculer'));
-        $inventaire->setEcart(($cheque+$espece)-$request->get('soldecalculer'));
+        $inventaire->setEcart($request->get('soldecalculer')-($cheque+$espece));
 
 
         $em->persist($inventaire);

@@ -25,6 +25,66 @@ api_inventaire_delete:
 api_inventaire_modifier:
     path:     /apiInventaire/modifier
     defaults: { _controller: ApiBundle:ApiInventaireCaisse:modifier }
+api_enp_add:
+    path:     /apiEntrepot/new
+    defaults: { _controller: ApiBundle:ApiEntrepot:new }
+api_enp_all:
+    path:     /apiEntrepot/all
+    defaults: { _controller: ApiBundle:ApiEntrepot:all }
+api_comapp_add:
+    path:     /apiCommandeDAp/new
+    defaults: { _controller: ApiBundle:ApiCommandeDAprovisionnement:new }
+api_comapp_all:
+    path:     /apiCommandeDAp/all
+    defaults: { _controller: ApiBundle:ApiCommandeDAprovisionnement:all }
+api_comapp_delete:
+    path:     /apiCommandeDAp/delete/{numeroC}
+    defaults: { _controller: ApiBundle:ApiCommandeDAprovisionnement:delete }
+api_lignecomapp_add:
+    path:     /apiLigneCommandeDAp/new
+    defaults: { _controller: ApiBundle:ApiLigneCommandeDApprovisionnement:new }
+api_lignecomapp_all:
+    path:     /apiLigneCommandeDAp/all
+    defaults: { _controller: ApiBundle:ApiLigneCommandeDApprovisionnement:all }
+api_lignecomapp_delete:
+    path:     /apiLigneCommandeDAp/delete/{id}
+    defaults: { _controller: ApiBundle:ApiLigneCommandeDApprovisionnement:delete }
+api_perte_add:
+    path:     /apiPerte/new
+    defaults: { _controller: ApiBundle:ApiPerte:new }
+api_perte_all:
+    path:     /apiPerte/all
+    defaults: { _controller: ApiBundle:ApiPerte:all }
+api_perte_delete:
+    path:     /apiPerte/delete/{id}
+    defaults: { _controller: ApiBundle:ApiPerte:delete }
+api_inv_add:
+    path:     /apiInvent/new
+    defaults: { _controller: ApiBundle:ApiInventaire:new }
+api_inv_all:
+    path:     /apiInvent/all
+    defaults: { _controller: ApiBundle:ApiInventaire:all }
+api_inv_delete:
+    path:     /apiInvent/delete/{id}
+    defaults: { _controller: ApiBundle:ApiInventaire:delete }
+api_ligneperte_add:
+    path:     /apiLignePerte/new
+    defaults: { _controller: ApiBundle:ApiLignePerte:new }
+api_ligneperte_all:
+    path:     /apiLignePerte/all
+    defaults: { _controller: ApiBundle:ApiLignePerte:all }
+api_ligneperte_delete:
+    path:     /apiLignePerte/delete/{id}
+    defaults: { _controller: ApiBundle:ApiLignePerte:delete }
+api_empl_add:
+    path:     /apiEmp/new
+    defaults: { _controller: ApiBundle:ApiEmplacement:new }
+api_empl_all:
+    path:     /apiEmp/all
+    defaults: { _controller: ApiBundle:ApiEmplacement:all }
+api_empl_delete:
+    path:     /apiEmp/delete/{id}
+    defaults: { _controller: ApiBundle:ApiEmplacement:delete }
 api_lettre_add:
     path:     /apiLettre/new
     defaults: { _controller: ApiBundle:ApiLettreDeRelance:new }
@@ -42,9 +102,6 @@ api_produit_affiche:
     path:     /apiProduit/affiche
     defaults: { _controller: ApiBundle:ApiProduit:affiche }
 
-
-
-
 api_aideCh_affiche:
     path:     /apiaide/affiche
     defaults: { _controller: ApiBundle:ApiAidechauffeur:affaide }
@@ -52,6 +109,13 @@ api_aideCh_affiche:
 api_ordreM_affiche:
     path:     /apiordre/affiche
     defaults: { _controller: ApiBundle:ApiOrdreDeMission:afficheordre }
+api_ordreM_ajout:
+    path:     /apiordre/ajout
+    defaults: { _controller: ApiBundle:ApiOrdreDeMission:ajoutordreM }
+
+api_ordreM_rec:
+    path:     /apiordre/rec
+    defaults: { _controller: ApiBundle:ApiOrdreDeMission:recM }
 
 api_aideCh_Ajout:
     path:     /apiAchauf/ajout
@@ -80,3 +144,18 @@ api_affiche_commandeMax:
 api_ajout_bon:
     path:     /apiBon/ajout
     defaults: { _controller: ApiBundle:ApiCommande:ajouterBonLivraison }
+api_Ch_Ajout:
+    path:     /apichauf/ajout
+    defaults: { _controller: ApiBundle:ApiChauffeur:ajoutchauf }
+
+api_Ch_Affiche:
+    path:     /apichauf/affiche
+    defaults: { _controller: ApiBundle:ApiChauffeur:chauffeuraff}
+
+api_v_Affiche:
+    path:     /apiv/affiche
+    defaults: { _controller: ApiBundle:ApiVehicule:affichevehicule}
+
+api_v_Ajout:
+    path:     /apiv/ajout
+    defaults: { _controller: ApiBundle:ApiVehicule:ajoutvehicule}
