@@ -56,3 +56,27 @@ api_ordreM_affiche:
 api_aideCh_Ajout:
     path:     /apiAchauf/ajout
     defaults: { _controller: ApiBundle:ApiAidechauffeur:ajoutAchauf }
+
+
+api_ajout_commandeV:
+    path:     /apiCommandeVente/ajout
+    defaults: { _controller: ApiBundle:ApiCommande:ajoutercom }
+
+
+
+api_ajout_ligne:
+    path:     /apiLigneCommande/ajout
+    defaults: { _controller: ApiBundle:ApiCommande:ajouterLigne }
+
+api_affiche_commande:
+    path:     /apiCommandeVente/affiche
+    defaults: { _controller: ApiBundle:ApiCommande:show }
+
+
+api_affiche_commandeMax:
+    path:     /apiCommandeVente/max
+    defaults: { _controller: ApiBundle:ApiCommande:maxCommande }
+
+api_ajout_bon:
+    path:     /apiBon/ajout
+    defaults: { _controller: ApiBundle:ApiCommande:ajouterBonLivraison }

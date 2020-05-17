@@ -22,4 +22,25 @@ class CommandeVenteRepository extends \Doctrine\ORM\EntityRepository
         return $qb->getSingleScalarResult();
     }
 
+     public function findByMax(){
+
+         $qb=$this->getEntityManager()
+             ->createQuery("SELECT max (c.id)
+                            FROM VenteBundle:CommandeVente c
+                            ");
+
+         return $qb->getScalarResult();
+     }
+    public function findCommande()
+    {
+
+
+        $qb=$this->getEntityManager()
+            ->createQuery("SELECT (c.totalC) ,(c.etat)
+                            FROM VenteBundle:CommandeVente c
+                            ");
+
+        return $qb->getScalarResult();
+    }
+
 }
