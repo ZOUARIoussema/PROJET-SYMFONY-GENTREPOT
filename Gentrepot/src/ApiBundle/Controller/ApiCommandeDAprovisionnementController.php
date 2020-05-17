@@ -40,7 +40,7 @@ class ApiCommandeDAprovisionnementController extends Controller
         $commande->setTotalC($request->get('totalC'));
         $commande->setTauxRemise($request->get('tauxRemise'));
 
-        $commande->setFournisseur($this->getDoctrine()->getRepository(\AchatBundle\Entity\Fournisseur::class)->find($request->get('idF')));
+        $commande->setFournisseur($this->getDoctrine()->getRepository(\AchatBundle\Entity\Fournisseur::class)->find($request->get('id')));
 
         $em->persist($commande);
         $em->flush();

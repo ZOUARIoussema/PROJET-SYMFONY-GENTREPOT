@@ -28,17 +28,17 @@ class ApiEntrepotController extends Controller
     public function newAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $commande = new Entrepot();
-        $commande->setAdresse($request->get('adresse'));
-        $commande->setAdresseMail($request->get('adresseMail'));
-        $commande->setMatriculeFiscal($request->get('matriculeFiscale'));
-        $commande->setNumeroTel($request->get('numeroTel'));
-        $commande->setRaisonSocial($request->get('raisonSociale'));
+        $ent = new Entrepot();
+        $ent->setAdresse($request->get('adresse'));
+        $ent->setAdresseMail($request->get('adresseMail'));
+        $ent->setMatriculeFiscal($request->get('matriculeFiscal'));
+        $ent->setNumeroTel($request->get('numeroTel'));
+        $ent->setRaisonSocial($request->get('raisonSocial'));
 
-        $em->persist($commande);
+        $em->persist($ent);
         $em->flush();
         $serializer = new Serializer([new ObjectNormalizer()]);
-        $formatted = $serializer->normalize($commande);
+        $formatted = $serializer->normalize($ent);
         return new JsonResponse($formatted);
 
     }

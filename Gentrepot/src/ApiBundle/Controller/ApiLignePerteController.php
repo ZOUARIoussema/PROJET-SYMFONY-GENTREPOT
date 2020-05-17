@@ -29,10 +29,12 @@ class ApiLignePerteController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $lpert = new LignePerte();
-        $lpert->getQuantite($request->get('qte'));
-        $lpert->getRaisonPerte($request->get('raison'));
+        $lpert->setQuantite($request->get('quantite'));
+        $lpert->setRaisonPerte($request->get('raisonPerte'));
         $lpert->setProduit($this->getDoctrine()->getRepository(\AchatBundle\Entity\ProduitAchat::class)->find($request->get('refPro')));
-        $lpert->setPerte($this->getDoctrine()->getRepository(Perte::class)->find($request->get('idp')));
+        //$lpert->setProduit($request->get('refPro'));
+        $lpert->setPerte($this->getDoctrine()->getRepository(Perte::class)->find($request->get('id')));
+        //$lpert->setPerte($request->get('id'));
 
         $em->persist($lpert);
         $em->flush();

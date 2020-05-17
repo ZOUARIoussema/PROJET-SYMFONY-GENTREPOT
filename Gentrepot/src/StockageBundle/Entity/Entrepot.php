@@ -13,15 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 class Entrepot
 {
     /**
-     * @var int
+     * @var string
      *
      * @ORM\Column(name="matriculeFiscal", type="string")
      * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $matriculeFiscal;
 
     /**
-     * @return int
+     * @return string
      */
     public function getMatriculeFiscal()
     {
@@ -29,7 +30,7 @@ class Entrepot
     }
 
     /**
-     * @param int $matriculeFiscal
+     * @param string $matriculeFiscal
      */
     public function setMatriculeFiscal($matriculeFiscal)
     {
