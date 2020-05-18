@@ -16,19 +16,4 @@ class ApiBonEntreeController extends Controller
 {
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
