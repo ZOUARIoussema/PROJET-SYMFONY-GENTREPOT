@@ -4,6 +4,7 @@ namespace ApiBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use logistiqueBundle\Entity\vehicule;
@@ -19,7 +20,8 @@ class ApiVehiculeController extends Controller
 
     public function ajoutvehiculeAction(Request $request){
         $vehicule= new vehicule();
-        $vehicule->setEtat($request->get('etat'));
+
+        $vehicule->setEtat('disponible');
         $vehicule->setMatricule($request->get('matricule'));
         $vehicule->setCapacite($request->get('capacite'));
         $vehicule->setType($request->get('type'));

@@ -17,6 +17,7 @@ class EmplacementType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('adresse')->add('capaciteStockage')->add('quantiteStocker')->add('classe')
+            ->add('entrepot',EntityType::class,['class'=>Entrepot::class,'choice_label'=>'matriculeFiscal','multiple'=>false])
         ;
     }/**
      * {@inheritdoc}
