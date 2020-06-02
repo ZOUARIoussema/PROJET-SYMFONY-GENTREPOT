@@ -37,7 +37,7 @@ class CommandeController extends Controller
 
 
         }
-        var_dump(CartController::$test);
+       // var_dump(CartController::$test);
 
 
         $form = $this->createForm(CommandeVenteType::class,$commande);

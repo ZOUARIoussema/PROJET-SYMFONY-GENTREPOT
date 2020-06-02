@@ -5,10 +5,15 @@ namespace AchatBundle\Controller;
 use AchatBundle\Entity\ProduitAchat;
 use AchatBundle\Entity\SousCategorieAchat;
 use AchatBundle\Form\ProduitAchatType;
+use StockageBundle\Entity\CommandeDAprovisionnement;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class ProduitAchatController extends Controller
 {
@@ -336,6 +341,34 @@ class ProduitAchatController extends Controller
         return ($this->render('@Achat/produit/shop.html.twig', array("list" => $list)));
     }
 
+    public function ListeSouCategorieAction(){
+        $souscat = $this->getDoctrine()->getRepository(SousCategorieAchat::class)->findAll();
+        $encoders = array(new XmlEncoder(), new JsonEncoder());
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(2);
+// Add Circular reference handler
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+        $normalizers = array($normalizer);
+        $serializer = new Serializer($normalizers, $encoders);
+        $formatted = $serializer->normalize(['sousCategorie' => $souscat]);
+        return new JsonResponse($formatted);
+    }
+    public function ListeCommandeApprovisionnementAction(){
+        $souscat = $this->getDoctrine()->getRepository(CommandeDAprovisionnement::class)->findAll();
+        $encoders = array(new XmlEncoder(), new JsonEncoder());
+        $normalizer = new ObjectNormalizer();
+        $normalizer->setCircularReferenceLimit(2);
+// Add Circular reference handler
+        $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+        });
+        $normalizers = array($normalizer);
+        $serializer = new Serializer($normalizers, $encoders);
+        $formatted = $serializer->normalize(['commande' => $souscat]);
+        return new JsonResponse($formatted);
+    }
 
 
 }

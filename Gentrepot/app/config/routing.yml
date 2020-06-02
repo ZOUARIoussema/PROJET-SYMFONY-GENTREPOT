@@ -10,7 +10,7 @@ aee:
 
 logistique:
     resource: "@logistiqueBundle/Resources/config/routing.yml"
-    prefix:   /hamzahjk
+    prefix:   /logistique
 
 achat:
     resource: "@AchatBundle/Resources/config/routing.yml"

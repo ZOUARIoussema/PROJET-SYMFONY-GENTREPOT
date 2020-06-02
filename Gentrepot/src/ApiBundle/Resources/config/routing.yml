@@ -121,6 +121,29 @@ api_aideCh_Ajout:
     path:     /apiAchauf/ajout
     defaults: { _controller: ApiBundle:ApiAidechauffeur:ajoutAchauf }
 
+
+api_ajout_commandeV:
+    path:     /apiCommandeVente/ajout
+    defaults: { _controller: ApiBundle:ApiCommande:ajoutercom }
+
+
+
+api_ajout_ligne:
+    path:     /apiLigneCommande/ajout
+    defaults: { _controller: ApiBundle:ApiCommande:ajouterLigne }
+
+api_affiche_commande:
+    path:     /apiCommandeVente/affiche
+    defaults: { _controller: ApiBundle:ApiCommande:show }
+
+
+api_affiche_commandeMax:
+    path:     /apiCommandeVente/max
+    defaults: { _controller: ApiBundle:ApiCommande:maxCommande }
+
+api_ajout_bon:
+    path:     /apiBon/ajout
+    defaults: { _controller: ApiBundle:ApiCommande:ajouterBonLivraison }
 api_Ch_Ajout:
     path:     /apichauf/ajout
     defaults: { _controller: ApiBundle:ApiChauffeur:ajoutchauf }
@@ -136,3 +159,64 @@ api_v_Affiche:
 api_v_Ajout:
     path:     /apiv/ajout
     defaults: { _controller: ApiBundle:ApiVehicule:ajoutvehicule}
+
+api_F_Ajout:
+    path:     /apiF/ajout
+    defaults: { _controller: ApiBundle:Fournisseur:index}
+
+api_F_Affiche:
+    path:     /apiF/affiche
+    defaults: { _controller: ApiBundle:Fournisseur:new}
+
+api_B_Affiche:
+    path:     /apiB/affiche
+    defaults: { _controller: ApiBundle:ApiBonEntree:index}
+
+list_prod:
+    path:     /apiP/listP
+    defaults: { _controller: "ApiBundle:ApiProduit:ListProduct" }
+add_prod:
+    path:     /apiP/addP
+    defaults: { _controller: "ApiBundle:ApiProduit:AddProduct" }
+Listfournisseur:
+    path:     /apiF/listF
+    defaults: { _controller: "ApiBundle:ApiFournisseur:listFounisseur" }
+add_fourn:
+    path:     /apiF/addF
+    defaults: { _controller: "ApiBundle:ApiFournisseur:AddFournisseur" }
+liste_Sous_Cat:
+    path:     /listSousCat
+    defaults: { _controller: "AchatBundle:ProduitAchat:ListeSouCategorie" }
+liste_comm:
+    path:     /listComm
+    defaults: { _controller: "AchatBundle:ProduitAchat:ListeCommandeApprovisionnement" }
+liste_bon_entree:
+    path:     /apiBE/listBonEntree
+    defaults: { _controller: "ApiBundle:ApiBonEntree:ListeBonEntree" }
+liste_bon_retour:
+    path:     /apiBR/listBonretour
+    defaults: { _controller: "ApiBundle:ApiBonRetour:ListeBonRetour" }
+add_bon_entree:
+    path:     /apiBE/addBonEntree
+    defaults: { _controller: "ApiBundle:ApiBonEntree:AddBonentree" }
+add_bon_retour:
+    path:     /apiBR/addBonRetour
+    defaults: { _controller: "ApiBundle:ApiBonRetour:AddBonRetour" }
+edit_prod:
+    path:     /apiP/editP
+    defaults: { _controller: "ApiBundle:ApiProduit:editProduct" }
+edit_fourn:
+    path:     /apiF/editF
+    defaults: { _controller: "ApiBundle:ApiFournisseur:editFournisseur" }
+delete_prod:
+    path:     /apiP/deleteP/{id}
+    defaults: { _controller: "ApiBundle:ApiProduit:deleteProduct" }
+delete_fourn:
+    path:     /apiF/deleteF/{id}
+    defaults: { _controller: "ApiBundle:ApiFournisseur:deletefournisseur" }
+delete_bon_entree:
+    path:     /apiBE/deletebonentree/{id}
+    defaults: { _controller: "ApiBundle:ApiBonEntree:deletebonentree" }
+delete_bon_retour:
+    path:     /apiBR/deletebonretour/{id}
+    defaults: { _controller: "ApiBundle:ApiBonRetour:deletebonRetour" }
