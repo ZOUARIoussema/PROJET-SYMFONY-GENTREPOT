@@ -67,4 +67,15 @@ class ApiOrdreDeMissionController extends Controller
         $formatted = $serializer->normalize($ordrem);
         return new JsonResponse($formatted);
     }*/
+
+    public function  deleteMAction($id){
+        $em=$this->getDoctrine()->getManager();
+        $M = $em->getRepository("logistiqueBundle:ordremission")->find($id);
+        $em->remove($M);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($M);
+        return new JsonResponse($formatted);
+
+    }
 }
