@@ -77,4 +77,11 @@ class ApiOrdreDeMissionController extends Controller
         $formatted = $serializer->normalize($M);
         return new JsonResponse($formatted);
     }
+    public function afficheAction(){
+        $em= $this->getDoctrine()->getManager();
+        $ordre = $em->getRepository("VenteBundle:BonLivraison")->findAll();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($ordre);
+        return new JsonResponse($formatted);
+    }
 }
