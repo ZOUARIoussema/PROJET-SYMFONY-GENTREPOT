@@ -220,3 +220,7 @@ delete_bon_entree:
 delete_bon_retour:
     path:     /apiBR/deletebonretour/{id}
     defaults: { _controller: "ApiBundle:ApiBonRetour:deletebonRetour" }
+
+affi_bon:
+    path:     /apio/affiche
+    defaults: { _controller: "ApiBundle:ApiOrdreDeMission:affiche" }
