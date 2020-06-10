@@ -76,6 +76,5 @@ class ApiOrdreDeMissionController extends Controller
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($M);
         return new JsonResponse($formatted);
-
     }
 }
