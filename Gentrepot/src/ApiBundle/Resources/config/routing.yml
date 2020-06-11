@@ -142,7 +142,7 @@ api_affiche_commandeMax:
     defaults: { _controller: ApiBundle:ApiCommande:maxCommande }
 
 api_ajout_bon:
-    path:     /apiBon/ajout
+    path:     /apiBon/ajout/{id}
     defaults: { _controller: ApiBundle:ApiCommande:ajouterBonLivraison }
 api_Ch_Ajout:
     path:     /apichauf/ajout

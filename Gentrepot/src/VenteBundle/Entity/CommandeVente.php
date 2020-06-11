@@ -33,19 +33,19 @@ class CommandeVente
 
 
     /**
-     * @ORM\Column(name="totalC", type="float",nullable=true)
+     * @ORM\Column(name="totalC", type="float")
      */
 
     private  $totalC;
 
 
     /**
-     * @ORM\Column(name="dateC", type="date",nullable=true)
+     * @ORM\Column(name="dateC", type="date")
      */
     private $dateC;
 
     /**
-     * @ORM\Column(name="etat", type="string",nullable=true)
+     * @ORM\Column(name="etat", type="string")
      */
 
     private $etat;
