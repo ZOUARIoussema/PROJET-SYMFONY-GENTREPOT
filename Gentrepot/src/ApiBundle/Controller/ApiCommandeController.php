@@ -3,10 +3,12 @@
 namespace ApiBundle\Controller;
 
 use AchatBundle\Entity\ProduitAchat;
+use DateTime;
 use logistiqueBundle\Entity\aidechauffeur;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use VenteBundle\Entity\BonLivraison;
@@ -23,6 +25,7 @@ class ApiCommandeController extends Controller
         $com = new CommandeVente();
         $com->setEtat($request->get('etat'));
         $com->setId($request->get('id'));
+        $com->setTotalC(12650.0);
         $com->setTotalC($request->get('TotalC'));
         $com->setDateC($request->get('DateC'));
         $com->setTauxRemise($request->get('TauxRemise'));
@@ -70,22 +73,28 @@ class ApiCommandeController extends Controller
         $formatted = $serializer->normalize($com);
         return new JsonResponse($formatted);
     }
-    public function ajouterBonlivraisonAction(Request $request)
+    public function ajouterBonlivraisonAction(Request $request ,$id)
     {
 
 
         $bon = new BonLivraison();
 
 
-      //  $commande = $this->getDoctrine()->getManager()->getRepository(CommandeVente::class)->find($id);
+      $commande = $this->getDoctrine()->getManager()->getRepository(CommandeVente::class)->find($id);
 
-       // $bon->setBonLivraison($commande);
+      $bon->setBonLivraison($commande);
+       // dump($bon);
+       // die();
+
         $bon->setEtat("non Facturé");
-            //$bon->setDateCreation(new \DateTime());
+        $bon->setDateCreation(new \DateTime('now'));
               $bon->setAdresseLivraison($request->get('AdresseLivraison'));
                 $bon->setNom($request->get('Nom'));
                  $bon->setPrenom($request->get('Prenom'));
-          $serializer = new Serializer([new ObjectNormalizer()]);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($bon);
+        $em->flush();
+        $serializer = new Serializer([new DateTimeNormalizer(),new ObjectNormalizer()]);
         $formatted = $serializer->normalize($bon);
         return new JsonResponse($formatted);
 
