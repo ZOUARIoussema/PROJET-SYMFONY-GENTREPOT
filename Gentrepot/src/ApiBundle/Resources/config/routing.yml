@@ -83,7 +83,7 @@ api_empl_all:
     path:     /apiEmp/all
     defaults: { _controller: ApiBundle:ApiEmplacement:all }
 api_empl_delete:
-    path:     /apiEmp/delete/{id}
+    path:     /apiEmp/delete
     defaults: { _controller: ApiBundle:ApiEmplacement:delete }
 api_lettre_add:
     path:     /apiLettre/new
