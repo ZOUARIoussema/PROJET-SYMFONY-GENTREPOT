@@ -162,7 +162,7 @@ class BonLivraison
     /**
      *
      * @ORM\OneToOne(targetEntity="CommandeVente")
-     * @ORM\JoinColumn(name="idC_Commande",referencedColumnName="id",nullable=true)
+     * @ORM\JoinColumn(name="idC_Commande",referencedColumnName="id")
      */
     private $BonLivraison;
 

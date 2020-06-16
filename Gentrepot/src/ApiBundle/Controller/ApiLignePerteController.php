@@ -52,9 +52,9 @@ class ApiLignePerteController extends Controller
 
         $em->remove($lpert);
         $em->flush();
-
-
-
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($lpert);
+        return new JsonResponse($formatted);
     }
 
 }

@@ -34,7 +34,7 @@ class ApiEmplacementController extends Controller
         $emp->setClasse($request->get('classe'));
         $emp->setCapaciteStockage($request->get('capaciteStockage'));
         $emp->setQuantiteStocker($request->get('quantiteStocker'));
-        $emp->setEntrepot($this->getDoctrine()->getRepository(Entrepot::class)->find($request->get('matriculeFiscal')));
+        //$emp->setEntrepot($this->getDoctrine()->getRepository(Entrepot::class)->find($request->get('matriculeFiscal')));
 
         $em->persist($emp);
         $em->flush();

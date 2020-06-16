@@ -36,7 +36,7 @@ class CommandeVenteRepository extends \Doctrine\ORM\EntityRepository
 
 
         $qb=$this->getEntityManager()
-            ->createQuery("SELECT (c.totalC) ,(c.etat)
+            ->createQuery("SELECT (c.totalC) ,(c.etat),(c.id)
                             FROM VenteBundle:CommandeVente c
                             ");
 

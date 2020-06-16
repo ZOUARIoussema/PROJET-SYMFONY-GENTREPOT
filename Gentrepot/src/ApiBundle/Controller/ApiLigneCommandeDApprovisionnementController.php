@@ -14,7 +14,7 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use StockageBundle\Entity\CommandeDAprovisionnement;
 
-class ApiLigneCommandeDApprovisionnementController
+class ApiLigneCommandeDApprovisionnementController extends Controller
 {
     public function allAction()
     {
