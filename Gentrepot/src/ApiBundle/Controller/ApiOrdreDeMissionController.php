@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Validator\Constraints\DateTime;
+use VenteBundle\Entity\BonLivraison;
 
 class ApiOrdreDeMissionController extends Controller
 {
@@ -33,7 +34,7 @@ class ApiOrdreDeMissionController extends Controller
         $ordre->setIdChauffeur($this->getDoctrine()->getRepository(\logistiqueBundle\Entity\chauffeur::class)->find($request->get('chauffeur')));
         $ordre->setIdAidechauff($this->getDoctrine()->getRepository(\logistiqueBundle\Entity\aidechauffeur::class)->find($request->get('Aidechauffeur')));
         $ordre->setIdVehicule($this->getDoctrine()->getRepository(\logistiqueBundle\Entity\vehicule::class)->find($request->get('vehicule')));
-        $ordre->setBondelivraisons($request->get('bondelivraison'));
+        //$ordre->setBondelivraisons($request->get('bondelivraison'));
 
         $ordre->setDatecreation(new \DateTime());
 
@@ -54,7 +55,22 @@ class ApiOrdreDeMissionController extends Controller
         $ordre->getIdChauffeur()->setVoyage($nb+1);
             $em= $this->getDoctrine()->getManager();
             $em-> persist($ordre);
+
+        //$bon=$this->getDoctrine()->getRepository(BonLivraison::class)->find($request->get('idBon'));
+
+       // $bon->setIdOrdemission($ordre);
+
             $em->flush();
+
+
+
+
+
+
+
+
+
+
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($ordre);
         return new JsonResponse($formatted);
@@ -83,5 +99,20 @@ class ApiOrdreDeMissionController extends Controller
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($ordre);
         return new JsonResponse($formatted);
+    }
+    public function updateAction(Request $request)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $variable=$em->getRepository(BonLivraison::class)->find($request->get('idBon'));
+        $or=$em->getRepository(\Proxies\__CG__\logistiqueBundle\Entity\ordremission::class)->find($request->get('idordre'));
+            $variable->setIdOrdemission($or);
+
+            $em->persist($variable);
+            $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($variable);
+        return new JsonResponse($formatted);
+
+
     }
 }

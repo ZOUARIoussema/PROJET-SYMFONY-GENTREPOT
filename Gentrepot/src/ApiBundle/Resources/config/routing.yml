@@ -224,3 +224,11 @@ delete_bon_retour:
 affi_bon:
     path:     /apio/affiche
     defaults: { _controller: "ApiBundle:ApiOrdreDeMission:affiche" }
+
+aupdate_bon:
+    path:     /apibonn/update
+    defaults: { _controller: "ApiBundle:ApiOrdreDeMission:update" }
+
+delete_Ordre:
+    path:     /apiOrdreD/delete/{id}
+    defaults: { _controller: "ApiBundle:ApiOrdreDeMission:deleteM" }

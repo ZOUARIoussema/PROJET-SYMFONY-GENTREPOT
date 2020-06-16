@@ -50,6 +50,14 @@ class BonLivraison
     private $id_ordemission;
 
     /**
+     * @param mixed $id_ordemission
+     */
+    public function setIdOrdemission($id_ordemission)
+    {
+        $this->id_ordemission = $id_ordemission;
+    }
+
+    /**
      * @return mixed
      */
     public function getIdOrdemission()
